@@ -1,0 +1,185 @@
+{
+
+  "config": {
+    "api": {
+        "GetRatesUriTokens": {
+           "ob":"?loanId={LOANID}&IsPar=false&limit=3&siteId=site:{SITEID}&{TERM_KEY}={TERM_VALUE}",
+           "epps":"?loanId={LOANID}&IsPar=true&limit=3&siteId=site:{SITEID}&{TERM_KEY}={TERM_VALUE}",
+           "epcPpe":"?loanId={LOANID}&IsPar=false&limit=3&siteId=site:{SITEID}&{TERM_KEY}={TERM_VALUE}"
+        }
+    },
+    "mappings": {
+      "PropertyType": {
+        "Single Family Residence": {
+          "epps": "Detached",
+          "ob": "Detached",
+          "epcPpe": "Detached-Single"
+        },
+        "Single Family Residence with Home Owners Association": {
+          "epps": "PUD",
+          "ob": "PUD",
+          "epcPpe": "PUD"
+        },
+        "Condominium": {
+          "epps": "Condominium",
+          "ob": "Condominium",
+          "epcPpe": "Condominium"
+        },
+        "Townhouse": {
+          "epps": "Attached",
+          "ob": "Townhouse",
+          "epcPpe": "Townhouse"
+        },        
+        "2+ Units": {
+          "epps": "Multi-UnitProperty",
+          "ob": "2+ Units",
+          "epcPpe": "Detached-Multi"
+        },
+        "Co-Operative": {
+          "epps": "Cooperative",
+          "ob": "Cooperative",
+          "epcPpe": "Co-Operative"
+        },
+        "Manufactured/Mobile Home (Single Wide)": {
+          "epps": "ManufacturedHousing",
+          "ob": "ManufacturedSingleWide",
+          "epcPpe": "ManufacturedSingleWide"
+        },
+        "Manufactured/Mobile Home (Multiwide)": {
+          "epps": "ManufacturedDoubleWide",
+          "ob": "ManufacturedDoubleWide",
+          "epcPpe": "ManufacturedDoubleWide"
+        }
+      },
+      "PropertyUsage": {
+        "Primary": {
+          "epps": "PrimaryResidence",
+          "ob": "PrimaryResidence",
+          "epcPpe": "PrimaryResidence"
+        },
+        "Secondary": {
+          "epps": "SecondHome",
+          "ob": "SecondHome",
+          "epcPpe": "SecondHome"
+        },
+        "Investment": {
+          "epps": "Investor",
+          "ob": "InvestmentProperty",
+          "epcPpe": "Investor"
+        }
+      },
+      "Representativecreditscore": {
+        "780 and above": {
+          "epps": 780,
+          "ob": 780,
+          "epcPpe": 780
+        },
+        "760-779": {
+          "epps": 770,
+          "ob": 770,
+          "epcPpe": 770
+        },
+        "740-759": {
+          "epps": 750,
+          "ob": 750,
+          "epcPpe": 750
+        },
+        "720-739": {
+          "epps": 730,
+          "ob": 730,
+          "epcPpe": 730
+        },
+        "700-719": {
+          "epps": 710,
+          "ob": 710,
+          "epcPpe": 710
+        },
+        "680-699": {
+          "epps": 690,
+          "ob": 690,
+          "epcPpe": 690
+        },
+        "660-679": {
+          "epps": 670,
+          "ob": 670,
+          "epcPpe": 670
+        },
+        "640-659": {
+          "epps": 650,
+          "ob": 650,
+          "epcPpe": 650
+        },
+        "620-639": {
+          "epps": 630,
+          "ob": 630,
+          "epcPpe": 630
+        },
+        "600-619": {
+          "epps": 610,
+          "ob": 610,
+          "epcPpe": 610
+        },
+        "Below 600": {
+          "epps": 599,
+          "ob": 599,
+          "epcPpe": 599
+        }
+      },
+      "AmortizationType": {
+        "Fixed": {
+          "epps": "Fixed",
+          "ob": "Fixed",
+          "epcPpe": "Fixed"
+        },
+        "Adjustable Rate Mortgage": {
+          "epps": "AdjustableRate",
+          "ob": "AdjustableRate",
+          "epcPpe": "AdjustableRate"
+        }
+      },
+      "NonEppsFieldPostPayload": {
+        "ob": {
+          "StoriesNumber": {
+            "formValue": 1
+          },
+          "BorrowerCitizenship": {
+            "formValue": "USCitizen"
+          },
+          "BorrowerTotalIncome": {
+            "formValue":{
+               "mapToFormKey":"annualincome",
+               "type":"number"
+            }
+          },
+          "BorrowerDebt": {
+            "formValue": {
+              "mapToFormKey": "monthlydebt",
+              "type":"number"
+            }
+          },
+          "SubjectPropertyCounty": {
+            "formValue":{
+              "mapToFormKey":"county"
+            }
+          }
+        },
+        "epcPpe": {
+          "BorrowerCitizenship": {
+            "formValue": "USCitizen"
+          },
+          "BorrowerTotalIncome": {
+            "formValue":{
+               "mapToFormKey":"annualincome",
+               "type":"number"
+            }
+          },
+          "SubjectPropertyCounty": {
+            "formValue":{
+              "mapToFormKey":"county"
+            }
+          }
+        }
+      }
+    }
+  }
+}

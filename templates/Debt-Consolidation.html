@@ -1,0 +1,173 @@
+
+  <div class="mortgage-calculators-widget-wrapper">
+    <div
+      class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left Debt Consolidation-calculator-container">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Debt Consolidation Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">Calculate the effect of combining other
+        debt with your home mortgage. If you select Credit Card, Auto Loan, or Other but leave the interest rate
+        blank, the calculator assumes a rate of 17.5%</p>
+      <form class="mortgage-calculators-widget-form Debt Consolidation-form"
+        id="mortgage-calculators-widget-form-js-askmortgageauthority" onsubmit="onCalculatorSubmit(event)"
+        novalidate=""><input type="hidden" name="type" value="Debt Consolidation" autocomplete="off" class="">
+        <h3 class="theme-body-text mortgage-calculators-widget-header">CURRENT DEBT</h3>
+        <div class="mortgage-calculators-add-debt-container" id="add-debt-container-askmortgageauthority-js">
+          <div class="mortgage-calculators-widget-select-group ">
+            <div class="mortgage-calculators-widget-form-group row">
+              <label class="mortgage-calculators-widget-label theme-body-text" for="typeofcredit-dropdown">Type of
+                Credit</label>
+
+
+              <div class="mortgage-calculators-widget-input-container">
+                <select class="mortgage-calculators-widget-select" name="typeofcredit" autocomplete="off"
+                  onchange="toggleCalculatorDropdownOrRadio(event)" id="typeofcredit-dropdown">
+                  <option value="Mortgage">Mortgage</option>
+                  <option value="Credit Card">Credit Card</option>
+                  <option value="Auto Loan">Auto Loan</option>
+                  <option value="Other">Other</option>
+
+                </select>
+              </div>
+            </div>
+            <div class="mortgage-calculators-widget-select-option-inputs">
+
+            </div>
+          </div>
+          <div class="mortgage-calculators-widget-form-group row ">
+            <label class="mortgage-calculators-widget-label theme-body-text"
+              for="balance-askmortgageauthority">Balance</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input is-amount" type="text"
+                id="balance-askmortgageauthority" name="balance" autocomplete="off" data-min="1" data-max="10000000"
+                onkeyup="onInputKeyUp(event, &#39;amount&#39;)" onkeydown="onInputKeyDown(event, &#39;amount&#39;)"
+                required="">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+            </div>
+          </div>
+          <div class="mortgage-calculators-widget-form-group row ">
+            <label class="mortgage-calculators-widget-label theme-body-text"
+              for="monthlypayment-askmortgageauthority">Monthly Payment</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input is-amount" type="text"
+                id="monthlypayment-askmortgageauthority" name="monthlypayment" autocomplete="off" data-min="1"
+                data-max="100000" data-custom="firstInterestVsMonthlyPayment"
+                onkeyup="onInputKeyUp(event, &#39;amount&#39;)" onkeydown="onInputKeyDown(event, &#39;amount&#39;)"
+                required="">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+            </div>
+          </div>
+          <div class="mortgage-calculators-widget-form-group row ">
+            <label class="mortgage-calculators-widget-label theme-body-text"
+              for="interestrate-askmortgageauthority">Interest Rate</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input is-percentage" type="text"
+                id="interestrate-askmortgageauthority" name="interestrate" autocomplete="off" placeholder="0"
+                data-min="0.01" data-max="50" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
+                onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+            </div>
+          </div>
+          <button class="mortgage-calculators-widget-submit btn remove-debt"
+            onclick="onMortgageCalculatorButtonClick(event, &#39;remove-debt&#39;, &#39;askmortgageauthority&#39;)">
+            Remove Debt
+          </button>
+
+        </div>
+        <button class="mortgage-calculators-widget-submit btn theme-button"
+          onclick="onMortgageCalculatorButtonClick(event, &#39;add-debt&#39;, &#39;askmortgageauthority&#39;)">
+          Add Debt
+        </button>
+        <hr class="mortgage-calculators-widget-hr">
+        <h3 class="theme-body-text mortgage-calculators-widget-header">NEW LOAN</h3>
+        <div class="mortgage-calculators-widget-form-group row">
+          <label class="mortgage-calculators-widget-label theme-body-text"
+            for="newinterestrate-askmortgageauthority">New Interest Rate</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input is-percentage" type="text"
+              id="newinterestrate-askmortgageauthority" name="newinterestrate" autocomplete="off" placeholder="0"
+              data-min="0.001" data-max="25" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
+              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+          </div>
+        </div>
+        <div class="mortgage-calculators-widget-form-group row">
+          <label class="mortgage-calculators-widget-label theme-body-text"
+            for="term-askmortgageauthority">Term</label>
+          <div class="mortgage-calculators-widget-input-container is-year">
+            <input class="mortgage-calculators-widget-input is-year" type="text" id="term-askmortgageauthority"
+              name="term" autocomplete="off" data-min="1" data-max="40"
+              onkeyup="onInputKeyUp(event, &#39;year&#39;)" onkeydown="onInputKeyDown(event, &#39;year&#39;)"
+              required="">
+            <label
+              class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+          </div>
+        </div>
+        <div class="mortgage-calculators-widget-form-group row">
+          <label class="mortgage-calculators-widget-label theme-body-text"
+            for="estimatedclosingcosts-askmortgageauthority">Estimated Closing Costs</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input is-amount" type="text"
+              id="estimatedclosingcosts-askmortgageauthority" name="estimatedclosingcosts" autocomplete="off"
+              placeholder="0.00" value="" data-min="0.01" data-max="100000"
+              onkeyup="onInputKeyUp(event, &#39;amount&#39;)" onkeydown="onInputKeyDown(event, &#39;amount&#39;)"
+              required="">
+            <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+          </div>
+        </div>
+        <input type="submit" value="Calculate" class="mortgage-calculators-widget-submit btn theme-button">
+        <p class="mortgage-calculators-widget-disclaimer">Default amounts are hypothetical and may not apply to your
+          individual situation. This calculator provides approximations for informational purposes only. Actual
+          results will be provided by your lender and will likely vary depending on your eligibility and current
+          market rates.</p>
+      </form>
+    </div>
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--right">
+      <h2 class="mortgage-calculators-widget-title theme-body-text"
+        id="mortgage-calculators-widget-results-title-js-askmortgageauthority">Results</h2>
+      <button class="mortgage-calculators-widget-print theme-title-text" onclick="window.print()"
+        onkeypress="window.ConsumerConnectApps.callOnEnter(event, window.print)">Print</button>
+      <div class="line-item-calculator-results" id="mortgage-calculators-widget-results-js-askmortgageauthority"
+        tabindex="0">
+        <div class="mortgage-calculators-widget-results">
+          <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Total Debt to be Refinanced</h3>
+          <div class="mortgage-calculators-widget-result theme-body-text" id="totaldebttoberefinanced"
+            data-type="amount" data-placeholder="$0.00">$0.00</div>
+        </div>
+        <div class="mortgage-calculators-widget-results">
+          <h3 class="mortgage-calculators-widget-subtitle theme-title-text">If using the term of the new loan, the
+            monthly payment decreased by:</h3>
+          <div class="mortgage-calculators-widget-result theme-body-text"
+            id="ifusingthetermofthenewloan,themonthlypaymentdecreasedby:" data-type="amount"
+            data-placeholder="$0.00">$0.00</div>
+        </div>
+        <div class="mortgage-calculators-widget-results">
+          <h3 class="mortgage-calculators-widget-subtitle theme-title-text">If keeping the original pay off date,
+            the monthly payment decreased by:</h3>
+          <div class="mortgage-calculators-widget-result theme-body-text"
+            id="ifkeepingtheoriginalpayoffdate,themonthlypaymentdecreasedby:" data-type="amount"
+            data-placeholder="$0.00">$0.00</div>
+        </div>
+        <div class="mortgage-calculators-widget-results">
+          <h3 class="mortgage-calculators-widget-subtitle theme-title-text">If keeping the original payment, all
+            debt will be paid off:</h3>
+          <div class="mortgage-calculators-widget-result theme-body-text"
+            id="ifkeepingtheoriginalpayment,alldebtwillbepaidoff:" data-type="text"
+            data-placeholder="0 months early">0 months early</div>
+        </div>
+      </div>
+      <div class="rates-calculator-results" id="rates-calculator-results-js-askmortgageauthority" tabindex="0">
+      </div>
+
+      <div class="mortgage-calculators-widget-tables-container"
+        id="mortgage-calculators-widget-tables-grandtotal-js-askmortgageauthority" tabindex="0">
+      </div>
+      <a class="theme-color-links mortgage-calculators-widget-tables-href" tabindex="0"
+        id="mortgage-calculators-widget-tables-href-js-askmortgageauthority"
+        href="https://askmortgageauthority.com/DebtConsolidation.html#mortgage-calculators-widget-tables-js-askmortgageauthority"
+        aria-label="See full report below on the same page">
+        See Full Report Below
+      </a>
+    </div>
+    <div class="mortgage-calculators-widget-tables-container"
+      id="mortgage-calculators-widget-tables-js-askmortgageauthority"></div>
+  </div>
+

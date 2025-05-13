@@ -1,0 +1,160 @@
+/* === MEGA MENU CORE === */
+.mega-menu {
+    background: #0a2540;
+    font-family: system-ui, sans-serif;
+    min-height: 90px;
+  }
+  
+  .mega-menu .main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .mega-menu .main-menu > li {
+    position: relative;
+  }
+  
+  .mega-menu .main-menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .mega-menu .main-menu > li:hover {
+    background: #102b4d;
+  }
+  
+  /* === DROPDOWN PANEL === */
+  .mega-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    width: 700px;
+    display: none;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 3px solid #ff6600;
+  }
+  
+  .has-mega:hover .mega-dropdown {
+    display: flex;
+  }
+  
+  /* === COLUMN STYLING === */
+  .mega-column {
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  .mega-column h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #0a2540;
+    font-weight: bold;
+  }
+  
+  .mega-column a {
+    display: block;
+    margin-bottom: 8px;
+    color: #0a2540;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .mega-column a:hover {
+    text-decoration: underline;
+    color: #ff6600;
+  }
+  
+  /* === RESPONSIVE CLEANUP === */
+  @media screen and (max-width: 768px) {
+    .mega-menu .main-menu {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .mega-menu .main-menu > li {
+      width: 100%;
+    }
+  
+    .mega-dropdown {
+      position: static;
+      width: 100%;
+      flex-direction: column;
+      box-shadow: none;
+      padding: 15px;
+      border-top: none;
+    }
+  
+    .has-mega:hover .mega-dropdown {
+      display: block;
+    }
+  }
+#logo {
+    width:84px;
+    border-radius:4px;
+    background-color:white;    position: relative;
+    top: 7px;
+    left: 20px;
+}
+
+  .custom-logo-link, .site-logo {
+    max-height: 30px;
+    max-width: 80px;
+  }
+
+  .custom-logo-link img{
+    max-width:100%
+  }
+  /* Find and modify the hamburger menu button styles */
+  .hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    right: 20px; /* Position from right side */
+    top: 2%;    /* Center vertically */
+    transform: translateY(-50%); 
+    z-index: 1000;
+}
+
+/* Modify your existing media query for 768px */
+@media screen and (max-width: 1024px) {
+    /* Add these specific display rules */
+    .hamburger-menu {
+        display: block; /* Only show hamburger on mobile */
+    }
+
+    .mega-menu .main-menu {
+        display: none; /* Hide menu by default on mobile */
+    }
+
+    .mega-menu .main-menu.active {
+        display: block; /* Show menu when active class is added */
+    }
+
+    /* Your other existing mobile styles remain unchanged */
+}
+
+/* Add this to ensure menu shows on desktop */
+@media screen and (min-width: 1024px) {
+    .mega-menu .main-menu {
+        display: flex !important; /* Force display on desktop */
+    }
+}

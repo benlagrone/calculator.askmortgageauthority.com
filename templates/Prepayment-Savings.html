@@ -1,0 +1,169 @@
+
+                    <div class="mortgage-calculators-widget-wrapper">
+                      <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left Prepayment Savings-calculator-container">
+                        <h2 class="mortgage-calculators-widget-title theme-title-text">Prepayment Savings Calculator</h2>
+                        <p class="mortgage-calculators-widget-description theme-body-text">Making additional mortgage payments reduces your interest costs by shortening the time it takes to pay off your mortgage and lowering your balance along the way.</p>
+                        <form class="mortgage-calculators-widget-form Prepayment Savings-form" id="mortgage-calculators-widget-form-js-askmortgageauthority" onsubmit="onCalculatorSubmit(event)" novalidate=""><input type="hidden" name="type" value="Prepayment Savings" autocomplete="off" class="">
+                          <div class="mortgage-calculators-widget-form-group row">
+                            <label class="mortgage-calculators-widget-label theme-body-text" for="additionalpaymentamount-askmortgageauthority">Additional Payment Amount</label>
+                            <div class="mortgage-calculators-widget-input-container is-amount">
+                              <input class="mortgage-calculators-widget-input is-amount" type="text" id="additionalpaymentamount-askmortgageauthority" name="additionalpaymentamount" autocomplete="off" placeholder="0.00" data-min="1" data-max="100000" onkeyup="onInputKeyUp(event, &#39;amount&#39;)" onkeydown="onInputKeyDown(event, &#39;amount&#39;)" required="">
+                              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+                            </div>
+                          </div>
+                          <div class="mortgage-calculators-widget-select-group">
+                            <div class="mortgage-calculators-widget-form-group row">
+                              <label class="mortgage-calculators-widget-label theme-body-text" for="prepaymentfrequency-dropdown">Prepayment Frequency</label>
+
+
+                              <div class="mortgage-calculators-widget-input-container">
+                                <select class="mortgage-calculators-widget-select" name="prepaymentfrequency" autocomplete="off" onchange="toggleCalculatorDropdownOrRadio(event)" id="prepaymentfrequency-dropdown">
+                                  <option value="Monthly">Monthly</option>
+                                  <option value="Yearly">Yearly</option>
+
+                                </select>
+                              </div>
+                            </div>
+                            <div class="mortgage-calculators-widget-select-option-inputs">
+
+                            </div>
+                          </div>
+                          <div class="mortgage-calculators-widget-select-group">
+                            <div class="mortgage-calculators-widget-form-group row">
+                              <label class="mortgage-calculators-widget-label theme-body-text" for="makefirstadditionalpayment-dropdown">Make First Additional Payment</label>
+
+
+                              <div class="mortgage-calculators-widget-input-container">
+                                <select class="mortgage-calculators-widget-select" name="makefirstadditionalpayment" autocomplete="off" onchange="toggleCalculatorDropdownOrRadio(event)" id="makefirstadditionalpayment-dropdown">
+                                  <option value="Starting Next Month">Starting Next Month</option>
+                                  <option value="One Year From Now">One Year From Now</option>
+                                  <option value="Starting Next Year">Starting Next Year</option>
+
+                                </select>
+                              </div>
+                            </div>
+                            <div class="mortgage-calculators-widget-select-option-inputs">
+
+                            </div>
+                          </div>
+                          <div class="mortgage-calculators-widget-form-group row">
+                            <label class="mortgage-calculators-widget-label theme-body-text" for="presentloanbalance-askmortgageauthority">Present Loan Balance</label>
+                            <div class="mortgage-calculators-widget-input-container is-amount">
+                              <input class="mortgage-calculators-widget-input is-amount" type="text" id="presentloanbalance-askmortgageauthority" name="presentloanbalance" autocomplete="off" placeholder="0.00" data-min="1" data-max="10000000" onkeyup="onInputKeyUp(event, &#39;amount&#39;)" onkeydown="onInputKeyDown(event, &#39;amount&#39;)" required="">
+                              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+                            </div>
+                          </div>
+                          <div class="mortgage-calculators-widget-form-group row">
+                            <label class="mortgage-calculators-widget-label theme-body-text" for="interestrate-askmortgageauthority">Interest Rate</label>
+                            <div class="mortgage-calculators-widget-input-container is-percentage">
+                              <input class="mortgage-calculators-widget-input is-percentage" type="text" id="interestrate-askmortgageauthority" name="interestrate" autocomplete="off" placeholder="0" data-min="0.001" data-max="25" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)" onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+                              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+                            </div>
+                          </div>
+                          <div class="mortgage-calculators-widget-form-group row">
+                            <label class="mortgage-calculators-widget-label theme-body-text" for="remainingloantermyear">Remaining Loan Term</label>
+                            <div class="mortgage-calculators-widget-input-container is-year mortgage-calculators-widget-input-container--inline">
+                              <input class="mortgage-calculators-widget-input is-year" type="text" id="remainingloantermyear-askmortgageauthority" name="remainingloantermyear" autocomplete="off" data-min="1" data-max="40" aria-label="Remaining Loan Term Years" onkeyup="onInputKeyUp(event, &#39;year&#39;)" onkeydown="onInputKeyDown(event, &#39;year&#39;)" required="">
+                              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+                            </div>
+                            <div class="mortgage-calculators-widget-input-container is-month mortgage-calculators-widget-input-container--inline">
+                              <input class="mortgage-calculators-widget-input is-month" type="text" id="remainingloantermmonth-askmortgageauthority" name="remainingloantermmonth" autocomplete="off" data-min="0" data-max="11" aria-label="Remaining Loan Term Months" onkeyup="onInputKeyUp(event, &#39;month&#39;)" onkeydown="onInputKeyDown(event, &#39;month&#39;)" required="">
+                              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+                            </div>
+                          </div>
+                          <div class="mortgage-calculators-widget-radio-group">
+                            <div class="mortgage-calculators-widget-form-group row">
+                              <fieldset>
+                                <legend class="mortgage-calculators-widget-label theme-body-text">Loan Type</legend>
+                                <div class="mortgage-calculators-widget-input-container">
+                                  <div class="mortgage-calculators-widget-label mortgage-calculators-widget-label--radio theme-body-text">
+                                    <input onclick="toggleCalculatorDropdownOrRadio(event)" class="mortgage-calculators-widget-input-radio" id="Fixed-Rate-askmortgageauthority" type="radio" role="radio" name="loantype" autocomplete="off" value="Fixed Rate" checked="" aria-checked="true">
+                                    <label for="Fixed-Rate-askmortgageauthority" class="mortgage-calculators-widget-label theme-body-text mortgage-calculators-widget-label-for-input">Fixed Rate</label>
+                                  </div>
+                                  <div class="mortgage-calculators-widget-label mortgage-calculators-widget-label--radio theme-body-text">
+                                    <input onclick="toggleCalculatorDropdownOrRadio(event)" class="mortgage-calculators-widget-input-radio" id="Adjustable-Rate-askmortgageauthority" type="radio" role="radio" name="loantype" autocomplete="off" value="Adjustable Rate" aria-checked="false">
+                                    <label for="Adjustable-Rate-askmortgageauthority" class="mortgage-calculators-widget-label theme-body-text mortgage-calculators-widget-label-for-input">Adjustable Rate</label>
+                                  </div>
+
+                                </div>
+                              </fieldset>
+                            </div>
+                            <div class="mortgage-calculators-widget-radio-option-inputs">
+                              <div class="mortgage-calculators-widget-form-group row is-hidden">
+                                <label class="mortgage-calculators-widget-label theme-body-text" for="maxperiodicrateincrease-askmortgageauthority">Max Periodic Rate Increase</label>
+                                <div class="mortgage-calculators-widget-input-container is-percentage">
+                                  <input class="mortgage-calculators-widget-input is-percentage" type="text" id="maxperiodicrateincrease-askmortgageauthority" name="maxperiodicrateincrease" autocomplete="off" placeholder="0" data-parent="loantype" data-min="0.001" data-max="10" data-parent-options="Adjustable Rate" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)" onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+                                  <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+                                </div>
+                              </div>
+                              <div class="mortgage-calculators-widget-form-group row is-hidden">
+                                <label class="mortgage-calculators-widget-label theme-body-text" for="maxlifetimerateincrease-askmortgageauthority">Max Lifetime Rate Increase</label>
+                                <div class="mortgage-calculators-widget-input-container is-percentage">
+                                  <input class="mortgage-calculators-widget-input is-percentage" type="text" id="maxlifetimerateincrease-askmortgageauthority" name="maxlifetimerateincrease" autocomplete="off" placeholder="0" data-parent="loantype" data-min="0" data-max="20" data-parent-options="Adjustable Rate" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)" onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+                                  <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+                                </div>
+                              </div>
+                              <div class="mortgage-calculators-widget-form-group row is-hidden">
+                                <label class="mortgage-calculators-widget-label theme-body-text" for="presentratechangesafter-askmortgageauthority">Present Rate Changes After</label>
+                                <div class="mortgage-calculators-widget-input-container is-month">
+                                  <input class="mortgage-calculators-widget-input is-month" type="text" id="presentratechangesafter-askmortgageauthority" name="presentratechangesafter" autocomplete="off" data-parent="loantype" data-min="1" data-max="360" data-parent-options="Adjustable Rate" onkeyup="onInputKeyUp(event, &#39;month&#39;)" onkeydown="onInputKeyDown(event, &#39;month&#39;)" required="">
+                                  <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+                                </div>
+                              </div>
+                              <div class="mortgage-calculators-widget-form-group row is-hidden">
+                                <label class="mortgage-calculators-widget-label theme-body-text" for="ratecanchangeevery-askmortgageauthority">Rate Can Change Every</label>
+                                <div class="mortgage-calculators-widget-input-container is-month">
+                                  <input class="mortgage-calculators-widget-input is-month" type="text" id="ratecanchangeevery-askmortgageauthority" name="ratecanchangeevery" autocomplete="off" data-parent="loantype" data-min="1" data-max="360" data-parent-options="Adjustable Rate" onkeyup="onInputKeyUp(event, &#39;month&#39;)" onkeydown="onInputKeyDown(event, &#39;month&#39;)" required="">
+                                  <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="mortgage-calculators-widget-select-group">
+                            <div class="mortgage-calculators-widget-form-group row">
+                              <label class="mortgage-calculators-widget-label theme-body-text" for="showamortizationtable-dropdown">Show Amortization Table</label>
+
+
+                              <div class="mortgage-calculators-widget-input-container">
+                                <select class="mortgage-calculators-widget-select" name="showamortizationtable" autocomplete="off" onchange="toggleCalculatorDropdownOrRadio(event)" id="showamortizationtable-dropdown">
+                                  <option value="No">No</option>
+                                  <option value="Monthly">Monthly</option>
+                                  <option value="Yearly">Yearly</option>
+
+                                </select>
+                              </div>
+                            </div>
+                            <div class="mortgage-calculators-widget-select-option-inputs">
+
+                            </div>
+                          </div>
+                          <input type="submit" value="Calculate" class="mortgage-calculators-widget-submit btn theme-button">
+                          <p class="mortgage-calculators-widget-disclaimer">Default amounts are hypothetical and may not apply to your individual situation. This calculator provides approximations for informational purposes only. Actual results will be provided by your lender and will likely vary depending on your eligibility and current market rates.</p>
+                        </form>
+                      </div>
+                      <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--right">
+                        <h2 class="mortgage-calculators-widget-title theme-body-text" id="mortgage-calculators-widget-results-title-js-askmortgageauthority">Results</h2>
+                        <button class="mortgage-calculators-widget-print theme-title-text" onclick="window.print()" onkeypress="window.ConsumerConnectApps.callOnEnter(event, window.print)">Print</button>
+                        <div class="line-item-calculator-results" id="mortgage-calculators-widget-results-js-askmortgageauthority" tabindex="0">
+                          <div class="mortgage-calculators-widget-results">
+                            <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Loan Term Reduction</h3>
+                            <div class="mortgage-calculators-widget-result theme-body-text" id="loantermreduction" data-type="text" data-placeholder="0 years">0 years</div>
+                          </div>
+                          <div class="mortgage-calculators-widget-results">
+                            <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Interest Savings</h3>
+                            <div class="mortgage-calculators-widget-result theme-body-text" id="interestsavings" data-type="amount" data-placeholder="$0.00">$0.00</div>
+                          </div>
+                        </div>
+                        <div class="rates-calculator-results" id="rates-calculator-results-js-askmortgageauthority" tabindex="0">
+                        </div>
+
+                        <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-grandtotal-js-askmortgageauthority" tabindex="0">
+                        </div>
+                        <a class="theme-color-links mortgage-calculators-widget-tables-href" tabindex="0" id="mortgage-calculators-widget-tables-href-js-askmortgageauthority" href="https://www.gmccloan.com/PrepaymentSavings.html#mortgage-calculators-widget-tables-js-askmortgageauthority" aria-label="See full report below on the same page">
+                          See Full Report Below
+                        </a>
+                      </div>
+                      <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-js-askmortgageauthority"></div>
+                    </div>
+
