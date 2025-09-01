@@ -143,9 +143,9 @@ input[type="ssn"] {
     max-width: 100%
 }
 
-.hide-empty-widget-placeholders .empty-widget-placeholder-container {
+/* .hide-empty-widget-placeholders .empty-widget-placeholder-container {
     display: none
-}
+} */
 
 .spinner-container {
     padding: 0;
@@ -382,12 +382,12 @@ img {
     right: 0
 }
 
-@media all and (-ms-high-contrast:none),
+/* @media all and (-ms-high-contrast:none),
 (-ms-high-contrast:active) {
     .map-widget-click-overlay {
         display: block
     }
-}
+} */
 
 .mortgage-calculators-widget-input:-ms-input-placeholder {
     color: #697489
@@ -448,11 +448,11 @@ img {
     font-weight: bold
 }
 
-.mortgage-calculators-widget-form-group.is-hidden,
+/* .mortgage-calculators-widget-form-group.is-hidden,
 .mortgage-calculators-widget-radio-group.is-hidden,
 .mortgage-calculators-widget-select-group.is-hidden {
     display: none
-}
+} */
 
 .mortgage-calculators-widget-select-subtext {
     margin-top: 8px;
@@ -715,9 +715,9 @@ div.rates-calculator-results {
     overflow-y: auto
 }
 
-.mortgage-calculators-widget-results.is-hidden {
+/* .mortgage-calculators-widget-results.is-hidden {
     display: none
-}
+} */
 
 .mortgage-calculators-widget-subtitle {
     font-size: 14px;
@@ -740,15 +740,15 @@ div.rates-calculator-results {
     margin-top: 2px
 }
 
-.mortgage-calculators-widget-tables-href {
+/* .mortgage-calculators-widget-tables-href {
     display: none;
     margin-top: 30px;
     text-align: center
-}
+} */
 
-.mortgage-calculators-widget-tables-href.is-active {
+/* .mortgage-calculators-widget-tables-href.is-active {
     display: block
-}
+} */
 
 .mortgage-calculators-widget-tables-container {
     overflow: auto;
@@ -1027,13 +1027,13 @@ div.rates-calculator-results {
     color: #000000de
 }
 
-.rates-calculator-results-payment-wrapper.rates-breakdown-active {
+/* .rates-calculator-results-payment-wrapper.rates-breakdown-active {
     padding-bottom: 14px
-}
+} */
 
-.rates-calculator-results-payment-wrapper.rates-breakdown-active>.rates-calculator-results-payment>.rates-calculator-payments-details-arrow-payment {
+/* .rates-calculator-results-payment-wrapper.rates-breakdown-active>.rates-calculator-results-payment>.rates-calculator-payments-details-arrow-payment {
     content: url(ratesPayment/Down.svg)
-}
+} */
 
 .rates-calculator-results-payment>.rates-calculator-payments-details-arrow-payment {
     content: url(ratesPayment/Right.svg)
@@ -1158,14 +1158,14 @@ div.rates-calculator-results {
     height: 64px
 }
 
-.rates-breakdown-active>.rates-calculator-payments-details,
+/* .rates-breakdown-active>.rates-calculator-payments-details,
 .rates-breakdown-active>.rates-calculator-breakdown-table-wrapper {
     display: block
-}
+} */
 
-.rates-breakdown-active .rates-calculator-payments-preloader {
+/* .rates-breakdown-active .rates-calculator-payments-preloader {
     display: flex
-}
+} */
 
 .rates-calculator-results-td.payment {
     padding: 0 24px 16px
@@ -1719,17 +1719,17 @@ form.free-consult-form {
     }
 }
 
-.velocify-lead-section-container.hide-section {
+/* .velocify-lead-section-container.hide-section {
     display: none
-}
+} */
 
 .thank-you-page-container {
     padding: 1px
 }
 
-.thank-you-page-container.hide-section {
+/* .thank-you-page-container.hide-section {
     display: none
-}
+} */
 
 .thank-you-page-container:focus,
 .velocify-lead-thank-you-page-header:focus {
@@ -1985,9 +1985,9 @@ form.free-consult-form select.velocify-form-field-error:focus {
     padding: 10px
 }
 
-.mobile-banner-wrapper.hide {
+/* .mobile-banner-wrapper.hide {
     display: none
-}
+} */
 
 .mobile-banner-wrapper .top-row {
     display: flex;

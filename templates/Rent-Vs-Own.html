@@ -1,222 +1,167 @@
-
 <div class="mortgage-calculators-widget">
   <div class="mortgage-calculators-widget-wrapper">
-    <div
-      class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left Rent Vs. Own-calculator-container">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left Rent Vs. Own-calculator-container">
       <h2 class="mortgage-calculators-widget-title theme-title-text">Rent Vs. Own Calculator</h2>
-      <p class="mortgage-calculators-widget-description theme-body-text">Calculate the difference between renting
-        and buying a home.</p>
-      <form class="mortgage-calculators-widget-form Rent Vs. Own-form"
-        id="mortgage-calculators-widget-form-js-askmortgageauthority" onsubmit="onCalculatorSubmit(event)"
-        novalidate=""><input type="hidden" name="type" value="Rent Vs. Own" autocomplete="off" class="">
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="monthlyrent-askmortgageauthority">Monthly Rent</label>
+      <p class="mortgage-calculators-widget-description theme-body-text">Calculate the difference between renting and buying a home.</p>
+      <form class="mortgage-calculators-widget-form Rent Vs. Own-form" id="mortgage-calculators-widget-form-js-askmortgageauthority" onsubmit="onCalculatorSubmit(event)" novalidate="">
+        <input type="hidden" name="type" value="Rent Vs. Own" autocomplete="off" class="">
+        
+        <!-- Monthly Rent -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="monthlyrent-askmortgageauthority">Monthly Rent</label>
           <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input is-amount" type="text"
-              id="monthlyrent-askmortgageauthority" name="monthlyrent" autocomplete="off" placeholder="0.00"
-              data-min="1" data-max="100000" onkeyup="onInputKeyUp(event, &#39;amount&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;amount&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="monthlyrent-askmortgageauthority" name="monthlyrent" autocomplete="off" placeholder="0.00" data-min="1" data-max="100000" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="annualrentincrease-askmortgageauthority">Annual Rent Increase</label>
+
+        <!-- Annual Rent Increase -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="annualrentincrease-askmortgageauthority">Annual Rent Increase</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="annualrentincrease-askmortgageauthority" name="annualrentincrease" autocomplete="off"
-              placeholder="0" value="" data-min="0" data-max="25"
-              onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="annualrentincrease-askmortgageauthority" name="annualrentincrease" autocomplete="off" placeholder="0" value="" data-min="0" data-max="25" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="monthlyrentersinsurance-askmortgageauthority">Monthly Renter's Insurance</label>
+
+        <!-- Monthly Renter's Insurance -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="monthlyrentersinsurance-askmortgageauthority">Monthly Renter's Insurance</label>
           <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input is-amount" type="text"
-              id="monthlyrentersinsurance-askmortgageauthority" name="monthlyrentersinsurance" autocomplete="off"
-              placeholder="0.00" value="" data-min="0" data-max="10000"
-              onkeyup="onInputKeyUp(event, &#39;amount&#39;)" onkeydown="onInputKeyDown(event, &#39;amount&#39;)"
-              required="">
+            <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="monthlyrentersinsurance-askmortgageauthority" name="monthlyrentersinsurance" autocomplete="off" placeholder="0.00" value="" data-min="0" data-max="10000" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="homepurchaseprice-askmortgageauthority">Home Purchase Price</label>
+
+        <!-- Home Purchase Price -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="homepurchaseprice-askmortgageauthority">Home Purchase Price</label>
           <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input is-amount" type="text"
-              id="homepurchaseprice-askmortgageauthority" name="homepurchaseprice" autocomplete="off"
-              placeholder="0.00" data-min="1" data-max="1000000000" onkeyup="onInputKeyUp(event, &#39;amount&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;amount&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="homepurchaseprice-askmortgageauthority" name="homepurchaseprice" autocomplete="off" placeholder="0.00" data-min="1" data-max="1000000000" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="downpayment-askmortgageauthority">Down Payment</label>
+
+        <!-- Down Payment -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="downpayment-askmortgageauthority">Down Payment</label>
           <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input is-amount" type="text"
-              id="downpayment-askmortgageauthority" name="downpayment" autocomplete="off" placeholder="0.00"
-              data-lessthan="Home Purchase Price" onkeyup="onInputKeyUp(event, &#39;amount&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;amount&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="downpayment-askmortgageauthority" name="downpayment" autocomplete="off" placeholder="0.00" data-lessthan="Home Purchase Price" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="mortgageinterestrate-askmortgageauthority">Mortgage Interest Rate</label>
+
+        <!-- Mortgage Interest Rate -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mortgageinterestrate-askmortgageauthority">Mortgage Interest Rate</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="mortgageinterestrate-askmortgageauthority" name="mortgageinterestrate" autocomplete="off"
-              placeholder="0" data-min="0" data-max="25" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="mortgageinterestrate-askmortgageauthority" name="mortgageinterestrate" autocomplete="off" placeholder="0" data-min="0" data-max="25" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="estimatedhomepurchasecosts-askmortgageauthority">Estimated Home Purchase Costs</label>
+
+        <!-- Estimated Home Purchase Costs -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="estimatedhomepurchasecosts-askmortgageauthority">Estimated Home Purchase Costs</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="estimatedhomepurchasecosts-askmortgageauthority" name="estimatedhomepurchasecosts"
-              autocomplete="off" placeholder="0" value="" data-min="0" data-max="20"
-              onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="estimatedhomepurchasecosts-askmortgageauthority" name="estimatedhomepurchasecosts" autocomplete="off" placeholder="0" value="" data-min="0" data-max="20" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="propertytaxrate-askmortgageauthority">Property Tax Rate</label>
+
+        <!-- Property Tax Rate -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="propertytaxrate-askmortgageauthority">Property Tax Rate</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="propertytaxrate-askmortgageauthority" name="propertytaxrate" autocomplete="off" placeholder="0"
-              value="" data-min="0" data-max="50" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="propertytaxrate-askmortgageauthority" name="propertytaxrate" autocomplete="off" placeholder="0" value="" data-min="0" data-max="50" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="annualhomemaintenance-askmortgageauthority">Annual Home Maintenance</label>
+
+        <!-- Annual Home Maintenance -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="annualhomemaintenance-askmortgageauthority">Annual Home Maintenance</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="annualhomemaintenance-askmortgageauthority" name="annualhomemaintenance" autocomplete="off"
-              placeholder="0" value="" data-min="0" data-max="50"
-              onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="annualhomemaintenance-askmortgageauthority" name="annualhomemaintenance" autocomplete="off" placeholder="0" value="" data-min="0" data-max="50" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="howlongbeforeselling-askmortgageauthority">How long before selling?</label>
+
+        <!-- How long before selling? -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="howlongbeforeselling-askmortgageauthority">How long before selling?</label>
           <div class="mortgage-calculators-widget-input-container is-year">
-            <input class="mortgage-calculators-widget-input is-year" type="text"
-              id="howlongbeforeselling-askmortgageauthority" name="howlongbeforeselling" autocomplete="off" value=""
-              data-min="1" data-max="99" onkeyup="onInputKeyUp(event, &#39;year&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;year&#39;)" required="">
-            <label
-              class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            <input class="mortgage-calculators-widget-input is-year form-control" type="text" id="howlongbeforeselling-askmortgageauthority" name="howlongbeforeselling" autocomplete="off" value="" data-min="1" data-max="99" onkeyup="onInputKeyUp(event, 'year')" onkeydown="onInputKeyDown(event, 'year')" required="">
+            <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="annualhomeappreciation-askmortgageauthority">Annual Home Appreciation</label>
+
+        <!-- Annual Home Appreciation -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="annualhomeappreciation-askmortgageauthority">Annual Home Appreciation</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="annualhomeappreciation-askmortgageauthority" name="annualhomeappreciation" autocomplete="off"
-              placeholder="0" value="" data-allownegative="true" data-min="-50" data-max="50"
-              onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="annualhomeappreciation-askmortgageauthority" name="annualhomeappreciation" autocomplete="off" placeholder="0" value="" data-allownegative="true" data-min="-50" data-max="50" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="sellingcosts-askmortgageauthority">Selling Costs</label>
+
+        <!-- Selling Costs -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="sellingcosts-askmortgageauthority">Selling Costs</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="sellingcosts-askmortgageauthority" name="sellingcosts" autocomplete="off" placeholder="0" value=""
-              data-min="0" data-max="20" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="sellingcosts-askmortgageauthority" name="sellingcosts" autocomplete="off" placeholder="0" value="" data-min="0" data-max="20" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="interestearnedondownpayment-askmortgageauthority">Interest Earned on Down Payment</label>
+
+        <!-- Interest Earned on Down Payment -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="interestearnedondownpayment-askmortgageauthority">Interest Earned on Down Payment</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="interestearnedondownpayment-askmortgageauthority" name="interestearnedondownpayment"
-              autocomplete="off" placeholder="0" value="" data-min="0" data-max="100"
-              onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="interestearnedondownpayment-askmortgageauthority" name="interestearnedondownpayment" autocomplete="off" placeholder="0" value="" data-min="0" data-max="100" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="yourincometaxrate-askmortgageauthority">Your Income Tax Rate</label>
+
+        <!-- Your Income Tax Rate -->
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="yourincometaxrate-askmortgageauthority">Your Income Tax Rate</label>
           <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="yourincometaxrate-askmortgageauthority" name="yourincometaxrate" autocomplete="off"
-              placeholder="0" value="" data-min="0" data-max="100"
-              onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
+            <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="yourincometaxrate-askmortgageauthority" name="yourincometaxrate" autocomplete="off" placeholder="0" value="" data-min="0" data-max="100" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
             <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
           </div>
         </div>
-        <input type="submit" value="Calculate" class="mortgage-calculators-widget-submit btn theme-button">
-        <p class="mortgage-calculators-widget-disclaimer">Default amounts are hypothetical and may not apply to your
-          individual situation. This calculator provides approximations for informational purposes only. Actual
-          results will be provided by your lender and will likely vary depending on your eligibility and current
-          market rates.</p>
+
+        <input type="submit" value="Calculate" class="mortgage-calculators-widget-submit btn btn-primary theme-button">
+        <p class="mortgage-calculators-widget-disclaimer">Default amounts are hypothetical and may not apply to your individual situation. This calculator provides approximations for informational purposes only. Actual results will be provided by your lender and will likely vary depending on your eligibility and current market rates.</p>
       </form>
     </div>
     <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--right">
-      <h2 class="mortgage-calculators-widget-title theme-body-text"
-        id="mortgage-calculators-widget-results-title-js-askmortgageauthority">Results</h2>
-      <button class="mortgage-calculators-widget-print theme-title-text" onclick="window.print()"
-        onkeypress="window.ConsumerConnectApps.callOnEnter(event, window.print)">Print</button>
-      <div class="line-item-calculator-results" id="mortgage-calculators-widget-results-js-askmortgageauthority"
-        tabindex="0">
+      <h2 class="mortgage-calculators-widget-title theme-body-text" id="mortgage-calculators-widget-results-title-js-askmortgageauthority">Results</h2>
+      <button class="mortgage-calculators-widget-print theme-title-text btn btn-secondary" onclick="window.print()" onkeypress="window.ConsumerConnectApps.callOnEnter(event, window.print)">Print</button>
+      <div class="line-item-calculator-results" id="mortgage-calculators-widget-results-js-askmortgageauthority" tabindex="0">
         <div class="mortgage-calculators-widget-results">
           <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Should you Rent or Own?</h3>
-          <div class="mortgage-calculators-widget-result theme-body-text" id="shouldyourentorown?" data-type="text"
-            data-placeholder="--">--</div>
+          <div class="mortgage-calculators-widget-result theme-body-text" id="shouldyourentorown?" data-type="text" data-placeholder="--">--</div>
         </div>
         <div class="mortgage-calculators-widget-results">
           <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Average Monthly Payment Savings</h3>
-          <div class="mortgage-calculators-widget-result theme-body-text" id="averagemonthlypaymentsavings"
-            data-type="amount" data-placeholder="$0.00">$0.00</div>
+          <div class="mortgage-calculators-widget-result theme-body-text" id="averagemonthlypaymentsavings" data-type="amount" data-placeholder="$0.00">$0.00</div>
         </div>
         <div class="mortgage-calculators-widget-results">
           <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Estimated Total Gain</h3>
-          <div class="mortgage-calculators-widget-result theme-body-text" id="estimatedtotalgain" data-type="amount"
-            data-placeholder="$0.00">$0.00</div>
+          <div class="mortgage-calculators-widget-result theme-body-text" id="estimatedtotalgain" data-type="amount" data-placeholder="$0.00">$0.00</div>
         </div>
       </div>
       <div class="rates-calculator-results" id="rates-calculator-results-js-askmortgageauthority" tabindex="0">
       </div>
 
-      <div class="mortgage-calculators-widget-tables-container"
-        id="mortgage-calculators-widget-tables-grandtotal-js-askmortgageauthority" tabindex="0">
+      <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-grandtotal-js-askmortgageauthority" tabindex="0">
       </div>
-      <a class="theme-color-links mortgage-calculators-widget-tables-href" tabindex="0"
-        id="mortgage-calculators-widget-tables-href-js-askmortgageauthority"
-        href="https://www.gmccloan.com/RentVsOwn.html#mortgage-calculators-widget-tables-js-askmortgageauthority"
-        aria-label="See full report below on the same page">
+      <a class="theme-color-links mortgage-calculators-widget-tables-href" tabindex="0" id="mortgage-calculators-widget-tables-href-js-askmortgageauthority" href="/RentVsOwn.html#mortgage-calculators-widget-tables-js-askmortgageauthority" aria-label="See full report below on the same page">
         See Full Report Below
       </a>
     </div>
-    <div class="mortgage-calculators-widget-tables-container"
-      id="mortgage-calculators-widget-tables-js-askmortgageauthority"></div>
+    <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-js-askmortgageauthority"></div>
   </div>
-
-
-
+</div>

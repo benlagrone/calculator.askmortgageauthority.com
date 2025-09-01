@@ -1,0 +1,64 @@
+/* Mobile/Tablet: up to and including iPad size (1024px) */
+@media (max-width: 1024px) {
+    #main.chat-closed {
+        height:80vh;
+    }
+    #main.chat-open {
+        height:60vh;
+        overflow:scroll;
+    }
+    #chatbot-wrapper.chat-closed {
+        height:10vh;
+    }
+    #chatbot-wrapper.chat-closed #mortgage-chatbot-iframe {
+      position:fixed;
+    }
+    #chatbot-wrapper.chat-open {
+        height:40vh;
+    }
+    #chatbot-wrapper.chat-open #mortgage-chatbot-iframe {
+        height:40vh;
+    }
+  }
+  
+  /* Desktop: above iPad size */
+  @media (min-width: 1025px) {
+    #main.chat-closed {
+      /* Your styles here */
+    }
+    #main.chat-open {
+      /* Your styles here */
+    }
+    #chatbot-wrapper.chat-closed {
+      /* Your styles here */
+      width: 42vw;
+      /* height: 40%; */
+      float: right;
+      position: fixed;
+      right: 0px;
+      margin: 0 10px 0 0;
+      bottom: 0;
+    }
+    #chatbot-wrapper.chat-closed #mortgage-chatbot-iframe {
+      /* Your styles here */
+    }
+    #chatbot-wrapper.chat-open {
+      /* Your styles here */
+      width: 42vw;
+    height: 40%;
+    float: right;
+    position: fixed;
+    right: 0px;
+    margin: 0 10px 0 0;
+    bottom: 0;
+    }
+    #chatbot-wrapper.chat-open #mortgage-chatbot-iframe {
+      /* Your styles here */
+      height: 42vh;
+    }
+  }
+  
+  /* General iframe style */
+  #mortgage-chatbot-iframe {
+    width: 100%;
+  }

@@ -1,0 +1,48 @@
+.mortgage-calculators-widget-form-group.is-hidden,
+.mortgage-calculators-widget-radio-group.is-hidden,
+.mortgage-calculators-widget-select-group.is-hidden {
+    display: none
+}
+.mortgage-calculators-widget-results.is-hidden {
+    display: none
+}
+.hide-empty-widget-placeholders .empty-widget-placeholder-container {
+    display: none
+}
+.velocify-lead-section-container.hide-section {
+    display: none
+}
+.thank-you-page-container.hide-section {
+    display: none
+}
+.mobile-banner-wrapper.hide {
+    display: none
+}
+@media all and (-ms-high-contrast:none),
+(-ms-high-contrast:active) {
+    .map-widget-click-overlay {
+        display: block
+    }
+}
+.mortgage-calculators-widget-tables-href.is-active {
+    display: block
+}
+.rates-calculator-results-payment-wrapper.rates-breakdown-active {
+    padding-bottom: 14px
+}
+.rates-calculator-results-payment-wrapper.rates-breakdown-active>.rates-calculator-results-payment>.rates-calculator-payments-details-arrow-payment {
+    content: url(ratesPayment/Down.svg)
+}
+.rates-breakdown-active>.rates-calculator-payments-details,
+.rates-breakdown-active>.rates-calculator-breakdown-table-wrapper {
+    display: block
+}
+.rates-breakdown-active .rates-calculator-payments-preloader {
+    display: flex
+}
+.mortgage-calculators-widget-tables-href {
+    display: none;
+}
+.mortgage-calculators-widget-submit.remove-debt {
+    display: none;
+}

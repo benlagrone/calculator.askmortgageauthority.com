@@ -53,43 +53,46 @@ function toggleCalculatorDropdownOrRadio(t) {
     }
 }
 
-function onInputKeyDown(t, e) {
-    if (!([8, 9, 37, 38, 39, 40, 46].indexOf(t.keyCode) > -1)) {
-        if (RatesCalculator.utils && RatesCalculator.utils.getNumberOfWholeDigits(t.target.value) > t.target.dataset.maxwholenumbers) return void t.preventDefault();
-        t.target.dataset.previousValue = t.target.value;
-        var a = "true" === t.target.dataset.allownegative;
-        switch (e) {
-            case "number":
-                MortgageCalculatorUtils.allowNumbersOnly(t, 0, 100, a);
+function onInputKeyDown(event, type) {
+    if (!([8, 9, 37, 38, 39, 40, 46].indexOf(event.keyCode) > -1)) {
+        if (RatesCalculator.utils && RatesCalculator.utils.getNumberOfWholeDigits(event.target.value) > event.target.dataset.maxwholenumbers) return void event.preventDefault();
+        event.target.dataset.previousValue = event.target.value;
+        var allowNegative = event.target.dataset.allownegative === 'true';
+        switch (type) {
+            case 'number':
+                MortgageCalculatorUtils.allowNumbersOnly(event, 0, 100, allowNegative);
                 break;
-            case "amount":
-                MortgageCalculatorUtils.allowNumbersOnly(t, 2, 100, a);
+            case 'amount':
+                MortgageCalculatorUtils.allowNumbersOnly(event, 2, 100, allowNegative);
                 break;
-            case "percentage":
-                MortgageCalculatorUtils.allowNumbersOnly(t, 3, 100, a);
+            case 'percentage':
+                MortgageCalculatorUtils.allowNumbersOnly(event, 3, 100, allowNegative);
                 break;
-            case "year":
-                MortgageCalculatorUtils.allowNumbersOnly(t, 0, 2, a);
+            case 'year':
+                MortgageCalculatorUtils.allowNumbersOnly(event, 0, 2, allowNegative);
                 break;
-            case "month":
-                MortgageCalculatorUtils.allowNumbersOnly(t, 0, 3, a);
+            case 'month':
+                MortgageCalculatorUtils.allowNumbersOnly(event, 0, 3, allowNegative);
                 break;
-            case "zip":
-                MortgageCalculatorUtils.allowNumbersOnly(t, 0, 5, !1)
+            case 'zip':
+                MortgageCalculatorUtils.allowNumbersOnly(event, 0, 5, false);
         }
     }
 }
 
-function onInputKeyUp(t, e) {
-    if (!([9, 16, 37, 38, 39, 40].indexOf(t.keyCode) > -1)) {
-        var a = "true" === t.target.dataset.allownegative;
-        switch (e) {
-            case "amount":
-                var r = t.target.dataset.maxwholenumbers;
-                r && RatesCalculator.utils && RatesCalculator.utils.getNumberOfWholeDigits(t.target.value) > r && (t.target.value = t.target.dataset.previousValue), t.target.value = MortgageCalculatorUtils.formatNumbers(t.target.value, 2, !0, a);
+function onInputKeyUp(event, type) {
+    if (!([9, 16, 37, 38, 39, 40].indexOf(event.keyCode) > -1)) {
+        var allowNegative = event.target.dataset.allownegative === 'true';
+        switch (type) {
+            case 'amount':
+                var maxWholeNumbers = event.target.dataset.maxwholenumbers;
+                if (maxWholeNumbers && RatesCalculator.utils && RatesCalculator.utils.getNumberOfWholeDigits(event.target.value) > maxWholeNumbers) {
+                    event.target.value = event.target.dataset.previousValue;
+                }
+                event.target.value = MortgageCalculatorUtils.formatNumbers(event.target.value, 2, true, allowNegative);
                 break;
-            case "percentage":
-                t.target.value = MortgageCalculatorUtils.formatNumbers(t.target.value, 3, !1, a)
+            case 'percentage':
+                event.target.value = MortgageCalculatorUtils.formatNumbers(event.target.value, 3, false, allowNegative);
         }
     }
 }

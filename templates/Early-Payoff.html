@@ -1,117 +1,84 @@
-
-
-
-  <div class="mortgage-calculators-widget-wrapper">
-    <div
-      class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left Early Payoff-calculator-container">
-      <h2 class="mortgage-calculators-widget-title theme-title-text">Early Payoff Calculator</h2>
-      <p class="mortgage-calculators-widget-description theme-body-text">Find the additional payment required to pay
-        off your loan early.</p>
-      <form class="mortgage-calculators-widget-form Early Payoff-form"
-        id="mortgage-calculators-widget-form-js-askmortgageauthority" onsubmit="onCalculatorSubmit(event)"
-        novalidate=""><input type="hidden" name="type" value="Early Payoff" autocomplete="off" class="">
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="originalloanamount-askmortgageauthority">Original Loan Amount</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input is-amount" type="text"
-              id="originalloanamount-askmortgageauthority" name="originalloanamount" autocomplete="off"
-              placeholder="0.00" data-min="1" data-max="10000000" onkeyup="onInputKeyUp(event, &#39;amount&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;amount&#39;)" required="">
-            <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
-          </div>
-        </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="originalinterestrate-askmortgageauthority">Original Interest Rate</label>
-          <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input is-percentage" type="text"
-              id="originalinterestrate-askmortgageauthority" name="originalinterestrate" autocomplete="off"
-              placeholder="0" data-min="0.001" data-max="25" onkeyup="onInputKeyUp(event, &#39;percentage&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;percentage&#39;)" required="">
-            <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
-          </div>
-        </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="originalloanterm-askmortgageauthority">Original Loan Term</label>
-          <div class="mortgage-calculators-widget-input-container is-year">
-            <input class="mortgage-calculators-widget-input is-year" type="text"
-              id="originalloanterm-askmortgageauthority" name="originalloanterm" autocomplete="off" data-min="1"
-              data-max="40" onkeyup="onInputKeyUp(event, &#39;year&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;year&#39;)" required="">
-            <label
-              class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
-          </div>
-        </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="monthsalreadypaid-askmortgageauthority">Months Already Paid</label>
-          <div class="mortgage-calculators-widget-input-container is-month">
-            <input class="mortgage-calculators-widget-input is-month" type="text"
-              id="monthsalreadypaid-askmortgageauthority" name="monthsalreadypaid" autocomplete="off" data-min="1"
-              data-max="999" onkeyup="onInputKeyUp(event, &#39;month&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;month&#39;)" required="">
-            <label
-              class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
-          </div>
-        </div>
-        <div class="mortgage-calculators-widget-form-group row">
-          <label class="mortgage-calculators-widget-label theme-body-text"
-            for="requestedyearstopayoff-askmortgageauthority">Requested Years to Payoff</label>
-          <div class="mortgage-calculators-widget-input-container is-year">
-            <input class="mortgage-calculators-widget-input is-year" type="text"
-              id="requestedyearstopayoff-askmortgageauthority" name="requestedyearstopayoff" autocomplete="off"
-              data-min="1" data-max="99" onkeyup="onInputKeyUp(event, &#39;year&#39;)"
-              onkeydown="onInputKeyDown(event, &#39;year&#39;)" required="">
-            <label
-              class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
-          </div>
-        </div>
-        <input type="submit" value="Calculate" class="mortgage-calculators-widget-submit btn theme-button">
-        <p class="mortgage-calculators-widget-disclaimer">Default amounts are hypothetical and may not apply to your
-          individual situation. This calculator provides approximations for informational purposes only. Actual
-          results will be provided by your lender and will likely vary depending on your eligibility and current
-          market rates.</p>
-      </form>
-    </div>
-    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--right">
-      <h2 class="mortgage-calculators-widget-title theme-body-text"
-        id="mortgage-calculators-widget-results-title-js-askmortgageauthority">Results</h2>
-      <button class="mortgage-calculators-widget-print theme-title-text" onclick="window.print()"
-        onkeypress="window.ConsumerConnectApps.callOnEnter(event, window.print)">Print</button>
-      <div class="line-item-calculator-results" id="mortgage-calculators-widget-results-js-askmortgageauthority"
-        tabindex="0">
-        <div class="mortgage-calculators-widget-results">
-          <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Current Monthly Payment</h3>
-          <div class="mortgage-calculators-widget-result theme-body-text" id="currentmonthlypayment"
-            data-type="amount" data-placeholder="$0.00">$0.00</div>
-        </div>
-        <div class="mortgage-calculators-widget-results">
-          <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Early Payoff Monthly Payment</h3>
-          <div class="mortgage-calculators-widget-result theme-body-text" id="earlypayoffmonthlypayment"
-            data-type="amount" data-placeholder="$0.00">$0.00</div>
-        </div>
-        <div class="mortgage-calculators-widget-results">
-          <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Additional Monthly Payment</h3>
-          <div class="mortgage-calculators-widget-result theme-body-text" id="additionalmonthlypayment"
-            data-type="amount" data-placeholder="$0.00">$0.00</div>
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left Early Payoff-calculator-container">
+    <h2 class="mortgage-calculators-widget-title theme-title-text">Early Payoff Calculator</h2>
+    <p class="mortgage-calculators-widget-description theme-body-text">Find the additional payment required to pay off your loan early.</p>
+    <form class="mortgage-calculators-widget-form Early Payoff-form" id="mortgage-calculators-widget-form-js-askmortgageauthority" onsubmit="onCalculatorSubmit(event)" novalidate="">
+      <input type="hidden" name="type" value="Early Payoff" autocomplete="off" class="">
+      
+      <!-- Original Loan Amount -->
+      <div class="mortgage-calculators-widget-form-group row form-group">
+        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="originalloanamount-askmortgageauthority">Original Loan Amount</label>
+        <div class="mortgage-calculators-widget-input-container is-amount">
+          <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="originalloanamount-askmortgageauthority" name="originalloanamount" autocomplete="off" placeholder="0.00" data-min="1" data-max="10000000" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
+          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
         </div>
       </div>
-      <div class="rates-calculator-results" id="rates-calculator-results-js-askmortgageauthority" tabindex="0">
+
+      <!-- Original Interest Rate -->
+      <div class="mortgage-calculators-widget-form-group row form-group">
+        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="originalinterestrate-askmortgageauthority">Original Interest Rate</label>
+        <div class="mortgage-calculators-widget-input-container is-percentage">
+          <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="originalinterestrate-askmortgageauthority" name="originalinterestrate" autocomplete="off" placeholder="0" data-min="0.001" data-max="25" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
+          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+        </div>
       </div>
 
-      <div class="mortgage-calculators-widget-tables-container"
-        id="mortgage-calculators-widget-tables-grandtotal-js-askmortgageauthority" tabindex="0">
+      <!-- Original Loan Term -->
+      <div class="mortgage-calculators-widget-form-group row form-group">
+        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="originalloanterm-askmortgageauthority">Original Loan Term</label>
+        <div class="mortgage-calculators-widget-input-container is-year">
+          <input class="mortgage-calculators-widget-input is-year form-control" type="text" id="originalloanterm-askmortgageauthority" name="originalloanterm" autocomplete="off" data-min="1" data-max="40" onkeyup="onInputKeyUp(event, 'year')" onkeydown="onInputKeyDown(event, 'year')" required="">
+          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+        </div>
       </div>
-      <a class="theme-color-links mortgage-calculators-widget-tables-href" tabindex="0"
-        id="mortgage-calculators-widget-tables-href-js-askmortgageauthority"
-        href="https://www.gmccloan.com/EarlyPayoff.html#mortgage-calculators-widget-tables-js-askmortgageauthority"
-        aria-label="See full report below on the same page">
-        See Full Report Below
-      </a>
-    </div>
-    <div class="mortgage-calculators-widget-tables-container"
-      id="mortgage-calculators-widget-tables-js-askmortgageauthority"></div>
+
+      <!-- Months Already Paid -->
+      <div class="mortgage-calculators-widget-form-group row form-group">
+        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="monthsalreadypaid-askmortgageauthority">Months Already Paid</label>
+        <div class="mortgage-calculators-widget-input-container is-month">
+          <input class="mortgage-calculators-widget-input is-month form-control" type="text" id="monthsalreadypaid-askmortgageauthority" name="monthsalreadypaid" autocomplete="off" data-min="1" data-max="999" onkeyup="onInputKeyUp(event, 'month')" onkeydown="onInputKeyDown(event, 'month')" required="">
+          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+        </div>
+      </div>
+
+      <!-- Requested Years to Payoff -->
+      <div class="mortgage-calculators-widget-form-group row form-group">
+        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="requestedyearstopayoff-askmortgageauthority">Requested Years to Payoff</label>
+        <div class="mortgage-calculators-widget-input-container is-year">
+          <input class="mortgage-calculators-widget-input is-year form-control" type="text" id="requestedyearstopayoff-askmortgageauthority" name="requestedyearstopayoff" autocomplete="off" data-min="1" data-max="99" onkeyup="onInputKeyUp(event, 'year')" onkeydown="onInputKeyDown(event, 'year')" required="">
+          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+        </div>
+      </div>
+
+      <input type="submit" value="Calculate" class="mortgage-calculators-widget-submit btn btn-primary theme-button">
+      <p class="mortgage-calculators-widget-disclaimer">Default amounts are hypothetical and may not apply to your individual situation. This calculator provides approximations for informational purposes only. Actual results will be provided by your lender and will likely vary depending on your eligibility and current market rates.</p>
+    </form>
   </div>
+  <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--right">
+    <h2 class="mortgage-calculators-widget-title theme-body-text" id="mortgage-calculators-widget-results-title-js-askmortgageauthority">Results</h2>
+    <button class="mortgage-calculators-widget-print theme-title-text btn btn-secondary" onclick="window.print()" onkeypress="window.ConsumerConnectApps.callOnEnter(event, window.print)">Print</button>
+    <div class="line-item-calculator-results" id="mortgage-calculators-widget-results-js-askmortgageauthority" tabindex="0">
+      <div class="mortgage-calculators-widget-results">
+        <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Current Monthly Payment</h3>
+        <div class="mortgage-calculators-widget-result theme-body-text" id="currentmonthlypayment" data-type="amount" data-placeholder="$0.00">$0.00</div>
+      </div>
+      <div class="mortgage-calculators-widget-results">
+        <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Early Payoff Monthly Payment</h3>
+        <div class="mortgage-calculators-widget-result theme-body-text" id="earlypayoffmonthlypayment" data-type="amount" data-placeholder="$0.00">$0.00</div>
+      </div>
+      <div class="mortgage-calculators-widget-results">
+        <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Additional Monthly Payment</h3>
+        <div class="mortgage-calculators-widget-result theme-body-text" id="additionalmonthlypayment" data-type="amount" data-placeholder="$0.00">$0.00</div>
+      </div>
+    </div>
+    <div class="rates-calculator-results" id="rates-calculator-results-js-askmortgageauthority" tabindex="0">
+    </div>
 
+    <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-grandtotal-js-askmortgageauthority" tabindex="0">
+    </div>
+    <a class="theme-color-links mortgage-calculators-widget-tables-href" tabindex="0" id="mortgage-calculators-widget-tables-href-js-askmortgageauthority" href="/EarlyPayoff.html#mortgage-calculators-widget-tables-js-askmortgageauthority" aria-label="See full report below on the same page">
+      See Full Report Below
+    </a>
+  </div>
+  <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-js-askmortgageauthority"></div>
+</div>

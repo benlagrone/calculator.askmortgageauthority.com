@@ -1,4 +1,4 @@
-var home = 'home'
+var home = 'Home'
 // DOMContentLoaded listener (already correct)
 document.addEventListener('DOMContentLoaded', function() {
   const calculatorType = window.location.pathname.split('/').pop().replace('.html', '') || home;
@@ -48,6 +48,25 @@ document.addEventListener('click', function(e) {
       const calculatorType = e.target.getAttribute('data-calculator');
       history.pushState({}, '', `/${calculatorType}`);
       loadCalculator(calculatorType);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const currentUrl = window.location.href;
+  const homeUrl = 'https://askmortgageauthority.com/';
+  const calculatorUrl = 'https://calculator.askmortgageauthority.com/';
+  const localUrl = 'http://[::]:8888/';
+
+  const homeLink = document.querySelector('a[href="https://askmortgageauthority.com/"]');
+  const calculatorLink = document.querySelector('a[href="https://calculator.askmortgageauthority.com/"]');
+
+  if (currentUrl === homeUrl && homeLink) {
+    homeLink.classList.add('active');
+  } else if (currentUrl === calculatorUrl && calculatorLink) {
+    calculatorLink.classList.add('active');
+  } else if (currentUrl.startsWith(localUrl) && calculatorLink) {
+    // Assuming local URL should activate the calculator link
+    calculatorLink.classList.add('active');
   }
 });
 

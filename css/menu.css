@@ -102,22 +102,35 @@
       display: block;
     }
   }
-#logo {
-    width:84px;
-    border-radius:4px;
-    background-color:white;    position: relative;
-    top: 7px;
-    left: 20px;
-}
-
-  .custom-logo-link, .site-logo {
-    max-height: 30px;
-    max-width: 80px;
+  #logo {
+    display: flex;
+    align-items: center;
+    width: 176px; /* 84px + 84px + 8px spacing */
+    margin:8px;
+  }
+  
+  .logo-img, .logo-icon {
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  .logo-img {
+    width: 84px;
+    height: 84px;
+  }
+  
+  .logo-icon {
+    width: 84px;
+    height: 84px;
+    font-size: 1.5rem;
+    color: #000;
   }
 
-  .custom-logo-link img{
-    max-width:100%
+  .active {
+    border-bottom: 2px solid #ff6600; /* Example active style */
   }
+  
   /* Find and modify the hamburger menu button styles */
   .hamburger-menu {
     display: none;
