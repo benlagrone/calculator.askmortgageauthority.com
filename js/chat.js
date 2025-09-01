@@ -1,6 +1,9 @@
 (function () {
     const iframe = document.createElement('iframe');
-    iframe.src = 'http://localhost:9000/static/chat.html';
+    // Use configurable chat URL from meta tag, fallback to localhost for local dev
+    const meta = document.querySelector('meta[name="chat-iframe-url"]');
+    const chatUrl = meta && meta.content ? meta.content : 'http://localhost:9000/static/chat.html';
+    iframe.src = chatUrl;
     iframe.id = 'mortgage-chatbot-iframe';
     iframe.className = 'chat-closed';
 

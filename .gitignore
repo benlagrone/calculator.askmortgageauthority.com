@@ -1,2 +1,14 @@
 Archive.zip
 .DS_Store
+venv/
+Archive*.zip
+*.zip
+node_modules/
+dist/
+build/
+*.log
+.env
+.env.*
+__pycache__/
+.pytest_cache/
+coverage/
