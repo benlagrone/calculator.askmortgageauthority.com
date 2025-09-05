@@ -1,0 +1,1030 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+	<style TYPE="text/css"><!--
+.calendar-box {
+	display:none;
+	background-color:#fff;
+	border:1px solid #444;
+	position:absolute;
+	width:250px;
+	padding: 0 5px;
+}
+.calendar-box select.calendar-month {
+	width:90px;
+}
+.calendar-box select.calendar-year {
+	width:70px;
+}
+.calendar-box .calendar-cancel {
+	width:100%;
+}
+.calendar-box table td {
+	width:14%;
+}
+.calendar-box .calendar-title {
+	text-align:center;
+}
+.calendar-box a {
+	text-decoration:none;
+}
+.calendar-box .today a {
+	padding:0 5px;
+	margin-left:-5px;
+	background-color:#ffe9c6;
+} 
+.calendar-box .selected a {
+	padding:0 5px;
+	margin-left:-5px;
+	background-color:#c9ff8b;
+}
+--></style>
+
+<script src="http://www.openjs.com/js/jsl.js" type="text/javascript"></script>
+<script src="http://www.openjs.com/common.js" type="text/javascript"></script>
+<script src="js/calendar.js"></script>
+
+		<script language="javascript">
+		<!--
+		
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46 || key == 45 ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function formatCurrency(num) {
+				num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+				return parseFloat(num).toFixed(2);
+			}
+
+			function hide() {
+				var ele = document.getElementById("result");
+				ele.style.display = "none";
+				document.myForm.high.value = '';
+				document.myForm.low.value = '';
+			}
+
+
+			function calcAsset() {
+				
+				var cash = evalValue(document.myForm.cash.value);
+				var accountsReceivable = evalValue(document.myForm.accountsReceivable.value);
+				var inventory = evalValue(document.myForm.inventory.value);
+
+				var totalCurrentAssets = cash + accountsReceivable + inventory;
+				document.myForm.totalCurrentAssets.value = formatCurrency(totalCurrentAssets);
+				
+				var plantPropertyEquipment = evalValue(document.myForm.plantPropertyEquipment.value);
+				var lessAccumulatedDepreciation = evalValue(document.myForm.lessAccumulatedDepreciation.value);
+
+				var netFixedAssets = plantPropertyEquipment - lessAccumulatedDepreciation;
+				document.myForm.netFixedAssets.value = formatCurrency(netFixedAssets);
+
+				var totalAssets = totalCurrentAssets + netFixedAssets;
+				document.myForm.totalAssets.value = formatCurrency(totalAssets);
+
+			}
+				 
+
+			function calcLiability() {
+				
+				var accountsPayable = evalValue(document.myForm.accountsPayable.value);
+				var notesPayable = evalValue(document.myForm.notesPayable.value);
+
+				var totalCurrentLiabilities = accountsPayable + notesPayable;
+				document.myForm.totalCurrentLiabilities.value = formatCurrency(totalCurrentLiabilities);
+				
+				var totalLongTermLiabilities = evalValue(document.myForm.totalLongTermLiabilities.value);
+
+				var commonStock = evalValue(document.myForm.commonStock.value);
+				var retainedEarnings = evalValue(document.myForm.retainedEarnings.value);
+				var otherIncome = evalValue(document.myForm.otherIncome.value);
+
+				var totalOwnersEquity = commonStock + retainedEarnings + otherIncome;
+				document.myForm.totalOwnersEquity.value = formatCurrency(totalOwnersEquity);
+
+				var totalLiabilitiesOwnersEquity = totalCurrentLiabilities + totalLongTermLiabilities + totalOwnersEquity;
+				document.myForm.totalLiabilitiesOwnersEquity.value = formatCurrency(totalLiabilitiesOwnersEquity);
+
+			}
+
+			function calcIncome() {
+				
+				var sales = evalValue(document.myForm.sales.value);
+				var costOfGoodsSold = evalValue(document.myForm.costOfGoodsSold.value);
+				var administrativeExpenses = evalValue(document.myForm.administrativeExpenses.value);
+				var depreciation = evalValue(document.myForm.depreciation.value);
+
+				var earningsBeforeInterestTax = sales - costOfGoodsSold - administrativeExpenses - depreciation;
+				document.myForm.earningsBeforeInterestTax.value = formatCurrency(earningsBeforeInterestTax);
+				
+				var interestExpense = evalValue(document.myForm.interestExpense.value);
+				
+				var taxableIncome = earningsBeforeInterestTax - interestExpense;
+				document.myForm.taxableIncome.value = formatCurrency(taxableIncome);
+
+				var taxes = evalValue(document.myForm.taxes.value);
+
+				var netIncome = taxableIncome - taxes;
+				document.myForm.netIncome.value = formatCurrency(netIncome);
+
+				var dividends = evalValue(document.myForm.dividends.value);
+
+				var additionToRetainedEarnings = netIncome - dividends;
+				document.myForm.additionToRetainedEarnings.value = formatCurrency(additionToRetainedEarnings);
+
+			}
+
+			function calc() {
+
+				var ele = document.getElementById("result");
+				ele.style.display = "block";
+
+				var cash = evalValue(document.myForm.cash.value);
+				var accountsReceivable = evalValue(document.myForm.accountsReceivable.value);
+				var inventory = evalValue(document.myForm.inventory.value);
+				var totalCurrentAssets = evalValue(document.myForm.totalCurrentAssets.value);
+
+				var plantPropertyEquipment = evalValue(document.myForm.plantPropertyEquipment.value);
+				var lessAccumulatedDepreciation = evalValue(document.myForm.lessAccumulatedDepreciation.value);
+				
+				var netFixedAssets = evalValue(document.myForm.netFixedAssets.value);
+
+				var totalAssets = evalValue(document.myForm.totalAssets.value);
+
+				
+				var accountsPayable = evalValue(document.myForm.accountsPayable.value);
+				var notesPayable = evalValue(document.myForm.notesPayable.value);
+
+				var totalCurrentLiabilities = evalValue(document.myForm.totalCurrentLiabilities.value);
+				
+				var totalLongTermLiabilities = evalValue(document.myForm.totalLongTermLiabilities.value);
+				
+				var commonStock = evalValue(document.myForm.commonStock.value);
+				var retainedEarnings = evalValue(document.myForm.retainedEarnings.value);
+				var otherIncome = evalValue(document.myForm.otherIncome.value);
+
+				var totalOwnersEquity = evalValue(document.myForm.totalOwnersEquity.value);
+
+				var totalLiabilitiesOwnersEquity = evalValue(document.myForm.totalLiabilitiesOwnersEquity.value);
+
+				
+				var sales = evalValue(document.myForm.sales.value);
+				var costOfGoodsSold = evalValue(document.myForm.costOfGoodsSold.value);
+				var administrativeExpenses = evalValue(document.myForm.administrativeExpenses.value);
+				var depreciation = evalValue(document.myForm.depreciation.value);
+
+				var earningsBeforeInterestTax = evalValue(document.myForm.earningsBeforeInterestTax.value);
+				
+				var interestExpense = evalValue(document.myForm.interestExpense.value);
+				
+				var taxableIncome = evalValue(document.myForm.taxableIncome.value);
+
+				var taxes = evalValue(document.myForm.taxes.value);
+
+				var netIncome = evalValue(document.myForm.netIncome.value);
+
+				var dividends = evalValue(document.myForm.dividends.value);
+
+				var additionToRetainedEarnings = evalValue(document.myForm.additionToRetainedEarnings.value);
+
+				var shares = evalValue(document.myForm.shares.value);
+				var pricePerShare = evalValue(document.myForm.pricePerShare.value);
+
+				
+				document.getElementById("currentRatio").innerHTML = totalCurrentAssets + " / " + totalCurrentLiabilities + " = " + (totalCurrentAssets/totalCurrentLiabilities).toFixed(4);
+				document.getElementById("quickRatio").innerHTML = "(" + totalCurrentAssets + " - " + inventory + ") / " + totalCurrentLiabilities + " = " + ((totalCurrentAssets - inventory)/totalCurrentLiabilities).toFixed(4);
+				document.getElementById("receivableTurnover").innerHTML = sales + " / " + accountsReceivable + " = " + (sales/accountsReceivable).toFixed(4);
+				document.getElementById("daysReceivables").innerHTML = 365 + " / " + (sales/accountsReceivable).toFixed(4) + " = " + (365/(sales/accountsReceivable)).toFixed(4);
+				document.getElementById("inventoryTurnover").innerHTML = costOfGoodsSold + " / " + inventory + " = " + (costOfGoodsSold/inventory).toFixed(4);
+				document.getElementById("daysInventory").innerHTML = 365 + " / " + (costOfGoodsSold/inventory).toFixed(4) + " = " + (365/(costOfGoodsSold/inventory)).toFixed(4);
+				document.getElementById("fixedAssetsTurnover").innerHTML = sales + " / " + netFixedAssets + " = " + (sales/netFixedAssets).toFixed(4);
+				document.getElementById("totalAssetsTurnover").innerHTML = sales + " / " + totalAssets + " = " + (sales/totalAssets).toFixed(4);
+				document.getElementById("timesInterestEarned").innerHTML = earningsBeforeInterestTax + " / " + interestExpense + " = " + (earningsBeforeInterestTax/interestExpense).toFixed(4);
+				document.getElementById("debtRatio").innerHTML = "(" + totalAssets + " - " + totalOwnersEquity + ") / " + totalAssets + " = " + ((totalAssets - totalOwnersEquity)/totalAssets).toFixed(4);
+				document.getElementById("debtToEquityRatio").innerHTML = "(" + totalAssets + " - " + totalOwnersEquity + ") / " + totalOwnersEquity + " = " + ((totalAssets - totalOwnersEquity)/totalOwnersEquity).toFixed(4);
+				document.getElementById("equityMultiplier").innerHTML = totalAssets + " / " + totalOwnersEquity + " = " + (totalAssets/totalOwnersEquity).toFixed(4);
+				document.getElementById("profitMargin").innerHTML = netIncome + " / " + sales + " = " + (netIncome/sales).toFixed(4);
+				document.getElementById("returnOnAssets").innerHTML = netIncome + " / " + totalAssets + " = " + (netIncome/totalAssets).toFixed(4);
+				document.getElementById("returnOnEquity").innerHTML = netIncome + " / " + totalOwnersEquity + " = " + (netIncome/totalOwnersEquity).toFixed(4);
+				document.getElementById("payoutAndRetentionRatios").innerHTML = dividends + " / " + netIncome + " = " + (dividends/netIncome).toFixed(4);
+				document.getElementById("earningPerShare").innerHTML = netIncome + " / " + shares + " = " + (netIncome/shares).toFixed(4);
+				document.getElementById("priceEarningRatio").innerHTML = pricePerShare + " / " + (netIncome/shares).toFixed(4) + " = " + (pricePerShare/(netIncome/shares)).toFixed(4);
+				document.getElementById("bookValuePerShare").innerHTML = totalOwnersEquity + " / " + shares + " = " + (totalOwnersEquity/shares).toFixed(4);
+				document.getElementById("marketToBookRatio").innerHTML = pricePerShare + " / " + (totalOwnersEquity/shares).toFixed(4) + " = " + (pricePerShare/(totalOwnersEquity/shares)).toFixed(4);
+
+			}
+
+		//-->
+		</script>
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Balance Sheet and Income Statement Analysis</font></b></td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div align="center">
+          
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+            <tr>
+              <td width="100%">
+
+					<table border="0" width="100%" cellspacing="0" cellpadding="5">
+				  
+					  <tr>
+							<td width="50%" align="left"  valign="top">
+								<div style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px">Balance Sheet</div>
+								<table  width="100%" border="0" cellpadding="5">
+									<tr>
+										<td width="100%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Asset</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="100%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Current Assets</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Cash</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="cash" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('cash', '.', ',');calcAsset();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Accounts Receivable</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="accountsReceivable" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('accountsReceivable', '.', ',');calcAsset();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Inventory</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="inventory" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('inventory', '.', ',');calcAsset();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Current Assets</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="totalCurrentAssets" size="20" maxlength="75" value="" readOnly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('totalCurrentAssets', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="100%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Fixed Assets</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Plant, Property, Equipment</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="plantPropertyEquipment" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('plantPropertyEquipment', '.', ',');calcAsset();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Less Accumulated Depreciation</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="lessAccumulatedDepreciation" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('lessAccumulatedDepreciation', '.', ',');calcAsset();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Net Fixed Assets</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="netFixedAssets" size="20" maxlength="75" value="" readOnly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('netFixedAssets', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Assets</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="totalAssets" size="20" maxlength="75" value="" readOnly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('totalAssets', '.', ',');">
+										</td>
+									</tr>
+									
+									<tr>
+										<td width="100%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Liabilities and Equity</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="100%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Current Liabilities</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Accounts Payable</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="accountsPayable" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('accountsPayable', '.', ',');calcLiability();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Notes Payable</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="notesPayable" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('notesPayable', '.', ',');calcLiability();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Current Liabilities</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="totalCurrentLiabilities" size="20" maxlength="75" value="" readOnly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('totalCurrentLiabilities', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Total Long-Term Liabilities</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="totalLongTermLiabilities" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('totalLongTermLiabilities', '.', ',');calcLiability();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Owner's Equity</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Common Stock ($1 par)</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="commonStock" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('commonStock', '.', ',');calcLiability();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Retained Earnings</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="retainedEarnings" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('retainedEarnings', '.', ',');calcLiability();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-family:Arial;font-size:14px">Accum Other Income</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="otherIncome" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('otherIncome', '.', ',');calcLiability();">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Owner's Equity</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="totalOwnersEquity" size="20" maxlength="75" value="" readOnly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('totalOwnersEquity', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Liabilities and Owner's Equity</span>
+										</td>
+										<td width="50%" align=""left"">
+											<input name="totalLiabilitiesOwnersEquity" size="20" maxlength="75" value="" readOnly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('totalLiabilitiesOwnersEquity', '.', ',');">
+										</td>
+									</tr>
+									
+								</table>
+							</td>
+							<td width="50%" align="left" valign="top">
+								<div style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px">Income Statement</div>
+								<table width="100%" border="0" cellpadding="5">
+									<tr>
+										<td width="100%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Income Statement</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Sales</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="sales" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('sales', '.', ',');calcIncome();">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Cost of Goods Sold</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="costOfGoodsSold" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('costOfGoodsSold', '.', ',');calcIncome();">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Administrative Expenses</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="administrativeExpenses" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('sales', '.', ',');calcIncome();">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Depreciation</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="depreciation" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('depreciation', '.', ',');calcIncome();">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Earnings Before Interest and Taxes</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="earningsBeforeInterestTax" size="20" maxlength="75" value="" readonly style="background-color:#FCF6CF;" "onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('earningsBeforeInterestTax', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Interest Expense</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="interestExpense" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('interestExpense', '.', ',');calcIncome();">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Taxable Income</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="taxableIncome" size="20" maxlength="75" value="" readonly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('taxableIncome', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Taxes</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="taxes" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('taxes', '.', ',');calcIncome();">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Net Income</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="netIncome" size="20" maxlength="75" value="" readonly style="background-color:#FCF6CF;" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('netIncome', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Dividends</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="dividends" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('dividends', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Addition to Retained Earnings</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="additionToRetainedEarnings" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('additionToRetainedEarnings', '.', ',');calcIncome();">
+										</td>
+									</tr>
+									<tr>
+										<td width="100%" align="left" colspan="2">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Other Information</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Shares Outstanding</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="shares" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('shares', '.', ',');">
+										</td>
+									</tr>
+									<tr>
+										<td width="25%" align="left">
+											<span style="font-family:Arial;font-size:14px">Price Per Share</span>
+										</td>
+										<td width="25%" align=""left"">
+											<input name="pricePerShare" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('pricePerShare', '.', ',');">
+										</td>
+									</tr>
+
+								</table>
+								
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<p><input type="reset" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 10em" onclick="hide();"></p>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<p><input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();"></p>
+							</td>
+					  </tr>
+
+
+					</table>
+
+
+
+				</td>
+            </tr>
+			</form>
+
+          <!-- calculation result-->
+            <tr>
+              <td width="100%">
+
+		      <div id="result" style="display: none">
+
+					<table border="0" width="90%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Current Ratio = Total Current Assets / Total Current Liabilities = </span>
+								<span id="currentRatio" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Quick Ratio = (Total Current Assets - Inventory) / Total Current Liabilities = </span>
+								<span id="quickRatio" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Receivable Turnover = Sales / Accounts Receivable = </span>
+								<span id="receivableTurnover" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Days' Receivables = Days / Receivable Turnover = </span>
+								<span id="daysReceivables" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Inventory Turnover = Cost of Goods Sold / Inventory = </span>
+								<span id="inventoryTurnover" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Days' Inventory = Days / Inventory Turnover = </span>
+								<span id="daysInventory" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Fixed Assets Turnover = Sales / Net Fixed Assets = </span>
+								<span id="fixedAssetsTurnover" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Assets Turnover = Sales / Total Assets = </span>
+								<span id="totalAssetsTurnover" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Times Interest Earned = Earnings Before Interest and Taxes / Interest Expense = </span>
+								<span id="timesInterestEarned" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Debt Ratio = (Total Assets - Total Owner's Equity) / Total Assets = </span>
+								<span id="debtRatio" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Debt to Equity Ratio = (Total Assets - Total Owner's Equity) / Total Owner's Equity = </span>
+								<span id="debtToEquityRatio" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Equity Multiplier = Total Assets / Total Owner's Equity = </span>
+								<span id="equityMultiplier" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Profit Margin = Net Income / Sales = </span>
+								<span id="profitMargin" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Return on Assets (ROA) = Net Income / Total Assets = </span>
+								<span id="returnOnAssets" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Return on Equity (ROE) = Net Income / Total Owner's Equity = </span>
+								<span id="returnOnEquity" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Payout and Retention Ratios = Dividend / Net Income = </span>
+								<span id="payoutAndRetentionRatios" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Earning per Share = Net Income / Shares Outstanding = </span>
+								<span id="earningPerShare" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Price/Earning Ratio = Price per Share / Earning per Share = </span>
+								<span id="priceEarningRatio" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Book Value per Share = Total Owner's Equity / Shares Outstanding = </span>
+								<span id="bookValuePerShare" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align=""left"">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Market-to-Book Ratio = Price per Share / Book Value per Share = </span>
+								<span id="marketToBookRatio" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					</table>
+
+					</div>
+
+
+				</td>
+            </tr>
+            
+		<!-- end of calculation result -->
+
+          </table>
+        </div>
+
+
+ <br><p>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

@@ -1,0 +1,677 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+	    <script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script language="javascript">
+		<!--
+		
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46  ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function formatCurrency(num) {
+				num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+				return parseFloat(num).toFixed(2);
+			}
+
+			function hide() {
+				var ele = document.getElementById("result");
+				ele.style.display = "none";
+				document.myForm.beginPrincipal.value = "";
+				document.myForm.interestRate.value = "";
+				document.myForm.years.value = "";
+				document.myForm.inflation.value = "";
+			}
+			
+				function calc() {	
+
+					resultTable();
+
+				}
+
+				function calcMonthlySocialSecuity(age, fullAgeMonthlySocialSecurity) {
+					if(age >= 67) {
+						if(age>=70) return fullAgeMonthlySocialSecurity*1.24;
+						return fullAgeMonthlySocialSecurity*Math.pow(1+0.08, age-67);
+					} else {
+						if(age<62) {
+							return 0;
+						}
+						var months = (67-age)*12;
+						if(months<=36) {
+							return fullAgeMonthlySocialSecurity*(1-months*5.0/9.0/100.0);
+						} else {
+							return fullAgeMonthlySocialSecurity*(1-0.2-(months-36)*5.0/12.0/100.0);
+						}
+					}
+				}
+
+				function modeSelect() {
+
+					var spouseCheck = evalValue(document.myForm.spouseCheck.value);
+					
+					if(!document.myForm.spouseCheck.checked) {
+						 document.getElementById("spouseRow").style.display = 'none';
+					} else {
+						 document.getElementById("spouseRow").style.display = '';
+					}
+					
+
+				}
+
+				function resultTable(pmt) {
+					
+					var ele = document.getElementById("result");
+					ele.style.display = "block";
+					
+					var fullAgeMonthlySocialSecurity = evalValue(document.myForm.socialSecurityInput.value);
+					var lifeExpectancy = evalValue(document.myForm.lifeExpectancyInput.value);
+					var inflationRate = evalValue(document.myForm.inflationRateInput.value);
+					var rate = inflationRate/100;
+					if(lifeExpectancy == 0) lifeExpectancy = 90;
+					
+					var totalPayment67atAge90 = fullAgeMonthlySocialSecurity*12*(lifeExpectancy-67);
+					if(rate > 0) {
+						totalPayment67atAge90 = fullAgeMonthlySocialSecurity*12 * (Math.pow(1+rate, (lifeExpectancy-67)) - 1)/rate;
+					}
+
+					var startingAge = evalValue(document.myForm.startingAgeInput.value);
+					if(startingAge<62) startingAge = 62;
+					
+					//spouse
+					var spouseCheck = evalValue(document.myForm.spouseCheck.value);
+
+					var spouseFullAgeMonthlySocialSecurity = evalValue(document.myForm.spouuseSocialSecurityInput.value);
+					var spouseLifeExpectancy = evalValue(document.myForm.spouseLifeExpectancyInput.value);
+					var spouseStartingAge = evalValue(document.myForm.spouseStartingAgeInput.value);
+					var spouseAgeDiff = evalValue(document.myForm.spouseAgeDiffInput.value);
+					if(spouseStartingAge<62) spouseStartingAge = 62;
+
+					var age = startingAge;
+					var spouseAge = spouseStartingAge;
+					if(age+spouseAgeDiff<=spouseStartingAge) {
+						spouseAge = age+spouseAgeDiff;
+					} else {
+						age = spouseAge - spouseAgeDiff;
+					}
+					
+					var table = document.getElementById("resultTable");
+					table.innerHTML = "";
+					
+				    var header = table.createTHead();
+				    var row = header.insertRow(0);
+				    var c0 = row.insertCell(0);
+				    var c1 = row.insertCell(1);
+				    var c2 = row.insertCell(2);
+				    var c3 = row.insertCell(3);
+				    var c4 = row.insertCell(4);
+				    var c5 = row.insertCell(5);
+				    var c6 = row.insertCell(6);
+				    var c7 = row.insertCell(7);
+				    var c8 = row.insertCell(8);
+				    var c9 = row.insertCell(9);
+				    var c10 = row.insertCell(10);
+				    
+				    c0.innerHTML = "<b>Starting Age</b>";
+				    c1.innerHTML = "<b>Monthly</b>";
+				    c2.innerHTML = "<b>Annually</b>";
+				    c3.innerHTML = "<b>Total</b>";
+				    c4.innerHTML = "<b>Spouse Age</b>";
+				    c5.innerHTML = "<b>Spouse Monthly</b>";
+				    c6.innerHTML = "<b>Spouse Annually</b>";
+				    c7.innerHTML = "<b>Spouse Total</b>";
+				    c8.innerHTML = "<b>Couple Monthly</b>";
+				    c9.innerHTML = "<b>Couple Annually</b>";
+				    c10.innerHTML = "<b>Couple Total</b>";
+
+					 c0.style.textAlign = 'center';
+					 c1.style.textAlign = 'center';
+					 c2.style.textAlign = 'center';
+					 c3.style.textAlign = 'center';
+					 c4.style.textAlign = 'center';
+					 c5.style.textAlign = 'center';
+					 c6.style.textAlign = 'center';
+					 c7.style.textAlign = 'center';
+					 c8.style.textAlign = 'center';
+					 c9.style.textAlign = 'center';
+					 c10.style.textAlign = 'center';
+
+
+	 				var monthlySS = 0;
+					var totalSS = 0;
+
+	 				var spouseMonthlySS = 0;
+					var spouseTotalSS = 0;
+
+					var coupleTotalSS = 0;
+					
+					for(var j=0;j<=40;j++)
+					{
+
+						if(age+j>lifeExpectancy && spouseAge+j>spouseLifeExpectancy) break;
+						
+						var row = table.insertRow(j+1);
+						var cell0 = row.insertCell(0);
+						var cell1 = row.insertCell(1); 
+						var cell2 = row.insertCell(2);
+						var cell3 = row.insertCell(3);
+						var cell4 = row.insertCell(4);
+						var cell5 = row.insertCell(5);
+						var cell6 = row.insertCell(6);
+						var cell7 = row.insertCell(7);
+						var cell8 = row.insertCell(8);
+						var cell9 = row.insertCell(9);
+						var cell10 = row.insertCell(10);
+						
+						if(j%2 == 0) row.style.backgroundColor = '#FCF6CF';
+						
+						 cell0.style.textAlign = 'center';
+						 cell1.style.textAlign = 'right';
+						 cell2.style.textAlign = 'right';
+						 cell3.style.textAlign = 'right';
+						 cell4.style.textAlign = 'right';
+						 cell5.style.textAlign = 'right';
+						 cell6.style.textAlign = 'right';
+						 cell7.style.textAlign = 'right';
+						 cell8.style.textAlign = 'right';
+						 cell9.style.textAlign = 'right';
+						 cell10.style.textAlign = 'right';
+
+	 				if(age+j > startingAge) {
+	 					monthlySS = monthlySS * (1+rate);
+	 				} else if (age+j == startingAge){
+	 					monthlySS = calcMonthlySocialSecuity(startingAge, fullAgeMonthlySocialSecurity);
+	 				} else {
+	 					monthlySS = 0;
+	 				}
+					if(age+j>lifeExpectancy) monthlySS = 0;
+
+	 				totalSS = totalSS + monthlySS*12;
+					
+	 				if(spouseAge+j > spouseStartingAge) {
+	 					spouseMonthlySS = spouseMonthlySS * (1+rate);
+	 				} else if (spouseAge+j == spouseStartingAge){
+	 					spouseMonthlySS = calcMonthlySocialSecuity(spouseStartingAge, spouseFullAgeMonthlySocialSecurity);
+						if(spouseMonthlySS<monthlySS/2) {
+							spouseMonthlySS = monthlySS/2;
+						}
+	 				} else {
+	 					spouseMonthlySS = 0;
+	 				}
+					if(spouseAge+j>spouseLifeExpectancy) spouseMonthlySS = 0;
+					
+					if(!document.myForm.spouseCheck.checked) spouseMonthlySS = 0;
+					
+	 				spouseTotalSS = spouseTotalSS + spouseMonthlySS*12;
+
+					
+					cell0.innerHTML=j+age;
+					cell1.innerHTML=formatDollar(monthlySS);
+					cell2.innerHTML=formatDollar(monthlySS*12);
+					cell3.innerHTML=formatDollar(totalSS);
+					cell4.innerHTML=j+spouseAge;
+					cell5.innerHTML=formatDollar(spouseMonthlySS);
+					cell6.innerHTML=formatDollar(spouseMonthlySS*12);
+					cell7.innerHTML=formatDollar(spouseTotalSS);
+					cell8.innerHTML=formatDollar(monthlySS+spouseMonthlySS);
+					cell9.innerHTML=formatDollar((monthlySS+spouseMonthlySS)*12);
+					cell10.innerHTML=formatDollar(totalSS+spouseTotalSS);
+					
+					}
+
+
+				}
+				
+				function formatDollar(num) {
+				    var p = num.toFixed(2).split(".");
+				    return p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+				        return  num + (i && !(i % 3) ? "," : "") + acc;
+				    }, "") + "." + p[1];
+				}
+
+
+		//-->
+		</script>
+		
+		<body onload="calc();">
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Social Security Distribution</font></b></td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div align="center">
+          <center>
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+            <tr>
+              <td width="100%">
+
+
+					<table border="0" width="100%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Monthly Social Security at Age 67</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="socialSecurityInput" size="10" maxlength="75" value="1,000" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('socialSecurityInput', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Life Expectancy</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="lifeExpectancyInput" size="10" maxlength="75" value="90" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Cost-Of-Living Adjustment (%)</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="inflationRateInput" size="10" maxlength="75" value="3" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Starting Age</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="startingAgeInput" size="10" maxlength="75" value="67" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+					  <tr>
+							<td width="100%" align="left" colspan="8">
+							<input type="checkbox" name="spouseCheck" value="yes" onclick="modeSelect();">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Include Spouse Beneficiary</span>
+							</input>
+								
+							</td>
+					  </tr>
+	
+					  <tr  id="spouseRow"  style="display: none">
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Spouse Social Security at Age 67</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="spouuseSocialSecurityInput" size="10" maxlength="75" value="1,000" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('spouuseSocialSecurityInput', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Spouse Life Expectancy</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="spouseLifeExpectancyInput" size="10" maxlength="75" value="90" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Spouse Age Difference</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="spouseAgeDiffInput" size="10" maxlength="75" value="-2" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:13px">Spouse Starting Age</span>
+							</td>
+							<td width="5%" align="left">
+								<input name="spouseStartingAgeInput" size="10" maxlength="75" value="67" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right" colspan="4">
+								<p><input type="button" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 10em" onclick="hide();"></p>
+							</td>
+							<td width="50%" valign="top" align="left" colspan="4">
+								<p><input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();"></p>
+							</td>
+					  </tr>
+
+					</table>
+
+
+
+				</td>
+            </tr>
+			</form>
+
+
+          <!-- calculation result-->
+            <tr>
+              <td width="100%">
+
+		      <div id="result" style="display: none">
+
+					<br>
+					<table id="resultTable" border="1" width="100%" cellspacing="0" cellpadding="5">
+
+					</table>
+
+					</div>
+
+
+				</td>
+            </tr>
+            
+		<!-- end of calculation result -->
+
+          </table>
+        </div>
+
+
+
+ 
+ <br><br><p>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

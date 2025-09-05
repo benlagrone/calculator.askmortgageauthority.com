@@ -1,0 +1,1979 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+		<script language="javascript">
+		<!--
+		
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46  ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function formatCurrency(num) {
+				num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+				return parseFloat(num).toFixed(2);
+			}
+			
+			function formatDollar(num) {
+			    var p = num.toFixed(2).split(".");
+			    return p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+			        return  num + (i && !(i % 3) ? "," : "") + acc;
+			    }, "") + "." + p[1];
+			}
+
+			function hide() {
+				var ele = document.getElementById("result");
+				ele.style.display = "none";
+				
+				var elements = document.myForm.elements;
+
+				for (var i = 0, element; element = elements[i++];) {
+				    if (element.type == "text") element.value = ""
+				}
+				
+				calcLoanAmount();
+				calcGui();
+			}
+			
+			function calcLoanAmount() {
+				var propertyPriceInput = evalValue(document.myForm.propertyPriceInput.value);
+				var downPaymentPercentInput = evalValue(document.myForm.downPaymentPercentInput.value);
+				var downPaymentAmountInput = evalValue(document.myForm.downPaymentAmountInput.value);
+				var loanAmountValue = propertyPriceInput * (1-downPaymentPercentInput/100);
+				if(downPaymentPercentInput>0) {
+					loanAmountValue = propertyPriceInput - downPaymentAmountInput;
+				}
+				var loanAmount = document.getElementById("loanAmount");
+				loanAmount.innerHTML = "Loan: " + formatCurrencyStr(loanAmountValue);
+				
+				calcDownPaymentAmount();
+			}
+
+			function calcDownPaymentAmount() {
+				var propertyPriceInput = evalValue(document.myForm.propertyPriceInput.value);
+				var downPaymentPercentInput = evalValue(document.myForm.downPaymentPercentInput.value);
+				var downPaymentAmountValue = propertyPriceInput * downPaymentPercentInput/100;
+				document.myForm.downPaymentAmountInput.value=formatCurrencyStr(downPaymentAmountValue);
+				
+				var loanAmountValue = propertyPriceInput - downPaymentAmountValue;
+				var loanAmount = document.getElementById("loanAmount");
+				if(loanAmountValue>0) loanAmount.innerHTML = "Loan: " + formatCurrencyStr(loanAmountValue);		
+
+			}
+
+			function calcDownPaymentPercent() {
+				var propertyPriceInput = evalValue(document.myForm.propertyPriceInput.value);
+				var downPaymentAmountInput = evalValue(document.myForm.downPaymentAmountInput.value);
+				var downPaymentPercentValue = 100*downPaymentAmountInput/propertyPriceInput;
+				document.myForm.downPaymentPercentInput.value=formatCurrencyStr(downPaymentPercentValue);
+				
+				var loanAmountValue = propertyPriceInput - downPaymentAmountInput;
+				var loanAmount = document.getElementById("loanAmount");
+				loanAmount.innerHTML = "Loan: " + formatCurrencyStr(loanAmountValue);		
+
+			}
+
+			function checkLoanType() {
+				var row_style = document.getElementById('rateAdjustment_tr').style;
+				
+				if(document.getElementById('adjustableRate').checked == true) {   
+					row_style.display = '';   
+				} else {  
+					row_style.display = 'none';   
+				}  
+			}
+
+			function calcMonthlyAnnually(monthlyInput, annuallyInput, isCalcMonth) {
+				var monthlyInput0 = document.getElementsByName(monthlyInput)[0].value;
+				var annuallyInput0 = document.getElementsByName(annuallyInput)[0].value;
+							
+				if(isCalcMonth) {
+					document.getElementsByName(monthlyInput)[0].value = formatCurrencyStr(evalValue(annuallyInput0)/12);
+				} else {
+					document.getElementsByName(annuallyInput)[0].value = formatCurrencyStr(evalValue(monthlyInput0)*12);
+				}
+			}
+			
+			function calcGui() {
+				
+				var propertyTaxInput = evalValue(document.myForm.propertyTaxInput.value);
+				var propertyTaxIncreaseInput = evalValue(document.myForm.propertyTaxIncreaseInput.value);
+
+				var monthlyPropertyTax = document.getElementById("monthlyPropertyTax");
+				var annualPropertyTaxAmountIncrease = document.getElementById("annualPropertyTaxAmountIncrease");
+
+				monthlyPropertyTax.innerHTML = formatCurrencyStr(propertyTaxInput/12) + "/mo";		
+				annualPropertyTaxAmountIncrease.innerHTML = formatCurrencyStr(propertyTaxInput*propertyTaxIncreaseInput/100) + "/yr";		
+
+				
+				var insuranceInput = evalValue(document.myForm.insuranceInput.value);
+				var insuranceIncreaseInput = evalValue(document.myForm.insuranceIncreaseInput.value);
+
+				var monthlyInsurance = document.getElementById("monthlyInsurance");
+				var annualInsuranceAmountIncrease = document.getElementById("annualInsuranceAmountIncrease");
+
+				monthlyInsurance.innerHTML = formatCurrencyStr(insuranceInput/12) + "/mo";		
+				annualInsuranceAmountIncrease.innerHTML = formatCurrencyStr(insuranceInput*insuranceIncreaseInput/100) + "/yr";		
+
+			
+				var hoaFeeInput = evalValue(document.myForm.hoaFeeInput.value);
+				var hoaFeeIncreaseInput = evalValue(document.myForm.hoaFeeIncreaseInput.value);
+
+				var monthlyHOA = document.getElementById("monthlyHOA");
+				var annualHOAAmountIncrease = document.getElementById("annualHOAAmountIncrease");
+
+				monthlyHOA.innerHTML = formatCurrencyStr(hoaFeeInput/12) + "/mo";		
+				annualHOAAmountIncrease.innerHTML = formatCurrencyStr(hoaFeeInput*hoaFeeIncreaseInput/100) + "/yr";		
+
+				
+				var maintenanceInput = evalValue(document.myForm.maintenanceInput.value);
+				var maintenanceIncreaseInput = evalValue(document.myForm.maintenanceIncreaseInput.value);
+
+				var monthlyMaintenance = document.getElementById("monthlyMaintenance");
+				var annualMaintenanceAmountIncrease = document.getElementById("annualMaintenanceAmountIncrease");
+
+				monthlyMaintenance.innerHTML = formatCurrencyStr(maintenanceInput/12) + "/mo";		
+				annualMaintenanceAmountIncrease.innerHTML = formatCurrencyStr(maintenanceInput*maintenanceIncreaseInput/100) + "/yr";		
+
+				
+				var utilityInput = evalValue(document.myForm.utilityInput.value);
+				var utilityIncreaseInput = evalValue(document.myForm.utilityIncreaseInput.value);
+
+				var monthlyUtilities = document.getElementById("monthlyUtilities");
+				var annualUtilitiesAmountIncrease = document.getElementById("annualUtilitiesAmountIncrease");
+
+				monthlyUtilities.innerHTML = formatCurrencyStr(utilityInput/12) + "/mo";		
+				annualUtilitiesAmountIncrease.innerHTML = formatCurrencyStr(utilityInput*utilityIncreaseInput/100) + "/yr";		
+
+				
+				var otherFeeInput = evalValue(document.myForm.otherFeeInput.value);
+				var otherFeeIncreaseInput = evalValue(document.myForm.otherFeeIncreaseInput.value);
+
+				var monthlyOtherFee = document.getElementById("monthlyOtherFee");
+				var annualOtherFeeAmountIncrease = document.getElementById("annualOtherFeeAmountIncrease");
+
+				monthlyOtherFee.innerHTML = formatCurrencyStr(otherFeeInput/12) + "/mo";		
+				annualOtherFeeAmountIncrease.innerHTML = formatCurrencyStr(otherFeeInput*otherFeeIncreaseInput/100) + "/yr";
+				
+				
+				var monthlyRentInput = evalValue(document.myForm.monthlyRentInput.value);
+				var monthlyRentIncreaseInput = evalValue(document.myForm.monthlyRentIncreaseInput.value);
+
+				var annualRent = document.getElementById("annualRent");
+				var annualRentAmountIncrease = document.getElementById("annualRentAmountIncrease");
+
+				annualRent.innerHTML = formatCurrencyStr(monthlyRentInput*12) + "/yr";		
+				annualRentAmountIncrease.innerHTML = formatCurrencyStr(monthlyRentInput*monthlyRentIncreaseInput/100) + "/mo,"+formatCurrencyStr(monthlyRentInput*12*monthlyRentIncreaseInput/100) + "/yr";
+				
+				
+				var otherMonthlyIncomeInput = evalValue(document.myForm.otherMonthlyIncomeInput.value);
+				var otherMonthlyIncomeIncreaseInput = evalValue(document.myForm.otherMonthlyIncomeIncreaseInput.value);
+
+				var annualOtherIncome = document.getElementById("annualOtherIncome");
+				var annualOtherIncomeAmountIncrease = document.getElementById("annualOtherIncomeAmountIncrease");
+
+				annualOtherIncome.innerHTML = formatCurrencyStr(otherMonthlyIncomeInput*12) + "/yr";		
+				annualOtherIncomeAmountIncrease.innerHTML = formatCurrencyStr(otherMonthlyIncomeInput*otherMonthlyIncomeIncreaseInput/100) + "/mo,"+formatCurrencyStr(otherMonthlyIncomeInput*12*otherMonthlyIncomeIncreaseInput/100) + "/yr";
+
+				
+				var monthlyTotalIncome = monthlyRentInput + otherMonthlyIncomeInput;
+
+				var managementFeeInput = evalValue(document.myForm.managementFeeInput.value);
+				var managementFeeAmount = document.getElementById("managementFeeAmount");
+				managementFeeAmount.innerHTML = formatCurrencyStr(monthlyTotalIncome*managementFeeInput/100) + "/mo," + formatCurrencyStr(12*monthlyTotalIncome*managementFeeInput/100) + "/yr";		
+
+				var managementFeeAmountInput = evalValue(document.myForm.managementFeeAmountInput.value);
+				var managementFeeIncreaseInput = evalValue(document.myForm.managementFeeIncreaseInput.value);
+				var annualManagementFee = document.getElementById("annualManagementFee");
+				var annualManagementFeeAmountIncrease = document.getElementById("annualManagementFeeAmountIncrease");
+				
+				annualManagementFee.innerHTML = formatCurrencyStr(managementFeeAmountInput*12) + "/yr";		
+				annualManagementFeeAmountIncrease.innerHTML = formatCurrencyStr(managementFeeAmountInput*managementFeeIncreaseInput/100) + "/mo,"+formatCurrencyStr(managementFeeAmountInput*12*managementFeeIncreaseInput/100) + "/yr";
+
+				var vacancyRateInput = evalValue(document.myForm.vacancyRateInput.value);
+				var vacancyRateAmount = document.getElementById("vacancyRateAmount");
+				var vacancyRateAmount1 = document.getElementById("vacancyRateAmount1");
+				vacancyRateAmount.innerHTML = formatCurrencyStr(monthlyTotalIncome*vacancyRateInput/100) + "/mo";		
+				vacancyRateAmount1.innerHTML = formatCurrencyStr(monthlyTotalIncome*12*vacancyRateInput/100) + "/yr";		
+
+				
+				var capExReserveInput = evalValue(document.myForm.capExReserveInput.value);
+				var capExReserveAmount = document.getElementById("capExReserveAmount");
+				var capExReserveAmount1 = document.getElementById("capExReserveAmount1");
+				capExReserveAmount.innerHTML = formatCurrencyStr(monthlyTotalIncome*capExReserveInput/100) + "/mo";		
+				capExReserveAmount1.innerHTML = formatCurrencyStr(monthlyTotalIncome*12*capExReserveInput/100) + "/yr";		
+
+				
+				var holdingYearsInput = evalValue(document.myForm.holdingYearsInput.value);
+				var propertyPriceInput = evalValue(document.myForm.propertyPriceInput.value);
+				var appreciationInput = evalValue(document.myForm.appreciationInput.value);
+				var soldPriceValue = propertyPriceInput * Math.pow(1 + appreciationInput/100, holdingYearsInput);
+				
+				var soldPrice = document.getElementById("soldPrice");
+				soldPrice.innerHTML = "Property Sold at: " + formatCurrencyStr(soldPriceValue);		
+				if(soldPriceValue==0) soldPrice.innerHTML = "";
+				
+				var salesCommissionInput = evalValue(document.myForm.salesCommissionInput.value);
+				var commission = soldPriceValue * salesCommissionInput/100;
+
+				var salesCommissionAmount = document.getElementById("salesCommissionAmount");
+				salesCommissionAmount.innerHTML = "Sales Commission: " + formatCurrencyStr(commission);	
+				if(commission==0) salesCommissionAmount.innerHTML = "";
+				
+			}
+	
+			   function calcLoan(amount, interest, month) {
+			    	var r = interest/100/12; //calculate interest per month
+			    	var n = month; //loan length in month
+			    	var a = amount*r*Math.pow(1+r,n)/(Math.pow(1+r, n) -1);
+			    	//if interest is 0, then calculate as special case
+			    	if(r == 0) a = amount/n;
+			    	a = Math.round(a * 100);
+			    	a = a/100;
+			  	
+			    	return a;
+			    }		
+			
+			function getXMLHttpRequest() {
+				  var xmlHttpReq = false;
+				  // to create XMLHttpRequest object in non-Microsoft browsers
+				  if (window.XMLHttpRequest) {
+				    xmlHttpReq = new XMLHttpRequest();
+				  } else if (window.ActiveXObject) {
+				    try {
+				      // to create XMLHttpRequest object in later versions
+				      // of Internet Explorer
+				      xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+				    } catch (exp1) {
+				      try {
+				        // to create XMLHttpRequest object in older versions
+				        // of Internet Explorer
+				        xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+				      } catch (exp2) {
+				        xmlHttpReq = false;
+				      }
+				    }
+				  }
+				  return xmlHttpReq;
+				}
+				/*
+				 * AJAX call starts with this function
+				 */
+				
+				function getParam() {
+					
+					var monthlyRentResult = document.getElementById("monthlyRentResult");
+					var annualRentResult = document.getElementById("annualRentResult");
+					var monthlyOtherIncomeResult = document.getElementById("monthlyOtherIncomeResult");
+					var annualOtherIncomeResult = document.getElementById("annualOtherIncomeResult");
+					var monthlyManagementFeeResult = document.getElementById("monthlyManagementFeeResult");
+					var annualManagementFeeResult = document.getElementById("annualManagementFeeResult");
+					var monthlyVacancyCostResult = document.getElementById("monthlyVacancyCostResult");
+					var annualVacancyCostResult = document.getElementById("annualVacancyCostResult");
+					var monthlyIncomeResult = document.getElementById("monthlyIncomeResult");
+					var annualIncomeResult = document.getElementById("annualIncomeResult");
+					var monthlyPropertyTaxResult = document.getElementById("monthlyPropertyTaxResult");
+					var annualPropertyTaxResult = document.getElementById("annualPropertyTaxResult");
+					var monthlyInsuranceResult = document.getElementById("monthlyInsuranceResult");
+					var annualInsuranceResult = document.getElementById("annualInsuranceResult");
+					var monthlyHoaFeeResult = document.getElementById("monthlyHoaFeeResult");
+					var annualHoaFeeResult = document.getElementById("annualHoaFeeResult");
+					var monthlyMaintenanceCostResult = document.getElementById("monthlyMaintenanceCostResult");
+					var annualMaintenanceCostResult = document.getElementById("annualMaintenanceCostResult");
+					var monthlyUtilityCostResult = document.getElementById("monthlyUtilityCostResult");
+					var annualUtilityCostResult = document.getElementById("annualUtilityCostResult");
+					var monthlyOtherCostResult = document.getElementById("monthlyOtherCostResult");
+					var annualOtherCostResult = document.getElementById("annualOtherCostResult");
+					var monthlyCostResult = document.getElementById("monthlyCostResult");
+					var annualCostResult = document.getElementById("annualCostResult");
+					var monthlyNetOperatingIncomeResult = document.getElementById("monthlyNetOperatingIncomeResult");
+					var annualOperatingIncomeResult = document.getElementById("annualOperatingIncomeResult");
+					var monthlyMortgageResult = document.getElementById("monthlyMortgageResult");
+					var annualMortgageResult = document.getElementById("annualMortgageResult");
+					var monthlyCapExReserveResult = document.getElementById("monthlyCapExReserveResult");
+					var annualCapExReserveResult = document.getElementById("annualCapExReserveResult");
+					var monthlyCashFlowResult = document.getElementById("monthlyCashFlowResult");
+					var annualCashFlowResult = document.getElementById("annualCashFlowResult");
+
+					//income
+					var monthlyRentInput = evalValue(document.myForm.monthlyRentInput.value);
+					var monthlyRentIncreaseInput = evalValue(document.myForm.monthlyRentIncreaseInput.value);
+					
+					var otherMonthlyIncomeInput = evalValue(document.myForm.otherMonthlyIncomeInput.value);
+					var otherMonthlyIncomeIncreaseInput = evalValue(document.myForm.otherMonthlyIncomeIncreaseInput.value);
+
+					var monthlyTotalIncome = monthlyRentInput + otherMonthlyIncomeInput;
+
+					var managementFeeAmountInput = evalValue(document.myForm.managementFeeAmountInput.value);
+					var managementFeeIncreaseInput = evalValue(document.myForm.managementFeeIncreaseInput.value);
+					
+					var managementFeeInput = evalValue(document.myForm.managementFeeInput.value);
+					if(managementFeeInput>0) {
+						managementFeeAmountInput = monthlyTotalIncome*managementFeeInput/100;
+					}
+					var vacancyRateInput = evalValue(document.myForm.vacancyRateInput.value);
+					var monthlyVacancyCost = monthlyTotalIncome*vacancyRateInput/100;
+					var monthlyIncome = monthlyTotalIncome - managementFeeAmountInput - monthlyVacancyCost;
+
+					
+					monthlyRentResult.innerHTML = formatCurrencyStr(monthlyRentInput);
+					annualRentResult.innerHTML = formatCurrencyStr(monthlyRentInput*12);
+
+					monthlyOtherIncomeResult.innerHTML = formatCurrencyStr(otherMonthlyIncomeInput);
+					annualOtherIncomeResult.innerHTML = formatCurrencyStr(otherMonthlyIncomeInput*12);
+
+					monthlyManagementFeeResult.innerHTML = formatCurrencyStr(managementFeeAmountInput);
+					annualManagementFeeResult.innerHTML = formatCurrencyStr(managementFeeAmountInput*12);
+
+					monthlyVacancyCostResult.innerHTML = formatCurrencyStr(monthlyVacancyCost);
+					annualVacancyCostResult.innerHTML = formatCurrencyStr(monthlyVacancyCost*12);
+
+					monthlyIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome);
+					annualIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome*12);
+
+					//expense
+					var propertyTaxInput = evalValue(document.myForm.propertyTaxInput.value);
+					var propertyTaxIncreaseInput = evalValue(document.myForm.propertyTaxIncreaseInput.value);
+	
+					var monthlyPropertyTax = document.getElementById("monthlyPropertyTax");
+					var annualPropertyTaxAmountIncrease = document.getElementById("annualPropertyTaxAmountIncrease");
+	
+					monthlyPropertyTaxResult.innerHTML = formatCurrencyStr(propertyTaxInput/12);		
+					annualPropertyTaxResult.innerHTML = formatCurrencyStr(propertyTaxInput);		
+	
+					
+					var insuranceInput = evalValue(document.myForm.insuranceInput.value);
+					var insuranceIncreaseInput = evalValue(document.myForm.insuranceIncreaseInput.value);
+	
+					var monthlyInsurance = document.getElementById("monthlyInsurance");
+					var annualInsuranceAmountIncrease = document.getElementById("annualInsuranceAmountIncrease");
+	
+					monthlyInsuranceResult.innerHTML = formatCurrencyStr(insuranceInput/12);		
+					annualInsuranceResult.innerHTML = formatCurrencyStr(insuranceInput);		
+				
+					var hoaFeeInput = evalValue(document.myForm.hoaFeeInput.value);
+					var hoaFeeIncreaseInput = evalValue(document.myForm.hoaFeeIncreaseInput.value);
+	
+					var monthlyHOA = document.getElementById("monthlyHOA");
+					var annualHOAAmountIncrease = document.getElementById("annualHOAAmountIncrease");
+	
+					monthlyHoaFeeResult.innerHTML = formatCurrencyStr(hoaFeeInput/12);		
+					annualHoaFeeResult.innerHTML = formatCurrencyStr(hoaFeeInput);		
+	
+					
+					var maintenanceInput = evalValue(document.myForm.maintenanceInput.value);
+					var maintenanceIncreaseInput = evalValue(document.myForm.maintenanceIncreaseInput.value);
+	
+					var monthlyMaintenance = document.getElementById("monthlyMaintenance");
+					var annualMaintenanceAmountIncrease = document.getElementById("annualMaintenanceAmountIncrease");
+	
+					monthlyMaintenanceCostResult.innerHTML = formatCurrencyStr(maintenanceInput/12);		
+					annualMaintenanceCostResult.innerHTML = formatCurrencyStr(maintenanceInput);		
+	
+					
+					var utilityInput = evalValue(document.myForm.utilityInput.value);
+					var utilityIncreaseInput = evalValue(document.myForm.utilityIncreaseInput.value);
+	
+					var monthlyUtilities = document.getElementById("monthlyUtilities");
+					var annualUtilitiesAmountIncrease = document.getElementById("annualUtilitiesAmountIncrease");
+	
+					monthlyUtilityCostResult.innerHTML = formatCurrencyStr(utilityInput/12);		
+					annualUtilityCostResult.innerHTML = formatCurrencyStr(utilityInput);		
+	
+					
+					var otherFeeInput = evalValue(document.myForm.otherFeeInput.value);
+					var otherFeeIncreaseInput = evalValue(document.myForm.otherFeeIncreaseInput.value);
+	
+					var monthlyOtherFee = document.getElementById("monthlyOtherFee");
+					var annualOtherFeeAmountIncrease = document.getElementById("annualOtherFeeAmountIncrease");
+	
+					monthlyOtherCostResult.innerHTML = formatCurrencyStr(otherFeeInput/12);		
+					annualOtherCostResult.innerHTML = formatCurrencyStr(otherFeeInput);
+
+					var annualTotalExpense = propertyTaxInput+insuranceInput+hoaFeeInput+maintenanceInput+utilityInput+otherFeeInput;
+					
+					monthlyCostResult.innerHTML = formatCurrencyStr(annualTotalExpense/12);		
+					annualCostResult.innerHTML = formatCurrencyStr(annualTotalExpense);
+
+					monthlyNetOperatingIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome - annualTotalExpense/12);		
+					annualNetOperatingIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome*12 - annualTotalExpense);
+
+
+					//mortgage
+					var propertyPriceInput = evalValue(document.myForm.propertyPriceInput.value);
+					var downPaymentPercentInput = evalValue(document.myForm.downPaymentPercentInput.value);
+					var downPaymentAmountInput = evalValue(document.myForm.downPaymentAmountInput.value);
+				
+					var loanAmountValue = propertyPriceInput - downPaymentAmountInput;
+
+					var loanYearInput = evalValue(document.myForm.loanYearInput.value);
+					var loanMonthInput = evalValue(document.myForm.loanMonthInput.value);
+					var loanMonths = loanYearInput*12+loanMonthInput;
+					var interestRateInput = evalValue(document.myForm.interestRateInput.value);
+					//var interestOnlyRate = document.myForm.interestOnlyRate.value;
+					var monthlyMortgage = calcLoan(loanAmountValue, interestRateInput, loanMonths);
+					if(document.getElementById('interestOnly').checked == true) {   
+		            	monthlyMortgage = loanAmountValue * interestRateInput/100/12;
+					}
+
+					monthlyMortgageResult.innerHTML = formatCurrencyStr(monthlyMortgage);		
+					annualMortgageResult.innerHTML = formatCurrencyStr(monthlyMortgage*12);	
+					
+					var closingCostInput = evalValue(document.myForm.closingCostInput.value);
+					var renovationCostInput = evalValue(document.myForm.renovationCostInput.value);
+
+					var capExReserveInput = evalValue(document.myForm.capExReserveInput.value);
+					var monthlyCapExReserve = monthlyTotalIncome*capExReserveInput/100;
+					monthlyCapExReserveResult.innerHTML = formatCurrencyStr(monthlyCapExReserve);		
+					annualCapExReserveResult.innerHTML = formatCurrencyStr(monthlyCapExReserve*12);		
+
+					//cash flow
+					var monthlyCashFlow = monthlyIncome - annualTotalExpense/12 - monthlyMortgage - monthlyCapExReserve;
+					monthlyCashFlowResult.innerHTML = formatCurrencyStr(monthlyCashFlow);		
+					annualCashFlowResult.innerHTML = formatCurrencyStr(monthlyCashFlow*12);		
+
+					//rate type
+					var rbInterestOnlyLoan = 'NO';
+					var rbAdjustableLoan = 'NO';
+					if(document.getElementById('adjustableRate').checked == true) {   
+						rbAdjustableLoan = 'YES';   
+					} else {  
+						rbAdjustableLoan = 'NO';  
+					}  
+					if(document.getElementById('interestOnly').checked == true) {   
+						rbInterestOnlyLoan = 'YES';   
+					} else {  
+						rbInterestOnlyLoan = 'NO';  
+					}  
+					
+					var etMonthsBeforeFirstAdjustment = evalValue(document.myForm.etMonthsBeforeFirstAdjustment.value);
+					var etMonthBetweenAdjustments = evalValue(document.myForm.etMonthBetweenAdjustments.value);
+					var etExpectedAdjustments = evalValue(document.myForm.etExpectedAdjustments.value);
+					var etInterestRateCap = evalValue(document.myForm.etInterestRateCap.value);
+
+					//if sold
+					var holdingYearsInput = evalValue(document.myForm.holdingYearsInput.value);
+					var appreciationInput = evalValue(document.myForm.appreciationInput.value);
+					var salesCommissionInput = evalValue(document.myForm.salesCommissionInput.value);
+					
+					//for summary table
+			        var propertyValue = propertyPriceInput*(1+appreciationInput/100);
+		            var capRate = (monthlyIncome*12 - annualTotalExpense)/ propertyValue * 100;
+					var currentCapRate = document.getElementById("currentCapRate");
+					currentCapRate.innerHTML = formatCurrencyStr(capRate) + "%";	
+					
+		            var dscr = (monthlyIncome*12 - annualTotalExpense)/ (monthlyMortgage*12);
+					var DSCR = document.getElementById("DSCR");
+					DSCR.innerHTML = formatCurrencyStr(dscr);	
+					
+		            var piti = monthlyMortgage + propertyTaxInput/12 + insuranceInput/12;
+					var monthlyPITI = document.getElementById("monthlyPITI");
+					monthlyPITI.innerHTML = formatCurrencyStr(piti);	
+
+				
+					var param = 
+					"&propertyPriceInput=" + propertyPriceInput + 
+					"&downPaymentPercentInput=" + downPaymentPercentInput + 
+					"&downPaymentAmountInput=" + downPaymentAmountInput + 
+					"&closingCostInput=" + closingCostInput + 
+					"&renovationCostInput=" + renovationCostInput + 
+					"&interestRateInput=" + interestRateInput + 
+					"&loanYearInput=" + loanYearInput + 
+					"&loanMonthInput=" + loanMonthInput + 
+					"&rbInterestOnlyLoan=" + rbInterestOnlyLoan + 
+					"&rbAdjustableLoan=" + rbAdjustableLoan + 
+					"&propertyTaxInput=" + propertyTaxInput + 
+					"&propertyTaxIncreaseInput=" + propertyTaxIncreaseInput + 
+					"&insuranceInput=" + insuranceInput + 
+					"&insuranceIncreaseInput=" + insuranceIncreaseInput + 
+					"&hoaFeeInput=" + hoaFeeInput + 
+					"&hoaFeeIncreaseInput=" + hoaFeeIncreaseInput + 
+					"&maintenanceInput=" + maintenanceInput + 
+					"&maintenanceIncreaseInput=" + maintenanceIncreaseInput + 
+					"&utilityInput=" + utilityInput + 
+					"&utilityIncreaseInput=" + utilityIncreaseInput + 
+					"&otherFeeInput=" + otherFeeInput + 
+					"&otherFeeIncreaseInput=" + otherFeeIncreaseInput + 
+					"&monthlyRentInput=" + monthlyRentInput + 
+					"&monthlyRentIncreaseInput=" + monthlyRentIncreaseInput + 
+					"&otherMonthlyIncomeInput=" + otherMonthlyIncomeInput + 
+					"&otherMonthlyIncomeIncreaseInput=" + otherMonthlyIncomeIncreaseInput + 
+					"&vacancyRateInput=" + vacancyRateInput + 
+					"&capExReserveInput=" + capExReserveInput + 
+					"&managementFeeInput=" + managementFeeInput + 
+					"&managementFeeAmountInput=" + managementFeeAmountInput + 
+					"&managementFeeIncreaseInput=" + managementFeeIncreaseInput + 
+					"&appreciationInput=" + appreciationInput + 
+					"&salesCommissionInput=" + salesCommissionInput + 
+					"&holdingYearsInput=" + holdingYearsInput + 
+					"&etMonthsBeforeFirstAdjustment=" + etMonthsBeforeFirstAdjustment + 
+					"&etMonthBetweenAdjustments=" + etMonthBetweenAdjustments + 
+					"&etExpectedAdjustments=" + etExpectedAdjustments + 
+					"&etInterestRateCap=" + etInterestRateCap; 
+
+					return param;
+				} 
+				 
+				function calc() {
+					
+					var ele = document.getElementById("result");
+					ele.style.display = "block";
+					/*
+					var monthlyRentResult = document.getElementById("monthlyRentResult");
+					var annualRentResult = document.getElementById("annualRentResult");
+					var monthlyOtherIncomeResult = document.getElementById("monthlyOtherIncomeResult");
+					var annualOtherIncomeResult = document.getElementById("annualOtherIncomeResult");
+					var monthlyManagementFeeResult = document.getElementById("monthlyManagementFeeResult");
+					var annualManagementFeeResult = document.getElementById("annualManagementFeeResult");
+					var monthlyVacancyCostResult = document.getElementById("monthlyVacancyCostResult");
+					var annualVacancyCostResult = document.getElementById("annualVacancyCostResult");
+					var monthlyIncomeResult = document.getElementById("monthlyIncomeResult");
+					var annualIncomeResult = document.getElementById("annualIncomeResult");
+					var monthlyPropertyTaxResult = document.getElementById("monthlyPropertyTaxResult");
+					var annualPropertyTaxResult = document.getElementById("annualPropertyTaxResult");
+					var monthlyInsuranceResult = document.getElementById("monthlyInsuranceResult");
+					var annualInsuranceResult = document.getElementById("annualInsuranceResult");
+					var monthlyHoaFeeResult = document.getElementById("monthlyHoaFeeResult");
+					var annualHoaFeeResult = document.getElementById("annualHoaFeeResult");
+					var monthlyMaintenanceCostResult = document.getElementById("monthlyMaintenanceCostResult");
+					var annualMaintenanceCostResult = document.getElementById("annualMaintenanceCostResult");
+					var monthlyUtilityCostResult = document.getElementById("monthlyUtilityCostResult");
+					var annualUtilityCostResult = document.getElementById("annualUtilityCostResult");
+					var monthlyOtherCostResult = document.getElementById("monthlyOtherCostResult");
+					var annualOtherCostResult = document.getElementById("annualOtherCostResult");
+					var monthlyCostResult = document.getElementById("monthlyCostResult");
+					var annualCostResult = document.getElementById("annualCostResult");
+					var monthlyNetOperatingIncomeResult = document.getElementById("monthlyNetOperatingIncomeResult");
+					var annualOperatingIncomeResult = document.getElementById("annualOperatingIncomeResult");
+					var monthlyMortgageResult = document.getElementById("monthlyMortgageResult");
+					var annualMortgageResult = document.getElementById("annualMortgageResult");
+					var monthlyCapExReserveResult = document.getElementById("monthlyCapExReserveResult");
+					var annualCapExReserveResult = document.getElementById("annualCapExReserveResult");
+					var monthlyCashFlowResult = document.getElementById("monthlyCashFlowResult");
+					var annualCashFlowResult = document.getElementById("annualCashFlowResult");
+
+					//income
+					var monthlyRentInput = evalValue(document.myForm.monthlyRentInput.value);
+					var monthlyRentIncreaseInput = evalValue(document.myForm.monthlyRentIncreaseInput.value);
+					
+					var otherMonthlyIncomeInput = evalValue(document.myForm.otherMonthlyIncomeInput.value);
+					var otherMonthlyIncomeIncreaseInput = evalValue(document.myForm.otherMonthlyIncomeIncreaseInput.value);
+
+					var monthlyTotalIncome = monthlyRentInput + otherMonthlyIncomeInput;
+
+					var managementFeeAmountInput = evalValue(document.myForm.managementFeeAmountInput.value);
+					var managementFeeIncreaseInput = evalValue(document.myForm.managementFeeIncreaseInput.value);
+					
+					var managementFeeInput = evalValue(document.myForm.managementFeeInput.value);
+					if(managementFeeInput>0) {
+						managementFeeAmountInput = monthlyTotalIncome*managementFeeInput/100;
+					}
+					var vacancyRateInput = evalValue(document.myForm.vacancyRateInput.value);
+					var monthlyVacancyCost = monthlyTotalIncome*vacancyRateInput/100;
+					var monthlyIncome = monthlyTotalIncome - managementFeeAmountInput - monthlyVacancyCost;
+
+					
+					monthlyRentResult.innerHTML = formatCurrencyStr(monthlyRentInput);
+					annualRentResult.innerHTML = formatCurrencyStr(monthlyRentInput*12);
+
+					monthlyOtherIncomeResult.innerHTML = formatCurrencyStr(otherMonthlyIncomeInput);
+					annualOtherIncomeResult.innerHTML = formatCurrencyStr(otherMonthlyIncomeInput*12);
+
+					monthlyManagementFeeResult.innerHTML = formatCurrencyStr(managementFeeAmountInput);
+					annualManagementFeeResult.innerHTML = formatCurrencyStr(managementFeeAmountInput*12);
+
+					monthlyVacancyCostResult.innerHTML = formatCurrencyStr(monthlyVacancyCost);
+					annualVacancyCostResult.innerHTML = formatCurrencyStr(monthlyVacancyCost*12);
+
+					monthlyIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome);
+					annualIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome*12);
+
+					//expense
+					var propertyTaxInput = evalValue(document.myForm.propertyTaxInput.value);
+					var propertyTaxIncreaseInput = evalValue(document.myForm.propertyTaxIncreaseInput.value);
+	
+					var monthlyPropertyTax = document.getElementById("monthlyPropertyTax");
+					var annualPropertyTaxAmountIncrease = document.getElementById("annualPropertyTaxAmountIncrease");
+	
+					monthlyPropertyTaxResult.innerHTML = formatCurrencyStr(propertyTaxInput/12);		
+					annualPropertyTaxResult.innerHTML = formatCurrencyStr(propertyTaxInput);		
+	
+					
+					var insuranceInput = evalValue(document.myForm.insuranceInput.value);
+					var insuranceIncreaseInput = evalValue(document.myForm.insuranceIncreaseInput.value);
+	
+					var monthlyInsurance = document.getElementById("monthlyInsurance");
+					var annualInsuranceAmountIncrease = document.getElementById("annualInsuranceAmountIncrease");
+	
+					monthlyInsuranceResult.innerHTML = formatCurrencyStr(insuranceInput/12);		
+					annualInsuranceResult.innerHTML = formatCurrencyStr(insuranceInput);		
+				
+					var hoaFeeInput = evalValue(document.myForm.hoaFeeInput.value);
+					var hoaFeeIncreaseInput = evalValue(document.myForm.hoaFeeIncreaseInput.value);
+	
+					var monthlyHOA = document.getElementById("monthlyHOA");
+					var annualHOAAmountIncrease = document.getElementById("annualHOAAmountIncrease");
+	
+					monthlyHoaFeeResult.innerHTML = formatCurrencyStr(hoaFeeInput/12);		
+					annualHoaFeeResult.innerHTML = formatCurrencyStr(hoaFeeInput);		
+	
+					
+					var maintenanceInput = evalValue(document.myForm.maintenanceInput.value);
+					var maintenanceIncreaseInput = evalValue(document.myForm.maintenanceIncreaseInput.value);
+	
+					var monthlyMaintenance = document.getElementById("monthlyMaintenance");
+					var annualMaintenanceAmountIncrease = document.getElementById("annualMaintenanceAmountIncrease");
+	
+					monthlyMaintenanceCostResult.innerHTML = formatCurrencyStr(maintenanceInput/12);		
+					annualMaintenanceCostResult.innerHTML = formatCurrencyStr(maintenanceInput);		
+	
+					
+					var utilityInput = evalValue(document.myForm.utilityInput.value);
+					var utilityIncreaseInput = evalValue(document.myForm.utilityIncreaseInput.value);
+	
+					var monthlyUtilities = document.getElementById("monthlyUtilities");
+					var annualUtilitiesAmountIncrease = document.getElementById("annualUtilitiesAmountIncrease");
+	
+					monthlyUtilityCostResult.innerHTML = formatCurrencyStr(utilityInput/12);		
+					annualUtilityCostResult.innerHTML = formatCurrencyStr(utilityInput);		
+	
+					
+					var otherFeeInput = evalValue(document.myForm.otherFeeInput.value);
+					var otherFeeIncreaseInput = evalValue(document.myForm.otherFeeIncreaseInput.value);
+	
+					var monthlyOtherFee = document.getElementById("monthlyOtherFee");
+					var annualOtherFeeAmountIncrease = document.getElementById("annualOtherFeeAmountIncrease");
+	
+					monthlyOtherCostResult.innerHTML = formatCurrencyStr(otherFeeInput/12);		
+					annualOtherCostResult.innerHTML = formatCurrencyStr(otherFeeInput);
+
+					var annualTotalExpense = propertyTaxInput+insuranceInput+hoaFeeInput+maintenanceInput+utilityInput+otherFeeInput;
+					
+					monthlyCostResult.innerHTML = formatCurrencyStr(annualTotalExpense/12);		
+					annualCostResult.innerHTML = formatCurrencyStr(annualTotalExpense);
+
+					monthlyNetOperatingIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome - annualTotalExpense/12);		
+					annualNetOperatingIncomeResult.innerHTML = formatCurrencyStr(monthlyIncome*12 - annualTotalExpense);
+
+
+					//mortgage
+					var propertyPriceInput = evalValue(document.myForm.propertyPriceInput.value);
+					var downPaymentPercentInput = evalValue(document.myForm.downPaymentPercentInput.value);
+					var downPaymentAmountInput = evalValue(document.myForm.downPaymentAmountInput.value);
+				
+					var loanAmountValue = propertyPriceInput - downPaymentAmountInput;
+
+					var loanYearInput = evalValue(document.myForm.loanYearInput.value);
+					var loanMonthInput = evalValue(document.myForm.loanMonthInput.value);
+					var loanMonths = loanYearInput*12+loanMonthInput;
+					var interestRateInput = evalValue(document.myForm.interestRateInput.value);
+					//var interestOnlyRate = document.myForm.interestOnlyRate.value;
+					var monthlyMortgage = calcLoan(loanAmountValue, interestRateInput, loanMonths);
+					if(document.getElementById('interestOnly').checked == true) {   
+		            	monthlyMortgage = loanAmountValue * interestRateInput/100/12;
+					}
+
+					monthlyMortgageResult.innerHTML = formatCurrencyStr(monthlyMortgage);		
+					annualMortgageResult.innerHTML = formatCurrencyStr(monthlyMortgage*12);	
+					
+					var closingCostInput = evalValue(document.myForm.closingCostInput.value);
+					var renovationCostInput = evalValue(document.myForm.renovationCostInput.value);
+
+					var capExReserveInput = evalValue(document.myForm.capExReserveInput.value);
+					var monthlyCapExReserve = monthlyTotalIncome*capExReserveInput/100;
+					monthlyCapExReserveResult.innerHTML = formatCurrencyStr(monthlyCapExReserve);		
+					annualCapExReserveResult.innerHTML = formatCurrencyStr(monthlyCapExReserve*12);		
+
+					//cash flow
+					var monthlyCashFlow = monthlyIncome - annualTotalExpense/12 - monthlyMortgage - monthlyCapExReserve;
+					monthlyCashFlowResult.innerHTML = formatCurrencyStr(monthlyCashFlow);		
+					annualCashFlowResult.innerHTML = formatCurrencyStr(monthlyCashFlow*12);		
+
+					//rate type
+					var rbInterestOnlyLoan = 'NO';
+					var rbAdjustableLoan = 'NO';
+					if(document.getElementById('adjustableRate').checked == true) {   
+						rbAdjustableLoan = 'YES';   
+					} else {  
+						rbAdjustableLoan = 'NO';  
+					}  
+					if(document.getElementById('interestOnly').checked == true) {   
+						rbInterestOnlyLoan = 'YES';   
+					} else {  
+						rbInterestOnlyLoan = 'NO';  
+					}  
+					
+					var etMonthsBeforeFirstAdjustment = evalValue(document.myForm.etMonthsBeforeFirstAdjustment.value);
+					var etMonthBetweenAdjustments = evalValue(document.myForm.etMonthBetweenAdjustments.value);
+					var etExpectedAdjustments = evalValue(document.myForm.etExpectedAdjustments.value);
+					var etInterestRateCap = evalValue(document.myForm.etInterestRateCap.value);
+
+					//if sold
+					var holdingYearsInput = evalValue(document.myForm.holdingYearsInput.value);
+					var appreciationInput = evalValue(document.myForm.appreciationInput.value);
+					var salesCommissionInput = evalValue(document.myForm.salesCommissionInput.value);
+					
+					//for summary table
+			        var propertyValue = propertyPriceInput*(1+appreciationInput/100);
+		            var capRate = (monthlyIncome*12 - annualTotalExpense)/ propertyValue * 100;
+					var currentCapRate = document.getElementById("currentCapRate");
+					currentCapRate.innerHTML = formatCurrencyStr(capRate) + "%";	
+					
+		            var dscr = (monthlyIncome*12 - annualTotalExpense)/ (monthlyMortgage*12);
+					var DSCR = document.getElementById("DSCR");
+					DSCR.innerHTML = formatCurrencyStr(dscr);	
+					
+		            var piti = monthlyMortgage + propertyTaxInput/12 + insuranceInput/12;
+					var monthlyPITI = document.getElementById("monthlyPITI");
+					monthlyPITI.innerHTML = formatCurrencyStr(piti);	
+
+				
+					var obj = "calculate?type=loanRentalProperty" +
+					"&propertyPriceInput=" + propertyPriceInput + 
+					"&downPaymentPercentInput=" + downPaymentPercentInput + 
+					"&downPaymentAmountInput=" + downPaymentAmountInput + 
+					"&closingCostInput=" + closingCostInput + 
+					"&renovationCostInput=" + renovationCostInput + 
+					"&interestRateInput=" + interestRateInput + 
+					"&loanYearInput=" + loanYearInput + 
+					"&loanMonthInput=" + loanMonthInput + 
+					"&rbInterestOnlyLoan=" + rbInterestOnlyLoan + 
+					"&rbAdjustableLoan=" + rbAdjustableLoan + 
+					"&propertyTaxInput=" + propertyTaxInput + 
+					"&propertyTaxIncreaseInput=" + propertyTaxIncreaseInput + 
+					"&insuranceInput=" + insuranceInput + 
+					"&insuranceIncreaseInput=" + insuranceIncreaseInput + 
+					"&hoaFeeInput=" + hoaFeeInput + 
+					"&hoaFeeIncreaseInput=" + hoaFeeIncreaseInput + 
+					"&maintenanceInput=" + maintenanceInput + 
+					"&maintenanceIncreaseInput=" + maintenanceIncreaseInput + 
+					"&utilityInput=" + utilityInput + 
+					"&utilityIncreaseInput=" + utilityIncreaseInput + 
+					"&otherFeeInput=" + otherFeeInput + 
+					"&otherFeeIncreaseInput=" + otherFeeIncreaseInput + 
+					"&monthlyRentInput=" + monthlyRentInput + 
+					"&monthlyRentIncreaseInput=" + monthlyRentIncreaseInput + 
+					"&otherMonthlyIncomeInput=" + otherMonthlyIncomeInput + 
+					"&otherMonthlyIncomeIncreaseInput=" + otherMonthlyIncomeIncreaseInput + 
+					"&vacancyRateInput=" + vacancyRateInput + 
+					"&capExReserveInput=" + capExReserveInput + 
+					"&managementFeeInput=" + managementFeeInput + 
+					"&managementFeeAmountInput=" + managementFeeAmountInput + 
+					"&managementFeeIncreaseInput=" + managementFeeIncreaseInput + 
+					"&appreciationInput=" + appreciationInput + 
+					"&salesCommissionInput=" + salesCommissionInput + 
+					"&holdingYearsInput=" + holdingYearsInput + 
+					"&etMonthsBeforeFirstAdjustment=" + etMonthsBeforeFirstAdjustment + 
+					"&etMonthBetweenAdjustments=" + etMonthBetweenAdjustments + 
+					"&etExpectedAdjustments=" + etExpectedAdjustments + 
+					"&etInterestRateCap=" + etInterestRateCap; 
+					*/
+					
+					var obj = "calculate?type=loanRentalProperty" + getParam(); //getParam() replaces above parameters
+					//alert(obj);
+					
+				  	var xmlHttpRequest = getXMLHttpRequest();
+				  	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
+				  	xmlHttpRequest.open("POST", obj, true);
+				  	xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				  	xmlHttpRequest.send(null);
+				}
+				 
+				/*
+				 * Returns a function that waits for the state change in XMLHttpRequest
+				 */
+				function getReadyStateHandler(xmlHttpRequest) {
+
+
+				  // an anonymous function returned
+				  // it listens to the XMLHttpRequest instance
+				  return function() {
+				    if (xmlHttpRequest.readyState == 4) {
+				      if (xmlHttpRequest.status == 200) {
+
+							//alert (xmlHttpRequest.responseText);
+							
+							resultTable(evalValue(xmlHttpRequest.responseText));
+
+				      } else {
+				        	
+				    	  	alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
+				      }
+				    }
+				  };
+				}
+				
+				
+				function resultTable(csvString) {
+					//alert (csvString);					
+					var lines = csvString.split("\n");
+
+					var table = document.getElementById("resultTable");
+					table.innerHTML = "";
+					
+
+					var totalRentalIncome1 = 0;
+					var totalExpense1 = 0;
+					var totalNOI1 = 0;
+					var totalMortgage1 = 0;
+					var totalCashFlow1 = 0;
+					var totalROI1 = 0;
+					var IRR1 = 0;
+					var currentCapRate1 = 0;
+					var monthlyPITI1 = 0;
+					var DSCR1 = 0;
+
+					for(var j=0;j<lines.length;j++)
+					{
+
+						var line = lines[j];
+						var row = table.insertRow(j);
+						if(j%2 == 0) row.style.backgroundColor = '#FCF6CF';
+
+						var cellValues = line.split(";");
+						//alert(line);
+						for(var k=0;k<cellValues.length;k++) {
+							var cell = row.insertCell(k);
+							cell.style.textAlign = 'right';
+							if(j==0) cell.style.textAlign = 'center';
+							if(j>0 && k>0) {
+								if(cellValues[k] != '') cell.innerHTML = formatCurrencyStr(cellValues[k]);
+							} else {
+								cell.innerHTML = cellValues[k];
+							}
+							cell.style.font = 'Arial';
+							cell.style.fontSize = '14px';
+
+						}
+						if(j==lines.length-2) IRR1 = cellValues[11];
+						if(j==lines.length-1) {
+							totalRentalIncome1 = cellValues[1];
+							totalExpense1 = cellValues[2];
+							totalNOI1 = cellValues[3];
+							totalMortgage1 = cellValues[4];
+							totalCashFlow1 = cellValues[5];
+							totalROI1 = cellValues[6];
+							
+
+						}
+						
+					}
+                	                
+					var totalRentalIncome = document.getElementById("totalRentalIncome");
+					var totalExpense = document.getElementById("totalExpense");
+					var totalNOI = document.getElementById("totalNOI");
+					var totalMortgage = document.getElementById("totalMortgage");
+					var totalCashFlow = document.getElementById("totalCashFlow");
+					var totalROI = document.getElementById("totalROI");
+					var IRR = document.getElementById("IRR");
+					//var currentCapRate = document.getElementById("currentCapRate");
+					//var monthlyPITI = document.getElementById("monthlyPITI");
+					//var DSCR = document.getElementById("DSCR");
+
+					totalRentalIncome.innerHTML = formatCurrencyStr(totalRentalIncome1);		
+					totalExpense.innerHTML = formatCurrencyStr(totalExpense1);		
+					totalNOI.innerHTML = formatCurrencyStr(totalNOI1);		
+					totalMortgage.innerHTML = formatCurrencyStr(totalMortgage1);		
+					totalCashFlow.innerHTML = formatCurrencyStr(totalCashFlow1);		
+					totalROI.innerHTML = formatCurrencyStr(totalROI1) + "%";		
+					IRR.innerHTML = formatCurrencyStr(IRR1) + "%";		
+					//currentCapRate.innerHTML = formatCurrencyStr(currentCapRate1);		
+					//monthlyPITI.innerHTML = formatCurrencyStr(monthlyPITI1);		
+					//DSCR.innerHTML = formatCurrencyStr(DSCR1);		
+
+				}
+
+				function email1() {
+					
+					var mainDiv = document.getElementById('main');
+					var screenshot = mainDiv.innerHTML
+					screenshot = screenshot.replace("hiddenForPrint", "none"); //hide buttons
+					
+					var url = "financialcalculator?type=emailScreenshot" + getParam();
+					//alert(url);
+					
+					document.myForm.screenshot.value=screenshot;
+
+				    document.myForm.action = url;
+				    document.myForm.method = "post";
+					document.myForm.submit();
+
+				}
+
+		//-->
+		</script>
+		
+		<body onload="calcLoanAmount();calcGui();calc();">
+
+        <div id="main" align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Rental Property Calculator</font></b></td>
+            </tr>
+          </table>
+
+          <center>
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+          
+          <!-- loan section -->
+            <tr>
+              <td width="100%">
+
+
+					<table border="0" width="85%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Property Price</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="propertyPriceInput" size="10" maxlength="75" value="200,000" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('propertyPriceInput', '.', ',');calcLoanAmount();">
+								&nbsp;<span id="loanAmount" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Down Payment</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="downPaymentPercentInput" placeholder="percent" size="5" maxlength="75" value="20" onkeypress="isNumberKey(event);" onkeyup="calcDownPaymentAmount();">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">&nbsp;% or </span>&nbsp;&nbsp;
+								<input name="downPaymentAmountInput" placeholder="amount" size="10" maxlength="75" value="40,000" onkeypress="isNumberKey(event);" onkeyup="addGroupingSeperator('downPaymentAmountInput', '.', ',');calcDownPaymentPercent();">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Interest Rate (%)</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="interestRateInput" size="10" maxlength="75" value="5" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Loan Term</span>
+							</td>
+							<td width="60%" align="left">
+								<input name="loanYearInput" size="5" maxlength="75" value="30" onkeypress="return isNumberKeyAndClear(event);">
+								<span style="font-weight:normal;font-family:Arial;font-size:14px">&nbsp;Years</span>&nbsp;&nbsp;
+								<input name="loanMonthInput" size="5" maxlength="75" onkeypress="return isNumberKeyAndClear(event);">
+								<span style="font-weight:normal;font-family:Arial;font-size:14px">&nbsp;Months</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Loan Type</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input type="radio" id="conventional" name="loanType" value="conventional" checked onclick="checkLoanType();"><label for="conventional">Conventional</label>
+								<input type="radio" id="interestOnly" name="loanType" value="interestOnly" onclick="checkLoanType();"><label for="interestOnly">Interest Only</label>
+								<input type="radio" id="adjustableRate" name="loanType" value="adjustableRate" onclick="checkLoanType();"><label for="adjustableRate">Adjustable Rate</label>
+							</td>
+					  </tr>
+
+					  <tr id="rateAdjustment_tr" style="display: none;">
+					  		<td colspan="2">
+					  			<table id="rateAdjustmentTable" border="0" width="100%" cellspacing="5" cellpadding="5">
+					  				<tr>
+								  		<td width="30%" align="right">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Months before 1st Adjust</span>
+										</td>
+										<td width="60%" valign="top" align="left">
+											<input name="etMonthsBeforeFirstAdjustment" size="10" maxlength="75" value="60" onkeypress="return isNumberKey(event);">
+										</td>
+					  				</tr>
+					  				<tr>
+								  		<td width="30%" align="right">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Months between Adjustments</span>
+										</td>
+										<td width="60%" valign="top" align="left">
+											<input name="etMonthBetweenAdjustments" size="10" maxlength="75" value="12" onkeypress="return isNumberKey(event);">
+										</td>
+					  					
+					  				</tr>
+					  				<tr>
+								  		<td width="30%" align="right">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Expected Adjustment (%)</span>
+										</td>
+										<td width="60%" valign="top" align="left">
+											<input name="etExpectedAdjustments" size="10" maxlength="75" value="0.25" onkeypress="return isNumberKey(event);">
+										</td>
+					  					
+					  				</tr>
+					  				<tr>
+								  		<td width="30%" align="right">
+											<span style="font-weight:bold;font-family:Arial;font-size:14px">Interest Rate Cap (%)</span>
+										</td>
+										<td width="60%" valign="top" align="left">
+											<input name="etInterestRateCap" size="10" maxlength="75" value="12" onkeypress="return isNumberKey(event);">
+										</td>
+					  					
+					  				</tr>
+					  				
+					  			</table>
+					  			
+					  		</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Closing Cost</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="closingCostInput" size="10" maxlength="75" value="3,000" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('closingCostInput', '.', ',');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Renovation Cost</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="renovationCostInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('renovationCostInput', '.', ',');">
+							</td>
+					  </tr>
+
+
+					</table>
+
+				</td>
+            </tr>
+            
+            <!-- expense section -->            
+            <tr>
+              	<td width="100%">
+
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">&nbsp;</span>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annually</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annually Increase (%)</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Property Tax</span>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<input name="monthlypropertyTaxInput" size="10" maxlength="75" value="500" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlypropertyTaxInput', '.', ',');calcMonthlyAnnually('monthlypropertyTaxInput', 'propertyTaxInput', false);calcGui();">
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="propertyTaxInput" size="10" maxlength="75" value="6,000" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('propertyTaxInput', '.', ',');calcMonthlyAnnually('monthlypropertyTaxInput', 'propertyTaxInput', true);calcGui();">
+								<span id="monthlyPropertyTax" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="propertyTaxIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualPropertyTaxAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Insurance</span>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<input name="monthlyInsuranceInput" size="10" maxlength="75" value="100" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlyInsuranceInput', '.', ',');calcMonthlyAnnually('monthlyInsuranceInput', 'insuranceInput', false);calcGui();">
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="insuranceInput" size="10" maxlength="75" value="1,200" onkeypress="return isNumberKey(event);" onkeyup="monthlyInsuranceInput('insuranceInput', '.', ',');calcMonthlyAnnually('monthlyInsuranceInput', 'insuranceInput', true);calcGui();">
+								<span id="monthlyInsurance" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="insuranceIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualInsuranceAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">HOA</span>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<input name="monthlyHoaFeeInput" size="10" maxlength="75" value="50" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlyHoaFeeInput', '.', ',');calcMonthlyAnnually('monthlyHoaFeeInput', 'hoaFeeInput', false);calcGui();">
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="hoaFeeInput" size="10" maxlength="75" value="600" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('hoaFeeInput', '.', ',');calcMonthlyAnnually('monthlyHoaFeeInput', 'hoaFeeInput', true);calcGui();">
+								<span id="monthlyHOA" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="hoaFeeIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualHOAAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Maintenance</span>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<input name="monthlyMaintenanceInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlyMaintenanceInput', '.', ',');calcMonthlyAnnually('monthlyMaintenanceInput', 'maintenanceInput', false);calcGui();">
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="maintenanceInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('maintenanceInput', '.', ',');calcMonthlyAnnually('monthlyMaintenanceInput', 'maintenanceInput', true);calcGui();">
+								<span id="monthlyMaintenance" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="maintenanceIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualMaintenanceAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+            
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Utilities</span>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<input name="monthlyUtilityInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlyUtilityInput', '.', ',');calcMonthlyAnnually('monthlyUtilityInput', 'utilityInput', false);calcGui();">
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="utilityInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('utilityInput', '.', ',');calcMonthlyAnnually('monthlyUtilityInput', 'utilityInput', true);calcGui();">
+								<span id="monthlyUtilities" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="utilityIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualUtilitiesAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+             
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Other Fee</span>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<input name="monthlyOtherFeeInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlyOtherFeeInput', '.', ',');calcMonthlyAnnually('monthlyOtherFeeInput', 'otherFeeInput', false);calcGui();">
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="otherFeeInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('otherFeeInput', '.', ',');calcMonthlyAnnually('monthlyOtherFeeInput', 'otherFeeInput', true);calcGui();">
+								<span id="monthlyOtherFee" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="otherFeeIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualOtherFeeAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+ 
+            		</table>
+            	</td>
+            </tr>
+            
+                
+            <!-- income section -->            
+            <tr>
+              	<td width="100%">
+
+
+					<table border="0" width="85%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">&nbsp;</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annually Increase (%)</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Rent</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="monthlyRentInput" size="10" maxlength="75" value="2,000" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlyRentInput', '.', ',');calcGui();">
+								<span id="annualRent" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="monthlyRentIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualRentAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Other Income</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="otherMonthlyIncomeInput" size="10" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('otherMonthlyIncomeInput', '.', ',');calcGui();">
+								<span id="annualOtherIncome" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="otherMonthlyIncomeIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualOtherIncomeAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Management Fee</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="managementFeeInput" size="10" maxlength="75" value="" onkeypress="isNumberKey(event);document.myForm.managementFeeAmountInput.value='';" onkeyup="calcGui();">
+								<span style="font-weight:normal;font-family:Arial;font-size:12px">%percent or</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<span id="managementFeeAmount" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">&nbsp;</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="managementFeeAmountInput" size="10" maxlength="75" value=""  placeHolder="amount" onkeypress="isNumberKey(event);document.myForm.managementFeeInput.value='';" onkeyup="addGroupingSeperator('managementFeeAmountInput', '.', ',');calcGui();">
+								<span id="annualManagementFee" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="managementFeeIncreaseInput" size="10" maxlength="75" value="3" onkeypress="return isNumberKey(event);"  onkeyup="calcGui();">
+								<span id="annualManagementFeeAmountIncrease" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Vacancy Rate (%)</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="vacancyRateInput" size="10" maxlength="75" value="5" onkeypress="return isNumberKey(event);" onkeyup="calcGui();">
+								<span id="vacancyRateAmount" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="middle" align="left">
+								<span id="vacancyRateAmount1" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">CapEx Reserve (%)</span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="capExReserveInput" size="10" maxlength="75" value="5" onkeypress="return isNumberKey(event);" onkeyup="calcGui();">
+								<span id="capExReserveAmount" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<span id="capExReserveAmount1" style="font-weight:normal;font-family:Arial;font-size:12px"></span>
+							</td>
+					  </tr>
+ 
+            		</table>
+            	</td>
+            </tr>
+
+
+          <!-- holding years section -->
+            <tr>
+              <td width="100%">
+
+
+					<table border="0" width="85%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Holding Years</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="holdingYearsInput" size="10" maxlength="75" value="30" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Appreciation (%)</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="appreciationInput" size="10" maxlength="75" value="4.5" onkeypress="return isNumberKey(event);" >
+								&nbsp;<span id="soldPrice" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Sales Commission (%)</span>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input name="salesCommissionInput" size="10" maxlength="75" value="5" onkeypress="return isNumberKey(event);">
+								&nbsp;<span id="salesCommissionAmount" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+					  </tr>
+
+					  <tr style="display:hiddenForPrint;">
+							<td width="30%" valign="top" align="right">
+								<p><input type="button" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 10em" onclick="hide();"></p>
+							</td>
+							<td width="60%" valign="top" align="left">
+								<input type=hidden name="screenshot">
+								<p><input type="button" border="0" hspace="4" alt="Email" name="email" value="Email/Print"  style="height: 2em; width: 10em" onclick="email1();">
+								<input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();"></p>
+							</td>
+					  </tr>
+
+
+					</table>
+
+
+
+				</td>
+            </tr>
+
+
+
+            
+		</form>
+
+
+          <!-- calculation result-->
+            <tr>
+              <td width="100%">
+
+		      <div id="result" style="display: none">
+					<table border="1" width="75%" cellspacing="0" cellpadding="5">
+					  <tr>
+							<td colspan=3 width="100%" valign="top" align="center">
+								<div id="title1" style="font-weight:bold;font-family:Arial;font-size:14px">&nbsp;Investment Summary When Sold</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="totalRentalIncomeLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total Rental Income</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="totalRentalIncome" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="totalExpenseLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total Expense</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="totalExpense" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="totalNOILabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total Net Operating Income</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="totalNOI" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="totalMortgageLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total Mortgage</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="totalMortgage" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="totalCashFlowLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total Cash Flow</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="totalCashFlow" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="totalROILabel" style="font-weight:bold;font-family:Arial;font-size:14px">Cash on Cash Return (ROI)</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="totalROI" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="IRRLabel" style="font-weight:bold;font-family:Arial;font-size:14px">IRR when Sold</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="IRR" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="currentCapRateLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Current Cap Rate</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="currentCapRate" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="monthlyPITILabel" style="font-weight:bold;font-family:Arial;font-size:14px">Monthly PITI</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyPITI" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="40%" valign="top" align="left">
+								<div id="DSCRLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Debt Service Coverage Ratio (DSCR)</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="DSCR" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					</table>
+					
+										
+					<br>
+
+					
+					<table border="1" width="75%" cellspacing="0" cellpadding="5">
+					  <tr>
+							<td colspan=3 width="100%" valign="top" align="center">
+								<div id="title1" style="font-weight:bold;font-family:Arial;font-size:14px">&nbsp;First Year Income, Expense and Cash Flow</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="right">
+								&nbsp;
+							</td>
+							<td width="20%" valign="top" align="center">
+								<div id="monthlyLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Monthly</div>
+							</td>
+							<td width="20%" valign="top" align="center">
+								<div id="annuallyLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Annually</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="rentalIncomeLabel" style="font-weight:bold;font-family:Arial;font-size:14px">1. Rental Income</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyRentResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualRentResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="otherIncomeLabel" style="font-weight:bold;font-family:Arial;font-size:14px">2. Other Income</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyOtherIncomeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualOtherIncomeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="managementFeeLabel" style="font-weight:bold;font-family:Arial;font-size:14px">3. Management Fee</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyManagementFeeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualManagementFeeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="vacancyCostLabel" style="font-weight:bold;font-family:Arial;font-size:14px">4. Vacancy Cost</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyVacancyCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualVacancyCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="incomeLabel" style="font-weight:bold;font-family:Arial;font-size:14px">5. Income (1+2-3-4)</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyIncomeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualIncomeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="propertyTaxLabel" style="font-weight:bold;font-family:Arial;font-size:14px">6. Property Tax</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyPropertyTaxResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualPropertyTaxResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="insuranceLabel" style="font-weight:bold;font-family:Arial;font-size:14px">7. Insurance</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyInsuranceResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualInsuranceResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="hoaFeeLabel" style="font-weight:bold;font-family:Arial;font-size:14px">8. HOA Fee</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyHoaFeeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualHoaFeeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="maintenanceCostLabel" style="font-weight:bold;font-family:Arial;font-size:14px">9. Maintenance Cost</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyMaintenanceCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualMaintenanceCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="utilityCostLabel" style="font-weight:bold;font-family:Arial;font-size:14px">10. Utilities</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyUtilityCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualUtilityCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="otherCostLabel" style="font-weight:bold;font-family:Arial;font-size:14px">11. Other Cost</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyOtherCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualOtherCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="totalCostLabel" style="font-weight:bold;font-family:Arial;font-size:14px">12. Total Expense (6+7+8+9+10+11)</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualCostResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="netOperatingIncomeLabel" style="font-weight:bold;font-family:Arial;font-size:14px">13. Net Operating Income (NOI)(5-12)</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyNetOperatingIncomeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualNetOperatingIncomeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="mortgageLabel" style="font-weight:bold;font-family:Arial;font-size:14px">14. Mortgage</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyMortgageResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualMortgageResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="capExReserveLabel" style="font-weight:bold;font-family:Arial;font-size:14px">15. CapEx Reserve</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyCapExReserveResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualCapExReserveResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="left">
+								<div id="cashFlowLabel" style="font-weight:bold;font-family:Arial;font-size:14px">16. Cash Flow (13-14-15)</div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="monthlyCashFlowResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" valign="top" align="right">
+								<div id="annualCashFlowResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					</table>
+					<p style="page-break-after:always;"></p>
+					<p><div style="font-weight:bold;font-family:Arial;font-size:13px">Annual Amortization</div></p>
+					<table id="resultTable" border="1" width="100%" cellspacing="0" cellpadding="5">
+
+					</table>
+
+					</div>
+            
+		<!-- end of calculation result -->
+
+
+				</td>
+            </tr>
+            
+
+          </table>
+        </div>
+
+
+
+
+ 
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

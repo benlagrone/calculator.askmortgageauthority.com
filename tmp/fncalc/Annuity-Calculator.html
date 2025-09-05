@@ -1,0 +1,682 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+		<script language="javascript">
+		<!--
+		
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46  ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function formatCurrency(num) {
+				num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+				return parseFloat(num).toFixed(2);
+			}
+
+			function hide() {
+				var ele = document.getElementById("result");
+				ele.style.display = "none";
+				document.myForm.beginPrincipal.value = "";
+				document.myForm.interestRate.value = "";
+				document.myForm.years.value = "";
+				document.myForm.inflation.value = "";
+			}
+			 
+			function getXMLHttpRequest() {
+				  var xmlHttpReq = false;
+				  // to create XMLHttpRequest object in non-Microsoft browsers
+				  if (window.XMLHttpRequest) {
+				    xmlHttpReq = new XMLHttpRequest();
+				  } else if (window.ActiveXObject) {
+				    try {
+				      // to create XMLHttpRequest object in later versions
+				      // of Internet Explorer
+				      xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+				    } catch (exp1) {
+				      try {
+				        // to create XMLHttpRequest object in older versions
+				        // of Internet Explorer
+				        xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+				      } catch (exp2) {
+				        xmlHttpReq = false;
+				      }
+				    }
+				  }
+				  return xmlHttpReq;
+				}
+			
+				/*
+				 * AJAX call starts with this function
+				 */
+				var n;
+				var f;
+				var r;
+				function calc() {	
+					var ele = document.getElementById("result");
+					ele.style.display = "block";
+
+					var beginPrincipal = evalValue(document.myForm.beginPrincipal.value);
+					var interestRate = evalValue(document.myForm.interestRate.value);
+					var years = evalValue(document.myForm.years.value);
+					var period = document.getElementById("period").value;
+					var type = document.getElementById("type").value;
+					var inflation = evalValue(document.myForm.inflation.value);
+
+					n = years;
+
+					r = interestRate/100;
+					f = inflation/100;
+
+					if(period == 'Weekly') {
+						n = n*52;
+						r = r/52;
+						f = f/52;
+					}
+
+					if(period == 'Bi-Weekly') {
+						n = n*26;
+						r = r/26;
+						f = f/26;
+					}
+
+					if(period == 'Semimonthly') {
+						n = n*24;
+						r = r/24;
+						f = f/24;
+					}
+
+					if(period == 'Monthly') {
+						n = n*12;
+						r = r/12;
+						f = f/12;
+					}
+
+					if(period == 'Bi-Monthly') {
+						n = n*6;
+						r = r/6;
+						f = f/6;
+					}
+
+					if(period == 'Quarterly') {
+						n = n*4;
+						r = r/4;
+						f = f/4;
+					}
+
+					if(period == 'Semiannually') {
+						n = n*2;
+						r = r/2;
+						f = f/2;
+					}
+
+					var obj = "calculate?type=annuity" +
+												"&beginPrincipal=" + beginPrincipal + 
+												"&r=" + r +
+												"&n=" + n +
+												"&f=" + f;
+					//alert(obj);
+					
+				  	var xmlHttpRequest = getXMLHttpRequest();
+				  	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
+				  	xmlHttpRequest.open("POST", obj, true);
+				  	xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				  	xmlHttpRequest.send(null);
+				}
+				 
+				/*
+				 * Returns a function that waits for the state change in XMLHttpRequest
+				 */
+				function getReadyStateHandler(xmlHttpRequest) {
+
+
+				  // an anonymous function returned
+				  // it listens to the XMLHttpRequest instance
+				  return function() {
+				    if (xmlHttpRequest.readyState == 4) {
+				      if (xmlHttpRequest.status == 200) {
+
+							//alert (xmlHttpRequest.responseText);
+
+							resultTable(evalValue(xmlHttpRequest.responseText));
+							
+				      } else {
+				        	
+				    	  	alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
+				      }
+				    }
+				  };
+				}
+
+
+				function resultTable(pmt) {
+					
+					var ele = document.getElementById("result");
+					ele.style.display = "block";
+
+					var totalPayment = 0;
+					var totalInterest = 0;
+
+					var balance = evalValue(document.myForm.beginPrincipal.value);
+					
+					var table = document.getElementById("resultTable");
+					table.innerHTML = "";
+					
+				    var header = table.createTHead();
+				    var row = header.insertRow(0);
+				    var c1 = row.insertCell(0);
+				    var c2 = row.insertCell(1);
+				    var c3 = row.insertCell(2);
+				    var c4 = row.insertCell(3);
+				    var c5 = row.insertCell(4);
+				    var c6 = row.insertCell(5);
+				    
+				    c1.innerHTML = "<b>No</b>";
+				    c2.innerHTML = "<b>Payment</b>";
+				    c3.innerHTML = "<b>Interest</b>";
+				    c4.innerHTML = "<b>Balance</b>";
+				    c5.innerHTML = "<b>Cumlative Interest</b>";
+				    c6.innerHTML = "<b>Cumlative Payment</b>";
+
+					 c1.style.textAlign = 'center';
+					 c2.style.textAlign = 'center';
+					 c3.style.textAlign = 'center';
+					 c4.style.textAlign = 'center';
+					 c5.style.textAlign = 'center';
+					 c6.style.textAlign = 'center';
+
+					 if(document.getElementById("type").value == 'End') pmt = pmt * (1+r);
+														
+					for(var j=0;j<n;j++)
+					{
+
+						var row = table.insertRow(j+1);
+						var cell1 = row.insertCell(0);
+						var cell2 = row.insertCell(1); 
+						var cell3 = row.insertCell(2);
+						var cell4 = row.insertCell(3);
+						var cell5 = row.insertCell(4);
+						var cell6 = row.insertCell(5);
+						
+						if(j%2 == 0) row.style.backgroundColor = '#FCF6CF';
+						
+					 cell2.style.textAlign = 'right';
+					 cell3.style.textAlign = 'right';
+					 cell4.style.textAlign = 'right';
+					 cell5.style.textAlign = 'right';
+					 cell6.style.textAlign = 'right';
+					 
+						if(j > 0) pmt = pmt * (1 +  f);
+						totalPayment = totalPayment + pmt;
+
+						var interest = balance * r;
+						if(document.getElementById("type").value == 'End') {
+							balance = balance * (1+r) - pmt;
+						} else {
+							interest = (balance - pmt) * r;
+							balance = (balance - pmt) * (1+r);
+						}
+						totalInterest = totalInterest + interest;
+						if(j==n-1) balance = 0;
+
+					cell1.innerHTML=j+1;
+					cell2.innerHTML=formatDollar(pmt);
+					cell3.innerHTML=formatDollar(interest);
+					cell4.innerHTML=formatDollar(balance);
+					cell5.innerHTML=formatDollar(totalInterest);
+					cell6.innerHTML=formatDollar(totalPayment);
+					
+					}
+
+
+				}
+				
+				function formatDollar(num) {
+				    var p = num.toFixed(2).split(".");
+				    return p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+				        return  num + (i && !(i % 3) ? "," : "") + acc;
+				    }, "") + "." + p[1];
+				}
+				
+		//-->
+		</script>
+		
+		<body onload="calc();">
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Annuity Calculator</font></b></td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div align="center">
+          <center>
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+            <tr>
+              <td width="100%">
+
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="25%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Beginning Principal</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="beginPrincipal" size="10" maxlength="75" value="250,000" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('beginPrincipal', '.', ',');">
+							</td>
+							<td width="25%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Interest (%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="interestRate" size="10" maxlength="75" value="7" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Years</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="years" size="10" maxlength="75" value="20" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+					  <tr>
+							<td width="25%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Payment Type</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<select id="type" style="height: 1.6em; width: 8em">
+							  		<option value="End" selected="selected">End</option>
+							  		<option value="Beginning">Beginning</option>
+								</select>
+							</td>
+							<td width="25%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Payment Period</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<select id="period" style="height: 1.6em; width: 8em">
+							  		<option value="Annually" selected="selected">Annually</option>
+							  		<option value="Semiannually">Semiannually</option>
+							  		<option value="Quarterly">Quarterly</option>
+							  		<option value="Bi-Monthly">Bi-Monthly</option>
+							  		<option value="Monthly">Monthly</option>
+							  		<option value="Semimonthly">Semimonthly</option>
+							  		<option value="Bi-Weekly">Bi-Weekly</option>
+							  		<option value="Weekly">Weekly</option>
+								</select>
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Inflation (%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="inflation" size="10" maxlength="75" value="3" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+					  <tr>
+							<td width="50%" valign="top" align="left" colspan="6">
+								<span style="font-weight:regular;font-family:Arial;font-size:12px">Note: Payment Type End means payment at the end of each period. Beginning type means payment at the beginning of each period.</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right" colspan="2">
+								<p><input type="button" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 10em" onclick="hide();"></p>
+							</td>
+							<td width="50%" valign="top" align="left" colspan="2">
+								<p><input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();"></p>
+							</td>
+					  </tr>
+
+					</table>
+
+
+
+				</td>
+            </tr>
+			</form>
+
+
+          <!-- calculation result-->
+            <tr>
+              <td width="100%">
+
+		      <div id="result" style="display: none">
+
+					<br>
+					<table id="resultTable" border="1" width="100%" cellspacing="0" cellpadding="5">
+
+					</table>
+
+					</div>
+
+
+				</td>
+            </tr>
+            
+		<!-- end of calculation result -->
+
+          </table>
+        </div>
+
+
+
+
+
+ 
+ <br><br><p>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

@@ -1,0 +1,802 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+	
+		<script language="javascript">
+		<!--
+
+		function formatCurrency(num) {
+			num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+			return parseFloat(num).toFixed(2);
+		}
+
+		function hide() {
+			var ele = document.getElementById("result");
+			ele.style.visibility = "hidden";
+		}
+
+		function getXMLHttpRequest() {
+			  var xmlHttpReq = false;
+			  // to create XMLHttpRequest object in non-Microsoft browsers
+			  if (window.XMLHttpRequest) {
+			    xmlHttpReq = new XMLHttpRequest();
+			  } else if (window.ActiveXObject) {
+			    try {
+			      // to create XMLHttpRequest object in later versions
+			      // of Internet Explorer
+			      xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+			    } catch (exp1) {
+			      try {
+			        // to create XMLHttpRequest object in older versions
+			        // of Internet Explorer
+			        xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+			      } catch (exp2) {
+			        xmlHttpReq = false;
+			      }
+			    }
+			  }
+			  return xmlHttpReq;
+			}
+		
+			/*
+			 * AJAX call starts with this function
+			 */
+			 
+			function calc() {
+				
+				var ele = document.getElementById("result");
+				ele.style.visibility = "visible";
+
+				var vehiclePrice = document.myForm.vehiclePrice.value;
+				var saleTaxRate = document.myForm.saleTaxRate.value;
+				var maxSalesTax = document.myForm.maxSalesTax.value;
+				var feeTaxable = document.myForm.feeTaxable.value;
+				var feeNonTaxable = document.myForm.feeNonTaxable.value;
+				var downPayment = document.myForm.downPayment.value;
+				var tradeInValue = document.myForm.tradeInValue.value;
+				var owedOnTradeIn = document.myForm.owedOnTradeIn.value;
+				var interestRate = document.myForm.interestRate.value;
+				var loanTerm = document.myForm.loanTerm.value;
+				var extraPerMonth = document.myForm.extraPerMonth.value;
+				var excludeTaxFeeOption = document.getElementById("excludeTaxFeeOption").checked;
+				var taxDeduction="YES";
+				if(document.getElementById('tax').checked) taxDeduction = "NO";
+				var calculateOption="monthlyPayment";
+				if(document.getElementById('affordableVehiclePriceOption').checked) calculateOption = "affordableVehiclePrice";
+				
+				var obj = "calculate?type=autoloan"  +
+											"&vehiclePrice=" + vehiclePrice + 
+											"&saleTaxRate=" + saleTaxRate +
+											"&maxSalesTax=" + maxSalesTax +
+											"&feeTaxable=" + feeTaxable +
+											"&feeNonTaxable=" + feeNonTaxable +
+											"&downPayment=" + downPayment +
+											"&tradeInValue=" + tradeInValue +
+											"&owedOnTradeIn=" + owedOnTradeIn +
+											"&interestRate=" + interestRate +
+											"&loanTerm=" + loanTerm +
+											"&extraPerMonth=" + extraPerMonth +
+											"&excludeTaxFeeOption=" + excludeTaxFeeOption +
+											"&calculateOption=" + calculateOption +
+											"&taxDeduction=" + taxDeduction;
+				//alert(obj);
+				
+			  	var xmlHttpRequest = getXMLHttpRequest();
+			  	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
+			  	xmlHttpRequest.open("POST", obj, true);
+			  	xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			  	xmlHttpRequest.send(null);
+			}
+			 
+			/*
+			 * Returns a function that waits for the state change in XMLHttpRequest
+			 */
+			function getReadyStateHandler(xmlHttpRequest) {
+
+
+			  // an anonymous function returned
+			  // it listens to the XMLHttpRequest instance
+			  return function() {
+			    if (xmlHttpRequest.readyState == 4) {
+			      if (xmlHttpRequest.status == 200) {
+
+						var monthlyPayment = document.getElementById("monthlyPayment");
+						var saleTax = document.getElementById("saleTax");
+						var amountFinanced = document.getElementById("amountFinanced");
+						var totalInterest = document.getElementById("totalInterest");
+						var totalPayment = document.getElementById("totalPayment");
+						var upfrontPayment = document.getElementById("upfrontPayment");
+						var totalCost = document.getElementById("totalCost");
+						var interestSaving = document.getElementById("interestSaving");
+						var payoffEarlierBy = document.getElementById("payoffEarlierBy");
+
+						
+						var mValue = xmlHttpRequest.responseText;
+						var res = mValue.split(";");
+
+						monthlyPayment.innerHTML = res[0];
+						saleTax.innerHTML = res[1];
+						amountFinanced.innerHTML = res[2];
+						totalInterest.innerHTML = res[3];
+						totalPayment.innerHTML = res[4];
+						upfrontPayment.innerHTML = res[5];
+						totalCost.innerHTML = res[6];
+						affordableVehiclePrice.innerHTML = res[7];
+						interestSaving.innerHTML = res[8];
+						payoffEarlierBy.innerHTML = res[9];
+
+						//alert (xmlHttpRequest.responseText);
+						
+						var extraPerMonth = document.myForm.extraPerMonth.value;
+						//alert("extra per month:" + extraPerMonth);
+						if(extraPerMonth != "") {
+							
+							document.getElementById("extraText").style.display = "block";
+							document.getElementById("interestSavingLabel").style.display = "block";
+							document.getElementById("interestSaving").style.display = "block";
+							document.getElementById("payoffEarlierByLabel").style.display = "block";
+							document.getElementById("payoffEarlierBy").style.display = "block";
+						} else {
+							document.getElementById("extraText").style.display = "none";
+							document.getElementById("interestSavingLabel").style.display = "none";
+							document.getElementById("interestSaving").style.display = "none";
+							document.getElementById("payoffEarlierByLabel").style.display = "none";
+							document.getElementById("payoffEarlierBy").style.display = "none";
+						}
+						
+
+			      } else {
+			        	
+			    	  	alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
+			      }
+			    }
+			  };
+			}
+			
+			function amort() {
+				
+				var vehiclePrice = document.myForm.vehiclePrice.value;
+				var saleTaxRate = document.myForm.saleTaxRate.value;
+				var maxSalesTax = document.myForm.maxSalesTax.value;
+				var feeTaxable = document.myForm.feeTaxable.value;
+				var feeNonTaxable = document.myForm.feeNonTaxable.value;
+				var downPayment = document.myForm.downPayment.value;
+				var tradeInValue = document.myForm.tradeInValue.value;
+				var owedOnTradeIn = document.myForm.owedOnTradeIn.value;
+				var interestRate = document.myForm.interestRate.value;
+				var loanTerm = document.myForm.loanTerm.value;
+				var extraPerMonth = document.myForm.extraPerMonth.value;
+				var excludeTaxFeeOption = document.getElementById("excludeTaxFeeOption").checked;
+				var taxDeduction="YES";
+				if(document.getElementById('tax').checked) taxDeduction = "NO";
+				var calculateOption="monthlyPayment";
+				if(document.getElementById('affordableVehiclePriceOption').checked) calculateOption = "affordableVehiclePrice";
+
+				var url = "financialcalculator?type=autoloanAmortization" +
+											"&vehiclePrice=" + vehiclePrice + 
+											"&saleTaxRate=" + saleTaxRate +
+											"&maxSalesTax=" + maxSalesTax +
+											"&feeTaxable=" + feeTaxable +
+											"&feeNonTaxable=" + feeNonTaxable +
+											"&downPayment=" + downPayment +
+											"&tradeInValue=" + tradeInValue +
+											"&owedOnTradeIn=" + owedOnTradeIn +
+											"&interestRate=" + interestRate +
+											"&loanTerm=" + loanTerm +
+											"&extraPerMonth=" + extraPerMonth +
+											"&excludeTaxFeeOption=" + excludeTaxFeeOption +
+											"&calculateOption=" + calculateOption +
+											"&taxDeduction=" + taxDeduction;
+	
+				//alert(url);
+				location.href = url;
+			}
+
+			function monthlyPaymentOption1() {
+				document.getElementById('optionLable').textContent='Vehicle Price';
+				document.getElementById('extraPerMonthRow').style.visibility='visible';
+			}
+			
+			function affordableVehiclePriceOption1() {
+				document.getElementById('optionLable').textContent='Monthly Payment';
+				document.getElementById('extraPerMonthRow').style.visibility='hidden';
+			}
+
+	//-->
+
+		</script>
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Auto Loan Calculator</font></b></td>
+            </tr>
+            <tr>
+              <td>
+				<font size="3" color="#CC0000"> * </font> Required field</td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div align="center">
+          <center>
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+            <tr>
+              <td width="100%">
+
+
+					<table border="0" width="100%" cellspacing="3" cellpadding="3">
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Select an option to calculate</span>
+							</td>
+							<td width="50%" valign="top" align="left" nowrap>
+								<input type="radio" id="monthlyPaymentOption" checked name="calculateOption" onclick="monthlyPaymentOption1();"><span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Payment</span>
+								<input type="radio" id="affordableVehiclePriceOption" name="calculateOption" onclick="affordableVehiclePriceOption1();"><span style="font-weight:bold;font-family:Arial;font-size:14px">Affordable Vehicle Price</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px" id="optionLable">Vehicle Price</span><font size="3" color="#CC0000"> * </font>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="vehiclePrice" size="20" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('vehiclePrice', '.', ',');">
+							</td>
+					  </tr>
+						
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-family:Arial;font-size:14px"><b>Sales Tax (%)</spanp>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="saleTaxRate" size="20" maxlength="75" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-family:Arial;font-size:14px"><b>Max Sales Tax</spanp>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="maxSalesTax" size="20" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('maxSaleTax', '.', ',');">
+								<input type="button" border="0" hspace="4" alt="Note" name="note" value="Note"  style="height: 2em; width: 5em" 
+								onclick="alert('Note: In some states, the vehicle sales tax is capped. If sales tax amount calculated from sales tax percentage is larger than the Max Sales Tax, the Max Sales Tax is used in the calculation. If you know the sales tax amount, you can enter in this field and leave Sales Tax (%) field blank. If there is no cap on the sales tax, leave Max Sales Tax field blank.');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Fees (taxable)</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="feeTaxable" size="20" maxlength="75" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Fees (non-taxable)</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="feeNonTaxable" size="20" maxlength="75" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Down Payment</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="downPayment" size="20" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('downPayment', '.', ',');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Trade-in Value</span>
+							</td>
+							<td width="50%" valign="top" align="left" nowrap>
+								<input name="tradeInValue" size="20" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('tradeInValue', '.', ',');">
+								<input type="radio" id="notax" checked name="taxDeduction" ><span style="font-weight:bold;font-family:Arial;font-size:14px">Tax Deduction</span>
+								<input type="radio" id="tax" name="taxDeduction"><span style="font-weight:bold;font-family:Arial;font-size:14px">No Tax Deduction</span>
+								<input type="button" border="0" hspace="4" alt="Note" name="note" value="Note"  style="height: 2em; width: 5em" 
+								onclick="alert('Note: In most states in US, you pay sales tax only on the difference between the new car price and the value of your trade-in. Some states such as California, DC, Hawaii, Michigan allow no deductions for trade-ins when calculating sales tax.');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Amount Owed on Trade-in</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="owedOnTradeIn" size="20" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('owedOnTradeIn', '.', ',');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Interest Rate</span><font size="3" color="#CC0000"> * </font>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="interestRate" size="20" maxlength="75" onkeypress="return isNumberKey(event);">
+								&nbsp;<span style="font-weight:bold;font-family:Arial;font-size:14px">% per year</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Loan Term</span><font size="3" color="#CC0000"> * </font>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="loanTerm" size="20" maxlength="75" onkeypress="return isNumberKey(event);">
+								&nbsp;<span style="font-weight:bold;font-family:Arial;font-size:14px">months</span>
+							</td>
+					  </tr>
+
+					  <tr id="extraPerMonthRow">
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Extra Payment Per Month</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="extraPerMonth" size="20" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('extraPerMonth', '.', ',');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="center" colspan=2>
+								<input type="checkbox" id="excludeTaxFeeOption" name="excludeTaxFeeOption">
+								<label for="excludeTaxFeeOption">Exclude Sales Tax and Fee in the Loan</label>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<p><input type="reset" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 10em" onclick="hide();"></p>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<p><input type="button" border="0" hspace="4" alt="Amortization" name="amortization" value="Amortization"  style="height: 2em; width: 10em" onclick="amort();">
+								<input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="return calc();"></p>
+							</td>
+					  </tr>
+
+					</table>
+
+
+				</td>
+            </tr>
+			</form>
+
+          <!-- calculation result-->
+            <tr>
+              <td width="100%">
+
+		      <div id="result" style="visibility: hidden">
+
+					<table border="0" width="100%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="affordableVehiclePriceLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Affordable Vehicle Price:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="affordableVehiclePrice" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="monthlyPaymentLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Payment:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="monthlyPayment" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="saleTaxLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Sales Tax:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="saleTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="amountFinancedLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Amount Financed:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="amountFinanced" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="totalInterestLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total Interest:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="totalInterest" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="totalPaymentLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total Loan Payment:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="totalPayment" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="upfrontPaymentLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Upfront Payment:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="upfrontPayment" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="totalCostLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Total(price,interest,tax,fee):</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="totalCost" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="extraText" style="display: none;font-weight:bold;font-family:Arial;font-size:14px">With Additional Payment</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="interestSavingLabel" style="display: none;font-weight:bold;font-family:Arial;font-size:14px">Interest Saving:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="interestSaving" style="display: none;color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="payoffEarlierByLabel" style="display: none;font-weight:bold;font-family:Arial;font-size:14px">Payoff Earlier By:</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="payoffEarlierBy" style="display: none;color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					</table>
+
+					</div>
+
+
+				</td>
+            </tr>
+
+
+
+          </table>
+        </div>
+
+
+
+
+<br><br><p>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

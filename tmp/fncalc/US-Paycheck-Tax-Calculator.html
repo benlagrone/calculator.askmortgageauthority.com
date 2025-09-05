@@ -1,0 +1,1059 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+		<script language="javascript">
+		<!--
+		
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46  ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function formatCurrency(num) {
+				num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+				return parseFloat(num).toFixed(2);
+			}
+
+			function hide() {
+				var ele = document.getElementById("result");
+				ele.style.display = "none";
+			}
+
+			Date.prototype.getWeek = function() {
+		        var onejan = new Date(this.getFullYear(), 0, 1);
+		        return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
+		    }
+
+			function calcPay() {
+				var ytdPeriod = document.myForm.ytdPeriod;
+				ytdPeriod.value = '';
+				var ytdPayResult = document.getElementById("ytdPayResult");
+				ytdPayResult.innerHTML = document.myForm.ytdPay.value;
+			}
+	
+			function calcPayYTDWithPeriod() {
+				var grossPay = evalValue(document.myForm.grossPay.value);
+				var ytdPeriod = document.myForm.ytdPeriod.value;
+				if(ytdPeriod.value != '') {
+					var ytdPayResult = document.getElementById("ytdPayResult");
+					ytdPayResult.innerHTML = formatCurrencyStr(grossPay*ytdPeriod); 				
+				}
+				//clear user entered year to date pay
+				var ytdPay = document.myForm.ytdPay;
+				ytdPay.value = '';
+
+			}
+	
+			function calcPeriod() {
+				var d = new Date();
+				var n = d.getMonth()+1; //Jan - 0
+				
+				var ytdPay = document.myForm.ytdPay;
+				ytdPay.value = '';
+				
+				var ytdPeriod = document.myForm.ytdPeriod;
+				
+				var grossPay = evalValue(document.myForm.grossPay.value);
+				var ytdPayResult = document.getElementById("ytdPayResult");
+
+				
+				var period = document.getElementById("period").value;
+				if(period == 'Weekly') {
+					ytdPeriod.value = d.getWeek();
+					ytdPayResult.innerHTML = formatCurrencyStr(grossPay*d.getWeek());
+				}
+				if(period == 'Biweekly') {
+					ytdPeriod.value = Math.floor(d.getWeek()/2);
+					ytdPayResult.innerHTML = formatCurrencyStr(grossPay*Math.floor(d.getWeek()/2));
+				}
+				if(period == 'Semimonthly') {
+					if(d.getDate()>15) {
+						ytdPeriod.value = n*2;						
+						ytdPayResult.innerHTML = formatCurrencyStr(grossPay*n*2);
+					} else {
+						ytdPeriod.value = n*2 -1;
+						ytdPayResult.innerHTML = formatCurrencyStr(grossPay*(n*2-1));
+					}
+				}
+				if(period == 'Monthly') {
+					ytdPeriod.value = n;
+					ytdPayResult.innerHTML = formatCurrencyStr(grossPay*n);
+				}
+				if(period == 'Quarterly') {
+					
+					ytdPeriod.value = 1;
+					if(n>3) ytdPeriod.value = 2;
+					if(n>6) ytdPeriod.value = 3;
+					if(n>9) ytdPeriod.value = 4;
+					ytdPayResult.innerHTML = formatCurrencyStr(grossPay*evalValue(ytdPeriod.value));
+				}
+				if(period == 'Semiannually') {
+					if(n>6){
+						ytdPeriod.value = 2;
+						ytdPayResult.innerHTML = formatCurrencyStr(grossPay*2);
+					} else {
+						ytdPeriod.value = 1;
+						ytdPayResult.innerHTML = formatCurrencyStr(grossPay*1);
+					}
+				}
+				if(period == 'Annually') {
+					ytdPeriod.value = 1;
+					ytdPayResult.innerHTML = formatCurrencyStr(grossPay*1);
+				}
+
+			}
+			
+			function calcAnnualGrossPay() {
+				var grossPay = evalValue(document.myForm.grossPay.value);
+				var period = document.getElementById("period").value;
+				
+				var annualGrossPayResult = document.getElementById("annualGrossPayResult");
+
+				if(period == 'Weekly') annualGrossPayResult.innerHTML = formatCurrencyStr(grossPay*52);
+				if(period == 'Biweekly') annualGrossPayResult.innerHTML = formatCurrencyStr(grossPay*26);
+				if(period == 'Semimonthly') annualGrossPayResult.innerHTML = formatCurrencyStr(grossPay*24);
+				if(period == 'Monthly') annualGrossPayResult.innerHTML = formatCurrencyStr(grossPay*12);
+				if(period == 'Quarterly') annualGrossPayResult.innerHTML = formatCurrencyStr(grossPay*4);
+				if(period == 'Semiannually') annualGrossPayResult.innerHTML = formatCurrencyStr(grossPay*2);
+				if(period == 'Annually') annualGrossPayResult.innerHTML = formatCurrencyStr(grossPay*1);
+				
+
+			}
+			
+			
+			function getXMLHttpRequest() {
+				  var xmlHttpReq = false;
+				  // to create XMLHttpRequest object in non-Microsoft browsers
+				  if (window.XMLHttpRequest) {
+				    xmlHttpReq = new XMLHttpRequest();
+				  } else if (window.ActiveXObject) {
+				    try {
+				      // to create XMLHttpRequest object in later versions
+				      // of Internet Explorer
+				      xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+				    } catch (exp1) {
+				      try {
+				        // to create XMLHttpRequest object in older versions
+				        // of Internet Explorer
+				        xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+				      } catch (exp2) {
+				        xmlHttpReq = false;
+				      }
+				    }
+				  }
+				  return xmlHttpReq;
+				}
+				/*
+				 * AJAX call starts with this function
+				 */
+				
+				function calc() {
+					
+					var ele = document.getElementById("result");
+					ele.style.display = "block";
+
+					var grossPay = evalValue(document.myForm.grossPay.value);
+					var period = document.getElementById("period").value;
+					var grossPayYTD = evalValue(document.getElementById("ytdPayResult").innerHTML);
+					var filingStatus = document.getElementById("filingStatus").value;
+					var allowance = document.myForm.allowance.value;
+					var taxDefer = document.myForm.taxDefer.value;
+					var preTaxDeduct = evalValue(document.myForm.preTaxDeduct.value);
+					var stateTax = document.myForm.stateTax.value;
+					var postTaxDeduct = evalValue(document.myForm.postTaxDeduct.value);
+					//alert("grossPayYTD:" + grossPayYTD);
+					var obj = "calculate?type=paycheck" +
+												"&grossPay=" + grossPay + 
+												"&period=" + period +
+												"&grossPayYTD=" + grossPayYTD +
+												"&filingStatus=" + filingStatus +
+												"&allowance=" + allowance +
+												"&taxDefer=" + taxDefer +
+												"&preTaxDeduct=" + preTaxDeduct +
+												"&stateTax=" + stateTax +
+												"&postTaxDeduct=" + postTaxDeduct;
+					//alert(obj);
+					
+				  	var xmlHttpRequest = getXMLHttpRequest();
+				  	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
+				  	xmlHttpRequest.open("POST", obj, true);
+				  	xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				  	xmlHttpRequest.send(null);
+				}
+				 
+				/*
+				 * Returns a function that waits for the state change in XMLHttpRequest
+				 */
+				function getReadyStateHandler(xmlHttpRequest) {
+
+
+				  // an anonymous function returned
+				  // it listens to the XMLHttpRequest instance
+				  return function() {
+				    if (xmlHttpRequest.readyState == 4) {
+				      if (xmlHttpRequest.status == 200) {
+
+							//alert (xmlHttpRequest.responseText);
+							
+							var netTakeHomePay = document.getElementById("netTakeHomePay");
+							var socialSecurity = document.getElementById("socialSecurity");
+							var medicare = document.getElementById("medicare");
+							var federalTax = document.getElementById("federalTax");
+							var taxDefer = document.getElementById("taxDefer");
+							var preTaxDeduction = document.getElementById("preTaxDeduction");
+							var stateTax = document.getElementById("stateTax");
+							var postTaxDeduct = document.getElementById("postTaxDeduct");
+
+							var netTakeHomePayYTD = document.getElementById("netTakeHomePayYTD");
+							var socialSecurityYTD = document.getElementById("socialSecurityYTD");
+							var medicareYTD = document.getElementById("medicareYTD");
+							var federalTaxYTD = document.getElementById("federalTaxYTD");
+							var taxDeferYTD = document.getElementById("taxDeferYTD");
+							var preTaxDeductionYTD = document.getElementById("preTaxDeductionYTD");
+							var stateTaxYTD = document.getElementById("stateTaxYTD");
+							var postTaxDeductYTD = document.getElementById("postTaxDeductYTD");
+
+							var note = document.getElementById("note");
+
+							var mValue = xmlHttpRequest.responseText;
+							var res = mValue.split(";");
+
+							netTakeHomePay.innerHTML = res[0];
+							socialSecurity.innerHTML = res[1];
+							medicare.innerHTML = res[2];
+							federalTax.innerHTML = res[3];
+							taxDefer.innerHTML = res[4];
+							preTaxDeduction.innerHTML = res[5];
+							stateTax.innerHTML = res[6];
+							postTaxDeduct.innerHTML = res[7];
+
+							var oneAllowanceResult = document.getElementById("oneAllowanceResult");
+							var taxGrossResult = document.getElementById("taxGrossResult");
+							oneAllowanceResult.innerHTML = res[8];
+							taxGrossResult.innerHTML = res[9];
+
+							var withhold = evalValue(res[10]);
+							var percent = evalValue(res[11]);
+							var excessOver = evalValue(res[12]);
+							
+							note.innerHTML = res[13];
+
+
+							
+							var grossPayYTD = document.getElementById("ytdPayResult").value;
+
+							if(grossPayYTD != '') {
+								netTakeHomePayYTD.innerHTML = res[14];
+								socialSecurityYTD.innerHTML = res[15];
+								medicareYTD.innerHTML = res[16];
+								federalTaxYTD.innerHTML = res[17];
+								taxDeferYTD.innerHTML = res[18];
+								preTaxDeductionYTD.innerHTML = res[19];
+								stateTaxYTD.innerHTML = res[20];
+								postTaxDeductYTD.innerHTML = res[21];
+							}
+							
+							
+							
+							//paycheck table
+							var table = document.getElementById("resultTable");
+							table.innerHTML = "";
+							
+						    var header = table.createTHead();
+						    var row = header.insertRow(0);
+						    var c1 = row.insertCell(0);
+						    var c2 = row.insertCell(1);
+						    var c3 = row.insertCell(2);
+						    var c4 = row.insertCell(3);
+						    var c5 = row.insertCell(4);
+						    var c6 = row.insertCell(5);
+						    var c7 = row.insertCell(6);
+						    var c8 = row.insertCell(7);
+						    var c9 = row.insertCell(8);
+						    var c10 = row.insertCell(9);
+						    
+						    c1.innerHTML = "<b>No</b>";
+						    c2.innerHTML = "<b>Social Security</b>";
+						    c3.innerHTML = "<b>Medicare</b>";
+						    c4.innerHTML = "<b>Tax Defer 401k</b>";
+						    c5.innerHTML = "<b>Pre-Tax Deduction</b>";
+						    c6.innerHTML = "<b>Federal Tax</b>";
+						    c7.innerHTML = "<b>State Tax</b>";
+						    c8.innerHTML = "<b>Post-Tax Deduction</b>";
+						    c9.innerHTML = "<b>Net Pay</b>";
+						    c10.innerHTML = "<b>YTD Net Pay</b>";
+
+							 c1.style.textAlign = 'center';
+							 c2.style.textAlign = 'center';
+							 c3.style.textAlign = 'center';
+							 c4.style.textAlign = 'center';
+							 c5.style.textAlign = 'center';
+							 c6.style.textAlign = 'center';
+							 c7.style.textAlign = 'center';
+							 c8.style.textAlign = 'center';
+							 c9.style.textAlign = 'center';
+							 c10.style.textAlign = 'center';
+
+							 
+							var grossPaycheck = evalValue(document.myForm.grossPay.value);
+							
+							var annualGrossPay = evalValue(document.getElementById("annualGrossPayResult").innerHTML);
+							var period = annualGrossPay/grossPaycheck;
+							
+							var taxDeferPlan = evalValue(res[4]);
+							
+							var ssTaxTotal = 0;
+							var taxDeferTotal = 0;
+							var initialTaxDeferPlan = taxDeferPlan;
+							
+							//IRS constants for 2024
+							var ssMax = 168600; //for 2024
+							var medicareExtraSingle = 200000;
+							var medicareExtraMarried = 250000;
+							var taxDefer401kMax = 23000; 
+
+							var stateTaxPercent = document.myForm.stateTax.value;
+							var preTaxDeduction = evalValue(document.myForm.preTaxDeduct.value);
+							var postTaxDeduction = evalValue(document.myForm.postTaxDeduct.value);
+							var netPayAmountYTD = 0;
+							
+							for(var j=0;j<period;j++)
+							{
+
+								var row = table.insertRow(j+1);
+								var cell1 = row.insertCell(0);
+								var cell2 = row.insertCell(1); 
+								var cell3 = row.insertCell(2);
+								var cell4 = row.insertCell(3);
+								var cell5 = row.insertCell(4);
+								var cell6 = row.insertCell(5);
+								var cell7 = row.insertCell(6);
+								var cell8 = row.insertCell(7);
+								var cell9 = row.insertCell(8);
+								var cell10 = row.insertCell(9);
+								
+								if(j%2 == 0) row.style.backgroundColor = '#FCF6CF';
+								
+								 cell2.style.textAlign = 'right';
+								 cell3.style.textAlign = 'right';
+								 cell4.style.textAlign = 'right';
+								 cell5.style.textAlign = 'right';
+								 cell6.style.textAlign = 'right';
+								 cell7.style.textAlign = 'right';
+								 cell8.style.textAlign = 'right';
+								 cell9.style.textAlign = 'right';
+								 cell10.style.textAlign = 'right';
+								 
+									//social security
+									var ssTax = evalValue(res[1]);
+									ssTaxTotal = ssTaxTotal + evalValue(res[1]);
+									if(ssTaxTotal > ssMax * 0.062) {
+										var prevTotal = ssTaxTotal - ssTax;
+										ssTax = ssMax * 0.062 - prevTotal;
+										ssTaxTotal = prevTotal + ssTax;
+									} 
+									
+									//medicare
+									//Married
+									var medicareTax = evalValue(res[2]);
+									var yearToDateGrossPay = (grossPaycheck-preTaxDeduction)*(j+1);
+									if(document.getElementById("filingStatus").value == 'Married' && yearToDateGrossPay > medicareExtraMarried) {
+										var extraMedicareEarning = grossPaycheck-preTaxDeduction;
+										if((yearToDateGrossPay - medicareExtraMarried) < (grossPaycheck-preTaxDeduction)) {
+											extraMedicareEarning = yearToDateGrossPay - medicareExtraMarried; //when reach extra line, it will consider the amount above the extra line
+										}
+										medicareTax = (grossPaycheck-preTaxDeduction) * 0.0145 + extraMedicareEarning * 0.009;
+									}
+									//Single
+									if(document.getElementById("filingStatus").value == 'Single' && yearToDateGrossPay > medicareExtraSingle) {
+										var extraMedicareEarning = grossPaycheck-preTaxDeduction;
+										if((yearToDateGrossPay - medicareExtraSingle) < (grossPaycheck-preTaxDeduction)) {
+											extraMedicareEarning = yearToDateGrossPay - medicareExtraSingle;
+										}
+										medicareTax = (grossPaycheck-preTaxDeduction) * 0.0145 + extraMedicareEarning * 0.009;
+									}
+									
+									//tax defer 401k
+									var federalTaxableGross = evalValue(res[9]);
+									var newFederalTaxableGross = federalTaxableGross;
+									taxDeferTotal = taxDeferTotal + taxDeferPlan;
+									if(taxDeferTotal >= taxDefer401kMax) {
+										var prevTotal = taxDeferTotal - taxDeferPlan;
+										taxDeferPlan = taxDefer401kMax - prevTotal;
+										taxDeferTotal = prevTotal + taxDeferPlan;
+										newFederalTaxableGross = (federalTaxableGross + initialTaxDeferPlan) - taxDeferPlan; //add back the original tax defer and substruct the new one
+									} 
+									
+									
+									
+									//federal tax
+									federalTaxAmount = (withhold + percent * (newFederalTaxableGross * period - excessOver)) / period;
+									
+									//state and local tax
+									var startLocalTax = newFederalTaxableGross * stateTaxPercent / 100;
+																		//net pay
+									var netPayAmount = grossPaycheck - ssTax - medicareTax - federalTaxAmount - taxDeferPlan - preTaxDeduction - startLocalTax - postTaxDeduction;
+									netPayAmountYTD = netPayAmountYTD + netPayAmount;
+																		
+								cell1.innerHTML=j+1;
+								cell2.innerHTML=formatCurrencyStr(ssTax);
+								cell3.innerHTML=formatCurrencyStr(medicareTax);
+								cell4.innerHTML=formatCurrencyStr(taxDeferPlan);
+								cell5.innerHTML=formatCurrencyStr(preTaxDeduction);
+								cell6.innerHTML=formatCurrencyStr(federalTaxAmount);
+								cell7.innerHTML=formatCurrencyStr(startLocalTax);
+								cell8.innerHTML=formatCurrencyStr(postTaxDeduction);
+								cell9.innerHTML=formatCurrencyStr(netPayAmount);
+								cell10.innerHTML=formatCurrencyStr(netPayAmountYTD);
+							
+							}
+							
+
+							
+							
+							
+				      } else {
+				        	
+				    	  	alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
+				      }
+				    }
+				  };
+				}
+		//-->
+		</script>
+		
+		<body onload="calcAnnualGrossPay();calcPeriod();calc();">
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Paycheck Tax Calculator</font></b></td>
+            </tr>
+          </table>
+        </div>
+		<br>
+
+        <div align="center">
+          <center>
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+            <tr>
+              <td width="100%">
+
+
+					<table border="0" width="100%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Gross Pay</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="grossPay" size="10" maxlength="75" value="8,000" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('grossPay', '.', ',');calcAnnualGrossPay();calcPayYTDWithPeriod();">
+							</td>
+							<td width="15%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Pay Period</span>
+							</td>
+							<td width="10%" align="left">
+								<select id="period" style="height: 1.6em; width: 7em" onchange="calcAnnualGrossPay();calcPeriod();">
+							  		<option value="Weekly">Weekly</option>
+							  		<option value="Biweekly">Biweekly</option>
+							  		<option value="Semimonthly">Semimonthly</option>
+							  		<option value="Monthly" selected="selected">Monthly</option>
+							  		<option value="Quarterly">Quarterly</option>
+							  		<option value="Semiannually">Semiannually</option>
+							  		<option value="Annually">Annually</option>
+								</select>
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Gross Pay</span>
+							</td>
+							<td width="15%" align="left">
+								<div id="annualGrossPayResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Year to Date Pay</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="ytdPay" size="10" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('ytdPay', '.', ',');calcPay()">
+							</td>
+							<td width="15%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Year to Date Period</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="ytdPeriod" id="ytdPeriod" size="10" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="calcPayYTDWithPeriod();">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Year to Date Pay</span>
+							</td>
+							<td width="15%" align="left">
+								<div id="ytdPayResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Filling Status</span>
+							</td>
+							<td width="10%" align="left">
+								<select id="filingStatus" style="height: 1.6em; width: 7em">
+							  		<option value="Married">Married</option>
+							  		<option value="Single">Single</option>
+								</select>
+							</td>
+							<td width="15%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Allowance</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="allowance" value="2" size="10" maxlength="75" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">One Allowance</span>
+							</td>
+							<td width="15%" align="left">
+								<div id="oneAllowanceResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Tax Defer 401k (%)</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="taxDefer" size="10" maxlength="75" value="15" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('ytdPay', '.', ',');">
+							</td>
+							<td width="15%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Pre-Tax Deduct</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="preTaxDeduct" size="10" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('ytdPeriod', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Taxable Gross</span>
+							</td>
+							<td width="15%" align="left">
+								<div id="taxGrossResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">State Tax (%)</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="stateTax" size="10" maxlength="75" value="5" onkeypress="return isNumberKey(event);" >
+							</td>
+							<td width="15%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Post-Tax Deduct</span>
+							</td>
+							<td width="10%" align="left">
+								<input name="postTaxDeduct" size="10" maxlength="75" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('postTaxDeduct', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px"></span>
+							</td>
+							<td width="15%" align="left">
+								<div id="empty" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+					  <tr>
+							<td width="15%" valign="top" align="right" colspan=2>
+								<br><input type="reset" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 10em" onclick="hide();"></p>
+							</td>
+							<td width="15%" valign="top" align="left">
+								<br><input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();"></p>
+							</td>
+					  </tr>
+
+					</table>
+
+
+				</td>
+            </tr>
+			</form>
+
+          <!-- calculation result-->
+            <tr>
+              <td width="100%">
+
+		      <div id="result" style="display: none">
+
+					<table border="0" width="60%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								&nbsp;
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="eachPeriodtLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Each Period</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="ytdLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Year to Date</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="30%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">Net Take-Home Pay:</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="netTakeHomePay" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="netTakeHomePayYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">Social Security (6.2%):</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="socialSecurity" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="socialSecurityYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">Medicare (1.45%):</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="medicare" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="medicareYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">Federal Tax:</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="federalTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="federalTaxYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">Tax Deferral Plan 401k:</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="taxDefer" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="taxDeferYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">Pre-Tax Deductions:</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="preTaxDeduction" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="preTaxDeductionYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">State/Local Tax:</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="stateTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="stateTaxYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div style="font-weight:bold;font-family:Arial;font-size:14px">Post-Tax Deductions:</div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="postTaxDeduct" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="30%" valign="top" align="right">
+								<div id="postTaxDeductYTD" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					</table>
+
+					<table border="0" width="100%" cellspacing="5" cellpadding="5">
+					  
+			            <tr>
+			              <td width="100%">
+			
+					      <div>
+			
+								<table id="resultTable" border="1" width="100%" cellspacing="0" cellpadding="5">
+			
+								</table>
+			
+								</div>
+			
+			
+							</td>
+			            </tr>
+ 
+					  <tr>
+							<td width="100%" valign="top" align="left">
+								<div id="note" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+<!-- 
+					  <tr>
+							<td width="100%" valign="top" align="left">
+								<div id="note" style="color:#000000;font-family:Arial;font-size:14px">
+								        <b>Paycheck Calculations:</b></b><br>
+										1. The FICA Social Security rate is 6.20 percent on earnings up to the applicable taxable maximum amount $118,500 in 2017.<br>
+										2. The Medicare portion is 1.45 percent on all earnings. Also, as of January 2013, individuals with earned income of more than $200,000 or $250,000 for married couples filing jointly pay an additional 0.9 percent in Medicare taxes.<br>
+								
+								</div>
+							</td>
+					  </tr>
+ -->
+					</table>
+
+					</div>
+
+
+				</td>
+            </tr>
+            
+		<!-- end of calculation result -->
+
+          </table>
+        </div>
+
+  <br><br><p>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

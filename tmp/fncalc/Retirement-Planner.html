@@ -1,0 +1,1060 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+	
+
+
+
+    <!-- old library <script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script language="javascript">
+		<!--
+		   window.onload = function(){
+			document.myForm.mode.value = 1;
+	    	};
+
+
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46  ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+			
+			function formatDollar(num) {
+			    var p = num.toFixed(2).split(".");
+			    return p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+			        return  num + (i && !(i % 3) ? "," : "") + acc;
+			    }, "");
+			}
+
+		    //google.load("visualization", "1", {packages:["corechart"]});
+		    //google.setOnLoadCallback(calc);
+			google.charts.load('current', {'packages':['corechart', 'table', 'geomap']});
+			google.charts.setOnLoadCallback(calc);
+
+			function calc() {
+				document.getElementById("mode1").style.display = "none";
+				document.getElementById("mode2").style.display = "none";
+				document.getElementById("mode3").style.display = "none";
+				document.getElementById("mode4").style.display = "none";
+				document.getElementById("mode5").style.display = "none";
+				document.getElementById("mode6").style.display = "none";
+				document.getElementById("mode7").style.display = "none";
+				document.getElementById("mode8").style.display = "none";
+			
+				var mode = evalValue(document.myForm.mode.value);
+				if(mode == 1) {
+					calc1();
+					document.getElementById("mode1").style.display = "block";
+				}
+				if(mode == 2) {
+					calc2();
+					document.getElementById("mode2").style.display = "block";
+				}
+				if(mode == 3) {
+					calc3();
+					document.getElementById("mode3").style.display = "block";
+				}
+				if(mode == 4) {
+					calc4();
+					document.getElementById("mode4").style.display = "block";
+				}
+				if(mode == 5) {
+					calc5();
+					document.getElementById("mode5").style.display = "block";
+				}
+				if(mode == 6) {
+					calc6();
+					document.getElementById("mode6").style.display = "block";
+				}
+				if(mode == 7) {
+					calc7();
+					document.getElementById("mode7").style.display = "block";
+				}
+				if(mode == 8) {
+					calc8();
+					document.getElementById("mode8").style.display = "block";
+				}
+
+			}
+			
+			//Start Early and Save Regurlarly
+			function calc1() {
+		    	var d1 = calcFutureValue(25);
+		    	var d2 = calcFutureValue(30);
+		    	var d3 = calcFutureValue(35);
+		    	var d4 = calcFutureValue(40);
+		    	var d5 = calcFutureValue(45);
+		    	var d6 = calcFutureValue(50);
+		    	var d7 = calcFutureValue(55);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Starting Age", "Savings", { role: "style" }, { role: 'annotation' } ],
+		        ["25", d1, "#3FBC8F", formatDollar(d1)],
+		        ["30", d2, "#FFA000", formatDollar(d2)],
+		        ["35", d3, "#808080", formatDollar(d3)],
+		        ["40", d4, "#FF0000", formatDollar(d4)],
+		        ["45", d5, "#008080", formatDollar(d5)],
+		        ["50", d6, "#A02820", formatDollar(d6)],
+		        ["55", d7, "#008000", formatDollar(d7)]
+		      	]);
+
+			    var titleStr = "Total Savings at Age " + document.myForm.retirementAge1.value;
+			    var xTitle = "Starting Age";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+			
+			function calcFutureValue(startingAge) {
+				
+				var monthlySaving = evalValue(document.myForm.monthlySaving1.value);
+				var annualReturnRate = evalValue(document.myForm.annualReturnRate1.value);
+				var retirementAge = evalValue(document.myForm.retirementAge1.value);
+				var r = annualReturnRate/100;
+				var years = retirementAge - startingAge;
+				
+				var fv = 0;
+				
+				if(r != 0) {
+					fv = (monthlySaving*(Math.pow(1+r/12, years*12) - 1))/(r/12);
+				} else {
+					fv = monthlySaving*12*years; 
+				}
+				
+				return Math.round(fv);
+			}
+			
+			//Start Early and Save Regurlarly
+			function calc2() {
+		    	var d1 = calcMonthlySaving(25);
+		    	var d2 = calcMonthlySaving(30);
+		    	var d3 = calcMonthlySaving(35);
+		    	var d4 = calcMonthlySaving(40);
+		    	var d5 = calcMonthlySaving(45);
+		    	var d6 = calcMonthlySaving(50);
+		    	var d7 = calcMonthlySaving(55);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Starting Age", "Savings", { role: "style" }, { role: 'annotation' } ],
+		        ["25", d1, "#3FBC8F", formatDollar(d1)],
+		        ["30", d2, "#FFA000", formatDollar(d2)],
+		        ["35", d3, "#808080", formatDollar(d3)],
+		        ["40", d4, "#FF0000", formatDollar(d4)],
+		        ["45", d5, "#008080", formatDollar(d5)],
+		        ["50", d6, "#A02820", formatDollar(d6)],
+		        ["55", d7, "#008000", formatDollar(d7)]
+		      	]);
+
+			    var titleStr = "To reach the retirement savings you should save monthly";
+			    var xTitle = "Starting Age";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+
+			function calcMonthlySaving(startingAge) {
+				
+				var fv = evalValue(document.myForm.savingAtRetirement2.value);
+				var annualReturnRate = evalValue(document.myForm.annualReturnRate2.value);
+				var retirementAge = evalValue(document.myForm.retirementAge2.value);
+				var r = annualReturnRate/100;
+				
+				var pmt = 0;
+				var years = retirementAge - startingAge;
+				if(r != 0) {
+	        		pmt = -fv/((1 - Math.pow(1+r/12, years*12))/(r/12));
+				} else {
+					pmt = (fv)/years/12;
+				}
+				if(pmt < 0) pmt = 0;
+				
+				return Math.round(pmt);
+			}
+
+			//Max out 401k/IRA Saving
+			function calc3() {
+		    	var d1 = calcFutureSavingWithMatch(25);
+		    	var d2 = calcFutureSavingWithMatch(30);
+		    	var d3 = calcFutureSavingWithMatch(35);
+		    	var d4 = calcFutureSavingWithMatch(40);
+		    	var d5 = calcFutureSavingWithMatch(45);
+		    	var d6 = calcFutureSavingWithMatch(50);
+		    	var d7 = calcFutureSavingWithMatch(55);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Starting Age", "Savings", { role: "style" }, { role: 'annotation' } ],
+		        ["25", d1, "#3FBC8F", formatDollar(d1)],
+		        ["30", d2, "#FFA000", formatDollar(d2)],
+		        ["35", d3, "#808080", formatDollar(d3)],
+		        ["40", d4, "#FF0000", formatDollar(d4)],
+		        ["45", d5, "#008080", formatDollar(d5)],
+		        ["50", d6, "#A02820", formatDollar(d6)],
+		        ["55", d7, "#008000", formatDollar(d7)]
+		      	]);
+
+			    var titleStr = "Total Saving at Retirement Age " + document.myForm.retirementAge3.value;
+			    var xTitle = "Starting Age";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+
+			function calcFutureSavingWithMatch(startingAge) {
+				
+				var annualSaving = evalValue(document.myForm.annualSaving3.value);
+				var annualReturnRate = evalValue(document.myForm.annualReturnRate3.value);
+				var retirementAge = evalValue(document.myForm.retirementAge3.value);
+				
+				var salary = evalValue(document.myForm.annualSalary3.value);
+				var matchPer = evalValue(document.myForm.companyMatch3.value);
+				
+				var r = annualReturnRate/100;
+				var years = retirementAge - startingAge;
+				
+			    var annualSaving = annualSaving + salary * matchPer/100;
+
+				var fv = 0;
+				
+				if(r != 0) {
+					fv = (annualSaving*(Math.pow(1+r, years) - 1))/r;
+				} else {
+					fv = annualSaving*years; 
+				}
+				
+				return Math.round(fv);
+				
+			}
+			
+			//Invest Wisely
+			function calc4() {
+		    	var d1 = calcFutureValue4(4);
+		    	var d2 = calcFutureValue4(5);
+		    	var d3 = calcFutureValue4(6);
+		    	var d4 = calcFutureValue4(7);
+		    	var d5 = calcFutureValue4(8);
+		    	var d6 = calcFutureValue4(9);
+		    	var d7 = calcFutureValue4(10);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Annual Return Rate", "Savings", { role: "style" }, { role: 'annotation' } ],
+		        ["4%", d1, "#3FBC8F", formatDollar(d1)],
+		        ["5%", d2, "#FFA000", formatDollar(d2)],
+		        ["6%", d3, "#808080", formatDollar(d3)],
+		        ["7%", d4, "#FF0000", formatDollar(d4)],
+		        ["8%", d5, "#008080", formatDollar(d5)],
+		        ["9%", d6, "#A02820", formatDollar(d6)],
+		        ["10%", d7, "#008000", formatDollar(d7)]
+		      	]);
+
+			    var titleStr = "Total Savings at Age " + document.myForm.retirementAge4.value;
+			    var xTitle = "Annual Return Rate";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+			
+			function calcFutureValue4(annualReturnRate) {
+				
+				var monthlySaving = evalValue(document.myForm.monthlySaving4.value);
+				var currentAge = evalValue(document.myForm.currentAge4.value);
+				var retirementAge = evalValue(document.myForm.retirementAge4.value);
+				var r = annualReturnRate/100;
+				var years = retirementAge - currentAge;
+				
+				var fv = 0;
+				
+				if(r != 0) {
+					//fv = (monthlySaving*12*(Math.pow(1+r, years) - 1))/r;
+					fv = (monthlySaving*(Math.pow(1+r/12, years*12) - 1))/(r/12);
+				} else {
+					fv = monthlySaving*12*years; 
+				}
+				
+				return Math.round(fv);
+			}
+			
+			//How much money will I need for retirement?
+			function calc5() {
+		    	var d1 = calcRetirementSavings(3000);
+		    	var d2 = calcRetirementSavings(4000);
+		    	var d3 = calcRetirementSavings(5000);
+		    	var d4 = calcRetirementSavings(6000);
+		    	var d5 = calcRetirementSavings(7000);
+		    	var d6 = calcRetirementSavings(8000);
+		    	var d7 = calcRetirementSavings(9000);
+		    	var d8 = calcRetirementSavings(10000);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Monthly Income at Retirement", "Savings", { role: "style" }, { role: 'annotation' } ],
+		        ["3,000", d1, "#3FBC8F", formatDollar(d1)],
+		        ["4,000", d2, "#FFA000", formatDollar(d2)],
+		        ["5,000", d3, "#808080", formatDollar(d3)],
+		        ["6,000", d4, "#FF0000", formatDollar(d4)],
+		        ["7,000", d5, "#008080", formatDollar(d5)],
+		        ["8,000", d6, "#A02820", formatDollar(d6)],
+		        ["9,000", d7, "#008000", formatDollar(d7)],
+		        ["10,000", d8, "#FF00FF", formatDollar(d8)]
+		      	]);
+
+			    var titleStr = "Money Needed at Retirement if Retirement Years is " + document.myForm.retirementYears5.value;
+			    var xTitle = "Monthly Income at Retirement";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+			
+			function calcRetirementSavings(pmt) {
+				
+				var years = evalValue(document.myForm.retirementYears5.value);
+				var annualReturnRate = evalValue(document.myForm.annualReturnRate5.value);
+				var r = annualReturnRate/100;
+				
+				var pv = 0;
+				
+				if(r != 0) {
+					//pv = (12*pmt*(Math.pow(1+r, years) - 1)/r)/Math.pow(1+r, years);
+					pv = (pmt*(Math.pow(1+r/12, years*12) - 1)/(r/12))/Math.pow(1+r/12, years*12);
+				} else {
+					pv = 12 * pmt*years; 
+				}
+				
+				return Math.round(pv);
+			}
+			
+			//How long will my money last?
+			function calc6() {
+				var monthlyWithdrawal = evalValue(document.myForm.monthlyWithdraw6.value);
+				var pmt = [];
+				var length = 8; // user defined length
+
+				for(var i = 0; i < length; i++) {
+					pmt[i] = monthlyWithdrawal + i*1000;
+				}
+				
+		    	var d1 = calcRetirementYears(pmt[0]);
+		    	var d2 = calcRetirementYears(pmt[1]);
+		    	var d3 = calcRetirementYears(pmt[2]);
+		    	var d4 = calcRetirementYears(pmt[3]);
+		    	var d5 = calcRetirementYears(pmt[4]);
+		    	var d6 = calcRetirementYears(pmt[5]);
+		    	var d7 = calcRetirementYears(pmt[6]);
+		    	var d8 = calcRetirementYears(pmt[7]);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Monthly Income at Retirement", "Savings", { role: "style" }, { role: 'annotation' } ],
+		        [formatDollar(pmt[0]), d1, "#3FBC8F", d1],
+		        [formatDollar(pmt[1]), d2, "#FFA000", d2],
+		        [formatDollar(pmt[2]), d3, "#808080", d3],
+		        [formatDollar(pmt[3]), d4, "#FF0000", d4],
+		        [formatDollar(pmt[4]), d5, "#008080", d5],
+		        [formatDollar(pmt[5]), d6, "#A02820", d6],
+		        [formatDollar(pmt[6]), d7, "#008000", d7],
+		        [formatDollar(pmt[7]), d8, "#FF00FF", d8]
+		      	]);
+
+			    var titleStr = "Years Retirement Fund Lasts";
+			    var xTitle = "Monthly Income at Retirement";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+			
+			function calcRetirementYears(pmt) {
+				
+				var pv = evalValue(document.myForm.savingAtRetirement6.value);
+				var annualReturnRate = evalValue(document.myForm.annualReturnRate6.value);
+				var r = annualReturnRate/100;
+				
+				var years = 0;
+				
+				if(r != 0) {
+					//years = Math.log((pmt*12/r)/(-pv+pmt*12/r))/Math.log(1+r);
+					years = Math.log((pmt/(r/12))/(-pv+pmt/(r/12)))/Math.log(1+r/12) / 12;
+				} else {
+					years = pv/(pmt*12);
+				}
+				//alert(years);
+				return Math.round(years*100)/100
+			}
+			
+			//How long should I withdraw?
+			function calc7() {
+		    	var d1 = calcRetirementIncome(10);
+		    	var d2 = calcRetirementIncome(15);
+		    	var d3 = calcRetirementIncome(20);
+		    	var d4 = calcRetirementIncome(25);
+		    	var d5 = calcRetirementIncome(30);
+		    	var d6 = calcRetirementIncome(35);
+		    	var d7 = calcRetirementIncome(40);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Monthly Income at Retirement", "Savings", { role: "style" }, { role: 'annotation' } ],
+		        ["10", d1, "#3FBC8F", formatDollar(d1)],
+		        ["15", d2, "#FFA000", formatDollar(d2)],
+		        ["20", d3, "#808080", formatDollar(d3)],
+		        ["25", d4, "#FF0000", formatDollar(d4)],
+		        ["30", d5, "#008080", formatDollar(d5)],
+		        ["35", d6, "#A02820", formatDollar(d6)],
+		        ["40", d7, "#008000", formatDollar(d7)]
+		      	]);
+
+			    var titleStr = "Monthly Withdraw from Retirement Fund";
+			    var xTitle = "Retirement Years";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+			
+			function calcRetirementIncome(years) {
+				
+				var pv = evalValue(document.myForm.savingAtRetirement7.value);
+				var annualReturnRate = evalValue(document.myForm.annualReturnRate7.value);
+				var r = annualReturnRate/100;
+				
+				var pmt = 0;
+				
+				if(r != 0) {
+	        		//pmt = -pv*Math.pow(1+r, years)/((1 - Math.pow(1+r, years))/r);
+	        		pmt = -pv*Math.pow(1+r/12, years*12)/((1 - Math.pow(1+r/12, years*12))/(r/12));
+				} else {
+					pmt = pv/years/12;
+				}
+
+				
+				return Math.round(pmt);
+			}
+
+			//Inflation Matters
+			function calc8() {
+		    	var d1 = calcFutureDollar(25);
+		    	var d2 = calcFutureDollar(30);
+		    	var d3 = calcFutureDollar(35);
+		    	var d4 = calcFutureDollar(40);
+		    	var d5 = calcFutureDollar(45);
+		    	var d6 = calcFutureDollar(50);
+		    	var d7 = calcFutureDollar(55);
+		      	var data = google.visualization.arrayToDataTable([
+		        ["Current Age", "Future Dollar", { role: "style" }, { role: 'annotation' } ],
+		        ["25", d1, "#3FBC8F", formatDollar(d1)],
+		        ["30", d2, "#FFA000", formatDollar(d2)],
+		        ["35", d3, "#808080", formatDollar(d3)],
+		        ["40", d4, "#FF0000", formatDollar(d4)],
+		        ["45", d5, "#008080", formatDollar(d5)],
+		        ["50", d6, "#A02820", formatDollar(d6)],
+		        ["55", d7, "#008000", formatDollar(d7)]
+		      	]);
+
+			    var titleStr = document.myForm.currentDollar8.value + " Current Dollar Worth at Retirement Age " + document.myForm.retirementAge8.value;
+			    var xTitle = "Current Age";
+			    
+		      	drawChart(data, titleStr, xTitle);
+			}
+
+			function calcFutureDollar(currentAge) {
+				
+				var currentMonthly = evalValue(document.myForm.currentDollar8.value);
+				var inflationRate = evalValue(document.myForm.inflationRate8.value);
+				var retirementAge = evalValue(document.myForm.retirementAge8.value);
+				
+				var r = inflationRate/100;
+
+				var fv = 0;
+				
+				var years = retirementAge - currentAge;
+
+				if(r != 0) {
+					fv = currentMonthly*(Math.pow(1+r, years));
+				} else {
+					fv = currentMonthly; 
+				}
+				
+				return Math.round(fv);
+				
+			}
+			
+			
+			
+			//commone Google Chart method
+		    function drawChart(data, titleStr, xTitle) {
+
+		    	var view = new google.visualization.DataView(data);
+		      /*
+		      view.setColumns([0, 1,
+		                       { calc: "stringify",
+		                         sourceColumn: 1,
+		                         type: "string",
+		                         role: "annotation" },
+		                       2]);*/
+
+		      var options = {
+		        title: titleStr,
+		        width: 950,
+		        height: 550,
+		        bar: {groupWidth: "85%"},
+		        legend: { position: "none" },
+	            chartArea : { left: 100, top: 50, right:50, bottom:50 },
+		        hAxis: {title: xTitle}
+		      };
+		      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+		      chart.draw(view, options);
+		  }
+
+		//-->
+		</script>
+
+        <!-- form input -->
+        <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+
+        <div>
+          <table border="0" width="85%" cellspacing="10" cellpadding="10">
+            <tr>
+              <td>
+                <b><font face="Arial" color="#CC0000" size="5">&nbsp;Retirement Planner</font></b>
+                </td>
+                <td>
+                				<select id="mode" style="height: 2em; width: 20em" onchange="calc();">
+							  		<option value="1" selected>Start Early and Save Regularly</option>
+							  		<option value="2">Set Goal for Retirement</option>
+							  		<option value="3">Max Out 401k/IRA Saving</option>
+							  		<option value="4">Invest Wisely</option>
+							  		<option value="5">How Much Money Will I Need?</option>
+							  		<option value="6">How Long Will My Money Last?</option>
+							  		<option value="7">How Much Should I Withdraw?</option>
+							  		<option value="8">Inflation Matters</option>
+								</select>
+                </td>
+                <td>
+                <input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();">
+                </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="mode1" style="display: none" align="center">
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="0">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Saving</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="monthlySaving1" size="10" maxlength="75" value="1,000" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlySaving1', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return Rate(%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualReturnRate1" size="10" maxlength="75" value="7" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Age</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="retirementAge1" size="10" maxlength="75" value="65" style="height: 2em; width: 5em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+        <div id="mode2" style="display: none" align="center">
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="0">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Saving at Retirement</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="savingAtRetirement2" size="10" maxlength="75" value="1,000,000" style="height: 2em; width: 10em"  onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('savingAtRetirement2', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return Rate(%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualReturnRate2" size="10" maxlength="75" value="7" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Age</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="retirementAge2" size="10" maxlength="75" value="65" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+        <div id="mode3" style="display: none" align="center">
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Saving</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualSaving3" size="10" maxlength="75" value="23,000" style="height: 2em; width: 10em"  onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('annualSaving3', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return Rate(%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualReturnRate3" size="10" maxlength="75" value="7" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Age</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="retirementAge3" size="10" maxlength="75" value="65" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Salary</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualSalary3" size="10" maxlength="75" value="50,000" style="height: 2em; width: 10em"  onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('annualSalary3', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Company Match(%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="companyMatch3" size="10" maxlength="75" value="4" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								&nbsp;
+							</td>
+							<td width="10%" valign="top" align="left">
+								&nbsp;
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+        <div id="mode4" style="display: none" align="center">
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="0">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Saving</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="monthlySaving4" size="10" maxlength="75" value="1,000" style="height: 2em; width: 10em"  onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlySaving4', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Current Age</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="currentAge4" size="10" maxlength="75" value="35" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Age</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="retirementAge4" size="10" maxlength="75" value="65" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+        <div id="mode5" style="display: none" align="center">
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="0">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Years</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="retirementYears5" size="10" maxlength="75" value="20" style="height: 2em; width: 10em"  onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return Rate(%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualReturnRate5" size="10" maxlength="75" value="4" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+         <div id="mode6" style="display: none" align="center">
+
+					<table border="0" width="85%" cellspacing="5" cellpadding="0">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Saving at Retirement</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="savingAtRetirement6" size="10" maxlength="75" value="500,000" style="height: 2em; width: 8em"  onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('savingAtRetirement6', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return Rate (%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualReturnRate6" size="10" maxlength="75" value="4" style="height: 2em; width: 3em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Withdrawal</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="monthlyWithdraw6" size="10" maxlength="75" value="3,000" style="height: 2em; width: 5em"  onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('monthlyWithdraw6', '.', ',');">
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+         <div id="mode7" style="display: none" align="center">
+
+					<table border="0" width="85%" cellspacing="5" cellpadding="0">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Saving at Retirement</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="savingAtRetirement7" size="10" maxlength="75" value="500,000"  style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('savingAtRetirement7', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return Rate(%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="annualReturnRate7" size="10" maxlength="75" value="4" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+        <div id="mode8" style="display: none" align="center">
+
+					<table border="0" width="95%" cellspacing="5" cellpadding="0">
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Current Dollar</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="currentDollar8" size="10" maxlength="75" value="5,000" style="height: 2em; width: 10em"  onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('currentDollar8', '.', ',');">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Inflation Rate (%)</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="inflationRate8" size="10" maxlength="75" value="3" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Age</span>
+							</td>
+							<td width="10%" valign="top" align="left">
+								<input name="retirementAge8" size="10" maxlength="75" value="65" style="height: 2em; width: 10em" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+         </div>
+
+		</form>
+
+<!-- 
+		<p><input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();"></p>
+ -->
+		<!-- chart -->
+		<div id="columnchart_values" style="width: 100%; height: 300px;"></div>
+
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

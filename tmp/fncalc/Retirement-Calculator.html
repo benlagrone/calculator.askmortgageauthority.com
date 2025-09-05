@@ -1,0 +1,945 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+	
+		<script language="javascript">
+		<!--
+		
+			function hide() {
+				var ele = document.getElementById("result");
+				ele.style.display = "none";
+				document.myForm.currentlySaved.value = "";
+				document.myForm.annualSalary.value = "";
+				document.myForm.inflationRate.value = "";
+
+				document.myForm.contribution.value = "";
+				document.myForm.employerMatch.value = "";
+				document.myForm.returnRate.value = "";
+				document.myForm.currentAge.value = "";
+				document.myForm.retirementAge.value = "";
+				document.myForm.desiredMonthlyIncome.value = "";
+				document.myForm.ssBenefit.value = "";
+				document.myForm.investment.value = "";
+				document.myForm.returnRateAtRetirement.value = "";
+				document.myForm.retirementYears.value = "";
+				document.myForm.retirementTaxRate.value = "";
+
+			}
+
+				function getXMLHttpRequest() {
+					  var xmlHttpReq = false;
+					  // to create XMLHttpRequest object in non-Microsoft browsers
+					  if (window.XMLHttpRequest) {
+					    xmlHttpReq = new XMLHttpRequest();
+					  } else if (window.ActiveXObject) {
+					    try {
+					      // to create XMLHttpRequest object in later versions
+					      // of Internet Explorer
+					      xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+					    } catch (exp1) {
+					      try {
+					        // to create XMLHttpRequest object in older versions
+					        // of Internet Explorer
+					        xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+					      } catch (exp2) {
+					        xmlHttpReq = false;
+					      }
+					    }
+					  }
+					  return xmlHttpReq;
+					}
+					
+				function calc() {
+					
+					var ele = document.getElementById("result");
+					ele.style.display = "block";
+					
+					var currentlySaved = evalValue(document.myForm.currentlySaved.value);
+					var annualSalary = evalValue(document.myForm.annualSalary.value);
+					var inflationRate = evalValue(document.myForm.inflationRate.value);
+					var contribution = document.myForm.contribution.value;
+					var employerMatch = document.myForm.employerMatch.value;
+					var returnRate = document.myForm.returnRate.value;
+					var currentAge = evalValue(document.myForm.currentAge.value);
+					var retirementAge = document.myForm.retirementAge.value;
+					var desiredMonthlyIncome = document.myForm.desiredMonthlyIncome.value;
+					var ssBenefit = document.myForm.ssBenefit.value;
+					var investment = document.myForm.investment.value;
+					var returnRateAtRetirement = document.myForm.returnRateAtRetirement.value;
+					var retirementYears = document.myForm.retirementYears.value;
+					var retirementTaxRate = document.myForm.retirementTaxRate.value;
+					
+					//alert(contribution);
+					//alert(annualSalary);
+					var annualContribution = annualSalary * Number(contribution)/100;
+					//alert(annualContribution);
+					if(annualContribution > 23000 && currentAge < 50) {
+						alert("The 401k contribution should be below 23,000 annual limit for participant below 50 years old in 2024. Please reduce the contribution percentage.")
+						//return; //alert and keep calculating
+					}
+					if(annualContribution  > 30500 && currentAge > 49) {
+						alert("The 401k contribution should be below 30,500 annual limit for participant of 50 years old and above in 2024. Please reduce the contribution percentage.")
+						//return; //alert and keep calculating
+					}
+					var totalAnnualContribution = annualSalary * (Number(contribution) + Number(employerMatch))/100;
+					if(totalAnnualContribution  > 69000  && currentAge < 50) {
+						alert("Total 401k contribution from empolyee and employer cannot exceed 69,000 for participant below 50 years old in 2024.")
+						//return; //alert and keep calculating
+					}
+					if(totalAnnualContribution  > 76500  && currentAge > 49) {
+						alert("Total 401k contribution from empolyee and employer cannot exceed 76,500 for participant of 50 years old and above in 2024.")
+						//return;
+					}
+
+					if(Number(retirementAge) < 62) {
+						alert("You will not be able to get social security benefit until you reach 62 years old.")
+					}
+
+					//if(Number(contribution) < Number(employerMatch)) {
+					//	alert("You will not get full match from your employer since your contribution is lower than the employer match.");
+					//	employerMatch = contribution;
+					//}
+					
+					var obj = "calculate?type=retirementIncome" +
+											"&currentlySaved=" + currentlySaved + 
+											"&annualSalary=" + annualSalary +
+											"&inflationRate=" + inflationRate +
+											"&contribution=" + contribution +
+											"&employerMatch=" + employerMatch +
+											"&returnRate=" + returnRate +
+											"&currentAge=" + currentAge +
+											"&retirementAge=" + retirementAge +
+											"&desiredMonthlyIncome=" + desiredMonthlyIncome +
+											"&ssBenefit=" + ssBenefit +
+											"&investment=" + investment +
+											"&returnRateAtRetirement=" + returnRateAtRetirement +
+											"&retirementYears=" + retirementYears +
+											"&retirementTaxRate=" + retirementTaxRate;
+					//alert(obj);
+					
+				  	var xmlHttpRequest = getXMLHttpRequest();
+				  	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
+				  	xmlHttpRequest.open("POST", obj, true);
+				  	xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				  	xmlHttpRequest.send(null);
+				}
+				 
+				/*
+				 * Returns a function that waits for the state change in XMLHttpRequest
+				 */
+				function getReadyStateHandler(xmlHttpRequest) {
+
+
+				  // an anonymous function returned
+				  // it listens to the XMLHttpRequest instance
+				  return function() {
+				    if (xmlHttpRequest.readyState == 4) {
+				      if (xmlHttpRequest.status == 200) {
+							
+							var mValue = xmlHttpRequest.responseText;
+							var res = mValue.split(";");
+
+							amountBeforeInflationBeforeTax.innerHTML = res[0];
+							amountAfterInflationBeforeTax.innerHTML = res[1];
+							mIncomeBeforeInflationBeforeTax.innerHTML = res[2];
+							mIncomeAfterInflationBeforeTax.innerHTML = res[3];
+							mTotalIncomeBeforeInflationBeforeTax.innerHTML = res[4];
+							mTotalIncomeAfterInflationBeforeTax.innerHTML = res[5];
+
+							mSSIncomeBeforeInflationBeforeTax.innerHTML = res[12];
+							mSSIncomeAfterInflationBeforeTax.innerHTML = res[13];
+
+							amountBeforeInflationAfterTax.innerHTML = res[6];
+							amountAfterInflationAfterTax.innerHTML = res[7];
+							mIncomeBeforeInflationAfterTax.innerHTML = res[8];
+							mIncomeAfterInflationAfterTax.innerHTML = res[9];
+							mTotalIncomeBeforeInflationAfterTax.innerHTML = res[10];
+							mTotalIncomeAfterInflationAfterTax.innerHTML = res[11];
+
+							mSSIncomeBeforeInflationAfterTax.innerHTML = res[14];
+							mSSIncomeAfterInflationAfterTax.innerHTML = res[15];
+
+							var annualSaving = res[16];
+							annualSaving = annualSaving.replace (/,/g, "");
+							//alert(annualSaving);
+							var annualSalary = evalValue(document.myForm.annualSalary.value);
+							//var employerMatch = evalValue(document.myForm.employerMatch.value);
+							//annualSaving = annualSaving-annualSalary*employerMatch/100;
+							var percent = formatCurrency(100*annualSaving/annualSalary);
+							
+							var desiredMonthlyIncome = document.myForm.desiredMonthlyIncome.value;
+							var monthlyIncome = res[4];
+							var str;
+							if(evalValue(desiredMonthlyIncome) > evalValue(monthlyIncome)) {
+								str = "Your desired monthly income is " + desiredMonthlyIncome + " and you will get monthly income about " + monthlyIncome + ". You need save more.";  
+								document.getElementById("belowGoal").innerHTML = str;
+								document.getElementById("belowGoal").style.display = "block";
+								document.getElementById("aboveGoal").style.display = "none";
+							} else {
+								str = "Your desired monthly income is " + desiredMonthlyIncome + " and you will get monthly income about " + monthlyIncome + ". You reach the income goal for retirement.";  								
+								document.getElementById("aboveGoal").innerHTML = str;
+								document.getElementById("aboveGoal").style.display = "block";
+								document.getElementById("belowGoal").style.display = "none";
+							}
+
+							str = "To reach your desired monthly income " + desiredMonthlyIncome + ", you need to save about " + res[16] + " annually, or about " + percent + "% of your annual income.";  								
+							document.getElementById("savingGoal").innerHTML = str;
+
+							//alert(str);
+				      } else {
+				        	
+				    	  	alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
+				      }
+				    }
+				  };
+				}
+				
+				function email() {
+					
+					var currentlySaved = evalValue(document.myForm.currentlySaved.value);
+					var annualSalary = evalValue(document.myForm.annualSalary.value);
+					var inflationRate = evalValue(document.myForm.inflationRate.value);
+					var contribution = document.myForm.contribution.value;
+					var employerMatch = document.myForm.employerMatch.value;
+					var returnRate = document.myForm.returnRate.value;
+					var currentAge = evalValue(document.myForm.currentAge.value);
+					var retirementAge = document.myForm.retirementAge.value;
+					var desiredMonthlyIncome = document.myForm.desiredMonthlyIncome.value;
+					var ssBenefit = document.myForm.ssBenefit.value;
+					var investment = document.myForm.investment.value;
+					var returnRateAtRetirement = document.myForm.returnRateAtRetirement.value;
+					var retirementYears = document.myForm.retirementYears.value;
+					var retirementTaxRate = document.myForm.retirementTaxRate.value;
+					
+					var url = "financialcalculator?type=email" +
+					"&currentlySaved=" + currentlySaved + 
+					"&annualSalary=" + annualSalary +
+					"&inflationRate=" + inflationRate +
+					"&contribution=" + contribution +
+					"&employerMatch=" + employerMatch +
+					"&returnRate=" + returnRate +
+					"&currentAge=" + currentAge +
+					"&retirementAge=" + retirementAge +
+					"&desiredMonthlyIncome=" + desiredMonthlyIncome +
+					"&ssBenefit=" + ssBenefit +
+					"&investment=" + investment +
+					"&returnRateAtRetirement=" + returnRateAtRetirement +
+					"&retirementYears=" + retirementYears +
+					"&retirementTaxRate=" + retirementTaxRate;
+					//alert(url);
+					location.href = url;
+				}
+
+				function calcRetirementIncomePercent()
+				{
+					var x;
+					var annualSalary = evalValue(document.myForm.annualSalary.value);
+					var str = document.getElementById("retirement_monthly_income_per").innerHTML;
+					var per = str.replace("% of current monthly income. Click here to change.", "");
+					var factor = prompt("Enter percentage of current income as your desired retirement income", per);
+
+					if (factor!=null)
+					  {
+					  	x= evalValue(factor) /100 * annualSalary/12;
+					  	document.myForm.desiredMonthlyIncome.value = x.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+						document.getElementById("retirement_monthly_income_per").innerHTML = factor + "% of current monthly income. Click here to change.";
+					  }
+				}
+
+				function calcRetirementIncomePercentPerAnnualIncome()
+				{
+					var x;
+					var annualSalary = evalValue(document.myForm.annualSalary.value);
+					var str = document.getElementById("retirement_monthly_income_per").innerHTML;
+					var per = str.replace("% of current monthly income. Click here to change.", "");
+
+
+					if (per!=null)
+					  {
+					  	x= evalValue(per) /100 * annualSalary/12;
+					  	document.myForm.desiredMonthlyIncome.value = x.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+					  }
+				}
+
+				function calcRetirementIncomePercentPerIncomeInput()
+				{
+					var annualSalary = evalValue(document.myForm.annualSalary.value);
+					var desiredMonthlyIncome = evalValue(document.myForm.desiredMonthlyIncome.value);
+
+
+					if (desiredMonthlyIncome>0)
+					  {
+					  	var x= 100 * desiredMonthlyIncome/(annualSalary/12);
+						document.getElementById("retirement_monthly_income_per").innerHTML = parseInt(x) + "% of current monthly income. Click here to change.";
+					  }
+				}
+
+		//-->
+		</script>
+		<body onload="calc();">
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Retirement Calculator</font></b></td>
+              <td>
+                <p align="left">powered by&nbsp;&nbsp;<a href="https://www.fncalculator.com/" target="_blank"><b><u><font face="Arial" color="#CC0000" size="5">fncalculator.com</font></u></b></a></td>
+            </tr>
+          </table>
+        </div>
+		<br>
+
+        <div align="center">
+          <center>
+          
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+
+            <tr>
+              <td width="50%">
+
+
+					<table border="0" width="100%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="100%" align="left" colspan="2">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px;color:#CC0000">Pre-Retirement Assumptions</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Currently Saved</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="currentlySaved" size="20" maxlength="75" value="100,000" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('currentlySaved', '.', ',');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span id="percentLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Annual Income</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="annualSalary" size="20" maxlength="75" value="100,000" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('annualSalary', '.', ',');calcRetirementIncomePercentPerAnnualIncome();">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span id="percentLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Inflation Rate</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="inflationRate" size="20" maxlength="75" value="3.1" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Contribution (%)</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="contribution" size="20" maxlength="75" value="3" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Employer Match (%)</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="employerMatch" size="20" maxlength="75" value="3" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return Rate (%)</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="returnRate" size="20" maxlength="75" value="6" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Current Age</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="currentAge" size="20" maxlength="75" value="45" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Age</span>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="retirementAge" size="20" maxlength="75" value="65" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+			 </td>
+			
+             <td width="50%" valign="top">
+
+					<table border="0" width="100%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="100%" align="left" colspan="2">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px;color:#CC0000">Post Retirement Assumptions</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Desired Monthly Income before Tax</span>
+							</td>
+							<td width="40%" valign="top" align="left">
+								<input name="desiredMonthlyIncome" size="20" maxlength="75" value="7,083.33" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('desiredMonthlyIncome', '.', ',');calcRetirementIncomePercentPerIncomeInput();">
+							</td>
+					  </tr>
+					  <tr>
+							<td width="100%" align="left" colspan="2">
+								<a href="javascript:calcRetirementIncomePercent();"><span id="retirement_monthly_income_per" style="font-weight:bold;font-family:Arial;font-size:13px;color:#0000FF">85% of current monthly income. Click here to change.</span></a>
+							</td>
+					  </tr>
+					 
+					  <tr>
+							<td width="60%" align="right">
+								<span id="percentLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Social Security in Current Dollar</spanp>
+							</td>
+							<td width="40%" valign="top" align="left">
+								<input name="ssBenefit" size="20" maxlength="75" value="" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('ssBenefit', '.', ',');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="right" colspan="2">
+								<span id="ssNote" style="font-family:Arial;font-size:14px">Note: if this field is blank, the app will estimate social security benefit based on your current age and income.</spanp>
+							</td>
+					  </tr>
+					 
+					  <tr>
+							<td width="60%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Income from Other Investments</span>
+							</td>
+							<td width="40%" valign="top" align="left">
+								<input name="investment" size="20" maxlength="75" value="2,000"  onkeyup="addGroupingSeperator('investment', '.', ',');">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Annual Return at Retirement (%)</span>
+							</td>
+							<td width="40%" valign="top" align="left">
+								<input name="returnRateAtRetirement" size="20" maxlength="75" value="3" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Years</span>
+							</td>
+							<td width="40%" valign="top" align="left">
+								<input name="retirementYears" size="20" maxlength="75" value="20" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Retirement Tax Bracket (%)</span>
+							</td>
+							<td width="40%" valign="top" align="left">
+								<input name="retirementTaxRate" size="15" maxlength="75" value="20" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					</table>
+
+
+				</td>
+            </tr>
+
+		</table>
+
+		<table border="0" width="50%" cellspacing="5" cellpadding="5">
+		
+			  <tr>
+					<td width="30%" valign="top" align="center">
+						<p><input type="button" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 12em" onclick="hide();"></p>
+					</td>
+					<td width="30%" valign="top" align="center">
+						<p><input type="button" border="0" hspace="4" alt="Email" name="calculate" value="Email"  style="height: 2em; width: 12em" onclick="email();"></p>
+					</td>
+					<td width="30%" valign="top" align="center">
+						<p><input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 12em" onclick="calc();"></p>
+					</td>
+			  </tr>
+           
+		</table>
+
+		</form>
+		
+		
+		<table border="0" width="100%" cellspacing="0" cellpadding="5">
+		
+		</table>
+		
+          <!-- calculation result-->
+
+		      <div id="result" style="display: none">
+
+					<table border="1" width="75%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">At Retirement&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Before Tax&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">After Tax&nbsp;</span>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Savings in future dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="amountBeforeInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="amountBeforeInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Total Savings in current dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="amountAfterInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="amountAfterInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Income from Savings in future dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="mIncomeBeforeInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="mIncomeBeforeInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Income from Savings in current dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="mIncomeAfterInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="mIncomeAfterInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Social Security in future dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="mSSIncomeBeforeInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="mSSIncomeBeforeInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Social Security in current dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="mSSIncomeAfterInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="mSSIncomeAfterInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Income + Social Security + Others in future dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="mTotalIncomeBeforeInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="mTotalIncomeBeforeInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+
+					  <tr>
+							<td width="60%" align="left">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px">Monthly Income+Social Security + Others in current dollar&nbsp;</span>
+							</td>
+							<td width="20%" align="right">
+								<div id="mTotalIncomeAfterInflationBeforeTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+							<td width="20%" align="right">
+								<div id="mTotalIncomeAfterInflationAfterTax" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					</table>
+		
+					  <br>
+					  <div  align="center" id="belowGoal" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:16px"></div>
+					  <div  align="center" id="aboveGoal" style="color:#008000;font-weight:bold;font-family:Arial;font-size:16px"></div>
+
+					  <br>
+					  <div  align="center" id="savingGoal" style="color:#000000;font-weight:bold;font-family:Arial;font-size:16px"></div>
+					  <br>	
+					  <div  align="center" id="savingGoal" style="text-decoration:underline;color:#CC0000;font-weight:bold;font-family:Arial;font-size:16px">
+					  		<a href="financialcalculator?type=retirementContributionLimit">IRS Contribution Limit</a>
+					  </div>
+
+
+					</div>
+
+      </div>
+
+
+
+
+
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%">&nbsp;</td>
+    </tr>
+  </table>
+
+  <br>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

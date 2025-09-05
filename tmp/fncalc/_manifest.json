@@ -1,0 +1,458 @@
+[
+  {
+    "title": "TVM Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=tvmCalculator",
+    "file": "tmp/fncalc/TVM-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Currency Converter",
+    "url": "https://www.fncalculator.com/currencyConverter",
+    "file": "tmp/fncalc/Currency-Converter.html",
+    "exists": true
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=interestCalculator",
+    "file": "tmp/fncalc/Compound-Interest-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Return On Investment (ROI) Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=roiCalculator",
+    "file": "tmp/fncalc/Return-On-Investment-ROI-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "IRR NPV Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=irrnpvCalculator",
+    "file": "tmp/fncalc/IRR-NPV-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Bond Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=bondCalculator",
+    "file": "tmp/fncalc/Bond-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Tax Equivalent Yield Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=taxEquivalentCalculator",
+    "file": "tmp/fncalc/Tax-Equivalent-Yield-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Rule of 72 Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=rule72Calculator",
+    "file": "tmp/fncalc/Rule-of-72-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "College Savings Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=collegeSavingsCalculator",
+    "file": "tmp/fncalc/College-Savings-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Investment Income Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=investmentIncomeCalculator",
+    "file": "tmp/fncalc/Investment-Income-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Mutual Fund Fee Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=mutualFundFeeCalculator",
+    "file": "tmp/fncalc/Mutual-Fund-Fee-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "US Health Savings Account Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=hsaCalculator",
+    "file": "tmp/fncalc/US-Health-Savings-Account-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Savings Goal Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=savingsGoalCalculator",
+    "file": "tmp/fncalc/Savings-Goal-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Certificate of Deposit (CD) Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=cdCalculator",
+    "file": "tmp/fncalc/Certificate-of-Deposit-CD-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Loan Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanCalculator",
+    "file": "tmp/fncalc/Loan-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Loan Comparison Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanComparisonCalculator",
+    "file": "tmp/fncalc/Loan-Comparison-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Loan Refinance Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=refinanceCalculator",
+    "file": "tmp/fncalc/Loan-Refinance-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "APR Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=aprCalculator",
+    "file": "tmp/fncalc/APR-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "APR Advanced Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=aprAdvancedCalculator",
+    "file": "tmp/fncalc/APR-Advanced-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Commercial Loan Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=commercialLoanCalculator",
+    "file": "tmp/fncalc/Commercial-Loan-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Loan Analysis Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanAnalysisCalculator",
+    "file": "tmp/fncalc/Loan-Analysis-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Home Affordablility Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanAffordabilityCalculator",
+    "file": "tmp/fncalc/Home-Affordablility-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Rent vs Buy Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanRentOrBuyCalculator",
+    "file": "tmp/fncalc/Rent-vs-Buy-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Mortgage Tax Saving Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanTaxSavingCalculator",
+    "file": "tmp/fncalc/Mortgage-Tax-Saving-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Discount Points Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanPointCalculator",
+    "file": "tmp/fncalc/Discount-Points-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Adjustable Rate Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanAdjustableRateCalculator",
+    "file": "tmp/fncalc/Adjustable-Rate-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Fixed vs Adjustable Rate Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanAdjustVsFixCalculator",
+    "file": "tmp/fncalc/Fixed-vs-Adjustable-Rate-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Bi-weekly Payment Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanBiweeklyCalculator",
+    "file": "tmp/fncalc/Bi-weekly-Payment-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Interest Only Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanInterestOnlyCalculator",
+    "file": "tmp/fncalc/Interest-Only-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Rental Property Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=loanRentalPropertyCalculator",
+    "file": "tmp/fncalc/Rental-Property-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Retirement Planner",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementPlanner",
+    "file": "tmp/fncalc/Retirement-Planner.html",
+    "exists": true
+  },
+  {
+    "title": "401k Contribution Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirement401kCalculator",
+    "file": "tmp/fncalc/401k-Contribution-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "401k Save the Max Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirement401kSaveMaxCalculator",
+    "file": "tmp/fncalc/401k-Save-the-Max-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Retirement Savings Analysis",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementSavingsAnalysis",
+    "file": "tmp/fncalc/Retirement-Savings-Analysis.html",
+    "exists": true
+  },
+  {
+    "title": "Retirement Income Analysis",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementIncomeAnalysis",
+    "file": "tmp/fncalc/Retirement-Income-Analysis.html",
+    "exists": true
+  },
+  {
+    "title": "Traditional IRA vs Roth IRA",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementIRAOrRothIRA",
+    "file": "tmp/fncalc/Traditional-IRA-vs-Roth-IRA.html",
+    "exists": true
+  },
+  {
+    "title": "Required Minimum Distribution",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementRMD",
+    "file": "tmp/fncalc/Required-Minimum-Distribution.html",
+    "exists": true
+  },
+  {
+    "title": "Social Security Estimator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementSocialSecurity",
+    "file": "tmp/fncalc/Social-Security-Estimator.html",
+    "exists": true
+  },
+  {
+    "title": "Social Security Analysis",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementSocialSecurityAnalysis",
+    "file": "tmp/fncalc/Social-Security-Analysis.html",
+    "exists": true
+  },
+  {
+    "title": "Social Security Distribution",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementSocialSecurityDistribution",
+    "file": "tmp/fncalc/Social-Security-Distribution.html",
+    "exists": true
+  },
+  {
+    "title": "Asset Allocation Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=assetAllocationCalculator",
+    "file": "tmp/fncalc/Asset-Allocation-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Retirement Income Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementIncomeCalculator",
+    "file": "tmp/fncalc/Retirement-Income-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Retirement Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=retirementCalculator",
+    "file": "tmp/fncalc/Retirement-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Annuity Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=annuityCalculator",
+    "file": "tmp/fncalc/Annuity-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Stock Return Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=stockReturnCalculator",
+    "file": "tmp/fncalc/Stock-Return-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Stock Constant Growth Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=growthStockCalculator",
+    "file": "tmp/fncalc/Stock-Constant-Growth-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Stock Non-constant Growth Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=nonGrowthStockCalculator",
+    "file": "tmp/fncalc/Stock-Non-constant-Growth-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "CAPM Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=capmCalculator",
+    "file": "tmp/fncalc/CAPM-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Expected Return Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=expectedReturnCalculator",
+    "file": "tmp/fncalc/Expected-Return-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Holding Period Return Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=hprCalculator",
+    "file": "tmp/fncalc/Holding-Period-Return-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Weighted Average Cost of Capital Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=waccCalculator",
+    "file": "tmp/fncalc/Weighted-Average-Cost-of-Capital-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Black-Scholes Option Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=optionCalculator",
+    "file": "tmp/fncalc/Black-Scholes-Option-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Pivot Point Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=pivotpointCalculator",
+    "file": "tmp/fncalc/Pivot-Point-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Fibonacci Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=fibonacciCalculator",
+    "file": "tmp/fncalc/Fibonacci-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Commodities and Futures",
+    "url": "https://www.fncalculator.com/financialcalculator?type=widgetCommodityFuture",
+    "file": "tmp/fncalc/Commodities-and-Futures.html",
+    "exists": true
+  },
+  {
+    "title": "Credit Card Payoff Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=creditPayoffCalculator",
+    "file": "tmp/fncalc/Credit-Card-Payoff-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Credit Card Minimum Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=creditMinPaymentCalculator",
+    "file": "tmp/fncalc/Credit-Card-Minimum-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Auto Loan Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=autoLoanCalculator",
+    "file": "tmp/fncalc/Auto-Loan-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Auto Lease Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=autoLeaseCalculator",
+    "file": "tmp/fncalc/Auto-Lease-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Tip Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=tipCalculator",
+    "file": "tmp/fncalc/Tip-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Discount and Tax Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=discountCalculator",
+    "file": "tmp/fncalc/Discount-and-Tax-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Percentage Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=percentageCalculator",
+    "file": "tmp/fncalc/Percentage-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Date Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=dateCalculator",
+    "file": "tmp/fncalc/Date-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Unit Conversion",
+    "url": "https://www.fncalculator.com/financialcalculator?type=converter&file=index.jsp",
+    "file": "tmp/fncalc/Unit-Conversion.html",
+    "exists": true
+  },
+  {
+    "title": "US Inflation Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=usInflationCalculator",
+    "file": "tmp/fncalc/US-Inflation-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "US Treasury Bill Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=usTreasuryBillCalculator",
+    "file": "tmp/fncalc/US-Treasury-Bill-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Margin and Markup Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=marginMarkupCalculator",
+    "file": "tmp/fncalc/Margin-and-Markup-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Business Forecast Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=businessForecastCalculator",
+    "file": "tmp/fncalc/Business-Forecast-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Fuel Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=fuelCalculator",
+    "file": "tmp/fncalc/Fuel-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Hourly to Salary Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=hourlyToSalaryCalculator",
+    "file": "tmp/fncalc/Hourly-to-Salary-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Salary Increase Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=salaryIncreaseCalculator",
+    "file": "tmp/fncalc/Salary-Increase-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "US Paycheck Tax Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=paycheckCalculator",
+    "file": "tmp/fncalc/US-Paycheck-Tax-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Net Distribution Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=netDistributionCalculator",
+    "file": "tmp/fncalc/Net-Distribution-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Effective Rate Calculator",
+    "url": "https://www.fncalculator.com/financialcalculator?type=effectiveRateCalculator",
+    "file": "tmp/fncalc/Effective-Rate-Calculator.html",
+    "exists": true
+  },
+  {
+    "title": "Balance Sheet and Income Statement Analysis",
+    "url": "https://www.fncalculator.com/financialcalculator?type=balanceSheetIncomeAnalysis",
+    "file": "tmp/fncalc/Balance-Sheet-and-Income-Statement-Analysis.html",
+    "exists": true
+  },
+  {
+    "title": "Financial Ratios",
+    "url": "https://www.fncalculator.com/financialcalculator?type=financialRatios",
+    "file": "tmp/fncalc/Financial-Ratios.html",
+    "exists": true
+  }
+]

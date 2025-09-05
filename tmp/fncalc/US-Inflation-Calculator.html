@@ -1,0 +1,1620 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+	
+
+<style TYPE="text/css"><!--
+.calendar-box {
+	display:none;
+	background-color:#fff;
+	border:1px solid #444;
+	position:absolute;
+	width:250px;
+	padding: 0 5px;
+}
+.calendar-box select.calendar-month {
+	width:90px;
+}
+.calendar-box select.calendar-year {
+	width:70px;
+}
+.calendar-box .calendar-cancel {
+	width:100%;
+}
+.calendar-box table td {
+	width:14%;
+}
+.calendar-box .calendar-title {
+	text-align:center;
+}
+.calendar-box a {
+	text-decoration:none;
+}
+.calendar-box .today a {
+	padding:0 5px;
+	margin-left:-5px;
+	background-color:#ffe9c6;
+} 
+.calendar-box .selected a {
+	padding:0 5px;
+	margin-left:-5px;
+	background-color:#c9ff8b;
+}
+--></style>
+
+<script src="http://www.openjs.com/js/jsl.js" type="text/javascript"></script>
+<script src="http://www.openjs.com/common.js" type="text/javascript"></script>
+<script src="js/calendar.js"></script>
+
+		<script language="javascript">
+		<!--
+		
+		 function init() {
+            calendar.set("fromdate");
+            calendar.set("todate");
+            calc();
+        }
+		
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46 || key == 45 ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function isNumberKeyAndClear(evt)
+			{
+				document.myForm.todate.value = "";
+				document.myForm.fromdate.value = "";
+				document.getElementById("period").checked = false;
+				
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46 || key == 45 ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function formatCurrency(num) {
+				num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+				return parseFloat(num).toFixed(2);
+			}
+
+			function hide() {
+				var ele = document.getElementById("result");
+				ele.style.display = "none";
+			}
+/*
+			funtion checkPeriod() {
+				//if(document.getElementById("period").checked) {
+					alert('YES');
+				//}
+			}
+*/			
+			function getXMLHttpRequest() {
+				  var xmlHttpReq = false;
+				  // to create XMLHttpRequest object in non-Microsoft browsers
+				  if (window.XMLHttpRequest) {
+				    xmlHttpReq = new XMLHttpRequest();
+				  } else if (window.ActiveXObject) {
+				    try {
+				      // to create XMLHttpRequest object in later versions
+				      // of Internet Explorer
+				      xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+				    } catch (exp1) {
+				      try {
+				        // to create XMLHttpRequest object in older versions
+				        // of Internet Explorer
+				        xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+				      } catch (exp2) {
+				        xmlHttpReq = false;
+				      }
+				    }
+				  }
+				  return xmlHttpReq;
+				}
+				/*
+				 * AJAX call starts with this function
+				 */
+				
+				function calc() {
+					
+					if(evalValue(document.myForm.dollar.value) == 0) {
+						hide();
+						document.getElementById("dollarResult").innerHTML = "";
+						return
+					}
+
+					var ele = document.getElementById("result");
+					ele.style.display = "block";
+
+					var dollar = evalValue(document.myForm.dollar.value);
+					var fromPosition = evalValue(document.myForm.fromYear.value);
+					var toPosition = evalValue(document.myForm.toYear.value);
+					
+					var obj = "calculate?type=usInflation" +
+												"&dollar=" + dollar + 
+												"&fromPosition=" + fromPosition +
+												"&toPosition=" + toPosition;
+					//alert(obj);
+					
+				  	var xmlHttpRequest = getXMLHttpRequest();
+				  	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
+				  	xmlHttpRequest.open("POST", obj, true);
+				  	xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				  	xmlHttpRequest.send(null);
+				  	
+
+				}
+				 
+				/*
+				 * Returns a function that waits for the state change in XMLHttpRequest
+				 */
+				function getReadyStateHandler(xmlHttpRequest) {
+
+					var dollar = evalValue(document.myForm.dollar.value);
+
+				  // an anonymous function returned
+				  // it listens to the XMLHttpRequest instance
+				  return function() {
+				    if (xmlHttpRequest.readyState == 4) {
+				      if (xmlHttpRequest.status == 200) {
+
+							//alert("tvm=" + tvm);
+							//alert (xmlHttpRequest.responseText);
+														
+							var mValue = xmlHttpRequest.responseText;
+							var res = mValue.split(";");
+
+							if(dollar != 0) {
+								document.getElementById("dollarResult").innerHTML = "$" + res[0];
+								document.getElementById("cumulativeResult").innerHTML = res[1];
+								document.getElementById("averageResult").innerHTML = res[2];
+							} 
+							
+							
+							
+							//CPI table
+							var table = document.getElementById("resultTable");
+							table.innerHTML = "";
+							
+							 var fromPosition = evalValue(document.myForm.fromYear.value);
+							 var toPosition = evalValue(document.myForm.toYear.value);
+							 period = toPosition - fromPosition;
+							 if(period <= 0) return;
+
+						    var header = table.createTHead();
+						    var row = header.insertRow(0);
+						    var c1 = row.insertCell(0);
+						    var c2 = row.insertCell(1);
+						    var c3 = row.insertCell(2);
+						    var c4 = row.insertCell(3);
+						    var c5 = row.insertCell(4);
+						    
+						    c1.innerHTML = "<b>Year</b>";
+						    c2.innerHTML = "<b>Amount</b>";
+						    c3.innerHTML = "<b>CPI</b>";
+						    c4.innerHTML = "<b>Inflation per Year (%)</b>";
+						    c5.innerHTML = "<b>Cumulative Inflation (%)</b>";
+
+							 c1.style.textAlign = 'center';
+							 c2.style.textAlign = 'center';
+							 c3.style.textAlign = 'center';
+							 c4.style.textAlign = 'center';
+							 c5.style.textAlign = 'center';
+							 
+								var arr = [9.9,10.0,10.1,10.9,12.8,15.1,17.3,20.0, 
+										17.9,16.8,17.1,17.1,17.5,17.7,17.4,17.1,17.1,16.7,
+										15.2,13.7,13.0,13.4,13.7,13.9,14.4,14.1,13.9,14.0,
+										14.7,16.3,17.3,17.6,18.0,19.5,22.3,24.1,23.8,24.1,
+										26.0,26.5,26.7,26.9,26.8,27.2,28.1,28.9,29.1,29.6,
+										29.9,30.2,30.6,31.0,31.5,32.4,33.4,34.8,36.7,38.8,
+										40.5,41.8,44.4,49.3,53.8,56.9,60.6,65.2,72.6,82.4,
+										90.9,96.5,99.6,103.9,107.6,109.6,113.6,118.3,124.0,130.7,
+										136.2,140.3,144.5,148.2,152.4,156.9,160.5,163.0,166.6,172.2,
+										177.1,179.9,184.0,188.9,195.3,201.6,207.3,215.303,214.537,218.056,
+										224.939,229.594,232.957,
+										236.736, //2014
+										237.017,  //2015
+										240.007,  //2016
+										245.120,  //2017
+										251.107,  //2018
+										255.657,  //2019
+										258.811,  //2020
+										270.970,  //2021
+										292.655,  //2022
+										307.671,  //2023
+										];
+
+								var prevCPI = arr[fromPosition-1];
+								var fromCPI = arr[fromPosition];
+								var dollar = evalValue(document.myForm.dollar.value);
+
+								
+							for(var j=0;j<=period;j++)
+							{
+								var toCPI = arr[fromPosition+j];
+								
+								var result$ = dollar * (toCPI/fromCPI);
+
+								var cumulativePercent = Math.abs(100 * (result$ - dollar)/dollar);
+								var eachYearPercent = 100 * (toCPI - prevCPI) / prevCPI;
+								prevCPI = toCPI;
+
+								var row = table.insertRow(j+1);
+								var cell1 = row.insertCell(0);
+								var cell2 = row.insertCell(1); 
+								var cell3 = row.insertCell(2);
+								var cell4 = row.insertCell(3);
+								var cell5 = row.insertCell(4);
+								
+								if(j%2 == 0) row.style.backgroundColor = '#FCF6CF';
+								
+								 cell2.style.textAlign = 'right';
+								 cell3.style.textAlign = 'right';
+								 cell4.style.textAlign = 'right';
+								 cell5.style.textAlign = 'right';
+								 
+																		
+								cell1.innerHTML=j+(fromPosition+1913);
+								cell2.innerHTML=formatCurrencyStr(result$);
+								cell3.innerHTML=formatCurrencyStr(toCPI);
+								cell4.innerHTML=formatCurrencyStr(eachYearPercent);
+								cell5.innerHTML=formatCurrencyStr(cumulativePercent);
+
+								
+							}	
+								
+							
+				      } else {
+				        	
+				    	  	alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
+				      }
+				    }
+				  };
+				}
+				
+		//-->
+		</script>
+		<body onload="calc();">
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;US Inflation Calculator</font></b></td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div align="center">
+          <center>
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+            <tr>
+              <td width="100%">
+
+
+					<table border="0" width="80%" cellspacing="5" cellpadding="5">
+
+					  <tr>
+							<td width="40%" align="right">
+								in&nbsp;
+								
+								<select id="fromYear" onchange="calc();">
+								    
+							  		
+							  			<option value="0"  >1913</option>
+							  		
+							  		
+							  		
+							  			<option value="1"  >1914</option>
+							  		
+							  		
+							  		
+							  			<option value="2"  >1915</option>
+							  		
+							  		
+							  		
+							  			<option value="3"  >1916</option>
+							  		
+							  		
+							  		
+							  			<option value="4"  >1917</option>
+							  		
+							  		
+							  		
+							  			<option value="5"  >1918</option>
+							  		
+							  		
+							  		
+							  			<option value="6"  >1919</option>
+							  		
+							  		
+							  		
+							  			<option value="7"  >1920</option>
+							  		
+							  		
+							  		
+							  			<option value="8"  >1921</option>
+							  		
+							  		
+							  		
+							  			<option value="9"  >1922</option>
+							  		
+							  		
+							  		
+							  			<option value="10"  >1923</option>
+							  		
+							  		
+							  		
+							  			<option value="11"  >1924</option>
+							  		
+							  		
+							  		
+							  			<option value="12"  >1925</option>
+							  		
+							  		
+							  		
+							  			<option value="13"  >1926</option>
+							  		
+							  		
+							  		
+							  			<option value="14"  >1927</option>
+							  		
+							  		
+							  		
+							  			<option value="15"  >1928</option>
+							  		
+							  		
+							  		
+							  			<option value="16"  >1929</option>
+							  		
+							  		
+							  		
+							  			<option value="17"  >1930</option>
+							  		
+							  		
+							  		
+							  			<option value="18"  >1931</option>
+							  		
+							  		
+							  		
+							  			<option value="19"  >1932</option>
+							  		
+							  		
+							  		
+							  			<option value="20"  >1933</option>
+							  		
+							  		
+							  		
+							  			<option value="21"  >1934</option>
+							  		
+							  		
+							  		
+							  			<option value="22"  >1935</option>
+							  		
+							  		
+							  		
+							  			<option value="23"  >1936</option>
+							  		
+							  		
+							  		
+							  			<option value="24"  >1937</option>
+							  		
+							  		
+							  		
+							  			<option value="25"  >1938</option>
+							  		
+							  		
+							  		
+							  			<option value="26"  >1939</option>
+							  		
+							  		
+							  		
+							  			<option value="27"  >1940</option>
+							  		
+							  		
+							  		
+							  			<option value="28"  >1941</option>
+							  		
+							  		
+							  		
+							  			<option value="29"  >1942</option>
+							  		
+							  		
+							  		
+							  			<option value="30"  >1943</option>
+							  		
+							  		
+							  		
+							  			<option value="31"  >1944</option>
+							  		
+							  		
+							  		
+							  			<option value="32"  >1945</option>
+							  		
+							  		
+							  		
+							  			<option value="33"  >1946</option>
+							  		
+							  		
+							  		
+							  			<option value="34"  >1947</option>
+							  		
+							  		
+							  		
+							  			<option value="35"  >1948</option>
+							  		
+							  		
+							  		
+							  			<option value="36"  >1949</option>
+							  		
+							  		
+							  		
+							  			<option value="37"  >1950</option>
+							  		
+							  		
+							  		
+							  			<option value="38"  >1951</option>
+							  		
+							  		
+							  		
+							  			<option value="39"  >1952</option>
+							  		
+							  		
+							  		
+							  			<option value="40"  >1953</option>
+							  		
+							  		
+							  		
+							  			<option value="41"  >1954</option>
+							  		
+							  		
+							  		
+							  			<option value="42"  >1955</option>
+							  		
+							  		
+							  		
+							  			<option value="43"  >1956</option>
+							  		
+							  		
+							  		
+							  			<option value="44"  >1957</option>
+							  		
+							  		
+							  		
+							  			<option value="45"  >1958</option>
+							  		
+							  		
+							  		
+							  			<option value="46"  >1959</option>
+							  		
+							  		
+							  		
+							  			<option value="47"  >1960</option>
+							  		
+							  		
+							  		
+							  			<option value="48"  >1961</option>
+							  		
+							  		
+							  		
+							  			<option value="49"  >1962</option>
+							  		
+							  		
+							  		
+							  			<option value="50"  >1963</option>
+							  		
+							  		
+							  		
+							  			<option value="51"  >1964</option>
+							  		
+							  		
+							  		
+							  			<option value="52"  >1965</option>
+							  		
+							  		
+							  		
+							  			<option value="53"  >1966</option>
+							  		
+							  		
+							  		
+							  			<option value="54"  >1967</option>
+							  		
+							  		
+							  		
+							  			<option value="55"  >1968</option>
+							  		
+							  		
+							  		
+							  			<option value="56"  >1969</option>
+							  		
+							  		
+							  		
+							  			<option value="57"  >1970</option>
+							  		
+							  		
+							  		
+							  			<option value="58"  >1971</option>
+							  		
+							  		
+							  		
+							  			<option value="59"  >1972</option>
+							  		
+							  		
+							  		
+							  			<option value="60"  >1973</option>
+							  		
+							  		
+							  		
+							  			<option value="61"  >1974</option>
+							  		
+							  		
+							  		
+							  			<option value="62"  >1975</option>
+							  		
+							  		
+							  		
+							  			<option value="63"  >1976</option>
+							  		
+							  		
+							  		
+							  			<option value="64"  >1977</option>
+							  		
+							  		
+							  		
+							  			<option value="65"  >1978</option>
+							  		
+							  		
+							  		
+							  			<option value="66"  >1979</option>
+							  		
+							  		
+							  		
+							  			<option value="67" selected >1980</option>
+							  		
+							  		
+							  		
+							  			<option value="68"  >1981</option>
+							  		
+							  		
+							  		
+							  			<option value="69"  >1982</option>
+							  		
+							  		
+							  		
+							  			<option value="70"  >1983</option>
+							  		
+							  		
+							  		
+							  			<option value="71"  >1984</option>
+							  		
+							  		
+							  		
+							  			<option value="72"  >1985</option>
+							  		
+							  		
+							  		
+							  			<option value="73"  >1986</option>
+							  		
+							  		
+							  		
+							  			<option value="74"  >1987</option>
+							  		
+							  		
+							  		
+							  			<option value="75"  >1988</option>
+							  		
+							  		
+							  		
+							  			<option value="76"  >1989</option>
+							  		
+							  		
+							  		
+							  			<option value="77"  >1990</option>
+							  		
+							  		
+							  		
+							  			<option value="78"  >1991</option>
+							  		
+							  		
+							  		
+							  			<option value="79"  >1992</option>
+							  		
+							  		
+							  		
+							  			<option value="80"  >1993</option>
+							  		
+							  		
+							  		
+							  			<option value="81"  >1994</option>
+							  		
+							  		
+							  		
+							  			<option value="82"  >1995</option>
+							  		
+							  		
+							  		
+							  			<option value="83"  >1996</option>
+							  		
+							  		
+							  		
+							  			<option value="84"  >1997</option>
+							  		
+							  		
+							  		
+							  			<option value="85"  >1998</option>
+							  		
+							  		
+							  		
+							  			<option value="86"  >1999</option>
+							  		
+							  		
+							  		
+							  			<option value="87"  >2000</option>
+							  		
+							  		
+							  		
+							  			<option value="88"  >2001</option>
+							  		
+							  		
+							  		
+							  			<option value="89"  >2002</option>
+							  		
+							  		
+							  		
+							  			<option value="90"  >2003</option>
+							  		
+							  		
+							  		
+							  			<option value="91"  >2004</option>
+							  		
+							  		
+							  		
+							  			<option value="92"  >2005</option>
+							  		
+							  		
+							  		
+							  			<option value="93"  >2006</option>
+							  		
+							  		
+							  		
+							  			<option value="94"  >2007</option>
+							  		
+							  		
+							  		
+							  			<option value="95"  >2008</option>
+							  		
+							  		
+							  		
+							  			<option value="96"  >2009</option>
+							  		
+							  		
+							  		
+							  			<option value="97"  >2010</option>
+							  		
+							  		
+							  		
+							  			<option value="98"  >2011</option>
+							  		
+							  		
+							  		
+							  			<option value="99"  >2012</option>
+							  		
+							  		
+							  		
+							  			<option value="100"  >2013</option>
+							  		
+							  		
+							  		
+							  			<option value="101"  >2014</option>
+							  		
+							  		
+							  		
+							  			<option value="102"  >2015</option>
+							  		
+							  		
+							  		
+							  			<option value="103"  >2016</option>
+							  		
+							  		
+							  		
+							  			<option value="104"  >2017</option>
+							  		
+							  		
+							  		
+							  			<option value="105"  >2018</option>
+							  		
+							  		
+							  		
+							  			<option value="106"  >2019</option>
+							  		
+							  		
+							  		
+							  			<option value="107"  >2020</option>
+							  		
+							  		
+							  		
+							  			<option value="108"  >2021</option>
+							  		
+							  		
+							  		
+							  			<option value="109"  >2022</option>
+							  		
+							  		
+							  		
+							  			<option value="110"  >2023</option>
+							  		
+							  		
+							  		
+							  			<option value="111"  >2024</option>
+							  		
+							  		
+							  		
+							  			<option value="112"  >2025</option>
+							  		
+							  		
+							  		
+								</select>
+								
+							</td>
+							<td width="40%" valign="top" align="left">
+								$&nbsp;<input name="dollar" size="20" maxlength="75" value="100" onkeypress="return isNumberKey(event);" onkeyup="addGroupingSeperator('dollar', '.', ',');calc();">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" align="right">
+								in&nbsp;
+								
+								<select id="toYear" onchange="calc();">
+									
+								    
+							  		
+							  			<option value="0"  >1913</option>
+							  		
+							  		
+							  		
+							  			<option value="1"  >1914</option>
+							  		
+							  		
+							  		
+							  			<option value="2"  >1915</option>
+							  		
+							  		
+							  		
+							  			<option value="3"  >1916</option>
+							  		
+							  		
+							  		
+							  			<option value="4"  >1917</option>
+							  		
+							  		
+							  		
+							  			<option value="5"  >1918</option>
+							  		
+							  		
+							  		
+							  			<option value="6"  >1919</option>
+							  		
+							  		
+							  		
+							  			<option value="7"  >1920</option>
+							  		
+							  		
+							  		
+							  			<option value="8"  >1921</option>
+							  		
+							  		
+							  		
+							  			<option value="9"  >1922</option>
+							  		
+							  		
+							  		
+							  			<option value="10"  >1923</option>
+							  		
+							  		
+							  		
+							  			<option value="11"  >1924</option>
+							  		
+							  		
+							  		
+							  			<option value="12"  >1925</option>
+							  		
+							  		
+							  		
+							  			<option value="13"  >1926</option>
+							  		
+							  		
+							  		
+							  			<option value="14"  >1927</option>
+							  		
+							  		
+							  		
+							  			<option value="15"  >1928</option>
+							  		
+							  		
+							  		
+							  			<option value="16"  >1929</option>
+							  		
+							  		
+							  		
+							  			<option value="17"  >1930</option>
+							  		
+							  		
+							  		
+							  			<option value="18"  >1931</option>
+							  		
+							  		
+							  		
+							  			<option value="19"  >1932</option>
+							  		
+							  		
+							  		
+							  			<option value="20"  >1933</option>
+							  		
+							  		
+							  		
+							  			<option value="21"  >1934</option>
+							  		
+							  		
+							  		
+							  			<option value="22"  >1935</option>
+							  		
+							  		
+							  		
+							  			<option value="23"  >1936</option>
+							  		
+							  		
+							  		
+							  			<option value="24"  >1937</option>
+							  		
+							  		
+							  		
+							  			<option value="25"  >1938</option>
+							  		
+							  		
+							  		
+							  			<option value="26"  >1939</option>
+							  		
+							  		
+							  		
+							  			<option value="27"  >1940</option>
+							  		
+							  		
+							  		
+							  			<option value="28"  >1941</option>
+							  		
+							  		
+							  		
+							  			<option value="29"  >1942</option>
+							  		
+							  		
+							  		
+							  			<option value="30"  >1943</option>
+							  		
+							  		
+							  		
+							  			<option value="31"  >1944</option>
+							  		
+							  		
+							  		
+							  			<option value="32"  >1945</option>
+							  		
+							  		
+							  		
+							  			<option value="33"  >1946</option>
+							  		
+							  		
+							  		
+							  			<option value="34"  >1947</option>
+							  		
+							  		
+							  		
+							  			<option value="35"  >1948</option>
+							  		
+							  		
+							  		
+							  			<option value="36"  >1949</option>
+							  		
+							  		
+							  		
+							  			<option value="37"  >1950</option>
+							  		
+							  		
+							  		
+							  			<option value="38"  >1951</option>
+							  		
+							  		
+							  		
+							  			<option value="39"  >1952</option>
+							  		
+							  		
+							  		
+							  			<option value="40"  >1953</option>
+							  		
+							  		
+							  		
+							  			<option value="41"  >1954</option>
+							  		
+							  		
+							  		
+							  			<option value="42"  >1955</option>
+							  		
+							  		
+							  		
+							  			<option value="43"  >1956</option>
+							  		
+							  		
+							  		
+							  			<option value="44"  >1957</option>
+							  		
+							  		
+							  		
+							  			<option value="45"  >1958</option>
+							  		
+							  		
+							  		
+							  			<option value="46"  >1959</option>
+							  		
+							  		
+							  		
+							  			<option value="47"  >1960</option>
+							  		
+							  		
+							  		
+							  			<option value="48"  >1961</option>
+							  		
+							  		
+							  		
+							  			<option value="49"  >1962</option>
+							  		
+							  		
+							  		
+							  			<option value="50"  >1963</option>
+							  		
+							  		
+							  		
+							  			<option value="51"  >1964</option>
+							  		
+							  		
+							  		
+							  			<option value="52"  >1965</option>
+							  		
+							  		
+							  		
+							  			<option value="53"  >1966</option>
+							  		
+							  		
+							  		
+							  			<option value="54"  >1967</option>
+							  		
+							  		
+							  		
+							  			<option value="55"  >1968</option>
+							  		
+							  		
+							  		
+							  			<option value="56"  >1969</option>
+							  		
+							  		
+							  		
+							  			<option value="57"  >1970</option>
+							  		
+							  		
+							  		
+							  			<option value="58"  >1971</option>
+							  		
+							  		
+							  		
+							  			<option value="59"  >1972</option>
+							  		
+							  		
+							  		
+							  			<option value="60"  >1973</option>
+							  		
+							  		
+							  		
+							  			<option value="61"  >1974</option>
+							  		
+							  		
+							  		
+							  			<option value="62"  >1975</option>
+							  		
+							  		
+							  		
+							  			<option value="63"  >1976</option>
+							  		
+							  		
+							  		
+							  			<option value="64"  >1977</option>
+							  		
+							  		
+							  		
+							  			<option value="65"  >1978</option>
+							  		
+							  		
+							  		
+							  			<option value="66"  >1979</option>
+							  		
+							  		
+							  		
+							  			<option value="67"  >1980</option>
+							  		
+							  		
+							  		
+							  			<option value="68"  >1981</option>
+							  		
+							  		
+							  		
+							  			<option value="69"  >1982</option>
+							  		
+							  		
+							  		
+							  			<option value="70"  >1983</option>
+							  		
+							  		
+							  		
+							  			<option value="71"  >1984</option>
+							  		
+							  		
+							  		
+							  			<option value="72"  >1985</option>
+							  		
+							  		
+							  		
+							  			<option value="73"  >1986</option>
+							  		
+							  		
+							  		
+							  			<option value="74"  >1987</option>
+							  		
+							  		
+							  		
+							  			<option value="75"  >1988</option>
+							  		
+							  		
+							  		
+							  			<option value="76"  >1989</option>
+							  		
+							  		
+							  		
+							  			<option value="77"  >1990</option>
+							  		
+							  		
+							  		
+							  			<option value="78"  >1991</option>
+							  		
+							  		
+							  		
+							  			<option value="79"  >1992</option>
+							  		
+							  		
+							  		
+							  			<option value="80"  >1993</option>
+							  		
+							  		
+							  		
+							  			<option value="81"  >1994</option>
+							  		
+							  		
+							  		
+							  			<option value="82"  >1995</option>
+							  		
+							  		
+							  		
+							  			<option value="83"  >1996</option>
+							  		
+							  		
+							  		
+							  			<option value="84"  >1997</option>
+							  		
+							  		
+							  		
+							  			<option value="85"  >1998</option>
+							  		
+							  		
+							  		
+							  			<option value="86"  >1999</option>
+							  		
+							  		
+							  		
+							  			<option value="87"  >2000</option>
+							  		
+							  		
+							  		
+							  			<option value="88"  >2001</option>
+							  		
+							  		
+							  		
+							  			<option value="89"  >2002</option>
+							  		
+							  		
+							  		
+							  			<option value="90"  >2003</option>
+							  		
+							  		
+							  		
+							  			<option value="91"  >2004</option>
+							  		
+							  		
+							  		
+							  			<option value="92"  >2005</option>
+							  		
+							  		
+							  		
+							  			<option value="93"  >2006</option>
+							  		
+							  		
+							  		
+							  			<option value="94"  >2007</option>
+							  		
+							  		
+							  		
+							  			<option value="95"  >2008</option>
+							  		
+							  		
+							  		
+							  			<option value="96"  >2009</option>
+							  		
+							  		
+							  		
+							  			<option value="97"  >2010</option>
+							  		
+							  		
+							  		
+							  			<option value="98"  >2011</option>
+							  		
+							  		
+							  		
+							  			<option value="99"  >2012</option>
+							  		
+							  		
+							  		
+							  			<option value="100"  >2013</option>
+							  		
+							  		
+							  		
+							  			<option value="101"  >2014</option>
+							  		
+							  		
+							  		
+							  			<option value="102"  >2015</option>
+							  		
+							  		
+							  		
+							  			<option value="103"  >2016</option>
+							  		
+							  		
+							  		
+							  			<option value="104"  >2017</option>
+							  		
+							  		
+							  		
+							  			<option value="105"  >2018</option>
+							  		
+							  		
+							  		
+							  			<option value="106"  >2019</option>
+							  		
+							  		
+							  		
+							  			<option value="107"  >2020</option>
+							  		
+							  		
+							  		
+							  			<option value="108"  >2021</option>
+							  		
+							  		
+							  		
+							  			<option value="109"  >2022</option>
+							  		
+							  		
+							  		
+							  			<option value="110"  >2023</option>
+							  		
+							  		
+							  		
+							  			<option value="111"  >2024</option>
+							  		
+							  		
+							  		
+							  			<option value="112" selected >2025</option>
+							  		
+							  		
+							  		
+								</select>
+								
+							</td>
+							<td width="40%" valign="top" align="left">
+								<div id="dollarResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+
+					</table>
+
+				</td>
+            </tr>
+			</form>
+
+          <!-- calculation result-->
+            <tr>
+              <td width="100%">
+
+		      <div id="result" style="display: none">
+
+					<table border="0" width="100%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div id="hpcLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Avg Inflation Per Year (%):</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="averageResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="40%" valign="top" align="right">
+								<div id="hpcLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Cumulative Inflation (%):</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="cumulativeResult" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px"></div>
+							</td>
+					  </tr>
+					  
+			            <tr>
+			              <td width="100%" colspan="2">
+			
+					      <div>
+			
+								<table id="resultTable" border="1" width="80%" cellspacing="0" cellpadding="5">
+			
+								</table>
+			
+								</div>
+			
+			
+							</td>
+			            </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align="left" colSpan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+									Note: The CPI inflation calculator uses the average Consumer Price Index for a given calendar year. This data represents changes in prices of all goods and services purchased for consumption by urban households. This index value has been calculated every year since 1913. For the current year, the latest monthly index value is used.
+								</div>
+							</td>
+					  </tr>
+
+					</table>
+
+					</div>
+
+
+				</td>
+            </tr>
+            
+		<!-- end of calculation result -->
+
+          </table>
+        </div>
+
+
+
+
+
+<br>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

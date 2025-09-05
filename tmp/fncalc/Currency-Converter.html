@@ -1,0 +1,1180 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+	
+
+
+
+
+
+<script type="text/javascript">
+<!--
+
+function getXMLHttpRequest() {
+	  var xmlHttpReq = false;
+	  // to create XMLHttpRequest object in non-Microsoft browsers
+	  if (window.XMLHttpRequest) {
+	    xmlHttpReq = new XMLHttpRequest();
+	  } else if (window.ActiveXObject) {
+	    try {
+	      // to create XMLHttpRequest object in later versions
+	      // of Internet Explorer
+	      xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+	    } catch (exp1) {
+	      try {
+	        // to create XMLHttpRequest object in older versions
+	        // of Internet Explorer
+	        xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+	      } catch (exp2) {
+	        xmlHttpReq = false;
+	      }
+	    }
+	  }
+	  return xmlHttpReq;
+	}
+	/*
+	 * AJAX call starts with this function
+	 */
+	function calc() {
+		
+		var ele = document.getElementById("result");
+		ele.style.display = "block";
+
+		var loading = document.getElementById("loading");
+		loading.style.display = "block";
+
+		var from = document.getElementById("fromCurrency").value;
+		var to = document.getElementById("toCurrency").value;
+		
+		var obj = "calculate?type=currency&symbol=" + from + to;
+		//alert(obj);
+		
+	  	var xmlHttpRequest = getXMLHttpRequest();
+	  	xmlHttpRequest.onreadystatechange = getReadyStateHandler(xmlHttpRequest);
+	  	xmlHttpRequest.open("POST", obj, true);
+	  	xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	  	xmlHttpRequest.send(null);
+	}
+	 
+	/*
+	 * Returns a function that waits for the state change in XMLHttpRequest
+	 */
+	function getReadyStateHandler(xmlHttpRequest) {
+
+
+	  // an anonymous function returned
+	  // it listens to the XMLHttpRequest instance
+	  return function() {
+	    if (xmlHttpRequest.readyState == 4) {
+	      if (xmlHttpRequest.status == 200) {
+
+	    	//hide loading message  
+	  		var loading = document.getElementById("loading");
+			loading.style.display = "none";
+
+	    	  	var from = document.getElementById("fromCurrency").value;
+				var to = document.getElementById("toCurrency").value;
+				var amount = document.myForm.amount.value;
+
+				var result = document.getElementById("resultStr");
+				var reverseResult = document.getElementById("reverseResultStr");
+
+				var exch = xmlHttpRequest.responseText;
+	    	  	//alert(exch);
+	    	  	
+		     	var fResult = amount*exch;
+		     	var resultStr = amount + " " + from + "  = " + formatCurrencyWithFourDigits(fResult) + " " + to; 
+		     	//alert(resultStr);
+
+		     	var fReverseResult = amount/exch;
+		     	var reverseResultStr = amount + " " + to + "  = " + formatCurrencyWithFourDigits(fReverseResult) + " " + from; 
+		     	//alert(reverseResultStr);
+				
+				result.innerHTML = resultStr;
+				reverseResult.innerHTML = reverseResultStr;
+				
+	      } else {
+	        alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
+	      }
+	    }
+	  };
+	}
+	
+	function formatCurrencyWithFourDigits(num) {
+		num = isNaN(num) || num === '' || num === null ? 0.0000 : num;
+		return parseFloat(num).toFixed(4);
+	}
+
+//-->
+</script>
+<!-- 
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Currency Converter</font></b></td>
+            </tr>
+          </table>
+        </div>
+ -->
+
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>	
+		          
+          	<td width="50%" valign="top">
+          <!-- converter -->
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;&nbsp;&nbsp;Currency Converter</font></b></td>
+            </tr>
+
+	          <tr>
+	          
+              <td width="100%">
+
+          <!-- form input -->
+          <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+
+					<table border="0" width="100%" cellspacing="5" cellpadding="5" >
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px"> &nbsp;From Currency:&nbsp; </span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<select id="fromCurrency" style="height: 1.6em; width: 12em">
+								
+									
+								  		<option value="USD" selected="selected">U.S. Dollar</option>
+									
+								  		<option value="EUR" >Euro</option>
+									
+								  		<option value="AED" >UAE Dirham</option>
+									
+								  		<option value="ALL" >Albanian Lek</option>
+									
+								  		<option value="ANG" >Neth Antilles Guilder</option>
+									
+								  		<option value="ARS" >Argentine Peso</option>
+									
+								  		<option value="AUD" >Australian Dollar</option>
+									
+								  		<option value="AWG" >Aruba Florin</option>
+									
+								  		<option value="BBD" >Barbados Dollar</option>
+									
+								  		<option value="BDT" >Bangladesh Taka</option>
+									
+								  		<option value="BGN" >Bulgarian Lev</option>
+									
+								  		<option value="BHD" >Bahreini Dinar</option>
+									
+								  		<option value="BIF" >Burundi Franc</option>
+									
+								  		<option value="BMD" >Bermuda Dollar</option>
+									
+								  		<option value="BND" >Brunei Dollar</option>
+									
+								  		<option value="BOB" >Bolivian Boliviano</option>
+									
+								  		<option value="BRL" >Brazilian Real</option>
+									
+								  		<option value="BSD" >Bahamian Dollar</option>
+									
+								  		<option value="BTN" >Bhutan Ngultrum</option>
+									
+								  		<option value="BWP" >Botswana Pula</option>
+									
+								  		<option value="BYR" >Belarus Rouble</option>
+									
+								  		<option value="BZD" >Belize Dollar</option>
+									
+								  		<option value="CAD" >Canadian Dollar</option>
+									
+								  		<option value="CHF" >Swiss Franc</option>
+									
+								  		<option value="CLP" >Chilean Peso</option>
+									
+								  		<option value="CNY" >Chinese Yuan</option>
+									
+								  		<option value="COP" >Colombian Peso</option>
+									
+								  		<option value="CRC" >Costa Rica Colon</option>
+									
+								  		<option value="CUP" >Cuban Peso</option>
+									
+								  		<option value="CZK" >Czech Koruna</option>
+									
+								  		<option value="DJF" >Dijibouti Franc</option>
+									
+								  		<option value="DKK" >Danish Krone</option>
+									
+								  		<option value="DOP" >Dominican Peso</option>
+									
+								  		<option value="DZD" >Algerian Dinar</option>
+									
+								  		<option value="ECS" >Equador Sucre</option>
+									
+								  		<option value="EEK" >Estonian Kroon</option>
+									
+								  		<option value="EGP" >Egyptian Pound</option>
+									
+								  		<option value="ERN" >Eritrea Nakfa</option>
+									
+								  		<option value="ETB" >Ethopian Birr</option>
+									
+								  		<option value="FJD" >Fiji Dollar</option>
+									
+								  		<option value="FKP" >Falkland Island Pound</option>
+									
+								  		<option value="GBP" >British Pound</option>
+									
+								  		<option value="GHC" >Ghanian Cedi</option>
+									
+								  		<option value="GIP" >Gibraltar Pound</option>
+									
+								  		<option value="GMD" >Gambian Dalasi</option>
+									
+								  		<option value="GNF" >Guinea Franc</option>
+									
+								  		<option value="GTQ" >Guatemala Quetzal</option>
+									
+								  		<option value="GYD" >Guyana Dollar</option>
+									
+								  		<option value="HNL" >Honduras Lempira</option>
+									
+								  		<option value="HKD" >Hong Kong Dollar</option>
+									
+								  		<option value="HRK" >Croatian Kuna</option>
+									
+								  		<option value="HTG" >Haiti Gourde</option>
+									
+								  		<option value="HUF" >Hungarian Forint</option>
+									
+								  		<option value="IDR" >Indonesian Rpiah</option>
+									
+								  		<option value="ILS" >Israeli Shekel</option>
+									
+								  		<option value="INR" >Indian Rupee</option>
+									
+								  		<option value="IQD" >Iraqui Dinar</option>
+									
+								  		<option value="IRR" >Iran Rial</option>
+									
+								  		<option value="ISK" >Iceland Krona</option>
+									
+								  		<option value="JMD" >Jamaican Dollar</option>
+									
+								  		<option value="JOD" >Jordania Dinar</option>
+									
+								  		<option value="JPY" >Japanese Yen</option>
+									
+								  		<option value="KES" >Kenyan Shilling</option>
+									
+								  		<option value="KHR" >Cambodia Riel</option>
+									
+								  		<option value="KMF" >Comoros Franc</option>
+									
+								  		<option value="KRW" >Korean Won</option>
+									
+								  		<option value="KWD" >Kuwaiti Dinar</option>
+									
+								  		<option value="KYD" >Cayman Islands Dollar</option>
+									
+								  		<option value="KZT" >Kazakhstan Tenge</option>
+									
+								  		<option value="LAK" >Lao Kip</option>
+									
+								  		<option value="LBP" >Lebanese Pound</option>
+									
+								  		<option value="LKR" >Sri Lanka Rupee</option>
+									
+								  		<option value="LRD" >Liberian Dollar</option>
+									
+								  		<option value="LSL" >Lesoto Loti</option>
+									
+								  		<option value="LTL" >Lithuanian Lita</option>
+									
+								  		<option value="LVL" >Latvian Lat</option>
+									
+								  		<option value="LYD" >Libyan Dinar</option>
+									
+								  		<option value="MAD" >Moroccan Dirham</option>
+									
+								  		<option value="MDL" >Moldovan Leu</option>
+									
+								  		<option value="MKD" >Macedonian Denar</option>
+									
+								  		<option value="MMK" >Myanmar Kyat</option>
+									
+								  		<option value="MNT" >Mongolian Tukrik</option>
+									
+								  		<option value="MOP" >Macau Pataca</option>
+									
+								  		<option value="MRO" >Mauritania Ougulya</option>
+									
+								  		<option value="MTL" >Maltese Lira</option>
+									
+								  		<option value="MUR" >Mauritius Rupee</option>
+									
+								  		<option value="MVR" >Maledives Rufiyaa</option>
+									
+								  		<option value="MWK" >Malawi Kwacha</option>
+									
+								  		<option value="MXN" >Mexican Peso</option>
+									
+								  		<option value="MYR" >Malaysian Ringgit</option>
+									
+								  		<option value="NAD" >Namibian Dollar</option>
+									
+								  		<option value="NGN" >Nigerian Naira</option>
+									
+								  		<option value="NIO" >Nicaragua Cordoba</option>
+									
+								  		<option value="NOK" >Norwegian Krone</option>
+									
+								  		<option value="NPR" >Nepalese Rupee</option>
+									
+								  		<option value="NPW" >North Korean Won</option>
+									
+								  		<option value="NZD" >New Zealand Dollar</option>
+									
+								  		<option value="OMR" >Omani Rial</option>
+									
+								  		<option value="PAB" >Panama Balboa</option>
+									
+								  		<option value="PEN" >Peruvian Nuevo Sol</option>
+									
+								  		<option value="PGK" >Papua New Guinea Kina</option>
+									
+								  		<option value="PHP" >Philipine Peso</option>
+									
+								  		<option value="PKR" >Pakistani Rupee</option>
+									
+								  		<option value="PLN" >Polish Zloty</option>
+									
+								  		<option value="PYG" >Paraquayan Guarani</option>
+									
+								  		<option value="QAR" >Qatar Rial</option>
+									
+								  		<option value="RON" >Romanian New Leu</option>
+									
+								  		<option value="RUB" >Russian Roubel</option>
+									
+								  		<option value="RWF" >Rwanda Franc</option>
+									
+								  		<option value="SAR" >Saudi Arabian Riyal</option>
+									
+								  		<option value="SBD" >Solomon Islands Dollar</option>
+									
+								  		<option value="SCR" >Seychelles Rupee</option>
+									
+								  		<option value="SDG" >Sudanese Pound</option>
+									
+								  		<option value="SEK" >Swedish Krona</option>
+									
+								  		<option value="SGD" >Singapore Dollar</option>
+									
+								  		<option value="SHP" >St Helena Pound</option>
+									
+								  		<option value="SIT" >Slovenian Tolar</option>
+									
+								  		<option value="SKK" >Slovak Koruna</option>
+									
+								  		<option value="SLL" >Sierra Leone Leone</option>
+									
+								  		<option value="SOS" >Somali Shilling</option>
+									
+								  		<option value="STD" >Sao Tome Dobra</option>
+									
+								  		<option value="SVC" >El Salvador Colon</option>
+									
+								  		<option value="SYP" >Syrian Pound</option>
+									
+								  		<option value="SZL" >Swaziland Lilageni</option>
+									
+								  		<option value="THB" >Thai Baht</option>
+									
+								  		<option value="TND" >Tunisian Dinar</option>
+									
+								  		<option value="TOP" >Tonga Pa'ang</option>
+									
+								  		<option value="TRY" >Turkish Lira</option>
+									
+								  		<option value="TTD" >Trinidad & Tobago Dollar</option>
+									
+								  		<option value="TWD" >Taiwan Dollar</option>
+									
+								  		<option value="TZS" >Tanzanian Shilling</option>
+									
+								  		<option value="UAH" >Ukraine Hryvnia</option>
+									
+								  		<option value="UGX" >Ugandan Shilling</option>
+									
+								  		<option value="UYU" >Uruguayan New Peso</option>
+									
+								  		<option value="VEB" >Venezuelan Bolivar</option>
+									
+								  		<option value="VND" >Vietnam Dong</option>
+									
+								  		<option value="VUV" >Vanuatu Vatu</option>
+									
+								  		<option value="WST" >Samoa Tala</option>
+									
+								  		<option value="XAF" >CFA Franc BEAC</option>
+									
+								  		<option value="XAG" >Silver Ounces</option>
+									
+								  		<option value="XAL" >Aluminium Ounces</option>
+									
+								  		<option value="XAU" >Gold Ounces</option>
+									
+								  		<option value="XCD" >East Caribbean Dollar</option>
+									
+								  		<option value="XOF" >CFA Franc BCEAO</option>
+									
+								  		<option value="XPD" >Paladium Ounces</option>
+									
+								  		<option value="XPF" >Pacific Franc</option>
+									
+								  		<option value="XPT" >Platinum Ounces</option>
+									
+								  		<option value="YER" >Yemen Riyal</option>
+									
+								  		<option value="ZAR" >South African Rand</option>
+									
+								  		<option value="ZMK" >Zambian Kwacha</option>
+									
+								  		<option value="ZWD" >Zimbabwe Dollar</option>
+								
+								
+								</select>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px"> &nbsp;To Currency:&nbsp; </span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<select id="toCurrency" style="height: 1.6em; width: 12em">
+								
+									
+								  		<option value="USD" >U.S. Dollar</option>
+									
+								  		<option value="EUR" selected="selected">Euro</option>
+									
+								  		<option value="AED" >UAE Dirham</option>
+									
+								  		<option value="ALL" >Albanian Lek</option>
+									
+								  		<option value="ANG" >Neth Antilles Guilder</option>
+									
+								  		<option value="ARS" >Argentine Peso</option>
+									
+								  		<option value="AUD" >Australian Dollar</option>
+									
+								  		<option value="AWG" >Aruba Florin</option>
+									
+								  		<option value="BBD" >Barbados Dollar</option>
+									
+								  		<option value="BDT" >Bangladesh Taka</option>
+									
+								  		<option value="BGN" >Bulgarian Lev</option>
+									
+								  		<option value="BHD" >Bahreini Dinar</option>
+									
+								  		<option value="BIF" >Burundi Franc</option>
+									
+								  		<option value="BMD" >Bermuda Dollar</option>
+									
+								  		<option value="BND" >Brunei Dollar</option>
+									
+								  		<option value="BOB" >Bolivian Boliviano</option>
+									
+								  		<option value="BRL" >Brazilian Real</option>
+									
+								  		<option value="BSD" >Bahamian Dollar</option>
+									
+								  		<option value="BTN" >Bhutan Ngultrum</option>
+									
+								  		<option value="BWP" >Botswana Pula</option>
+									
+								  		<option value="BYR" >Belarus Rouble</option>
+									
+								  		<option value="BZD" >Belize Dollar</option>
+									
+								  		<option value="CAD" >Canadian Dollar</option>
+									
+								  		<option value="CHF" >Swiss Franc</option>
+									
+								  		<option value="CLP" >Chilean Peso</option>
+									
+								  		<option value="CNY" >Chinese Yuan</option>
+									
+								  		<option value="COP" >Colombian Peso</option>
+									
+								  		<option value="CRC" >Costa Rica Colon</option>
+									
+								  		<option value="CUP" >Cuban Peso</option>
+									
+								  		<option value="CZK" >Czech Koruna</option>
+									
+								  		<option value="DJF" >Dijibouti Franc</option>
+									
+								  		<option value="DKK" >Danish Krone</option>
+									
+								  		<option value="DOP" >Dominican Peso</option>
+									
+								  		<option value="DZD" >Algerian Dinar</option>
+									
+								  		<option value="ECS" >Equador Sucre</option>
+									
+								  		<option value="EEK" >Estonian Kroon</option>
+									
+								  		<option value="EGP" >Egyptian Pound</option>
+									
+								  		<option value="ERN" >Eritrea Nakfa</option>
+									
+								  		<option value="ETB" >Ethopian Birr</option>
+									
+								  		<option value="FJD" >Fiji Dollar</option>
+									
+								  		<option value="FKP" >Falkland Island Pound</option>
+									
+								  		<option value="GBP" >British Pound</option>
+									
+								  		<option value="GHC" >Ghanian Cedi</option>
+									
+								  		<option value="GIP" >Gibraltar Pound</option>
+									
+								  		<option value="GMD" >Gambian Dalasi</option>
+									
+								  		<option value="GNF" >Guinea Franc</option>
+									
+								  		<option value="GTQ" >Guatemala Quetzal</option>
+									
+								  		<option value="GYD" >Guyana Dollar</option>
+									
+								  		<option value="HNL" >Honduras Lempira</option>
+									
+								  		<option value="HKD" >Hong Kong Dollar</option>
+									
+								  		<option value="HRK" >Croatian Kuna</option>
+									
+								  		<option value="HTG" >Haiti Gourde</option>
+									
+								  		<option value="HUF" >Hungarian Forint</option>
+									
+								  		<option value="IDR" >Indonesian Rpiah</option>
+									
+								  		<option value="ILS" >Israeli Shekel</option>
+									
+								  		<option value="INR" >Indian Rupee</option>
+									
+								  		<option value="IQD" >Iraqui Dinar</option>
+									
+								  		<option value="IRR" >Iran Rial</option>
+									
+								  		<option value="ISK" >Iceland Krona</option>
+									
+								  		<option value="JMD" >Jamaican Dollar</option>
+									
+								  		<option value="JOD" >Jordania Dinar</option>
+									
+								  		<option value="JPY" >Japanese Yen</option>
+									
+								  		<option value="KES" >Kenyan Shilling</option>
+									
+								  		<option value="KHR" >Cambodia Riel</option>
+									
+								  		<option value="KMF" >Comoros Franc</option>
+									
+								  		<option value="KRW" >Korean Won</option>
+									
+								  		<option value="KWD" >Kuwaiti Dinar</option>
+									
+								  		<option value="KYD" >Cayman Islands Dollar</option>
+									
+								  		<option value="KZT" >Kazakhstan Tenge</option>
+									
+								  		<option value="LAK" >Lao Kip</option>
+									
+								  		<option value="LBP" >Lebanese Pound</option>
+									
+								  		<option value="LKR" >Sri Lanka Rupee</option>
+									
+								  		<option value="LRD" >Liberian Dollar</option>
+									
+								  		<option value="LSL" >Lesoto Loti</option>
+									
+								  		<option value="LTL" >Lithuanian Lita</option>
+									
+								  		<option value="LVL" >Latvian Lat</option>
+									
+								  		<option value="LYD" >Libyan Dinar</option>
+									
+								  		<option value="MAD" >Moroccan Dirham</option>
+									
+								  		<option value="MDL" >Moldovan Leu</option>
+									
+								  		<option value="MKD" >Macedonian Denar</option>
+									
+								  		<option value="MMK" >Myanmar Kyat</option>
+									
+								  		<option value="MNT" >Mongolian Tukrik</option>
+									
+								  		<option value="MOP" >Macau Pataca</option>
+									
+								  		<option value="MRO" >Mauritania Ougulya</option>
+									
+								  		<option value="MTL" >Maltese Lira</option>
+									
+								  		<option value="MUR" >Mauritius Rupee</option>
+									
+								  		<option value="MVR" >Maledives Rufiyaa</option>
+									
+								  		<option value="MWK" >Malawi Kwacha</option>
+									
+								  		<option value="MXN" >Mexican Peso</option>
+									
+								  		<option value="MYR" >Malaysian Ringgit</option>
+									
+								  		<option value="NAD" >Namibian Dollar</option>
+									
+								  		<option value="NGN" >Nigerian Naira</option>
+									
+								  		<option value="NIO" >Nicaragua Cordoba</option>
+									
+								  		<option value="NOK" >Norwegian Krone</option>
+									
+								  		<option value="NPR" >Nepalese Rupee</option>
+									
+								  		<option value="NPW" >North Korean Won</option>
+									
+								  		<option value="NZD" >New Zealand Dollar</option>
+									
+								  		<option value="OMR" >Omani Rial</option>
+									
+								  		<option value="PAB" >Panama Balboa</option>
+									
+								  		<option value="PEN" >Peruvian Nuevo Sol</option>
+									
+								  		<option value="PGK" >Papua New Guinea Kina</option>
+									
+								  		<option value="PHP" >Philipine Peso</option>
+									
+								  		<option value="PKR" >Pakistani Rupee</option>
+									
+								  		<option value="PLN" >Polish Zloty</option>
+									
+								  		<option value="PYG" >Paraquayan Guarani</option>
+									
+								  		<option value="QAR" >Qatar Rial</option>
+									
+								  		<option value="RON" >Romanian New Leu</option>
+									
+								  		<option value="RUB" >Russian Roubel</option>
+									
+								  		<option value="RWF" >Rwanda Franc</option>
+									
+								  		<option value="SAR" >Saudi Arabian Riyal</option>
+									
+								  		<option value="SBD" >Solomon Islands Dollar</option>
+									
+								  		<option value="SCR" >Seychelles Rupee</option>
+									
+								  		<option value="SDG" >Sudanese Pound</option>
+									
+								  		<option value="SEK" >Swedish Krona</option>
+									
+								  		<option value="SGD" >Singapore Dollar</option>
+									
+								  		<option value="SHP" >St Helena Pound</option>
+									
+								  		<option value="SIT" >Slovenian Tolar</option>
+									
+								  		<option value="SKK" >Slovak Koruna</option>
+									
+								  		<option value="SLL" >Sierra Leone Leone</option>
+									
+								  		<option value="SOS" >Somali Shilling</option>
+									
+								  		<option value="STD" >Sao Tome Dobra</option>
+									
+								  		<option value="SVC" >El Salvador Colon</option>
+									
+								  		<option value="SYP" >Syrian Pound</option>
+									
+								  		<option value="SZL" >Swaziland Lilageni</option>
+									
+								  		<option value="THB" >Thai Baht</option>
+									
+								  		<option value="TND" >Tunisian Dinar</option>
+									
+								  		<option value="TOP" >Tonga Pa'ang</option>
+									
+								  		<option value="TRY" >Turkish Lira</option>
+									
+								  		<option value="TTD" >Trinidad & Tobago Dollar</option>
+									
+								  		<option value="TWD" >Taiwan Dollar</option>
+									
+								  		<option value="TZS" >Tanzanian Shilling</option>
+									
+								  		<option value="UAH" >Ukraine Hryvnia</option>
+									
+								  		<option value="UGX" >Ugandan Shilling</option>
+									
+								  		<option value="UYU" >Uruguayan New Peso</option>
+									
+								  		<option value="VEB" >Venezuelan Bolivar</option>
+									
+								  		<option value="VND" >Vietnam Dong</option>
+									
+								  		<option value="VUV" >Vanuatu Vatu</option>
+									
+								  		<option value="WST" >Samoa Tala</option>
+									
+								  		<option value="XAF" >CFA Franc BEAC</option>
+									
+								  		<option value="XAG" >Silver Ounces</option>
+									
+								  		<option value="XAL" >Aluminium Ounces</option>
+									
+								  		<option value="XAU" >Gold Ounces</option>
+									
+								  		<option value="XCD" >East Caribbean Dollar</option>
+									
+								  		<option value="XOF" >CFA Franc BCEAO</option>
+									
+								  		<option value="XPD" >Paladium Ounces</option>
+									
+								  		<option value="XPF" >Pacific Franc</option>
+									
+								  		<option value="XPT" >Platinum Ounces</option>
+									
+								  		<option value="YER" >Yemen Riyal</option>
+									
+								  		<option value="ZAR" >South African Rand</option>
+									
+								  		<option value="ZMK" >Zambian Kwacha</option>
+									
+								  		<option value="ZWD" >Zimbabwe Dollar</option>
+								
+								
+								</select>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="20%" align="right">
+								<span style="font-weight:bold;font-family:Arial;font-size:14px"> &nbsp;Exchange Amount:&nbsp; </span>
+							</td>
+							<td width="30%" valign="top" align="left">
+								<input name="amount" size="20" maxlength="75" value="1" onkeypress="return isNumberKey(event);">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<p><input type="reset" border="0" hspace="4" alt="Reset" name="reset" value="Reset"  style="height: 2em; width: 10em" onclick="hide();"></p>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<p><input type="button" border="0" hspace="4" alt="Calculate" name="calculate" value="Calculate"  style="height: 2em; width: 10em" onclick="calc();"></p>
+							</td>
+					  </tr>
+
+					</table>
+			</form>
+
+
+
+				</td>
+            </tr>
+
+            <tr>
+              <td width="80%">
+              
+			  	<div id="loading" style="display: none; font-weight:bold;font-family:Arial;font-size:18px"">Loading ...</div>
+		      
+		      <div id="result" style="display: block" align="center">
+
+					<table border="0" width="80%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<td width="100%" valign="top" align="center" colspan="2">
+								<div id="resultStr" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:18px">1 USD = .8572 EUR</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align="center" colspan="2">
+								<div id="reverseResultStr" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px">1 EUR = 1.1666 USD</div>
+							</td>
+					  </tr>
+
+					</table>
+
+					</div>
+
+
+				</td>
+            </tr>
+
+            
+          </table>
+          </td>
+          <!-- end of converter -->
+          
+          <!-- currencies -->
+          <td width="50%"  valign="top">
+          
+          			<table border="0" width="90%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<th width="100%" valign="top" align="center" colspan="2">
+								<div id="resultStr" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:18px">1 U.S. Dollar (USD) = </div>
+							</th>
+					  </tr>
+
+					    
+					    <tr bgcolor="">
+					      <td width="50%" align="right"><div id="currencyName" style="font-family:Arial;font-size:14px">Euro (EUR)</div></td>
+					      <td width="50%" align="right"><div id="exchangeRate" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px">.8572</div></td>
+					    </tr>
+					    
+					    <tr bgcolor="#FCF6CF">
+					      <td width="50%" align="right"><div id="currencyName" style="font-family:Arial;font-size:14px">British Pound (GBP)</div></td>
+					      <td width="50%" align="right"><div id="exchangeRate" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px">.7436</div></td>
+					    </tr>
+					    
+					    <tr bgcolor="">
+					      <td width="50%" align="right"><div id="currencyName" style="font-family:Arial;font-size:14px">Canadian Dollar (CAD)</div></td>
+					      <td width="50%" align="right"><div id="exchangeRate" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px">1.3810</div></td>
+					    </tr>
+					    
+					    <tr bgcolor="#FCF6CF">
+					      <td width="50%" align="right"><div id="currencyName" style="font-family:Arial;font-size:14px">Chinese Yuan (CNY)</div></td>
+					      <td width="50%" align="right"><div id="exchangeRate" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:14px">7.1385</div></td>
+					    </tr>
+					    
+
+					</table>
+          
+          </td>
+          
+          </tr>
+          </table>
+          
+        </div>
+
+        
+<br><p>
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" align="center">&nbsp;
+      
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- financial_calculators_728_90 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-5262108672348053"
+		     data-ad-slot="2264600304"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+      </td>
+    </tr>
+  </table>
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 

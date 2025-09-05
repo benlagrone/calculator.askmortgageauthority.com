@@ -1,0 +1,1415 @@
+
+<html>
+<head>
+  	<link rel="icon" type="image/png" href="images/financial_calculator.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Loan Calculator, Refinance Calculator, APR, TVM Calculator, Interest Calculator, Currency Converter, Investment Calculator, Credit Card Calculator, Auto Loan Calculator, Discount Calculator, Percentage Calculator" />
+	<title>Financial Calculators</title>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+    
+    body { height:100% }/* This makes sure the jquery dialog centers on screen.  */
+    
+--></style>
+
+<script src="js/financialCalculator.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="5%" valign="center" height="53"><a href="/"><img border="0" src="images/financial_calculator.png" width="48" height="48"></a></td>
+      <td width="25%" valign="center" height="53"><font face="Arial Black" size="5"><a href="http://www.fncalculator.com">Financial Calculators</a></font></td>
+      </center>
+      <td width="70%" valign="bottom">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0" height="25">
+          <tr>
+            <td width="100%" valign="top">
+             
+			<!-- time -->	
+			
+			</td>
+          </tr>
+        </table>
+
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%">
+
+<p align="right"><b><font size="1" face="Verdana"><a href="financialcalculator?type=android">Android</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=ios">iPhone/iPad</a>&nbsp;&nbsp; <font color="#CC0000"><!-- |</font>&nbsp;&nbsp; <a href="financialcalculator?type=wp">Windows Phone</a>&nbsp;&nbsp; -->
+<font color="#CC0000">|</font>&nbsp;&nbsp; <a href="financialcalculator?type=allApps">Other Apps</a>&nbsp;&nbsp; <font color="#CC0000">|</font>&nbsp;&nbsp;
+<a href="financialcalculator?type=aboutUs">Contact Us</a></font></b>
+
+</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+          		<hr color="#CC0000" size="3" width="90%">
+
+
+</div>
+<!--
+<p align="center"><font face="Arial" size="2">PLACE YOUR BANNER HERE</font>
+
+</p>
+-->
+<div align="center">
+  <center>
+  <table border="0" width="90%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%" valign="top">
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Finance and Investment
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=tvmCalculator">TVM Calculator</a><br>
+            <li><a href="currencyConverter">Currency Converter</a><br>
+            <li><a href="financialcalculator?type=interestCalculator">Compound Interest Calculator</a><br>
+            <li><a href="financialcalculator?type=roiCalculator">Return On Investment (ROI) Calculator</a><br>
+            <li><a href="financialcalculator?type=irrnpvCalculator">IRR NPV Calculator</a><br>
+            <li><a href="financialcalculator?type=bondCalculator">Bond Calculator</a><br>
+			<li><a href="financialcalculator?type=taxEquivalentCalculator">Tax Equivalent Yield Calculator</a><br>
+			<li><a href="financialcalculator?type=rule72Calculator">Rule of 72 Calculator</a><br>
+            <li><a href="financialcalculator?type=collegeSavingsCalculator">College Savings Calculator</a><br>
+            <li><a href="financialcalculator?type=investmentIncomeCalculator">Investment Income Calculator</a><br>
+			<li><a href="financialcalculator?type=mutualFundFeeCalculator">Mutual Fund Fee Calculator</a><br>
+            <li><a href="financialcalculator?type=hsaCalculator">US Health Savings Account Calculator</a><br>
+            <li><a href="financialcalculator?type=savingsGoalCalculator">Savings Goal Calculator</a><br>
+            &nbsp;</font>
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Loan/Mortgage
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=loanCalculator">Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=loanComparisonCalculator">Loan Comparison Calculator</a><br>
+            <li><a href="financialcalculator?type=refinanceCalculator">Loan Refinance Calculator</a><br>
+            <li><a href="financialcalculator?type=aprCalculator">APR Calculator</a><br>
+            <li><a href="financialcalculator?type=aprAdvancedCalculator">APR Advanced Calculator</a><br>
+            <li><a href="financialcalculator?type=commercialLoanCalculator">Commercial Loan Calculator</a><br>
+			<li><a href="financialcalculator?type=loanAnalysisCalculator">Loan Analysis Calculator</a><br>
+			<li><a id="moreLoan" href="#">More Loan Calculators</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Retirement Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=retirementPlanner">Retirement Planner</a><br>
+            <li><a href="financialcalculator?type=retirement401kCalculator">401k Contribution Calculator</a><br>
+            <li><a href="financialcalculator?type=retirement401kSaveMaxCalculator">401k Save the Max Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementSavingsAnalysis">Retirement Savings Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIncomeAnalysis">Retirement Income Analysis</a><br>
+            <li><a href="financialcalculator?type=retirementIRAOrRothIRA">Traditional IRA vs Roth IRA</a><br>
+            <li><a href="financialcalculator?type=retirementRMD">Required Minimum Distribution</a><br>
+            <li><a href="financialcalculator?type=retirementSocialSecurity">Social Security Estimator</a><br>
+            <li><a href="financialcalculator?type=assetAllocationCalculator">Asset Allocation Calculator</a><br>
+            <li><a href="financialcalculator?type=retirementCalculator">Retirement Calculator</a><br>
+            <li><a href="financialcalculator?type=annuityCalculator">Annuity Calculator</a><br>
+            &nbsp;</font>
+            
+        <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Credit Card
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=creditPayoffCalculator">Credit Card Payoff Calculator</a><br>
+            <li><a href="financialcalculator?type=creditMinPaymentCalculator">Credit Card Minimum Calculator</a><br>
+            &nbsp;</font>
+          <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Auto Loan and Lease
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=autoLoanCalculator">Auto Loan Calculator</a><br>
+            <li><a href="financialcalculator?type=autoLeaseCalculator">Auto Lease Calculator</a><br>
+            &nbsp;</font>
+
+         <table border="0" width="100%" bgcolor="#CC0000" cellspacing="0" cellpadding="5" bordercolor="#ffffff">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Stock Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <li><a href="financialcalculator?type=stockReturnCalculator">Stock Return Calculator</a><br>
+            <li><a href="financialcalculator?type=growthStockCalculator">Stock Constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=nonGrowthStockCalculator">Stock Non-constant Growth Calculator</a><br>
+            <li><a href="financialcalculator?type=capmCalculator">CAPM Calculator</a><br>
+            <li><a href="financialcalculator?type=expectedReturnCalculator">Expected Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=hprCalculator">Holding Period Return Calculator</a><br>
+		    <li><a href="financialcalculator?type=waccCalculator">Weighted Average Cost of Capital Calculator</a><br>
+		    <li><a href="financialcalculator?type=optionCalculator">Black-Scholes Option Calculator</a><br>
+            &nbsp;</font>
+            
+      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#CC0000">
+          <tr>
+            <td width="100%"><b><font color="#FFFFFF" face="Arial" size="2">&nbsp;
+              Miscellaneous Calculators
+              </font></b></td>
+          </tr>
+        </table>
+            <p align="left"><font face="Arial" size="2">
+            <!-- <li><a href="financialcalculator?type=calculator">Calculator</a><br> -->
+            <li><a href="financialcalculator?type=tipCalculator">Tip Calculator</a><br>
+            <li><a href="financialcalculator?type=discountCalculator">Discount and Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=percentageCalculator">Percentage Calculator</a><br>
+            <li><a href="financialcalculator?type=dateCalculator">Date Calculator</a><br>
+            <li><a href="financialcalculator?type=converter&file=index.jsp">Unit Conversion</a><br>
+			<li><a href="financialcalculator?type=usInflationCalculator">US Inflation Calculator</a><br>
+			<li><a href="financialcalculator?type=usTreasuryBillCalculator">US Treasury Bill Calculator</a><br>
+			<li><a href="financialcalculator?type=marginMarkupCalculator">Margin and Markup Calculator</a><br>
+            <li><a href="financialcalculator?type=businessForecastCalculator">Business Forecast Calculator</a><br>
+            <li><a href="financialcalculator?type=fuelCalculator">Fuel Calculator</a><br>
+            <li><a href="financialcalculator?type=hourlyToSalaryCalculator">Hourly to Salary Calculator</a><br>
+            <li><a href="financialcalculator?type=salaryIncreaseCalculator">Salary Increase Calculator</a><br>
+            <li><a href="financialcalculator?type=paycheckCalculator">US Paycheck Tax Calculator</a><br>
+            <li><a href="financialcalculator?type=netDistributionCalculator">Net Distribution Calculator</a><br>
+            <li><a href="financialcalculator?type=effectiveRateCalculator">Effective Rate Calculator</a><br>
+            <li><a href="financialcalculator?type=financialRatios">Financial Ratios</a><br>
+
+        </td>
+  </center>
+
+  <!-- center content section -->
+
+  <td width="65%" valign="top">
+
+			<script language="javascript">
+		<!--
+		
+			function isNumberKey(evt)
+			{
+            	   var theEvent = evt || window.event;
+				   var key = theEvent.keyCode || theEvent.which;
+				   if ((key < 48 || key > 57) && !(key == 8 || key == 9 || key == 13 || key == 37 || key == 39 || key == 46 || key == 45 ) ){ 
+				     theEvent.returnValue = false;
+				     if (theEvent.preventDefault) theEvent.preventDefault();
+  					}
+            }
+
+			function formatCurrency(num) {
+				num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+				return parseFloat(num).toFixed(2);
+			}
+		
+			var ratioTitle = "Current Ratio";
+			function calc() {
+
+				var numeratorValue = document.myForm.numeratorValue.value;
+				var demonimatorValue = document.myForm.demonimatorValue.value;
+
+				if(expr(numeratorValue) != 0 && (numeratorValue !='' && demonimatorValue != '')) {
+					//alert(expr(numeratorValue));
+					//alert(expr(demonimatorValue));
+					var r = expr(numeratorValue)/expr(demonimatorValue);
+					result.innerHTML = ratioTitle + " = " + parseFloat(r).toFixed(3);
+				}
+				
+			}
+
+			/**
+			* Evaluate a mathematical expression (as a string) and return the result
+			* @param {String} expr A mathematical expression
+			* @returns {Decimal} Result of the mathematical expression
+			* @example
+			*    // Returns -81.4600
+			*    expr("10.04+9.5-1+-100");
+			*/ 
+			function expr (expr) {
+
+			    var chars = expr.split("");
+			    var n = [], op = [], index = 0, oplast = true;
+
+			    n[index] = "";
+
+			    // Parse the expression
+			    for (var c = 0; c < chars.length; c++) {
+
+			        if (isNaN(parseInt(chars[c])) && chars[c] !== "." && !oplast) {
+			            op[index] = chars[c];
+			            index++;
+			            n[index] = "";
+			            oplast = true;
+			        } else {
+			            n[index] += chars[c];
+			            oplast = false;
+			        }
+			    }
+
+			    // Calculate the expression
+			    expr = parseFloat(n[0]);
+			    for (var o = 0; o < op.length; o++) {
+			        var num = parseFloat(n[o + 1]);
+			        switch (op[o]) {
+			            case "+":
+			                expr = expr + num;
+			                break;
+			            case "-":
+			                expr = expr - num;
+			                break;
+			            case "*":
+			                expr = expr * num;
+			                break;
+			            case "/":
+			                expr = expr / num;
+			                break;
+			        }
+			    }
+
+			    return expr;
+			}
+			
+			function selectRatio(title) {
+				
+				ratioTitle = title;
+				document.getElementById("ratioTitle").innerHTML = ratioTitle;
+				
+				if(title == "Current Ratio") {
+					document.getElementById("current_ratio").style.display = '';
+				} else {
+					document.getElementById("current_ratio").style.display = 'none';
+				}
+				if(title == "Quick Ratio") {
+					document.getElementById("quick_ratio").style.display = '';
+				} else {
+					document.getElementById("quick_ratio").style.display = 'none';
+				}
+				if(title == "Cash Ratio") {
+					document.getElementById("cash_ratio").style.display = '';
+				} else {
+					document.getElementById("cash_ratio").style.display = 'none';
+				}
+
+				
+				if(title == "Profit Margin Analysis") {
+					document.getElementById("profit_margin_analysis").style.display = '';
+				} else {
+					document.getElementById("profit_margin_analysis").style.display = 'none';
+				}
+				if(title == "Effective Tax Rate") {
+					document.getElementById("effective_tax_rate").style.display = '';
+				} else {
+					document.getElementById("effective_tax_rate").style.display = 'none';
+				}
+				if(title == "Return on Assets") {
+					document.getElementById("return_on_assets").style.display = '';
+				} else {
+					document.getElementById("return_on_assets").style.display = 'none';
+				}
+				if(title == "Return on Equity") {
+					document.getElementById("return_on_equity").style.display = '';
+				} else {
+					document.getElementById("return_on_equity").style.display = 'none';
+				}
+				if(title == "Return on Capital Employed") {
+					document.getElementById("return_on_capital_employed").style.display = '';
+				} else {
+					document.getElementById("return_on_capital_employed").style.display = 'none';
+				}
+
+
+				if(title == "Debt Ratio") {
+					document.getElementById("debt_ratio").style.display = '';
+				} else {
+					document.getElementById("debt_ratio").style.display = 'none';
+				}
+				if(title == "Debt-Equity Ratio") {
+					document.getElementById("debt_equity_ratio").style.display = '';
+				} else {
+					document.getElementById("debt_equity_ratio").style.display = 'none';
+				}
+				if(title == "Capitalization Ratio") {
+					document.getElementById("capitalization_ratio").style.display = '';
+				} else {
+					document.getElementById("capitalization_ratio").style.display = 'none';
+				}
+				if(title == "Interest Coverage Ratio") {
+					document.getElementById("interest_coverage_ratio").style.display = '';
+				} else {
+					document.getElementById("interest_coverage_ratio").style.display = 'none';
+				}
+				if(title == "Cash Flow To Debt Ratio") {
+					document.getElementById("cash_flow_to_debt_ratio").style.display = '';
+				} else {
+					document.getElementById("cash_flow_to_debt_ratio").style.display = 'none';
+				}
+				
+				
+				if(title == "Price/Book Value Ratio") {
+					document.getElementById("price_book_value_ratio").style.display = '';
+				} else {
+					document.getElementById("price_book_value_ratio").style.display = 'none';
+				}
+				if(title == "Price/Cash Flow Ratio") {
+					document.getElementById("price_cash_flow_ratio").style.display = '';
+				} else {
+					document.getElementById("price_cash_flow_ratio").style.display = 'none';
+				}
+				if(title == "Price/Earnings Ratio") {
+					document.getElementById("price_earnings_ratio").style.display = '';
+				} else {
+					document.getElementById("price_earnings_ratio").style.display = 'none';
+				}
+				if(title == "Price/Earnings To Growth Ratio") {
+					document.getElementById("price_earnings_to_growth_ratio").style.display = '';
+				} else {
+					document.getElementById("price_earnings_to_growth_ratio").style.display = 'none';
+				}
+				if(title == "Price/Sales Ratio") {
+					document.getElementById("price_sales_ratio").style.display = '';
+				} else {
+					document.getElementById("price_sales_ratio").style.display = 'none';
+				}
+				if(title == "Dividend Yield") {
+					document.getElementById("dividend_yield").style.display = '';
+				} else {
+					document.getElementById("dividend_yield").style.display = 'none';
+				}
+				if(title == "Enterprise Value Multiple") {
+					document.getElementById("enterprise_value_multiple").style.display = '';
+				} else {
+					document.getElementById("enterprise_value_multiple").style.display = 'none';
+				}
+				
+				
+				if(title == "Fixed-Asset Turnover") {
+					document.getElementById("fixed_asset_turnover").style.display = '';
+				} else {
+					document.getElementById("fixed_asset_turnover").style.display = 'none';
+				}
+				if(title == "Sales/Revenue Per Employee") {
+					document.getElementById("sales_revenue_per_employee").style.display = '';
+				} else {
+					document.getElementById("sales_revenue_per_employee").style.display = 'none';
+				}
+
+				
+				if(title == "Operating Cash Flow/Sales Ratio") {
+					document.getElementById("operating_cash_flow_sales_ratio").style.display = '';
+				} else {
+					document.getElementById("operating_cash_flow_sales_ratio").style.display = 'none';
+				}
+				if(title == "Free Cash Flow/Operating Cash Ratio") {
+					document.getElementById("free_cash_flow_operating_cash_ratio").style.display = '';
+				} else {
+					document.getElementById("free_cash_flow_operating_cash_ratio").style.display = 'none';
+				}
+				if(title == "Cash Flow Coverage Ratio") {
+					document.getElementById("cash_flow_coverage_ratio").style.display = '';
+				} else {
+					document.getElementById("cash_flow_coverage_ratio").style.display = 'none';
+				}
+				if(title == "Dividend Payout Ratio") {
+					document.getElementById("dividend_payout_ratio").style.display = '';
+				} else {
+					document.getElementById("dividend_payout_ratio").style.display = 'none';
+				}
+
+				calc();
+			}
+
+				
+		//-->
+		</script>
+
+        <div align="center">
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p align="left"><b><font face="Arial" color="#CC0000" size="5">&nbsp;Financial Ratios</font></b></td>
+            </tr>
+          </table>
+        </div>
+
+     <form name="myForm" action="https://www.fncalculator.com/" method="GET">
+
+        <div align="center">
+          <center>
+          <table border="0" width="95%" cellspacing="0" cellpadding="0">
+
+
+            <tr>
+         
+              <td width="30%" valign="top">
+					  
+				      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#dcdcdc">
+				          <tr>
+				            <td width="100%"><b><font color="#000000" face="Arial" size="2">&nbsp;
+				              Liquidity Measurement Ratios
+				              </font></b></td>
+				          </tr>
+				        </table>
+				            <font face="Arial" size="2">
+				            <li><a href="#" onclick="selectRatio('Current Ratio');">Current Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Quick Ratio');return false;">Quick Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Cash Ratio');return false;">Cash Ratio</a><br>
+ 						<br>
+ 				      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#dcdcdc">
+				          <tr>
+				            <td width="100%"><b><font color="#000000" face="Arial" size="2">&nbsp;
+				              Profitability Indicator Ratios
+				              </font></b></td>
+				          </tr>
+				        </table>
+				            <font face="Arial" size="2">
+				            <li><a href="#" onclick="selectRatio('Profit Margin Analysis');">Profit Margin Analysis</a><br>
+				            <li><a href="#" onclick="selectRatio('Effective Tax Rate');return false;">Effective Tax Rate</a><br>
+				            <li><a href="#" onclick="selectRatio('Return on Assets');return false;">Return on Assets</a><br>
+				            <li><a href="#" onclick="selectRatio('Return on Equity');return false;">Return on Equity</a><br>
+				            <li><a href="#" onclick="selectRatio('Return on Capital Employed');return false;">Return on Capital Employed</a><br>
+ 						<br>
+ 				      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#dcdcdc">
+				          <tr>
+				            <td width="100%"><b><font color="#000000" face="Arial" size="2">&nbsp;
+				              Debt Ratios
+				              </font></b></td>
+				          </tr>
+				        </table>
+				            <font face="Arial" size="2">
+				            <li><a href="#" onclick="selectRatio('Debt Ratio');">Debt Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Debt-Equity Ratio');return false;">Debt-Equity Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Capitalization Ratio');return false;">Capitalization Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Interest Coverage Ratio');return false;">Interest Coverage Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Cash Flow To Debt Ratio');return false;">Cash Flow To Debt Ratio</a><br>
+ 						<br>
+ 				      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#dcdcdc">
+				          <tr>
+				            <td width="100%"><b><font color="#000000" face="Arial" size="2">&nbsp;
+				              Investment Valuation Ratios
+				              </font></b></td>
+				          </tr>
+				        </table>
+				            <font face="Arial" size="2">
+				            <li><a href="#" onclick="selectRatio('Price/Book Value Ratio');">Price/Book Value Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Price/Cash Flow Ratio');return false;">Price/Cash Flow Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Price/Earnings Ratio');return false;">Price/Earnings Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Price/Earnings To Growth Ratio');return false;">Price/Earnings To Growth Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Price/Sales Ratio');return false;">Price/Sales Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Dividend Yield');return false;">Dividend Yield</a><br>
+				            <li><a href="#" onclick="selectRatio('Enterprise Value Multiple');return false;">Enterprise Value Multiple</a><br>
+ 						<br>
+ 				      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#dcdcdc">
+				          <tr>
+				            <td width="100%"><b><font color="#000000" face="Arial" size="2">&nbsp;
+				              Operating Performance Ratios
+				              </font></b></td>
+				          </tr>
+				        </table>
+				            <font face="Arial" size="2">
+				            <li><a href="#" onclick="selectRatio('Fixed-Asset Turnover');">Fixed-Asset Turnover</a><br>
+				            <li><a href="#" onclick="selectRatio('Sales/Revenue Per Employee');return false;">Sales/Revenue Per Employee</a><br>
+ 						<br>
+ 				      	<table border="0" width="100%" bordercolor="#ffffff" cellspacing="0" cellpadding="5" bgcolor="#dcdcdc">
+				          <tr>
+				            <td width="100%"><b><font color="#000000" face="Arial" size="2">&nbsp;
+				              Cash Flow Indicator Ratios
+				              </font></b></td>
+				          </tr>
+				        </table>
+				            <font face="Arial" size="2">
+				            <li><a href="#" onclick="selectRatio('Operating Cash Flow/Sales Ratio');">Operating Cash Flow/Sales Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Free Cash Flow/Operating Cash Ratio');return false;">Free Cash Flow/Operating Cash Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Cash Flow Coverage Ratio');return false;">Cash Flow Coverage Ratio</a><br>
+				            <li><a href="#" onclick="selectRatio('Dividend Payout Ratio');return false;">Dividend Payout Ratio</a><br>
+ 				
+ 			  </td>           
+ 
+              <td width="70%" valign="top">
+
+
+					<table border="0" width="100%" cellspacing="0" cellpadding="5">
+
+					  <tr>
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="ratioTitle" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:18px">Current Ratio</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<div id="numeratorLabel" style="font-weight:bold;font-family:Arial;font-size:14px">Numerator</div>
+							</td>
+							<td width="50%" valign="top" align="left">
+								<div id="denominatorLabel" style="font-weight:bold;font-family:Arial;font-size:14px">/Denominator</div>
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="50%" valign="top" align="right">
+								<input name="numeratorValue" size="20" maxlength="75" onkeyup="calc();">
+							</td>
+							<td width="50%" valign="top" align="left">
+								<input name="demonimatorValue" size="20" maxlength="75" onkeyup="calc();">
+							</td>
+					  </tr>
+
+					  <tr>
+							<td width="100%" valign="top" align="center" colspan="2">
+								<p><div id="result" style="color:#CC0000;font-weight:bold;font-family:Arial;font-size:18px"></div></p>
+							</td>
+					  </tr>
+
+					  <tr id="current_ratio">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+										<b><font color=#cc0000>Formula</font></b>
+								        <p>
+								        Current Ratio = 
+								        </p>
+								        <center>
+								        <p>
+										Current Assets / Current Liabilities
+										</p>
+										</center>
+										<p>
+								        <b><font color=#cc0000>Description</font></b>
+										</p>
+										<p>
+										The current ratio is a popular financial ratio used to test a company's liquidity (also referred to as its current or working capital position) by deriving the proportion of current assets available to cover current liabilities.
+										<br><br>
+										The concept behind this ratio is to ascertain whether a company's short-term assets (cash, cash equivalents, marketable securities, receivables and inventory) are readily available to pay off its short-term liabilities (notes payable, current portion of term debt, payables, accrued expenses and taxes). In theory, the higher the current ratio, the better.
+										</p>
+								
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="quick_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Quick Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									(Cash&Equivalents+Short term Investments + Accounts Receivable) / Current Liabilities
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The quick ratio - aka the quick assets ratio or the acid-test ratio - is a liquidity indicator that further refines the current ratio by measuring the amount of the most liquid current assets there are to cover current liabilities. The quick ratio is more conservative than the current ratio because it excludes inventory and other current assets, which are more difficult to turn into cash. Therefore, a higher ratio means a more liquid current position.		
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="cash_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Cash Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									(Cash+Cash Equivalents+Invested Funds) / Current Liabilities
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The cash ratio is an indicator of a company's liquidity that further refines both the current ratio and the quick ratio by measuring the amount of cash, cash equivalents or invested funds there are in current assets to cover current liabilities. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="profit_margin_analysis" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+						        <b><font color="#cc0000">Formula</font></b>
+						        <p>
+						        Gross Profit Margin = 
+						        </p>
+						        <center>
+						        <p>
+								Gross Profit / Net Sales (Revenue)
+								</p>
+								</center>
+								
+								<p>
+						        Operating Profit Margin = 
+						        </p>
+						        <center>
+						        <p>
+								Operating Profit / Net Sales (Revenue)
+								</p>
+								</center>
+								
+								<p>
+						        Pretax Profit Margin = 
+						        </p>
+						        <center>
+						        <p>
+								Pretax Profit / Net Sales (Revenue)
+								</p>
+								</center>
+						
+								<p>
+						        Net Profit Margin = 
+						        </p>
+						        <center>
+						        <p>
+								Net Income / Net Sales (Revenue)
+								</p>
+								</center>
+								
+								<p>
+						        <b><font color="#cc0000">Description</font></b>
+								</p>
+								<p>
+								In the income statement, there are four levels of profit or profit margins - gross profit, operating profit, pretax profit and net profit. The term "margin" can apply to the absolute number for a given profit level and/or the number as a percentage of net sales/revenues. Profit margin analysis uses the percentage calculation to provide a comprehensive measure of a company\'s profitability on a historical basis (3-5 years) and in comparison to peer companies and industry benchmarks. 
+								<br><br>
+								Basically, it is the amount of profit (at the gross, operating, pretax or net income level) generated by the company as a percent of the sales generated. The objective of margin analysis is to detect consistency or positive/negative trends in a company\'s earnings. Positive profit margin analysis translates into positive investment quality. To a large degree, it is the quality, and growth, of a company\'s earnings that drive its stock price.		
+								</p>
+							
+								</div>
+							</td>
+					  </tr>
+					  
+					  <tr id="effective_tax_rate" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Effective Tax Rate (%) = 
+							        </p>
+							        <center>
+							        <p>
+									Income Tax Expense / Pretax Income
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This ratio is a measurement of a company\'s tax rate, which is calculated by comparing its income tax expense to its pretax income. This amount will often differ from the company\'s stated jurisdictional rate due to many accounting factors, including foreign exchange provisions. This effective tax rate gives a good understanding of the tax rate the company faces.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="return_on_assets" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Return On Assets = 
+							        </p>
+							        <center>
+							        <p>
+									Net Income / Average Total Assets
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This ratio indicates how profitable a company is relative to its total assets. The return on assets (ROA) ratio illustrates how well management is employing the company\'s total assets to make a profit. The higher the return, the more efficient management is in utilizing its asset base. The ROA ratio is calculated by comparing net income to average total assets, and is expressed as a percentage.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="return_on_equity" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Return On Equity = 
+							        </p>
+							        <center>
+							        <p>
+									Net Income / Average Shareholders\' Equity
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This ratio indicates how profitable a company is by comparing its net income to its average shareholders\' equity. The return on equity ratio (ROE) measures how much the shareholders earned for their investment in the company. The higher the ratio percentage, the more efficient management is in utilizing its equity base and the better return is to investors.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="return_on_capital_employed" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Return On Capital Employed (ROCE) = 
+							        </p>
+							        <center>
+							        <p>
+									EBIT / Capital Employed
+									</p>
+									</center>
+									Where<br>
+									Capital Employed = Average Debt Liabilities + Average Shareholders\' Equity
+									EBIT = Earnings Before Interest and Taxes<br>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The return on capital employed (ROCE) ratio, expressed as a percentage, complements the return on equity (ROE) ratio by adding a company\'s debt liabilities, or funded debt, to equity to reflect a company\'s total "capital employed". This measure narrows the focus to gain a better understanding of a company\'s ability to generate returns from its available capital base.
+									<br><br>
+									By comparing net income to the sum of a company\'s debt and equity capital, investors can get a clear picture of how the use of leverage impacts a company\'s profitability. Financial analysts consider the ROCE measurement to be a more comprehensive profitability indicator because it gauges management\'s ability to generate earnings from a company\'s total pool of capital.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+					  
+					  
+					  <tr id="debt_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Debt Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Total Liabilities / Total Assets
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The debt ratio compares a company\'s total debt to its total assets, which is used to gain a general idea as to the amount of leverage being used by a company. A low percentage means that the company is less dependent on leverage, i.e., money borrowed from and/or owed to others. The lower the percentage, the less leverage a company is using and the stronger its equity position. In general, the higher the ratio, the more risk that company is considered to have taken on.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="debt_equity_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Debt-Equity Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Total Liabilities / Shareholders' Equity
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The debt-equity ratio is another leverage ratio that compares a company\'s total liabilities to its total shareholders\' equity. This is a measurement of how much suppliers, lenders, creditors and obligors have committed to the company versus what the shareholders have committed. 
+									<br><br>
+									To a large degree, the debt-equity ratio provides another vantage point on a company\'s leverage position, in this case, comparing total liabilities to shareholders\' equity, as opposed to total assets in the debt ratio. Similar to the debt ratio, a lower the percentage means that a company is using less leverage and has a stronger equity position. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="capitalization_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Capitalization Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Long term Debt / (Long term Debt + Shareholders\' Equity)
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The capitalization ratio measures the debt component of a company\'s capital structure, or capitalization (i.e., the sum of long-term debt liabilities and shareholders\' equity) to support a company\'s operations and growth. 
+									<br><br>
+									Long-term debt is divided by the sum of long-term debt and shareholders\' equity. This ratio is considered to be one of the more meaningful of the "debt" ratios - it delivers the key insight into a company\'s use of leverage. 
+									<br><br>
+									There is no right amount of debt. Leverage varies according to industries, a company\'s line of business and its stage of development. Nevertheless, common sense tells us that low debt and high equity levels in the capitalization ratio indicate investment quality. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="interest_coverage_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Interest Coverage Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									EBIT / Interest Expense
+									</p>
+									</center>
+									Where<br>
+									EBIT = Earnings Before Interest and Taxes<br>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The interest coverage ratio is used to determine how easily a company can pay interest expenses on outstanding debt. The ratio is calculated by dividing a company\'s earnings before interest and taxes (EBIT) by the company\'s interest expenses for the same period. The lower the ratio, the more the company is burdened by debt expense. When a company\'s interest coverage ratio is only 1.5 or lower, its ability to meet interest expenses may be questionable.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+					  
+					  <tr id="cash_flow_to_debt_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Cash Flow To Debt Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Operating Cash Flow / Total Debt
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This coverage ratio compares a company's operating cash flow to its total debt, which, for purposes of this ratio, is defined as the sum of short-term borrowings, the current portion of long-term debt and long-term debt. This ratio provides an indication of a company\'s ability to cover total debt with its yearly cash flow from operations. The higher the percentage ratio, the better the company\'s ability to carry its total debt.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+					  
+					  
+					  <tr id="price_book_value_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Price/Book Value Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Stock Price Per Share / Shareholders\' Equity Per Share
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									A valuation ratio used by investors which compares a stock\'s per-share price (market value) to its book value (shareholders\' equity). The price-to-book value ratio, expressed as a multiple (i.e. how many times a company\'s stock is trading per share compared to the company\'s book value per share), is an indication of how much shareholders are paying for the net assets of a company. 
+									<br><br>
+									The book value of a company is the value of a company\'s assets expressed on the balance sheet. It is the difference between the balance sheet assets and balance sheet liabilities and is an estimation of the value if it were to be liquidated. 
+									<br><br>
+									The price/book value ratio, often expressed simply as "price-to-book", provides investors a way to compare the market value, or what they are paying for each share, to a conservative measure of the value of the firm. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="price_cash_flow_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Price/Cash Flow Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Stock Price Per Share / Operating Cash Flow Per Share
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The price/cash flow ratio is used by investors to evaluate the investment attractiveness, from a value standpoint, of a company\'s stock. This metric compares the stock\'s market price to the amount of cash flow the company generates on a per-share basis.
+									<br><br>
+									This ratio is similar to the price/earnings ratio, except that the price/cash flow ratio (P/CF) is seen by some as a more reliable basis than earnings per share to evaluate the acceptability, or lack thereof, of a stock\'s current pricing. The argument for using cash flow over earnings is that the former is not easily manipulated, while the same cannot be said for earnings, which, unlike cash flow, are affected by depreciation and other non-cash factors. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="price_earnings_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Price/Earnings Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Stock Price Per Share / Earnings Per Share(EPS)
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The price/earnings ratio (P/E) is the best known of the investment valuation indicators. The P/E ratio has its imperfections, but it is nevertheless the most widely reported and used valuation by investment professionals and the investing public. The financial reporting of both companies and investment research services use a basic earnings per share (EPS) figure divided into the current stock price to calculate the P/E multiple (i.e. how many times a stock is trading (its price) per each dollar of EPS).
+									<br><br>
+									It\'s not surprising that estimated EPS figures are often very optimistic during bull markets, while reflecting pessimism during bear markets. Also, as a matter of historical record, it\'s no secret that the accuracy of stock analyst earnings estimates should be looked at skeptically by investors. Nevertheless, analyst estimates and opinions based on forward-looking projections of a company\'s earnings do play a role in Wall Street\'s stock-pricing considerations. 
+									<br><br>
+									Historically, the average P/E ratio for the broad market has been around 15, although it can fluctuate significantly depending on economic and market conditions. The ratio will also vary widely among different companies and industries.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="price_earnings_to_growth_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Price/Earnings To Growth(EPG) Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Price/Earnings Ratio(PE) / Earnings Per Share(EPS) Growth
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The price/earnings to growth ratio, commonly referred to as the PEG ratio, is obviously closely related to the P/E ratio. The PEG ratio is a refinement of the P/E ratio and factors in a stock\'s estimated earnings growth into its current valuation. By comparing a stock\'s P/E ratio with its projected, or estimated, earnings per share (EPS) growth, investors are given insight into the degree of overpricing or underpricing of a stock\'s current valuation, as indicated by the traditional P/E ratio.
+									<br><br>
+									The general consensus is that if the PEG ratio indicates a value of 1, this means that the market is correctly valuing (the current P/E ratio) a stock in accordance with the stock\'s current estimated earnings per share growth. If the PEG ratio is less than 1, this means that EPS growth is potentially able to surpass the market\'s current valuation. In other words, the stock\'s price is being undervalued. On the other hand, stocks with high PEG ratios can indicate just the opposite - that the stock is currently overvalued.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="price_sales_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Price/Sales Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Stock Price Per Share / Net Sales(Revenue) Per Share
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									A stock\'s price/sales ratio (P/S ratio) is another stock valuation indicator similar to the P/E ratio. The P/S ratio measures the price of a company\'s stock against its annual sales, instead of earnings. 
+									<br><br>
+									Like the P/E ratio, the P/S reflects how many times investors are paying for every dollar of a company\'s sales. Since earnings are subject, to one degree or another, to accounting estimates and management manipulation, many investors consider a company\'s sales (revenue) figure a more reliable ratio component in calculating a stock\'s price multiple than the earnings figure. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="dividend_yield" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Dividend Yield = 
+							        </p>
+							        <center>
+							        <p>
+									Annual Dividend Per Share / Stock Price Per Share
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									A stock\'s dividend yield is expressed as an annual percentage and is calculated as the company\'s annual cash dividend per share divided by the current price of the stock. The dividend yield is found in the stock quotes of dividend-paying companies. Investors should note that stock quotes record the per share dollar amount of a company\'s latest quarterly declared dividend. This quarterly dollar amount is annualized and compared to the current stock price to generate the per annum dividend yield, which represents an expected return. 
+									<br><br>
+									Income investors value a dividend-paying stock, while growth investors have little interest in dividends, preferring to capture large capital gains. Whatever your investing style, it is a matter of historical record that dividend-paying stocks have performed better than non-paying-dividend stocks over the long term. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="enterprise_value_multiple" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Enterprise Value Multiple = 
+							        </p>
+							        <center>
+							        <p>
+									Enterprise Value / EPITDA
+									</p>
+									</center>
+									Where<br>
+							        EPITDA = earnings before interest expense, taxes, depreciation and amortization
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This valuation metric is calculated by dividing a company\'s "enterprise value" by its earnings before interest expense, taxes, depreciation and amortization (EBITDA). 
+									<br><br>
+									Overall, this measurement allows investors to assess a company on the same basis as that of an acquirer. As a rough calculation, enterprise value multiple serves as a proxy for how long it would take for an acquisition to earn enough to pay off its costs (assuming no change in EBITDA).
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+
+					  <tr id="fixed_asset_turnover" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Fixed-Asset Turnover = 
+							        </p>
+							        <center>
+							        <p>
+									Revenue / Value of Property,Plant and Equipment
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This ratio is a rough measure of the productivity of a company\'s fixed assets (property, plant and equipment or PP&E) with respect to generating sales. For most companies, their investment in fixed assets represents the single largest component of their total assets. This annual turnover ratio is designed to reflect a company\'s efficiency in managing these significant assets. Simply put, the higher the yearly turnover rate, the better.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="sales_revenue_per_employee" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Sales/Revenue Per Employee = 
+							        </p>
+							        <center>
+							        <p>
+									Revenue / Number of Employee(average)
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									As a gauge of personnel productivity, this indicator simply measures the amount of dollar sales, or revenue, generated per employee. The higher the dollar figure the better. Here again, labor-intensive businesses (ex. mass market retailers) will be less productive in this metric than a high-tech, high product-value manufacturer.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  
+					  <tr id="operating_cash_flow_sales_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Operating Cash Flow/Sales Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Operating Cash Flow / Net Sales(Revenue)
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This ratio, which is expressed as a percentage, compares a company\'s operating cash flow to its net sales or revenues, which gives investors an idea of the company\'s ability to turn sales into cash.
+									<br><br>
+									It would be worrisome to see a company\'s sales grow without a parallel growth in operating cash flow. Positive and negative changes in a company\'s terms of sale and/or the collection experience of its accounts receivable will show up in this indicator.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="free_cash_flow_operating_cash_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Free Cash Flow/Operating Cash Ratio = 
+							        </p>
+							        <center>
+							        <p>
+									Free Cash Flow * (Operating Cash Flow - Capital Expenditure) / Operating Cash Flow
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									The free cash flow/operating cash flow ratio measures the relationship between free cash flow and operating cash flow. 
+									<br><br>
+									Free cash flow is most often defined as operating cash flow minus capital expenditures, which, in analytical terms, are considered to be an essential outflow of funds to maintain a company\'s competitiveness and efficiency.
+									<br><br>
+									The cash flow remaining after this deduction is considered "free" cash flow, which becomes available to a company to use for expansion, acquisitions, and/or financial stability to weather difficult market conditions. The higher the percentage of free cash flow embedded in a company\'s operating cash flow, the greater the financial strength of the company. 
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="cash_flow_coverage_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							
+							        <p>
+							        Short term Debt Coverage = 
+							        </p>
+							        <center>
+							        <p>
+									Operating Cash Flow / Short term Debt
+									</p>
+									</center>
+									<p>
+							
+							        <p>
+							        Capital Expenditure Coverage = 
+							        </p>
+							        <center>
+							        <p>
+									Operating Cash Flow / Capital Expenditure
+									</p>
+									</center>
+									<p>
+							
+							        <p>
+							        Dividend Coverage = 
+							        </p>
+							        <center>
+							        <p>
+									Operating Cash Flow / Cash Dividends
+									</p>
+									</center>
+									<p>
+							
+							        <p>
+							        CAPEX+Cash Dividends Coverage = 
+							        </p>
+							        <center>
+							        <p>
+									Operating Cash Flow / (Capital Expenditures + Cash Dividends)
+									</p>
+									</center>
+									<p>
+									
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This ratio measures the ability of the company\'s operating cash flow to meet its obligations - including its liabilities or ongoing concern costs. 
+									<br><br>
+									The operating cash flow is simply the amount of cash generated by the company from its main operations, which are used to keep the business funded.
+									<br><br>
+									The larger the operating cash flow coverage for these items, the greater the company\'s ability to meet its obligations, along with giving the company more cash flow to expand its business, withstand hard times, and not be burdened by debt servicing and the restrictions typically included in credit agreements.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+
+					  <tr id="dividend_payout_ratio" style="display: none">
+							<td width="100%" valign="top" align="left" colspan="2">
+								<div id="note" style="font-family:Arial;font-size:14px">
+								
+							        <b><font color="#cc0000">Formula</font></b>
+							        <p>
+							        Dividend Payout Ratio (%) = 
+							        </p>
+							        <center>
+							        <p>
+									Dividends Per Common Share / Earnings Per Share
+									</p>
+									</center>
+									<p>
+							        <b><font color="#cc0000">Description</font></b>
+									</p>
+									<p>
+									This ratio identifies the percentage of earnings (net income) per common share allocated to paying cash dividends to shareholders. The dividend payout ratio is an indicator of how well earnings support the dividend payment. 
+									<br><br>
+									Here\'s how dividends "start" and "end." During a fiscal year quarter, a company\'s board of directors declares a dividend. This event triggers the posting of a current liability for "dividends payable." At the end of the quarter, net income is credited to a company\'s retained earnings, and assuming there\'s sufficient cash on hand and/or from current operating cash flow, the dividend is paid out. This reduces cash, and the dividends payable liability is eliminated. 
+									<br><br>
+									The payment of a cash dividend is recorded in the statement of cash flows under the "financing activities" section.
+									</p>
+							
+								</div>
+							</td>
+					  </tr>
+					  
+					  
+					  
+					</table>
+
+
+				</td> 
+            </tr>
+            
+		<!-- end of calculation result -->
+
+          </table>
+        </div>
+	</form>
+	 
+  </td>
+
+  <!-- end of center content section -->
+
+  <center>
+      <td width="15%" valign="top">
+
+		<!-- Google Ads -->
+
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-5262108672348053";
+		/* Financial_Calculators_160_600 */
+		google_ad_slot = "9015230006";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+		<!-- End of Google Ads -->
+
+        </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+<!-- jQuery library -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+  
+  $(document).ready(function() {
+	    $("#moreLoan").click(function() {
+	    	$("#dialog").dialog({
+	    		width: 400, 
+	    		height:320,
+	    		 modal: true
+	    		});
+	    	return false;
+	    });
+	});  
+  
+  </script>
+<style TYPE="text/css"><!--
+    A:link {text-decoration: none; color: #000000}
+    a:visited {text-decoration: none; color: #000000}
+    a:active {text-decoration: none; color: #000000}
+    a:hover{color: #CC0000}
+
+--></style>
+
+  <div style="display: none" id="dialog" title="More Loan Calculators">
+  							<input type="hidden" autofocus="autofocus" /> <!-- this line remove the autofocus on the first link -->
+				            <p align="left"><font face="Arial" size="3">
+				            <li><a href="financialcalculator?type=loanAffordabilityCalculator">Home Affordablility Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanRentOrBuyCalculator">Rent vs Buy Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanTaxSavingCalculator">Mortgage Tax Saving Calculator</a><br>
+				            <li><a href="financialcalculator?type=loanPointCalculator">Discount Points Calculator</a><br>
+           		 			<li><a href="financialcalculator?type=loanAdjustableRateCalculator">Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanAdjustVsFixCalculator">Fixed vs Adjustable Rate Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanBiweeklyCalculator">Bi-weekly Payment Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanInterestOnlyCalculator">Interest Only Calculator</a><br>
+            				<li><a href="financialcalculator?type=loanRentalPropertyCalculator">Rental Property Calculator</a><br>
+				            &nbsp;</font>
+  </div>
+
+
+
+
+<hr color="#CC0000" size="3" width="90%">
+
+<p align="center"><font face="Arial" size="2" color="#000000"><strong><b>&copy Copyright 2012-<span id="thisYear">2017</span>
+All Rights Reserved <a href="http://www.fncalculator.com">www.fncalculator.com</a></b></strong></font></p>
+
+<script src="js/util.js"></script>
+
+</body>
+</html>
+ 
