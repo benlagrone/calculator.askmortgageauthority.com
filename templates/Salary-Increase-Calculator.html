@@ -1,0 +1,51 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Salary Increase Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate the impact of a raise: new salary, annual increase, and monthly change.
+      </p>
+
+      <form id="salary-increase-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="si-salary">Current Annual Salary</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="si-salary" name="salary" autocomplete="off" placeholder="70,000" value="70000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="si-percent">Increase (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="si-percent" name="percent" autocomplete="off" placeholder="5" value="5">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="si-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annual Increase Amount:</div>
+          <div id="si-annual-increase" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">New Annual Salary:</div>
+          <div id="si-new-annual" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Monthly Change:</div>
+          <div id="si-monthly-change" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">New Monthly Salary:</div>
+          <div id="si-new-monthly" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="si-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

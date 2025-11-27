@@ -1,0 +1,66 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Net Distribution Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate net proceeds from a distribution after federal/state withholding and other deductions.
+      </p>
+
+      <form id="net-distribution-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="nd-amount">Gross Distribution</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="nd-amount" name="amount" autocomplete="off" placeholder="25,000" value="25000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="nd-federal">Federal Withholding (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="nd-federal" name="federal" autocomplete="off" placeholder="20" value="20">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="nd-state">State Withholding (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="nd-state" name="state" autocomplete="off" placeholder="5" value="5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="nd-other">Other Withholding/Deductions</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="nd-other" name="other" autocomplete="off" placeholder="0" value="0">
+          </div>
+          <small class="text-muted">Flat amount taken out in addition to tax withholding.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="nd-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Withholding (tax):</div>
+          <div id="nd-tax" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Other Deductions:</div>
+          <div id="nd-other-out" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Net Distribution:</div>
+          <div id="nd-net" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Effective Withholding %:</div>
+          <div id="nd-effective" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="nd-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

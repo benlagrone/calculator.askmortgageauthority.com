@@ -1,0 +1,44 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Effective Rate Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Convert a nominal interest rate with periodic compounding to an effective annual rate (EAR).
+      </p>
+
+      <form id="effective-rate-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-nominal">Nominal Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="er-nominal" name="nominal" autocomplete="off" placeholder="6" value="6">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-periods">Compounding Periods per Year</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="er-periods" name="periods" autocomplete="off" placeholder="12" value="12">
+          </div>
+          <small class="text-muted">12 = monthly, 365 = daily, 4 = quarterly, etc.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="effective-rate-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Effective Annual Rate (EAR):</div>
+          <div id="er-effective" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Periodic Rate:</div>
+          <div id="er-periodic" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="er-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

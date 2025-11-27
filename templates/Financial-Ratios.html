@@ -1,0 +1,94 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Financial Ratios Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Calculate common ratios: Current Ratio, Debt-to-Equity, Profit Margin, and Return on Equity.
+      </p>
+
+      <form id="financial-ratios-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fr-current-assets">Current Assets</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="fr-current-assets" name="currentAssets" autocomplete="off" placeholder="150,000" value="150000">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fr-current-liabilities">Current Liabilities</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="fr-current-liabilities" name="currentLiabilities" autocomplete="off" placeholder="90,000" value="90000">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fr-total-debt">Total Debt</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="fr-total-debt" name="totalDebt" autocomplete="off" placeholder="200,000" value="200000">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fr-total-equity">Total Equity</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="fr-total-equity" name="totalEquity" autocomplete="off" placeholder="250,000" value="250000">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fr-revenue">Revenue</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="fr-revenue" name="revenue" autocomplete="off" placeholder="500,000" value="500000">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fr-net-income">Net Income</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="fr-net-income" name="netIncome" autocomplete="off" placeholder="60,000" value="60000">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="fr-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Current Ratio:</div>
+          <div id="fr-current-ratio" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Debt-to-Equity:</div>
+          <div id="fr-dte" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Profit Margin:</div>
+          <div id="fr-margin" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Return on Equity (ROE):</div>
+          <div id="fr-roe" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="fr-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

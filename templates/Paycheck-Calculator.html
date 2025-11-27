@@ -1,0 +1,90 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Paycheck Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate take-home pay per check and per year with federal/state taxes and deductions.
+      </p>
+
+      <form id="paycheck-calculator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-gross">Gross Pay per Check</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-gross" name="gross" autocomplete="off" placeholder="2,500" value="2500">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-frequency">Pay Frequency</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <select class="form-select" id="pc-frequency" name="frequency">
+              <option value="52">Weekly (52)</option>
+              <option value="26" selected>Biweekly (26)</option>
+              <option value="24">Semi-monthly (24)</option>
+              <option value="12">Monthly (12)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-pretax">Pre-tax Deductions per Check</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-pretax" name="pretax" autocomplete="off" placeholder="200" value="200">
+          </div>
+          <small class="text-muted">Health, 401k, etc. removed before taxes.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-federal">Federal Tax Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-federal" name="federal" autocomplete="off" placeholder="12" value="12">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-state">State Tax Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-state" name="state" autocomplete="off" placeholder="5" value="5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-posttax">Post-tax Deductions per Check</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-posttax" name="posttax" autocomplete="off" placeholder="50" value="50">
+          </div>
+          <small class="text-muted">Deductions after taxes (e.g., parking).</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="pc-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Taxable Pay per Check:</div>
+          <div id="pc-taxable" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Taxes per Check:</div>
+          <div id="pc-taxes" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Net Pay per Check:</div>
+          <div id="pc-net" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annual Gross:</div>
+          <div id="pc-annual-gross" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annual Net:</div>
+          <div id="pc-annual-net" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="pc-note"></div>
+      </div>
+    </div>
+  </div>
+</div>
