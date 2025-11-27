@@ -1,0 +1,75 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Loan Tax Saving Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate mortgage tax savings from deductible interest and property tax over the loan term.
+      </p>
+
+      <form id="loan-tax-saving-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lts-amount">Loan Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lts-amount" name="loanAmount" autocomplete="off" placeholder="350,000" value="350000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lts-rate">Annual Interest Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lts-rate" name="interestRate" autocomplete="off" placeholder="6.5" value="6.5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lts-years">Loan Term (Years)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lts-years" name="years" autocomplete="off" placeholder="30" value="30">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lts-tax">Annual Property Tax</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lts-tax" name="propertyTax" autocomplete="off" placeholder="6,000" value="6000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lts-bracket">Marginal Tax Bracket (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lts-bracket" name="taxBracket" autocomplete="off" placeholder="24" value="24">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="loan-tax-saving-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Monthly Payment:</div>
+          <div id="lts-monthly" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Payment:</div>
+          <div id="lts-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest:</div>
+          <div id="lts-interest" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Property Tax:</div>
+          <div id="lts-prop-tax" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Tax Saving:</div>
+          <div id="lts-saving" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">College Savings Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate annual contributions needed to cover college costs with growth and inflation, and view year-by-year balances.
+      </p>
+
+      <form id="college-savings-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cs-cost">Annual College Cost (today’s $)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cs-cost" name="annualCollegeCost" autocomplete="off" placeholder="20,000" value="20000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cs-savings">Current Savings</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cs-savings" name="currentSavings" autocomplete="off" placeholder="5,000" value="5000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cs-return">Annual Return (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cs-return" name="annualReturn" autocomplete="off" placeholder="6" value="6">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cs-inflation">Inflation Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cs-inflation" name="inflationRate" autocomplete="off" placeholder="3" value="3">
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" id="cs-inflation-check" name="inflationCheck" checked>
+            <label class="form-check-label theme-body-text" for="cs-inflation-check">Grow contributions with inflation</label>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cs-years-until">Years Until Enrollment</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cs-years-until" name="yearsUntilEnrollment" autocomplete="off" placeholder="10" value="10">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cs-years-enrolled">Years Enrolled</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cs-years-enrolled" name="yearsEnrolled" autocomplete="off" placeholder="4" value="4">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="college-savings-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Annual Contribution:</div>
+          <div id="cs-annual-contribution" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Projected Cost:</div>
+          <div id="cs-total-cost" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Contributions:</div>
+          <div id="cs-total-contrib" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Ending Balance:</div>
+          <div id="cs-ending-balance" class="theme-title-text"></div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h4 class="theme-body-text">Year-by-Year</h4>
+        <div class="table-responsive">
+          <table class="table table-sm" id="cs-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Annual Contribution</th>
+                <th>Annual College Cost</th>
+                <th>Balance</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

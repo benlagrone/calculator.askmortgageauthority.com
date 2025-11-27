@@ -1,0 +1,58 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Percentage Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Quick percentage math: what percent one number is of another, what a percentage of a number is, and how a number changes with a percentage increase or decrease.
+      </p>
+
+      <form id="percentage-calculator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-base">Base Number</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-base" name="base" autocomplete="off" placeholder="100" value="100">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-part">Part / Comparison Number</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-part" name="part" autocomplete="off" placeholder="25" value="25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pc-percent">Percent (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="pc-percent" name="percent" autocomplete="off" placeholder="10" value="10">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="pc-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">What percent is Part of Base?</div>
+          <div id="pc-part-of-base" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">What is Percent of Base?</div>
+          <div id="pc-percent-of-base" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Base increased by Percent:</div>
+          <div id="pc-increase" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Base decreased by Percent:</div>
+          <div id="pc-decrease" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="pc-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

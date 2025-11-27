@@ -1,0 +1,64 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">US Inflation Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Adjust an amount for inflation using CPI values. Enter the CPI for the start and end periods to see the equivalent value and annualized inflation rate.
+      </p>
+
+      <form id="us-inflation-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="inf-amount">Starting Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="inf-amount" name="amount" autocomplete="off" placeholder="1,000" value="1000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="inf-start-cpi">Start CPI</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="inf-start-cpi" name="startCpi" autocomplete="off" placeholder="260.0" value="260.0">
+          </div>
+          <small class="text-muted">Enter the CPI for the starting period.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="inf-end-cpi">End CPI</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="inf-end-cpi" name="endCpi" autocomplete="off" placeholder="320.0" value="320.0">
+          </div>
+          <small class="text-muted">Enter the CPI for the comparison period.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="inf-years">Years Between Periods</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="inf-years" name="years" autocomplete="off" placeholder="6" value="6">
+          </div>
+          <small class="text-muted">Used to compute annualized inflation (leave blank if unknown).</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="us-inflation-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Equivalent Amount at End CPI:</div>
+          <div id="inf-adjusted" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Inflation:</div>
+          <div id="inf-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annualized Inflation (CAGR):</div>
+          <div id="inf-annual" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="inf-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

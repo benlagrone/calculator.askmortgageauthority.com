@@ -1,0 +1,88 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Expected Return Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compute a portfolio&rsquo;s expected return using asset weights and expected returns. Weights should total about 100%.
+      </p>
+
+      <form id="expected-return-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-a-return">Asset A Return (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="er-a-return" name="aReturn" autocomplete="off" placeholder="8" value="8">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-a-weight">Asset A Weight (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="er-a-weight" name="aWeight" autocomplete="off" placeholder="50" value="50">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-b-return">Asset B Return (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="er-b-return" name="bReturn" autocomplete="off" placeholder="5" value="5">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-b-weight">Asset B Weight (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="er-b-weight" name="bWeight" autocomplete="off" placeholder="30" value="30">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-c-return">Asset C Return (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="er-c-return" name="cReturn" autocomplete="off" placeholder="3" value="3">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="er-c-weight">Asset C Weight (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="er-c-weight" name="cWeight" autocomplete="off" placeholder="20" value="20">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <small class="text-muted d-block mb-2">Weights should total ~100%. We accept totals within ±0.5%.</small>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="er-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Portfolio Expected Return:</div>
+          <div id="er-expected" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Weight Check:</div>
+          <div id="er-weight-check" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="er-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

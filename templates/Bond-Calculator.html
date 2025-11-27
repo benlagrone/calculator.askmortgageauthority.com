@@ -1,0 +1,95 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Bond Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Solve for price, yield, coupon, face value, or years to maturity. Select compounding to match payment frequency.
+      </p>
+
+      <form id="bond-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="bond-price">Bond Price</label>
+          <div class="mortgage-calculators-widget-input-container is-amount d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="bond-price" name="bondPrice" autocomplete="off" placeholder="950">
+            <button type="button" class="btn btn-outline-primary" data-bond-action="price">Solve Price</button>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="bond-face">Face Value</label>
+          <div class="mortgage-calculators-widget-input-container is-amount d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="bond-face" name="faceValue" autocomplete="off" placeholder="1000">
+            <button type="button" class="btn btn-outline-primary" data-bond-action="face">Solve Face</button>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="bond-coupon">Annual Coupon Payment</label>
+          <div class="mortgage-calculators-widget-input-container is-amount d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="bond-coupon" name="coupon" autocomplete="off" placeholder="50">
+            <button type="button" class="btn btn-outline-primary" data-bond-action="coupon">Solve Coupon</button>
+          </div>
+          <small class="text-muted">Annual total coupon payment (not rate). We adjust for frequency below.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="bond-yield">Annual Yield (%)</label>
+          <div class="mortgage-calculators-widget-input-container d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="bond-yield" name="yield" autocomplete="off" placeholder="6">
+            <button type="button" class="btn btn-outline-primary" data-bond-action="yield">Solve Yield</button>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="bond-years">Years to Maturity</label>
+          <div class="mortgage-calculators-widget-input-container d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="bond-years" name="years" autocomplete="off" placeholder="10">
+            <button type="button" class="btn btn-outline-primary" data-bond-action="years">Solve Years</button>
+          </div>
+          <small class="text-muted">Enter years (we’ll convert to periods based on compounding).</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="bond-compounding">Compounding / Payment Frequency</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <select id="bond-compounding" class="form-select">
+              <option value="Annually">Annually</option>
+              <option value="Semiannually" selected>Semiannually</option>
+              <option value="Quarterly">Quarterly</option>
+              <option value="Monthly">Monthly</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Daily">Daily</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="bond-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Price:</div>
+          <div id="bond-price-out" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Face Value:</div>
+          <div id="bond-face-out" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annual Coupon:</div>
+          <div id="bond-coupon-out" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Yield (annual %):</div>
+          <div id="bond-yield-out" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Years to Maturity:</div>
+          <div id="bond-years-out" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

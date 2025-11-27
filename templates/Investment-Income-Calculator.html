@@ -1,0 +1,73 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Investment Income (Principal Protected)</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        See yearly income while preserving principal against inflation. Calculates fees, taxes, inflation set-aside, and income for up to 50 years.
+      </p>
+
+      <form id="investment-income-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ii-principal">Investment Principal</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ii-principal" name="principalAmount" autocomplete="off" placeholder="500,000" value="500000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ii-growth">Annual Growth Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ii-growth" name="growthRate" autocomplete="off" placeholder="8" value="8">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ii-inflation">Inflation Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ii-inflation" name="inflationRate" autocomplete="off" placeholder="3" value="3">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ii-fee">Annual Investment Fee (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ii-fee" name="feeRate" autocomplete="off" placeholder="1" value="1">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ii-tax">Tax Rate on Annual Gain (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ii-tax" name="taxRate" autocomplete="off" placeholder="15" value="15">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="investment-income-results" class="mt-4" hidden>
+        <h4 class="theme-body-text">Year-by-Year</h4>
+        <div class="table-responsive">
+          <table class="table table-sm" id="ii-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Beginning Principal</th>
+                <th>Investment Gain</th>
+                <th>Investment Fee</th>
+                <th>Tax on Gain</th>
+                <th>Inflation Set Aside</th>
+                <th>Income</th>
+                <th>Ending Principal</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

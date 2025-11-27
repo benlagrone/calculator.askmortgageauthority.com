@@ -1,0 +1,82 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Growth Stock Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate future value of a growth stock position using expected price appreciation and dividend yield.
+      </p>
+
+      <form id="growth-stock-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="gs-shares">Shares</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="gs-shares" name="shares" autocomplete="off" placeholder="100" value="100">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="gs-price">Current Price per Share</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="gs-price" name="price" autocomplete="off" placeholder="50" value="50">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="gs-growth">Expected Annual Price Growth (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="gs-growth" name="growth" autocomplete="off" placeholder="8" value="8">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="gs-yield">Dividend Yield (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="gs-yield" name="yield" autocomplete="off" placeholder="1.5" value="1.5">
+          </div>
+          <small class="text-muted">Assumes yield applies to the growing price each year.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="gs-years">Holding Period (years)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="gs-years" name="years" autocomplete="off" placeholder="5" value="5">
+          </div>
+          <small class="text-muted">Use fractional years if needed (e.g., 2.5).</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="gs-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Future Price per Share:</div>
+          <div id="gs-future-price" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Portfolio Value (price only):</div>
+          <div id="gs-future-value" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Dividends Collected:</div>
+          <div id="gs-dividends" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Gain (price + dividends):</div>
+          <div id="gs-gain" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Return:</div>
+          <div id="gs-total-return" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annualized Return (CAGR):</div>
+          <div id="gs-cagr" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="gs-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Adjustable vs Fixed</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compare a fixed-rate mortgage to an adjustable-rate scenario with planned adjustments and a lifetime cap.
+      </p>
+
+      <form id="adj-vs-fixed-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-amount">Loan Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-amount" name="loanAmount" autocomplete="off" placeholder="300,000" value="300000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-years">Loan Term (Years)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-years" name="years" autocomplete="off" placeholder="30" value="30">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-fixed-rate">Fixed Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-fixed-rate" name="fixedRate" autocomplete="off" placeholder="6.5" value="6.5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-arm-rate">Initial ARM Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-arm-rate" name="armRate" autocomplete="off" placeholder="5.5" value="5.5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-first">Months Before First Adjustment</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-first" name="monthsBeforeFirstAdjustment" autocomplete="off" placeholder="60" value="60">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-between">Months Between Adjustments</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-between" name="monthBetweenAdjustments" autocomplete="off" placeholder="12" value="12">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-step">Expected Adjustment Each Time (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-step" name="expectedAdjustments" autocomplete="off" placeholder="0.25" value="0.25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="avf-cap">Lifetime Rate Cap (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="avf-cap" name="interestRateCap" autocomplete="off" placeholder="12" value="12">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="adj-vs-fixed-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Fixed Monthly Payment:</div>
+          <div id="avf-fixed-pmt" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Fixed Total Payment:</div>
+          <div id="avf-fixed-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Fixed Total Interest:</div>
+          <div id="avf-fixed-int" class="theme-title-text"></div>
+        </div>
+
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">ARM Initial Payment:</div>
+          <div id="avf-arm-initial" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">ARM Max Payment:</div>
+          <div id="avf-arm-max" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">ARM Total Payment:</div>
+          <div id="avf-arm-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">ARM Total Interest:</div>
+          <div id="avf-arm-int" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

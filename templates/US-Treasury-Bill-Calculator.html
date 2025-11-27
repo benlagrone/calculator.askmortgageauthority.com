@@ -1,0 +1,54 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">US Treasury Bill Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compute bank discount yield (BDY), bond equivalent yield (BEY), and dollar discount for a T-Bill given purchase price, face value, and days to maturity.
+      </p>
+
+      <form id="t-bill-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tb-face">Face Value</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tb-face" name="face" autocomplete="off" placeholder="10,000" value="10000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tb-price">Purchase Price</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tb-price" name="price" autocomplete="off" placeholder="9,850" value="9850">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tb-days">Days to Maturity</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tb-days" name="days" autocomplete="off" placeholder="90" value="90">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="t-bill-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Dollar Discount (Face - Price):</div>
+          <div id="tb-discount" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Bank Discount Yield (BDY):</div>
+          <div id="tb-bdy" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Bond Equivalent Yield (BEY):</div>
+          <div id="tb-bey" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="tb-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

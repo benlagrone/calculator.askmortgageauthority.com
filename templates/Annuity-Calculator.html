@@ -1,0 +1,61 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Annuity Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate the periodic payout from an annuity (or the amount needed to fund one) using your balance, rate, and payout period.
+      </p>
+
+      <form id="annuity-calculator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="annuity-balance">Annuity Balance / Present Value</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="annuity-balance" name="balance" autocomplete="off" placeholder="250,000" value="250000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="annuity-rate">Annual Interest Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="annuity-rate" name="rate" autocomplete="off" placeholder="5" value="5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="annuity-years">Years of Payments</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="annuity-years" name="years" autocomplete="off" placeholder="25" value="25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="annuity-periods">Payments Per Year</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="annuity-periods" name="periods" autocomplete="off" placeholder="12" value="12">
+          </div>
+          <small class="text-muted">Use 12 for monthly, 4 for quarterly, 1 for annual, etc.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="annuity-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Periodic Payment:</div>
+          <div id="annuity-payment" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Paid Out:</div>
+          <div id="annuity-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest Earned:</div>
+          <div id="annuity-interest" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

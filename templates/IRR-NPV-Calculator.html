@@ -1,0 +1,41 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">IRR / NPV Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compute NPV and IRR for up to 10 cash flows (0–9). Enter a discount rate for NPV; IRR is independent of the discount rate.
+      </p>
+
+      <form id="irr-npv-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="irr-discount">Discount Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="irr-discount" name="discountRate" autocomplete="off" placeholder="8">
+          </div>
+          <small class="text-muted">IRR does not use the discount rate; it is only for NPV.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Cash Flows</label>
+          <div class="row g-2" id="irr-cashflows"></div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="irr-npv-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">NPV:</div>
+          <div id="irr-npv" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">IRR (%):</div>
+          <div id="irr-rate" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

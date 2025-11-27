@@ -1,0 +1,47 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Currency Converter</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Convert between currencies using cached daily rates (Frankfurter first, exchangerate.host as fallback).
+      </p>
+
+      <form id="currency-converter-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fx-amount">Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="fx-amount" name="amount" autocomplete="off" placeholder="1,000" value="1">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">From / To</label>
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <select id="fx-from" class="form-select" aria-label="From currency"></select>
+            <button type="button" class="btn btn-outline-secondary" data-fx-swap aria-label="Swap currencies">
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+            <select id="fx-to" class="form-select" aria-label="To currency"></select>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary" data-fx-convert>Convert</button>
+          <button type="reset" class="btn btn-outline-secondary">Reset</button>
+        </div>
+      </form>
+
+      <div id="fx-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Converted:</div>
+          <div id="fx-result-text" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Reverse:</div>
+          <div id="fx-reverse-text" class="theme-body-text"></div>
+        </div>
+        <div class="mt-2 text-muted small" id="fx-meta"></div>
+      </div>
+    </div>
+  </div>
+</div>

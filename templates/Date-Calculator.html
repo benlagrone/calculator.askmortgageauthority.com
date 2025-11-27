@@ -1,0 +1,52 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Date Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Find the difference between two dates or add/subtract days from a start date.
+      </p>
+
+      <form id="date-calculator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="date-start">Start Date</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="date" id="date-start" name="startDate">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="date-end">End Date</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="date" id="date-end" name="endDate">
+          </div>
+          <small class="text-muted">Used for date difference.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="date-offset">Add/Subtract Days (optional)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="date-offset" name="offset" autocomplete="off" placeholder="e.g. 30 or -15">
+          </div>
+          <small class="text-muted">We add this many days to the start date to get a new date.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="date-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Days Between Start and End:</div>
+          <div id="date-diff" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Start Date plus Offset:</div>
+          <div id="date-shifted" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="date-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

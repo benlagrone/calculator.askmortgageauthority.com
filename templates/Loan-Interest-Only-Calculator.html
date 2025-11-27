@@ -1,0 +1,64 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Interest Only Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        See interest-only payment, total interest, and balloon principal at the end of the term.
+      </p>
+
+      <form id="interest-only-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="io-amount">Loan Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="io-amount" name="loanAmount" autocomplete="off" placeholder="300,000" value="300000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="io-rate">Annual Interest Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="io-rate" name="interestRate" autocomplete="off" placeholder="6.5" value="6.5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Interest-only Term</label>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="mortgage-calculators-widget-input-container is-year">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="io-years" name="years" autocomplete="off" placeholder="10" value="10">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            </div>
+            <div class="mortgage-calculators-widget-input-container is-month">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="io-months" name="months" autocomplete="off" placeholder="0">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="interest-only-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Monthly Payment (interest-only):</div>
+          <div id="io-monthly" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Payment:</div>
+          <div id="io-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest:</div>
+          <div id="io-interest" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Balloon (principal due):</div>
+          <div id="io-balloon" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

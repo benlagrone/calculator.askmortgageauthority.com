@@ -1,0 +1,73 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Option Calculator (Black-Scholes)</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate European call and put prices using the Black-Scholes model.
+      </p>
+
+      <form id="option-calculator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="opt-spot">Underlying Price</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="opt-spot" name="spot" autocomplete="off" placeholder="100" value="100">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="opt-strike">Strike Price</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="opt-strike" name="strike" autocomplete="off" placeholder="100" value="100">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="opt-time">Time to Expiration (years)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="opt-time" name="time" autocomplete="off" placeholder="1" value="1">
+          </div>
+          <small class="text-muted">Use decimals for partial years (e.g., 0.5 for six months).</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="opt-vol">Volatility (σ, %)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="opt-vol" name="vol" autocomplete="off" placeholder="25" value="25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="opt-rf">Risk-Free Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="opt-rf" name="rf" autocomplete="off" placeholder="4" value="4">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="opt-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Call Price:</div>
+          <div id="opt-call" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Put Price:</div>
+          <div id="opt-put" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">d1:</div>
+          <div id="opt-d1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">d2:</div>
+          <div id="opt-d2" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="opt-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

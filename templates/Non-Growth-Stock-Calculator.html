@@ -1,0 +1,83 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Non-Growth Stock Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate returns for a stock with flat price and a dividend yield. You can also enter a small price drift if desired.
+      </p>
+
+      <form id="non-growth-stock-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ng-shares">Shares</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ng-shares" name="shares" autocomplete="off" placeholder="100" value="100">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ng-price">Current Price per Share</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ng-price" name="price" autocomplete="off" placeholder="40" value="40">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ng-yield">Dividend Yield (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ng-yield" name="yield" autocomplete="off" placeholder="4" value="4">
+          </div>
+          <small class="text-muted">Assumes yield applied to the (mostly) flat price each year.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ng-drift">Annual Price Drift (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ng-drift" name="drift" autocomplete="off" placeholder="0" value="0">
+          </div>
+          <small class="text-muted">Optional small price change assumption (leave 0 for flat price).</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ng-years">Holding Period (years)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ng-years" name="years" autocomplete="off" placeholder="5" value="5">
+          </div>
+          <small class="text-muted">Use fractional years if needed (e.g., 2.5).</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="ng-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Ending Price per Share:</div>
+          <div id="ng-end-price" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Ending Portfolio Value (price only):</div>
+          <div id="ng-end-value" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Dividends Collected:</div>
+          <div id="ng-dividends" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Gain (price + dividends):</div>
+          <div id="ng-gain" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Return:</div>
+          <div id="ng-total-return" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annualized Return (CAGR):</div>
+          <div id="ng-cagr" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="ng-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

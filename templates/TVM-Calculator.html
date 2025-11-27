@@ -1,0 +1,88 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Time Value of Money (TVM)</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Solve for any missing variable (PV, PMT, FV, Rate, or Periods). Choose compounding and payment timing (end/beginning).
+      </p>
+
+      <form id="tvm-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Mode</label>
+          <div class="d-flex gap-3 flex-wrap">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="tvm-mode" id="tvm-mode-end" value="end" checked>
+              <label class="form-check-label theme-body-text" for="tvm-mode-end">End</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="tvm-mode" id="tvm-mode-beg" value="beginning">
+              <label class="form-check-label theme-body-text" for="tvm-mode-beg">Beginning</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tvm-pv">Present Value</label>
+          <div class="mortgage-calculators-widget-input-container is-amount d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tvm-pv" name="presentValue" autocomplete="off" placeholder="0">
+            <button type="button" class="btn btn-outline-primary" data-tvm-action="pv">Solve PV</button>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tvm-pmt">Payment</label>
+          <div class="mortgage-calculators-widget-input-container is-amount d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tvm-pmt" name="payment" autocomplete="off" placeholder="0">
+            <button type="button" class="btn btn-outline-primary" data-tvm-action="pmt">Solve PMT</button>
+          </div>
+          <small class="text-muted">Payments each period, signless (we’ll handle the math).</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tvm-fv">Future Value</label>
+          <div class="mortgage-calculators-widget-input-container is-amount d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tvm-fv" name="futureValue" autocomplete="off" placeholder="0">
+            <button type="button" class="btn btn-outline-primary" data-tvm-action="fv">Solve FV</button>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tvm-rate">Annual Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tvm-rate" name="annualRate" autocomplete="off" placeholder="6.5">
+            <button type="button" class="btn btn-outline-primary" data-tvm-action="rate">Solve Rate</button>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tvm-periods">Periods</label>
+          <div class="mortgage-calculators-widget-input-container d-flex gap-2">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tvm-periods" name="period" autocomplete="off" placeholder="360">
+            <button type="button" class="btn btn-outline-primary" data-tvm-action="period">Solve Periods</button>
+          </div>
+          <small class="text-muted">Enter total periods (not years). We’ll adjust for compounding.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tvm-compounding">Compounding</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <select id="tvm-compounding" class="form-select">
+              <option value="Annually">Annually</option>
+              <option value="Semiannually">Semiannually</option>
+              <option value="Quarterly">Quarterly</option>
+              <option value="Monthly" selected>Monthly</option>
+              <option value="Semimonthly">Semimonthly</option>
+              <option value="Bi-Weekly">Bi-Weekly</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Daily">Daily</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="reset" class="btn btn-outline-secondary">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

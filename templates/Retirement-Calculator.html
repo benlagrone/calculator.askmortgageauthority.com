@@ -1,0 +1,91 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Retirement Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Project your nest egg at retirement and estimate sustainable income using either a withdrawal rate or a fixed retirement period.
+      </p>
+
+      <form id="retirement-calculator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-current-age">Current Age</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-current-age" name="currentAge" autocomplete="off" placeholder="35" value="35">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-retire-age">Retirement Age</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-retire-age" name="retireAge" autocomplete="off" placeholder="67" value="67">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-savings">Current Savings</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-savings" name="currentSavings" autocomplete="off" placeholder="50,000" value="50000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-monthly">Monthly Contribution</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-monthly" name="monthlyContribution" autocomplete="off" placeholder="800" value="800">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-return-pre">Expected Annual Return (pre-retirement)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-return-pre" name="returnPre" autocomplete="off" placeholder="6" value="6">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-return-post">Expected Annual Return (during retirement)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-return-post" name="returnPost" autocomplete="off" placeholder="4" value="4">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-years-retired">Years in Retirement</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-years-retired" name="yearsRetired" autocomplete="off" placeholder="25" value="25">
+          </div>
+          <small class="text-muted">Used to compute a level income if no withdrawal rate is given.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rc-withdrawal">Withdrawal Rate (% per year, optional)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rc-withdrawal" name="withdrawalRate" autocomplete="off" placeholder="4">
+          </div>
+          <small class="text-muted">If provided, we use this instead of the fixed-year payout.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="rc-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Balance at Retirement:</div>
+          <div id="rc-balance" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Annual Income:</div>
+          <div id="rc-annual-income" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Monthly Income:</div>
+          <div id="rc-monthly-income" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="rc-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

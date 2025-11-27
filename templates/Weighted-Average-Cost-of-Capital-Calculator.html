@@ -1,0 +1,88 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">WACC Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compute Weighted Average Cost of Capital (WACC): WACC = We × Re + Wd × Rd × (1 − tax).
+      </p>
+
+      <form id="wacc-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="wacc-we">Equity Weight (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="wacc-we" name="equityWeight" autocomplete="off" placeholder="60" value="60">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="wacc-re">Cost of Equity (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="wacc-re" name="equityCost" autocomplete="off" placeholder="10" value="10">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="wacc-wd">Debt Weight (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="wacc-wd" name="debtWeight" autocomplete="off" placeholder="40" value="40">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="wacc-rd">Cost of Debt (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="wacc-rd" name="debtCost" autocomplete="off" placeholder="5" value="5">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="wacc-tax">Corporate Tax Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="wacc-tax" name="taxRate" autocomplete="off" placeholder="25" value="25">
+          </div>
+        </div>
+
+        <small class="text-muted d-block mb-2">Weights should total ~100%. We accept totals within ±0.5%.</small>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="wacc-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">After-Tax Cost of Debt:</div>
+          <div id="wacc-after-tax-debt" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Weighted Cost of Equity:</div>
+          <div id="wacc-weighted-equity" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Weighted Cost of Debt:</div>
+          <div id="wacc-weighted-debt" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total WACC:</div>
+          <div id="wacc-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Weight Check:</div>
+          <div id="wacc-weight-check" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="wacc-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

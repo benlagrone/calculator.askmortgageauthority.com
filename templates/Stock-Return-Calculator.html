@@ -1,0 +1,77 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Stock Return Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Calculate total and annualized return for a stock investment including dividends.
+      </p>
+
+      <form id="stock-return-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="sr-shares">Shares</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="sr-shares" name="shares" autocomplete="off" placeholder="100" value="100">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="sr-buy">Buy Price per Share</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="sr-buy" name="buyPrice" autocomplete="off" placeholder="50" value="50">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="sr-sell">Sell Price per Share</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="sr-sell" name="sellPrice" autocomplete="off" placeholder="65" value="65">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="sr-dividends">Dividends Received (total)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="sr-dividends" name="dividends" autocomplete="off" placeholder="300" value="300">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="sr-years">Holding Period (years)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="sr-years" name="yearsHeld" autocomplete="off" placeholder="3" value="3">
+          </div>
+          <small class="text-muted">Enter fractional years if needed (e.g., 1.5).</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="sr-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Cost Basis:</div>
+          <div id="sr-cost" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Proceeds (ex-dividend):</div>
+          <div id="sr-proceeds" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Gain/Loss (incl. dividends):</div>
+          <div id="sr-gain" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Return:</div>
+          <div id="sr-total-return" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annualized Return (CAGR):</div>
+          <div id="sr-cagr" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="sr-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

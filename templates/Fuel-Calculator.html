@@ -1,0 +1,70 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Fuel Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate fuel cost per trip and per period based on distance, fuel efficiency, fuel price, and trip frequency.
+      </p>
+
+      <form id="fuel-calculator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fuel-distance">Distance per Trip (miles)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="fuel-distance" name="distance" autocomplete="off" placeholder="30" value="30">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fuel-mpg">Fuel Efficiency (MPG)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="fuel-mpg" name="mpg" autocomplete="off" placeholder="25" value="25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fuel-price">Fuel Price per Gallon</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="fuel-price" name="price" autocomplete="off" placeholder="3.75" value="3.75">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="fuel-trips">Trips per Week (optional)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="fuel-trips" name="trips" autocomplete="off" placeholder="10" value="10">
+          </div>
+          <small class="text-muted">Used to estimate weekly, monthly, and annual cost.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="fuel-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Fuel Needed per Trip:</div>
+          <div id="fuel-per-trip" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Cost per Trip:</div>
+          <div id="fuel-cost-trip" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Weekly Cost:</div>
+          <div id="fuel-weekly" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Monthly Cost (est.):</div>
+          <div id="fuel-monthly" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annual Cost (est.):</div>
+          <div id="fuel-annual" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="fuel-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

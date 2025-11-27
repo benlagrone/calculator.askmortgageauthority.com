@@ -1,0 +1,94 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Auto Lease Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate your monthly lease payment using the negotiated price (cap cost), residual value, money factor, and term. Taxes/fees are optional.
+      </p>
+
+      <form id="auto-lease-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lease-price">Negotiated Price (Cap Cost)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lease-price" name="price" autocomplete="off" placeholder="38,000" value="38000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lease-down">Cap Cost Reduction (Down Payment)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lease-down" name="down" autocomplete="off" placeholder="3,000" value="3000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lease-residual">Residual Value (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lease-residual" name="residualPct" autocomplete="off" placeholder="58" value="58">
+          </div>
+          <small class="text-muted">Residual as % of MSRP/cap cost.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lease-mf">Money Factor</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lease-mf" name="moneyFactor" autocomplete="off" placeholder="0.0025" value="0.0025">
+          </div>
+          <small class="text-muted">Money factor ≈ APR / 2400. Example: 0.0025 ≈ 6% APR.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lease-term">Lease Term (months)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lease-term" name="termMonths" autocomplete="off" placeholder="36" value="36">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lease-fees">Acquisition / Other Fees (capitalized)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lease-fees" name="fees" autocomplete="off" placeholder="900" value="900">
+          </div>
+          <small class="text-muted">Added to the capitalized cost.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lease-tax">Sales Tax (optional, % of payment)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lease-tax" name="taxPct" autocomplete="off" placeholder="0">
+          </div>
+          <small class="text-muted">If your state taxes monthly payments.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="lease-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Adjusted Cap Cost:</div>
+          <div id="lease-cap" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Residual Value:</div>
+          <div id="lease-residual-amt" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Base Payment (pre-tax):</div>
+          <div id="lease-base-payment" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Payment (incl. tax):</div>
+          <div id="lease-total-payment" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Paid Over Term:</div>
+          <div id="lease-total-paid" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="lease-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

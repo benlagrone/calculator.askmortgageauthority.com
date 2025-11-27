@@ -1,0 +1,83 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Return On Investment (ROI)</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Calculate gain/loss, ROI %, and annualized returns. Enter term as years/months or choose start/end dates.
+      </p>
+
+      <form id="roi-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="roi-original">Original Investment</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="roi-original" name="originalInvestment" autocomplete="off" placeholder="10,000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="roi-return">Investment Return</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="roi-return" name="investmentReturn" autocomplete="off" placeholder="12,000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Term</label>
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <div class="mortgage-calculators-widget-input-container">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="roi-years" name="years" autocomplete="off" placeholder="1">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            </div>
+            <div class="mortgage-calculators-widget-input-container">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="roi-months" name="months" autocomplete="off" placeholder="0">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="roi-use-dates">
+            <label class="form-check-label theme-body-text" for="roi-use-dates">Or select investment period (dates)</label>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="roi-from">From / To</label>
+          <div class="d-flex flex-wrap gap-3">
+            <input class="mortgage-calculators-widget-input form-control" type="date" id="roi-from" name="fromdate">
+            <input class="mortgage-calculators-widget-input form-control" type="date" id="roi-to" name="todate">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="roi-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Investment Period:</div>
+          <div id="roi-period" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Gain or Loss:</div>
+          <div id="roi-gain" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Return on Investment:</div>
+          <div id="roi-return-pct" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Simple Annual ROI:</div>
+          <div id="roi-simple" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Compound Annual ROI:</div>
+          <div id="roi-compound" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

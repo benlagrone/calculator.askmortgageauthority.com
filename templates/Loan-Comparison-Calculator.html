@@ -1,0 +1,79 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Loan Comparison Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compare two loans side by side: monthly payment, total payment, and total interest.
+      </p>
+
+      <form id="loan-comparison-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-amount">Loan Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-amount" name="loanAmount" autocomplete="off" placeholder="300,000" value="300000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Loan Term 1</label>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="mortgage-calculators-widget-input-container is-year">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-years1" name="years1" autocomplete="off" placeholder="15" value="15">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            </div>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-rate1" name="interestRate1" autocomplete="off" placeholder="6" value="6">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">% Rate</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Loan Term 2</label>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="mortgage-calculators-widget-input-container is-year">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-years2" name="years2" autocomplete="off" placeholder="30" value="30">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            </div>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-rate2" name="interestRate2" autocomplete="off" placeholder="6.5" value="6.5">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">% Rate</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="loan-comparison-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Monthly Payment (Term 1):</div>
+          <div id="lc-monthly1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Monthly Payment (Term 2):</div>
+          <div id="lc-monthly2" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Payment (Term 1):</div>
+          <div id="lc-total1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Payment (Term 2):</div>
+          <div id="lc-total2" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest (Term 1):</div>
+          <div id="lc-interest1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest (Term 2):</div>
+          <div id="lc-interest2" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

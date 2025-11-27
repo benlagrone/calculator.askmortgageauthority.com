@@ -1,0 +1,93 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Adjustable Rate Mortgage Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Project payments for an ARM with scheduled adjustments. Enter initial rate, adjustment timing, expected increases, and a lifetime cap.
+      </p>
+
+      <form id="arm-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="arm-amount">Loan Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-amount" name="loanAmount" autocomplete="off" placeholder="200,000" value="200000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="arm-rate">Initial Annual Interest Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-rate" name="interestRate" autocomplete="off" placeholder="3" value="3">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Loan Term</label>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="mortgage-calculators-widget-input-container is-year">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-years" name="years" autocomplete="off" placeholder="30" value="30">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            </div>
+            <div class="mortgage-calculators-widget-input-container is-month">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-months" name="months" autocomplete="off" placeholder="0">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="arm-first">Months Before First Adjustment</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-first" name="monthsBeforeFirstAdjustment" autocomplete="off" placeholder="60" value="60">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="arm-between">Months Between Adjustments</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-between" name="monthBetweenAdjustments" autocomplete="off" placeholder="12" value="12">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="arm-expected">Expected Adjustment Each Time (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-expected" name="expectedAdjustments" autocomplete="off" placeholder="0.25" value="0.25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="arm-cap">Lifetime Rate Cap (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="arm-cap" name="interestRateCap" autocomplete="off" placeholder="12" value="12">
+          </div>
+          <small class="text-muted">Maximum annual rate allowed over the life of the loan.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="arm-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Initial Monthly Payment:</div>
+          <div id="arm-initial" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Max Monthly Payment:</div>
+          <div id="arm-max" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Payment:</div>
+          <div id="arm-total" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest:</div>
+          <div id="arm-interest" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

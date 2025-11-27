@@ -1,0 +1,67 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Margin &amp; Markup Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Convert between cost, price, margin %, and markup %. Enter any two to compute the rest.
+      </p>
+
+      <form id="margin-markup-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mm-cost">Cost</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="mm-cost" name="cost" autocomplete="off" placeholder="50.00">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mm-price">Price</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="mm-price" name="price" autocomplete="off" placeholder="75.00">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mm-margin">Margin (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="mm-margin" name="marginPct" autocomplete="off" placeholder="30">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mm-markup">Markup (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="mm-markup" name="markupPct" autocomplete="off" placeholder="50">
+          </div>
+        </div>
+
+        <small class="text-muted d-block mb-2">Provide any two values. Leave the others blank.</small>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="mm-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Cost:</div>
+          <div id="mm-out-cost" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Price:</div>
+          <div id="mm-out-price" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Margin %:</div>
+          <div id="mm-out-margin" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Markup %:</div>
+          <div id="mm-out-markup" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="mm-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

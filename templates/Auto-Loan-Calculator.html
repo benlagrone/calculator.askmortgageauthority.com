@@ -1,0 +1,73 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Auto Loan Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate your auto payment, total paid, and total interest for a new or used vehicle purchase.
+      </p>
+
+      <form id="auto-loan-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="auto-price">Vehicle Price</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="auto-price" name="price" autocomplete="off" placeholder="35,000" value="35000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="auto-down">Down Payment</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="auto-down" name="downPayment" autocomplete="off" placeholder="5,000" value="5000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="auto-rate">Interest Rate (APR %)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="auto-rate" name="rate" autocomplete="off" placeholder="6" value="6">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="auto-term">Loan Term (months)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="auto-term" name="termMonths" autocomplete="off" placeholder="60" value="60">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="auto-tax">Sales Tax (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="auto-tax" name="taxPct" autocomplete="off" placeholder="7" value="7">
+          </div>
+          <small class="text-muted">Tax is applied to vehicle price.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="auto-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Loan Amount:</div>
+          <div id="auto-loan-amount" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Monthly Payment:</div>
+          <div id="auto-payment" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Paid:</div>
+          <div id="auto-total-paid" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest:</div>
+          <div id="auto-total-interest" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="auto-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

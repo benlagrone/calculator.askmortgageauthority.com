@@ -19,6 +19,11 @@ function loadCalculator(calculatorType) {
           // Insert into the page
           document.getElementById('app-content').innerHTML = '';
           document.getElementById('app-content').appendChild(calculatorContent);
+
+          // Notify calculator-specific scripts that a template was loaded
+          document.dispatchEvent(
+            new CustomEvent('calculator:loaded', { detail: { calculatorType } })
+          );
           
           // Update the document title and meta title
           const titleText = `Ask Mortgage Authority - ${calculatorType.replace(/-/g, ' ')}`;

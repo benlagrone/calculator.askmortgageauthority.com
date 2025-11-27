@@ -1,0 +1,81 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Asset Allocation Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Allocate your portfolio across stocks, bonds, and cash. Choose a risk profile or set your own percentages and see the dollar split.
+      </p>
+
+      <form id="asset-allocation-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="aa-portfolio">Portfolio Value</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="aa-portfolio" name="portfolio" autocomplete="off" placeholder="250,000" value="250000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="aa-risk">Risk Profile (prefill)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <select class="form-select" id="aa-risk" name="risk">
+              <option value="custom" selected>Custom</option>
+              <option value="conservative">Conservative (40/50/10)</option>
+              <option value="moderate">Moderate (60/30/10)</option>
+              <option value="growth">Growth (75/20/5)</option>
+              <option value="aggressive">Aggressive (90/10/0)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="aa-stocks">Stocks (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="aa-stocks" name="stocks" autocomplete="off" placeholder="60" value="60">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="aa-bonds">Bonds (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="aa-bonds" name="bonds" autocomplete="off" placeholder="30" value="30">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="aa-cash">Cash (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="aa-cash" name="cash" autocomplete="off" placeholder="10" value="10">
+              </div>
+            </div>
+          </div>
+        </div>
+        <small class="text-muted d-block mb-2">Percentages should total 100%.</small>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="aa-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Stocks Allocation:</div>
+          <div id="aa-stocks-amt" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Bonds Allocation:</div>
+          <div id="aa-bonds-amt" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Cash Allocation:</div>
+          <div id="aa-cash-amt" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="aa-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

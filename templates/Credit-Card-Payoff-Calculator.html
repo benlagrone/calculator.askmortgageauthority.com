@@ -1,0 +1,59 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Credit Card Payoff Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate how long it will take to pay off your balance and how much interest you will pay with a fixed monthly payment.
+      </p>
+
+      <form id="credit-payoff-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-balance">Current Balance</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-balance" name="balance" autocomplete="off" placeholder="8,000" value="8000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-rate">APR (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-rate" name="rate" autocomplete="off" placeholder="20" value="20">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-payment">Monthly Payment</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-payment" name="payment" autocomplete="off" placeholder="250" value="250">
+          </div>
+          <small class="text-muted">Use the amount you plan to pay each month. Payments must exceed monthly interest.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="cc-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Months to Payoff:</div>
+          <div id="cc-months" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Years &amp; Months:</div>
+          <div id="cc-years-months" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest Paid:</div>
+          <div id="cc-total-interest" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Paid:</div>
+          <div id="cc-total-paid" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="cc-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

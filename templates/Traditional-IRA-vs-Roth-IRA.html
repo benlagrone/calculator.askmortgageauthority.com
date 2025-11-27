@@ -1,0 +1,80 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Traditional IRA vs Roth IRA</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compare how taxes today vs. taxes in retirement impact your IRA balance. We treat Traditional contributions as pre-tax and Roth contributions as after-tax.
+      </p>
+
+      <form id="ira-roth-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ir-current">Current Balance</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ir-current" name="current" autocomplete="off" placeholder="40,000" value="40000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ir-monthly">Monthly Contribution</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ir-monthly" name="monthly" autocomplete="off" placeholder="500" value="500">
+          </div>
+          <small class="text-muted">Traditional: full amount invested pre-tax. Roth: after-tax amount invested.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ir-years">Years Until Retirement</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ir-years" name="years" autocomplete="off" placeholder="25" value="25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ir-return">Expected Annual Return (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ir-return" name="annualReturn" autocomplete="off" placeholder="6" value="6">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ir-tax-now">Current Marginal Tax Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ir-tax-now" name="taxNow" autocomplete="off" placeholder="24" value="24">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ir-tax-later">Expected Tax Rate in Retirement (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ir-tax-later" name="taxLater" autocomplete="off" placeholder="22" value="22">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="ir-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Traditional IRA (pre-tax) Balance:</div>
+          <div id="ir-trad-balance" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Traditional IRA After-Tax (at retirement):</div>
+          <div id="ir-trad-after" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Roth IRA Balance (tax-free at retirement):</div>
+          <div id="ir-roth-balance" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Difference (Roth after-tax minus Traditional after-tax):</div>
+          <div id="ir-difference" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="ir-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

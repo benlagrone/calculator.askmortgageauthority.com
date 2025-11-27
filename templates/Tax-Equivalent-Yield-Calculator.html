@@ -1,0 +1,56 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Tax Equivalent Yield</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Convert between tax-free and taxable yields given an income tax rate.
+      </p>
+
+      <form id="tax-equivalent-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tey-taxfree">Tax-free Yield (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tey-taxfree" name="taxfreeYield" autocomplete="off" placeholder="3.5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tey-rate">Income Tax Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tey-rate" name="incomeTaxRate" autocomplete="off" placeholder="24">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Equivalent Taxable Yield</label>
+          <div id="tey-taxable-out" class="theme-title-text"></div>
+        </div>
+
+        <hr>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tey-taxable">Taxable Yield (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tey-taxable" name="taxableYield" autocomplete="off" placeholder="4.5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="tey-rate2">Income Tax Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="tey-rate2" name="incomeTaxRate2" autocomplete="off" placeholder="24">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Equivalent Tax-free Yield</label>
+          <div id="tey-taxfree-out" class="theme-title-text"></div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

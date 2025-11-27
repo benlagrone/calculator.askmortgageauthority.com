@@ -1,0 +1,77 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Social Security Estimator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate your monthly benefit based on your full retirement age (FRA) benefit, planned claiming age, and expected COLA.
+      </p>
+
+      <form id="social-security-estimator-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ss-current-age">Current Age</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ss-current-age" name="currentAge" autocomplete="off" placeholder="62" value="62">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ss-claim-age">Planned Claim Age</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ss-claim-age" name="claimAge" autocomplete="off" placeholder="67" value="67">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ss-fra-age">Full Retirement Age (FRA)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ss-fra-age" name="fraAge" autocomplete="off" placeholder="67" value="67">
+          </div>
+          <small class="text-muted">Most people born 1960 or later have FRA = 67.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ss-fra-benefit">Monthly Benefit at FRA ($)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ss-fra-benefit" name="fraBenefit" autocomplete="off" placeholder="2,200" value="2200">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ss-cola">Expected Annual COLA (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ss-cola" name="cola" autocomplete="off" placeholder="2.0" value="2.0">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ss-years-benefit">Expected Years Receiving Benefits</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ss-years-benefit" name="yearsBenefit" autocomplete="off" placeholder="20" value="20">
+          </div>
+          <small class="text-muted">Used to approximate lifetime benefits with COLA.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="ss-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Adjusted Monthly Benefit at Claim Age:</div>
+          <div id="ss-monthly" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">First-Year Annual Benefit:</div>
+          <div id="ss-annual" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Lifetime Benefits (with COLA):</div>
+          <div id="ss-lifetime" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="ss-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

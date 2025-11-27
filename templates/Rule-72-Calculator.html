@@ -1,0 +1,52 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Rule of 72</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate doubling time from a rate, or the rate needed to double in a given number of years. Shows both the Rule of 72 estimate and the exact calculation.
+      </p>
+
+      <form id="rule72-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="r72-rate">Annual Interest Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="r72-rate" name="annualInterestRate" autocomplete="off" placeholder="6.5">
+          </div>
+          <small class="text-muted">Enter a rate to estimate years to double.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimate (Rule of 72):</div>
+          <div id="r72-est-years" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Exact (ln(2)/ln(1+rate)):</div>
+          <div id="r72-exact-years" class="theme-title-text"></div>
+        </div>
+
+        <hr>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="r72-years">Years to Double</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="r72-years" name="yearsToDouble" autocomplete="off" placeholder="10">
+          </div>
+          <small class="text-muted">Enter years to estimate required annual rate.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimate (Rule of 72):</div>
+          <div id="r72-est-rate" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Exact:</div>
+          <div id="r72-exact-rate" class="theme-title-text"></div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Holding Period Return (HPR) Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Calculate total and annualized holding period return using your buy price, sell price, dividends, and holding period.
+      </p>
+
+      <form id="hpr-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="hpr-shares">Shares</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="hpr-shares" name="shares" autocomplete="off" placeholder="100" value="100">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="hpr-buy">Buy Price per Share</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="hpr-buy" name="buyPrice" autocomplete="off" placeholder="40" value="40">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="hpr-sell">Sell Price per Share</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="hpr-sell" name="sellPrice" autocomplete="off" placeholder="48" value="48">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="hpr-dividends">Dividends Received (total)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="hpr-dividends" name="dividends" autocomplete="off" placeholder="200" value="200">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="hpr-years">Holding Period (years)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="hpr-years" name="yearsHeld" autocomplete="off" placeholder="2" value="2">
+          </div>
+          <small class="text-muted">Use fractional years if needed (e.g., 1.5).</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="hpr-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Cost Basis:</div>
+          <div id="hpr-cost" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Ending Value (price + dividends):</div>
+          <div id="hpr-ending" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Gain/Loss:</div>
+          <div id="hpr-gain" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Holding Period Return:</div>
+          <div id="hpr-total-return" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Annualized Return (CAGR):</div>
+          <div id="hpr-cagr" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="hpr-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

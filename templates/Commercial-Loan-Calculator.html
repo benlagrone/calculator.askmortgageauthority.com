@@ -1,0 +1,118 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Commercial Loan Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compare two day-count conventions (365/365 vs 365/360). Includes optional balloon at a custom due term.
+      </p>
+
+      <form id="commercial-loan-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cl-amount">Loan Amount</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cl-amount" name="loanAmount" autocomplete="off" placeholder="500,000" value="500000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cl-rate">Annual Interest Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cl-rate" name="interestRate" autocomplete="off" placeholder="7" value="7">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Loan Term</label>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="mortgage-calculators-widget-input-container is-year">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cl-years" name="years" autocomplete="off" placeholder="20" value="20">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            </div>
+            <div class="mortgage-calculators-widget-input-container is-month">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cl-months" name="months" autocomplete="off" placeholder="0">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cl-due">Loan Due Term (months, optional balloon)</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="cl-due" name="loanDueTermInMonths" autocomplete="off" placeholder="0">
+            <small class="text-muted">If set &gt;0 and &lt; term, a balloon is due then.</small>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cl-compounding">Compounding Method</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <select id="cl-compounding" class="form-select">
+              <option value="365">365</option>
+              <option value="360">360</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cl-period">Payment Period</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <select id="cl-period" class="form-select">
+              <option value="Daily">Daily</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Biweekly">Biweekly</option>
+              <option value="Semimonthly">Semimonthly</option>
+              <option value="Monthly" selected>Monthly</option>
+              <option value="Quarterly">Quarterly</option>
+              <option value="Semiannually">Semiannually</option>
+              <option value="Annually">Annually</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="commercial-loan-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Payment Label:</div>
+          <div id="cl-payment-label" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/365 Payment:</div>
+          <div id="cl-monthly1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/360 Payment:</div>
+          <div id="cl-monthly2" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/365 Total Payment:</div>
+          <div id="cl-total1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/360 Total Payment:</div>
+          <div id="cl-total2" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/365 Total Interest:</div>
+          <div id="cl-interest1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/360 Total Interest:</div>
+          <div id="cl-interest2" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/365 Balloon:</div>
+          <div id="cl-balloon1" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">365/360 Balloon:</div>
+          <div id="cl-balloon2" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

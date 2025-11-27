@@ -1,0 +1,70 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Credit Card Minimum Payment Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate how long it will take to pay off your card if you only make the minimum payment each month.
+      </p>
+
+      <form id="credit-min-payment-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ccmin-balance">Current Balance</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ccmin-balance" name="balance" autocomplete="off" placeholder="8,000" value="8000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ccmin-rate">APR (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ccmin-rate" name="rate" autocomplete="off" placeholder="20" value="20">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ccmin-percent">Minimum Payment (% of balance)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ccmin-percent" name="percent" autocomplete="off" placeholder="2" value="2">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="ccmin-floor">Minimum Payment Floor ($)</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="ccmin-floor" name="floor" autocomplete="off" placeholder="25" value="25">
+          </div>
+          <small class="text-muted">We use the greater of percent-based minimum or this floor.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="ccmin-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">First Minimum Payment:</div>
+          <div id="ccmin-first-payment" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Months to Payoff:</div>
+          <div id="ccmin-months" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Years &amp; Months:</div>
+          <div id="ccmin-years-months" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Interest Paid:</div>
+          <div id="ccmin-total-interest" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Paid:</div>
+          <div id="ccmin-total-paid" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="ccmin-note"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Retirement Savings Analysis</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        See how your current savings, monthly contributions, growth rate, and inflation affect your retirement balance, and estimate a sustainable annual withdrawal.
+      </p>
+
+      <form id="retirement-savings-analysis-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rsa-current">Current Savings</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rsa-current" name="current" autocomplete="off" placeholder="75,000" value="75000">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rsa-monthly">Monthly Contribution</label>
+          <div class="mortgage-calculators-widget-input-container is-amount">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rsa-monthly" name="monthly" autocomplete="off" placeholder="800" value="800">
+          </div>
+          <small class="text-muted">Include employee + employer contributions if applicable.</small>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rsa-return">Expected Annual Return (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rsa-return" name="annualReturn" autocomplete="off" placeholder="6" value="6">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rsa-inflation">Expected Inflation (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rsa-inflation" name="inflation" autocomplete="off" placeholder="2.5" value="2.5">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rsa-years">Years Until Retirement</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rsa-years" name="years" autocomplete="off" placeholder="25" value="25">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rsa-withdrawal">Planned Withdrawal Rate (% of balance)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="rsa-withdrawal" name="withdrawalRate" autocomplete="off" placeholder="4" value="4">
+          </div>
+          <small class="text-muted">A 3-5% rate is a common starting point for sustainable withdrawals.</small>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="rsa-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Projected Balance (nominal):</div>
+          <div id="rsa-balance" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Inflation-adjusted Balance (today's dollars):</div>
+          <div id="rsa-real-balance" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Total Contributions:</div>
+          <div id="rsa-total-contrib" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Annual Withdrawal:</div>
+          <div id="rsa-withdrawal-amount" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Estimated Monthly Withdrawal:</div>
+          <div id="rsa-withdrawal-monthly" class="theme-title-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

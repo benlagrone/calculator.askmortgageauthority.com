@@ -1,0 +1,50 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">CAPM Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate the expected return of a stock using CAPM: Expected Return = Risk‑Free Rate + Beta × (Market Return − Risk‑Free Rate).
+      </p>
+
+      <form id="capm-form" class="mortgage-calculators-widget-form" novalidate>
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="capm-rf">Risk-Free Rate (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="capm-rf" name="riskFree" autocomplete="off" placeholder="4" value="4">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="capm-beta">Beta</label>
+          <div class="mortgage-calculators-widget-input-container">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="capm-beta" name="beta" autocomplete="off" placeholder="1.1" value="1.1">
+          </div>
+        </div>
+
+        <div class="mortgage-calculators-widget-form-group row form-group">
+          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="capm-market">Expected Market Return (%)</label>
+          <div class="mortgage-calculators-widget-input-container is-percentage">
+            <input class="mortgage-calculators-widget-input form-control" type="text" id="capm-market" name="marketReturn" autocomplete="off" placeholder="8" value="8">
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="capm-results" class="mt-4" hidden>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Market Risk Premium:</div>
+          <div id="capm-premium" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result">
+          <div class="theme-body-text">Expected Return (CAPM):</div>
+          <div id="capm-expected" class="theme-title-text"></div>
+        </div>
+        <div class="mortgage-calculators-widget-result" id="capm-note"></div>
+      </div>
+    </div>
+  </div>
+</div>
