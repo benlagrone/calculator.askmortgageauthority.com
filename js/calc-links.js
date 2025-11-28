@@ -3,7 +3,7 @@
 
   const fetchCalculators = async () => {
     if (cache) return cache;
-    const res = await fetch("/templates/Home.html");
+    const res = await fetch("/templates/home.html");
     const html = await res.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");

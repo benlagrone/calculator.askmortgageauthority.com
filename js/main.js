@@ -1,4 +1,4 @@
-var home = 'Home'
+var home = 'home'
 // DOMContentLoaded listener (already correct)
 document.addEventListener('DOMContentLoaded', function() {
   const calculatorType = window.location.pathname.split('/').pop().replace('.html', '') || home;
