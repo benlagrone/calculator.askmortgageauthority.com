@@ -56,7 +56,6 @@
   };
 
   const prependMobileMenu = async () => {
-    if (window.innerWidth > 1024) return;
     const mainMenu = document.querySelector(".main-menu");
     if (!mainMenu || mainMenu.dataset.calcsInjected === "true") return;
     const list = await fetchCalculators();
@@ -78,20 +77,27 @@
     mainMenu.dataset.calcsInjected = "true";
   };
 
+  const removeMobileCalcs = () => {
+    const mainMenu = document.querySelector(".main-menu");
+    if (!mainMenu) return;
+    mainMenu.querySelectorAll(".calc-menu-heading, li[data-calc-item]").forEach((node) => node.remove());
+    mainMenu.dataset.calcsInjected = "false";
+  };
+
   document.addEventListener("menu:loaded", async () => {
-    await prependMobileMenu();
+    // Do nothing on load; handled on calculator:loaded to respect home vs subpages.
   });
 
   document.addEventListener("calculator:loaded", async (evt) => {
     const calcType = (evt.detail?.calculatorType || "").toLowerCase();
     if (calcType === "home" || calcType === "") {
       hideSidebar();
+      removeMobileCalcs();
     } else {
       await buildSidebar();
-    }
-    // On mobile, ensure calculators are injected into the hamburger menu even if menu:loaded didn't fire yet.
-    if (window.innerWidth <= 1024) {
-      await prependMobileMenu();
+      if (window.innerWidth <= 1024) {
+        await prependMobileMenu();
+      }
     }
   });
 })();
