@@ -19,6 +19,9 @@ Running Locally
 - Docker (local testing only):
   - `docker build -t calculators-local .`
   - `docker run --rm -p 8000:8000 calculators-local`
+- Docker Compose (uniform start/stop/rebuild):
+  - `docker compose up -d --build` (maps host `18010` to container `8000`)
+  - `docker compose down`
 
 Routing
 Navigating to `/<Calculator-Name>` loads `/templates/<Calculator-Name>.html` into the app container. Example: `/Annual-Percentage-Rate`.

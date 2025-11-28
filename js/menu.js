@@ -37,6 +37,7 @@ function loadMenu() {
             const mainMenu = document.querySelector('.main-menu');
             const menuHTML = menuData.map(generateMenuItem).join('');
             mainMenu.innerHTML = menuHTML;
+            document.dispatchEvent(new CustomEvent('menu:loaded'));
         })
         .catch(error => {
             console.error('Error loading menu from API, falling back to local JSON:', error);
@@ -47,6 +48,7 @@ function loadMenu() {
                     const mainMenu = document.querySelector('.main-menu');
                     const menuHTML = localMenuData.map(generateMenuItem).join('');
                     mainMenu.innerHTML = menuHTML;
+                    document.dispatchEvent(new CustomEvent('menu:loaded'));
                 })
                 .catch(localError => {
                     console.error('Error loading local menu:', localError);

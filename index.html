@@ -70,10 +70,13 @@
       </ul>
     </nav>
   
-    <!-- Main content area with Bootstrap grid -->
+    <!-- Main content area with optional sidebar -->
     <div class="container mt-4">
       <div class="row">
-        <div class="col-12 col-md-8 offset-md-2">
+        <div id="calc-sidebar-col" class="d-none d-lg-block col-lg-3">
+          <div id="calc-sidebar" class="calc-sidebar"></div>
+        </div>
+        <div class="col-12 col-lg-9">
           <div id="app-content" class="container"></div>
         </div>
       </div>
@@ -83,9 +86,9 @@
     <!-- The iframe will be injected here by JS -->
   </div>
     <!-- Scripts -->
-    <script src="js/countyList.min.js"></script>
-    <script src="js/utils.min.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/utils.min.js"></script>
+    <script src="js/countyList.min.js"></script>
     <script src="js/calcs.js"></script>
     <script src="js/main.js"></script>
     <script src="js/financial-calculator.js"></script>
@@ -99,7 +102,6 @@
     <script src="js/rule-72-calculator.js"></script>
     <script src="js/college-savings-calculator.js"></script>
     <script src="js/investment-income-calculator.js"></script>
-    <script src="js/mutual-fund-fee-calculator.js"></script>
     <script src="js/hsa-calculator.js"></script>
     <script src="js/savings-goal-calculator.js"></script>
     <script src="js/loan-comparison-calculator.js"></script>
@@ -153,6 +155,8 @@
     <script src="js/net-distribution-calculator.js"></script>
     <script src="js/effective-rate-calculator.js"></script>
     <script src="js/financial-ratios.js"></script>
+    <script src="js/icon-map.js"></script>
+    <script src="js/calc-links.js"></script>
     <script src="js/menu.js"></script>
     <!-- Google tag (gtag.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
