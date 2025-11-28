@@ -282,3 +282,7 @@
         display: block;
     }
 }
+
+#calc-sidebar-col.sidebar-hidden {
+    display: none !important;
+}

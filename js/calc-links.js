@@ -25,6 +25,7 @@
     const sidebar = document.getElementById("calc-sidebar");
     const sidebarCol = document.getElementById("calc-sidebar-col");
     if (!sidebar || !sidebarCol) return;
+    sidebarCol.classList.remove("sidebar-hidden");
     const list = await fetchCalculators();
     const ul = document.createElement("ul");
     ul.className = "calc-sidebar__list";
@@ -41,13 +42,17 @@
     sidebar.appendChild(ul);
     // Keep hidden on small screens, show on lg+
     sidebarCol.classList.add("d-none", "d-lg-block");
+    sidebarCol.classList.remove("sidebar-hidden");
   };
 
   const hideSidebar = () => {
     const sidebar = document.getElementById("calc-sidebar");
     const sidebarCol = document.getElementById("calc-sidebar-col");
     if (sidebar) sidebar.innerHTML = "";
-    if (sidebarCol) sidebarCol.classList.add("d-none");
+    if (sidebarCol) {
+      sidebarCol.classList.add("sidebar-hidden");
+      sidebarCol.classList.remove("d-lg-block");
+    }
   };
 
   const prependMobileMenu = async () => {
