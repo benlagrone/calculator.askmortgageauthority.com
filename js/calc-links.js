@@ -7,18 +7,50 @@
     const html = await res.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
-    const anchors = Array.from(doc.querySelectorAll("a[data-calculator]"));
+
     const seen = new Set();
-    const list = [];
-    anchors.forEach((a) => {
-      const calc = a.getAttribute("data-calculator");
-      const text = (a.textContent || calc || "").trim() || calc || "";
-      if (!calc || seen.has(calc)) return;
-      seen.add(calc);
-      list.push({ calc, text });
-    });
-    cache = list;
-    return list;
+    const flat = [];
+    const groups = [];
+
+    const collectAnchors = (root) => Array.from(root.querySelectorAll("a[data-calculator]"));
+
+    const headings = Array.from(doc.querySelectorAll("h3"));
+    if (headings.length) {
+      headings.forEach((heading) => {
+        const title = (heading.textContent || "").trim();
+        const items = [];
+        let node = heading.nextElementSibling;
+        while (node && node.tagName !== "H3") {
+          collectAnchors(node).forEach((a) => {
+            const calc = a.getAttribute("data-calculator");
+            const text = (a.textContent || calc || "").trim() || calc || "";
+            if (!calc || seen.has(calc)) return;
+            seen.add(calc);
+            const item = { calc, text };
+            flat.push(item);
+            items.push(item);
+          });
+          node = node.nextElementSibling;
+        }
+        if (items.length) {
+          groups.push({ title, items });
+        }
+      });
+    }
+
+    if (!groups.length) {
+      collectAnchors(doc).forEach((a) => {
+        const calc = a.getAttribute("data-calculator");
+        const text = (a.textContent || calc || "").trim() || calc || "";
+        if (!calc || seen.has(calc)) return;
+        seen.add(calc);
+        flat.push({ calc, text });
+      });
+      groups.push({ title: "Calculators", items: [...flat] });
+    }
+
+    cache = { flat, groups };
+    return cache;
   };
 
   const buildSidebar = async () => {
@@ -30,20 +62,28 @@
     if (mainCol) mainCol.classList.remove("main-full");
     if (adCol) adCol.classList.remove("sidebar-hidden");
     sidebarCol.classList.remove("sidebar-hidden");
-    const list = await fetchCalculators();
-    const ul = document.createElement("ul");
-    ul.className = "calc-sidebar__list";
-    list.forEach(({ calc, text }) => {
-      const li = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = `/${calc}`;
-      link.setAttribute("data-calculator", calc);
-      link.textContent = text;
-      li.appendChild(link);
-      ul.appendChild(li);
+    const { groups } = await fetchCalculators();
+    const wrapper = document.createElement("div");
+    groups.forEach(({ title, items }) => {
+      const sectionTitle = document.createElement("h6");
+      sectionTitle.className = "calc-sidebar__heading";
+      sectionTitle.textContent = title;
+      const ul = document.createElement("ul");
+      ul.className = "calc-sidebar__list";
+      items.forEach(({ calc, text }) => {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `/${calc}`;
+        link.setAttribute("data-calculator", calc);
+        link.textContent = text;
+        li.appendChild(link);
+        ul.appendChild(li);
+      });
+      wrapper.appendChild(sectionTitle);
+      wrapper.appendChild(ul);
     });
     sidebar.innerHTML = "";
-    sidebar.appendChild(ul);
+    sidebar.appendChild(wrapper);
     // Keep hidden on small screens, show on lg+
     sidebarCol.classList.add("d-none", "d-lg-block");
     sidebarCol.classList.remove("sidebar-hidden");
@@ -71,20 +111,23 @@
   const prependMobileMenu = async () => {
     const mainMenu = document.querySelector(".main-menu");
     if (!mainMenu || mainMenu.dataset.calcsInjected === "true") return;
-    const list = await fetchCalculators();
+    const { groups } = await fetchCalculators();
     const fragment = document.createDocumentFragment();
-    const heading = document.createElement("li");
-    heading.className = "calc-menu-heading";
-    heading.textContent = "Calculators";
-    fragment.appendChild(heading);
-    list.forEach(({ calc, text }) => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = `/${calc}`;
-      a.setAttribute("data-calculator", calc);
-      a.textContent = text;
-      li.appendChild(a);
-      fragment.appendChild(li);
+    groups.forEach(({ title, items }) => {
+      const heading = document.createElement("li");
+      heading.className = "calc-menu-heading";
+      heading.textContent = title;
+      fragment.appendChild(heading);
+      items.forEach(({ calc, text }) => {
+        const li = document.createElement("li");
+        li.dataset.calcItem = "true";
+        const a = document.createElement("a");
+        a.href = `/${calc}`;
+        a.setAttribute("data-calculator", calc);
+        a.textContent = text;
+        li.appendChild(a);
+        fragment.appendChild(li);
+      });
     });
     mainMenu.prepend(fragment);
     mainMenu.dataset.calcsInjected = "true";

@@ -230,6 +230,17 @@
     color: #0c2747;
 }
 
+.calc-sidebar__heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 16px 0 8px;
+    color: #0c2747;
+}
+
+.calc-sidebar__heading:first-of-type {
+    margin-top: 0;
+}
+
 .calc-menu-heading {
     font-weight: 600;
     padding: 8px 10px;
