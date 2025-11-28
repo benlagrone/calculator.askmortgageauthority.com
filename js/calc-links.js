@@ -78,8 +78,8 @@
   });
 
   document.addEventListener("calculator:loaded", async (evt) => {
-    const calcType = evt.detail?.calculatorType || "";
-    if (calcType === "Home") {
+    const calcType = (evt.detail?.calculatorType || "").toLowerCase();
+    if (calcType === "home" || calcType === "") {
       hideSidebar();
     } else {
       await buildSidebar();
