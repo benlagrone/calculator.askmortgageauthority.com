@@ -89,5 +89,9 @@
     } else {
       await buildSidebar();
     }
+    // On mobile, ensure calculators are injected into the hamburger menu even if menu:loaded didn't fire yet.
+    if (window.innerWidth <= 1024) {
+      await prependMobileMenu();
+    }
   });
 })();

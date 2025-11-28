@@ -12,6 +12,7 @@
     }
     #chatbot-wrapper.chat-closed #mortgage-chatbot-iframe {
       position:fixed;
+      bottom: 0;
     }
     #chatbot-wrapper.chat-open {
         height:40vh;
