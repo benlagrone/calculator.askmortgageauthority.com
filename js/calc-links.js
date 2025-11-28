@@ -24,7 +24,11 @@
   const buildSidebar = async () => {
     const sidebar = document.getElementById("calc-sidebar");
     const sidebarCol = document.getElementById("calc-sidebar-col");
+    const adCol = document.getElementById("ad-sidebar-col");
+    const mainCol = document.getElementById("main-content-col");
     if (!sidebar || !sidebarCol) return;
+    if (mainCol) mainCol.classList.remove("main-full");
+    if (adCol) adCol.classList.remove("sidebar-hidden");
     sidebarCol.classList.remove("sidebar-hidden");
     const list = await fetchCalculators();
     const ul = document.createElement("ul");
@@ -48,10 +52,19 @@
   const hideSidebar = () => {
     const sidebar = document.getElementById("calc-sidebar");
     const sidebarCol = document.getElementById("calc-sidebar-col");
+    const adCol = document.getElementById("ad-sidebar-col");
+    const mainCol = document.getElementById("main-content-col");
     if (sidebar) sidebar.innerHTML = "";
     if (sidebarCol) {
       sidebarCol.classList.add("sidebar-hidden");
       sidebarCol.classList.remove("d-lg-block");
+    }
+    if (adCol) {
+      adCol.classList.add("sidebar-hidden");
+      adCol.classList.remove("d-lg-block");
+    }
+    if (mainCol) {
+      mainCol.classList.add("main-full");
     }
   };
 
