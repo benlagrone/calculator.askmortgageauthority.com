@@ -44,6 +44,29 @@ function loadCalculator(calculatorType) {
             a.setAttribute('aria-label', label);
           });
 
+          // Add a lightweight CTA block for non-home calculators
+          if (calculatorType !== home) {
+            const appContent = document.getElementById('app-content');
+            if (appContent && !document.getElementById('calc-cta-block')) {
+              const cta = document.createElement('div');
+              cta.id = 'calc-cta-block';
+              cta.className = 'mt-4 mb-4 p-3 border rounded bg-light';
+              cta.innerHTML = `
+                <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-3">
+                  <div>
+                    <h5 class="mb-1">Ready to talk numbers?</h5>
+                    <p class="mb-0 text-muted">Get pre-qualified or speak with a loan expert about your scenario.</p>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-primary" href="https://askmortgageauthority.com/contact-us/" rel="noopener">Get Pre-Qualified</a>
+                    <a class="btn btn-outline-secondary" href="/Financial-Calculators">View All Calculators</a>
+                  </div>
+                </div>
+              `;
+              appContent.appendChild(cta);
+            }
+          }
+
           // Notify calculator-specific scripts that a template was loaded
           document.dispatchEvent(
             new CustomEvent('calculator:loaded', { detail: { calculatorType } })
