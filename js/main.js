@@ -20,6 +20,30 @@ function loadCalculator(calculatorType) {
           document.getElementById('app-content').innerHTML = '';
           document.getElementById('app-content').appendChild(calculatorContent);
 
+          // Ensure anchors have readable text for accessibility/SEO
+          const anchors = document.querySelectorAll('#app-content a[data-calculator]');
+          anchors.forEach((a) => {
+            const existingText = (a.textContent || '').trim();
+            if (existingText.length > 0) return;
+            // Find a nearby title to reuse as anchor text
+            let label = '';
+            const titleNode = a.closest('.card')?.querySelector('.card-title') || a.nextElementSibling;
+            if (titleNode && titleNode.textContent) {
+              label = titleNode.textContent.trim();
+            }
+            if (!label) {
+              label = a.getAttribute('data-calculator') || 'Calculator';
+            }
+            // Avoid duplicating
+            if (!a.querySelector('.visually-hidden')) {
+              const span = document.createElement('span');
+              span.className = 'visually-hidden';
+              span.textContent = label;
+              a.appendChild(span);
+            }
+            a.setAttribute('aria-label', label);
+          });
+
           // Notify calculator-specific scripts that a template was loaded
           document.dispatchEvent(
             new CustomEvent('calculator:loaded', { detail: { calculatorType } })
