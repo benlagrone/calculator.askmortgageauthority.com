@@ -65,6 +65,56 @@ function loadCalculator(calculatorType) {
               `;
               appContent.appendChild(cta);
             }
+
+            // Add a small FAQ section for additional context (HTML only)
+            if (appContent && !document.getElementById('calc-faq-block')) {
+              const faq = document.createElement('div');
+              faq.id = 'calc-faq-block';
+              faq.className = 'mt-3 mb-4';
+              const prettyName = calculatorType.replace(/-/g, ' ');
+              faq.innerHTML = `
+                <h5 class="mb-3">Frequently Asked Questions</h5>
+                <div class="accordion" id="calcFaqAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-1">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
+                        How should I use the ${prettyName}?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#calcFaqAccordion">
+                      <div class="accordion-body">
+                        Enter realistic inputs (rates, terms, taxes/fees) to see monthly and total costs, then tweak one value at a time to compare scenarios.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-2">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+                        Can I compare different scenarios?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#calcFaqAccordion">
+                      <div class="accordion-body">
+                        Yes. Run the calculation, change a single input (e.g., rate, term, extra payment), and run again to see how the outputs change.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+                        Does this replace lender estimates?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#calcFaqAccordion">
+                      <div class="accordion-body">
+                        No—these are informational estimates. For an official quote or pre-qualification, connect with a loan expert.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+              appContent.appendChild(faq);
+            }
           }
 
           // Notify calculator-specific scripts that a template was loaded
