@@ -5,19 +5,66 @@ from pathlib import Path
 from typing import Dict, Optional
 
 import requests
-from fastapi import FastAPI, HTTPException, Query, Response
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
+from page_rendering import build_not_found_page, build_page_catalog, render_page
+
 APP_DIR = Path(__file__).resolve().parent
-CACHE_DIR = APP_DIR / "cache"
-CACHE_DIR.mkdir(exist_ok=True)
+TEMPLATES_DIR = APP_DIR / "templates"
+INDEX_HTML = (APP_DIR / "index.html").read_text(encoding="utf-8")
+PAGE_CATALOG = build_page_catalog(TEMPLATES_DIR)
 
-# TTL for rate caching (in seconds)
-CACHE_TTL = 24 * 60 * 60  # 1 day
+DEFAULT_CACHE_TTL = 24 * 60 * 60  # 1 day
+DEFAULT_REQUEST_TIMEOUT_SECONDS = 10.0
 
-FRANKFURTER_URL = "https://api.frankfurter.app"
-EXCHANGE_HOST_URL = "https://api.exchangerate.host"
+
+def get_env_int(name: str, default: int) -> int:
+    raw_value = os.getenv(name)
+    if not raw_value:
+        return default
+    try:
+        return int(raw_value)
+    except ValueError:
+        return default
+
+
+def get_env_float(name: str, default: float) -> float:
+    raw_value = os.getenv(name)
+    if not raw_value:
+        return default
+    try:
+        return float(raw_value)
+    except ValueError:
+        return default
+
+
+def get_env_path(name: str, default: Path) -> Path:
+    raw_value = os.getenv(name)
+    if not raw_value:
+        return default
+    env_path = Path(raw_value).expanduser()
+    if env_path.is_absolute():
+        return env_path
+    return APP_DIR / env_path
+
+
+CACHE_DIR = get_env_path("CALCULATORS_CACHE_DIR", APP_DIR / "cache")
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+CACHE_TTL = get_env_int("CALCULATORS_CACHE_TTL_SECONDS", DEFAULT_CACHE_TTL)
+REQUEST_TIMEOUT_SECONDS = get_env_float(
+    "CALCULATORS_REQUEST_TIMEOUT_SECONDS",
+    DEFAULT_REQUEST_TIMEOUT_SECONDS,
+)
+FRANKFURTER_URL = os.getenv(
+    "CALCULATORS_FRANKFURTER_URL",
+    "https://api.frankfurter.app",
+).rstrip("/")
+EXCHANGE_HOST_URL = os.getenv(
+    "CALCULATORS_EXCHANGE_HOST_URL",
+    "https://api.exchangerate.host",
+).rstrip("/")
 
 app = FastAPI()
 
@@ -47,7 +94,10 @@ def is_fresh(path: Path, ttl: int) -> bool:
 
 
 def fetch_frankfurter_currencies() -> Dict[str, str]:
-    resp = requests.get(f"{FRANKFURTER_URL}/currencies", timeout=10)
+    resp = requests.get(
+        f"{FRANKFURTER_URL}/currencies",
+        timeout=REQUEST_TIMEOUT_SECONDS,
+    )
     resp.raise_for_status()
     return resp.json()
 
@@ -56,7 +106,7 @@ def fetch_rate_frankfurter(from_code: str, to_code: str) -> Optional[float]:
     resp = requests.get(
         f"{FRANKFURTER_URL}/latest",
         params={"from": from_code, "to": to_code},
-        timeout=10,
+        timeout=REQUEST_TIMEOUT_SECONDS,
     )
     if resp.status_code != 200:
         return None
@@ -70,7 +120,7 @@ def fetch_rate_exchangerate_host(from_code: str, to_code: str) -> Optional[float
     resp = requests.get(
         f"{EXCHANGE_HOST_URL}/convert",
         params={"from": from_code, "to": to_code},
-        timeout=10,
+        timeout=REQUEST_TIMEOUT_SECONDS,
     )
     if resp.status_code != 200:
         return None
@@ -107,6 +157,17 @@ def get_rate(from_code: str, to_code: str) -> Dict[str, str]:
     }
     save_json(cache_file, payload)
     return payload
+
+
+@app.get("/healthz")
+def healthz():
+    if not CACHE_DIR.exists() or not os.access(CACHE_DIR, os.W_OK):
+        raise HTTPException(status_code=500, detail="Cache directory is not writable")
+    return {
+        "status": "ok",
+        "cache_ttl_seconds": CACHE_TTL,
+        "request_timeout_seconds": REQUEST_TIMEOUT_SECONDS,
+    }
 
 
 @app.get("/api/currencies")
@@ -166,19 +227,40 @@ app.mount("/templates", StaticFiles(directory=APP_DIR / "templates"), name="temp
 
 @app.get("/")
 def root():
-    return FileResponse(APP_DIR / "index.html")
+    return HTMLResponse(render_page(INDEX_HTML, PAGE_CATALOG["home"], "home"))
 
 
 @app.get("/{full_path:path}")
 def spa_fallback(full_path: str):
-    # Serve real files if they exist; otherwise, fall back to SPA entry.
+    # Serve real files if they exist; otherwise, render known calculator routes.
     candidate = (APP_DIR / full_path).resolve()
     try:
         candidate.relative_to(APP_DIR)
     except ValueError:
-        # Security: path traversal -> serve index
-        return FileResponse(APP_DIR / "index.html")
+        return HTMLResponse(
+            render_page(
+                INDEX_HTML,
+                build_not_found_page(),
+                None,
+                robots="noindex, nofollow",
+            ),
+            status_code=404,
+        )
 
     if candidate.exists() and candidate.is_file():
         return FileResponse(candidate)
-    return FileResponse(APP_DIR / "index.html")
+
+    slug = Path(full_path).name.replace(".html", "")
+    page = PAGE_CATALOG.get(slug)
+    if page:
+        return HTMLResponse(render_page(INDEX_HTML, page, slug))
+
+    return HTMLResponse(
+        render_page(
+            INDEX_HTML,
+            build_not_found_page(),
+            None,
+            robots="noindex, nofollow",
+        ),
+        status_code=404,
+    )

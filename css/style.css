@@ -46,3 +46,23 @@
 .mortgage-calculators-widget-submit.remove-debt {
     display: none;
 }
+input[type="text"].mortgage-calculators-widget-input::placeholder,
+.mortgage-calculators-widget-input::placeholder {
+    color: #98a2b3;
+    opacity: 1
+}
+input[type="text"].mortgage-calculators-widget-input::-webkit-input-placeholder,
+.mortgage-calculators-widget-input::-webkit-input-placeholder {
+    color: #98a2b3
+}
+input[type="text"].mortgage-calculators-widget-input::-moz-placeholder,
+.mortgage-calculators-widget-input::-moz-placeholder {
+    color: #98a2b3;
+    opacity: 1
+}
+input[type="text"].mortgage-calculators-widget-input:-ms-input-placeholder,
+.mortgage-calculators-widget-input:-ms-input-placeholder,
+input[type="text"].mortgage-calculators-widget-input::-ms-input-placeholder,
+.mortgage-calculators-widget-input::-ms-input-placeholder {
+    color: #98a2b3
+}

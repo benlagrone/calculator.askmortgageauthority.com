@@ -124,7 +124,6 @@
       const loanAmount = parseNumber(form.loanAmount.value);
       const interestRate = parseNumber(form.interestRate.value);
       const years = parseNumber(form.years.value);
-      const months = parseNumber(form.months.value);
       const extraMonthlyPayment = parseNumber(form.extraMonthlyPayment.value);
       const propertyTax = parseNumber(form.propertyTax.value);
       const insurance = parseNumber(form.insurance.value);
@@ -133,9 +132,9 @@
       const propertyPrice = parseNumber(form.propertyPrice.value);
       const cancelPmi = form.cancelPMI.checked;
 
-      const termMonths = years * 12 + months;
-      if (!loanAmount || !interestRate || !termMonths) {
-        alert('Loan amount, rate, and term are required.');
+      const termMonths = years * 12;
+      if (!loanAmount || !interestRate || !years) {
+        alert('Loan amount, rate, and years are required.');
         return;
       }
 
