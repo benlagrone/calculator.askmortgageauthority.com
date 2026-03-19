@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /templates/
+
+Sitemap: https://calculator.askmortgageauthority.com/sitemap.xml

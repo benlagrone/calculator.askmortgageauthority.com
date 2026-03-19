@@ -28,7 +28,13 @@ jobs:
         run: python3 -m compileall server.py page_rendering.py
 
       - name: Build Container For Smoke
-        run: docker build -t ama-calculators:ci .
+        shell: bash
+        run: |
+          set -euo pipefail
+          asset_release="rel-${GITHUB_RUN_NUMBER}-${GITHUB_SHA::12}"
+          docker build \
+            --build-arg CALCULATORS_RELEASE_NAME="${asset_release}" \
+            -t ama-calculators:ci .
 
       - name: Container Smoke
         shell: bash
