@@ -217,7 +217,37 @@ def _apply_asset_release_name(html_text: str) -> str:
     return LOCAL_ASSET_RE.sub(replace, html_text)
 
 
-def _build_page_schema(page: Page) -> str:
+def _build_page_schema(page: Page, seo_page=None) -> str:
+    breadcrumb_items = [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Calculators",
+            "item": f"{SITE_URL}/",
+        }
+    ]
+    if seo_page:
+        breadcrumb_items.append(
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": seo_page.category_title,
+                "item": f"{SITE_URL}/#{seo_page.category_anchor}",
+            }
+        )
+        breadcrumb_position = 3
+    else:
+        breadcrumb_position = 2
+
+    breadcrumb_items.append(
+        {
+            "@type": "ListItem",
+            "position": breadcrumb_position,
+            "name": page.heading,
+            "item": page.canonical,
+        }
+    )
+
     schema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -231,21 +261,27 @@ def _build_page_schema(page: Page) -> str:
         },
         "breadcrumb": {
             "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Calculators",
-                    "item": f"{SITE_URL}/",
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": page.heading,
-                    "item": page.canonical,
-                },
-            ],
+            "itemListElement": breadcrumb_items,
         },
+    }
+    return json.dumps(schema, separators=(",", ":"))
+
+
+def _build_faq_schema(seo_page) -> str:
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer,
+                },
+            }
+            for faq in seo_page.faqs
+        ],
     }
     return json.dumps(schema, separators=(",", ":"))
 
@@ -255,6 +291,7 @@ def _append_head_extras(
     page: Page,
     initial_slug: Optional[str],
     robots: Optional[str],
+    seo_page=None,
 ) -> str:
     extras = [
         f'<link rel="canonical" href="{escape(page.canonical)}">',
@@ -272,7 +309,11 @@ def _append_head_extras(
         extras.append(f'<meta name="robots" content="{escape(robots)}">')
     if not page.is_home:
         extras.append(
-            f'<script type="application/ld+json">{_build_page_schema(page)}</script>'
+            f'<script type="application/ld+json">{_build_page_schema(page, seo_page)}</script>'
+        )
+    if seo_page and seo_page.faqs:
+        extras.append(
+            f'<script type="application/ld+json">{_build_faq_schema(seo_page)}</script>'
         )
 
     extras_markup = "\n    ".join(extras)
@@ -296,14 +337,19 @@ def render_page(
     page: Page,
     initial_slug: Optional[str],
     robots: Optional[str] = None,
+    seo_page=None,
 ) -> str:
+    page_body = page.body_html
+    if seo_page and getattr(seo_page, "html", ""):
+        page_body = f"{page_body}\n{seo_page.html}"
+
     html_text = shell_html.replace(
         APP_CONTENT_MARKER,
-        f'{APP_CONTENT_OPEN_TAG}{page.body_html}</div>',
+        f'{APP_CONTENT_OPEN_TAG}{page_body}</div>',
         1,
     )
     html_text = _replace_meta(html_text, page.title, page.description)
     if not page.is_home:
         html_text = HOME_WEBPAGE_SCHEMA_RE.sub("", html_text, count=1)
-    html_text = _append_head_extras(html_text, page, initial_slug, robots)
+    html_text = _append_head_extras(html_text, page, initial_slug, robots, seo_page)
     return _apply_asset_release_name(html_text)

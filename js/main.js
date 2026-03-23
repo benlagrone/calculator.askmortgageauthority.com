@@ -4,6 +4,10 @@ function getCalculatorTypeFromPath() {
   return window.location.pathname.split('/').pop().replace('.html', '') || home;
 }
 
+function getCalculatorPath(calculatorType) {
+  return calculatorType === home ? '/' : `/${calculatorType}`;
+}
+
 function ensureReadableAnchors(root) {
   const anchors = root.querySelectorAll('a[data-calculator]');
   anchors.forEach((a) => {
@@ -49,57 +53,6 @@ function ensureCalculatorCta(appContent) {
   appContent.appendChild(cta);
 }
 
-function ensureCalculatorFaq(appContent, calculatorType) {
-  if (!appContent || document.getElementById('calc-faq-block')) return;
-
-  const faq = document.createElement('div');
-  faq.id = 'calc-faq-block';
-  faq.className = 'mt-3 mb-4';
-  const prettyName = calculatorType.replace(/-/g, ' ');
-  faq.innerHTML = `
-    <h5 class="mb-3">Frequently Asked Questions</h5>
-    <div class="accordion" id="calcFaqAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq-heading-1">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
-            How should I use the ${prettyName}?
-          </button>
-        </h2>
-        <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#calcFaqAccordion">
-          <div class="accordion-body">
-            Enter realistic inputs (rates, terms, taxes or fees) to compare scenarios one variable at a time.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq-heading-2">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
-            Can I compare different scenarios?
-          </button>
-        </h2>
-        <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#calcFaqAccordion">
-          <div class="accordion-body">
-            Yes. Run the calculation, adjust one input, then calculate again to see how the results change.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq-heading-3">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
-            Does this replace lender estimates?
-          </button>
-        </h2>
-        <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#calcFaqAccordion">
-          <div class="accordion-body">
-            No. These are informational estimates and should be paired with advice from a lender or financial professional.
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-  appContent.appendChild(faq);
-}
-
 function enhanceCalculatorContent(calculatorType) {
   const appContent = document.getElementById('app-content');
   if (!appContent) return;
@@ -108,7 +61,6 @@ function enhanceCalculatorContent(calculatorType) {
 
   if (calculatorType !== home) {
     ensureCalculatorCta(appContent);
-    ensureCalculatorFaq(appContent, calculatorType);
   }
 }
 
@@ -118,58 +70,67 @@ function dispatchCalculatorLoaded(calculatorType) {
   );
 }
 
-function updateClientSideMetadata(calculatorType) {
-  const prettyName = calculatorType === home
+function updateClientSideMetadata(doc, calculatorType) {
+  const fallbackPrettyName = calculatorType === home
     ? 'Mortgage & Financial Calculators'
     : calculatorType.replace(/-/g, ' ');
-  const titleText = calculatorType === home
-    ? 'Mortgage & Financial Calculators | Ask Mortgage Authority'
-    : `${prettyName} | Ask Mortgage Authority`;
+  const titleText = doc.title || `${fallbackPrettyName} | Ask Mortgage Authority`;
   document.title = titleText;
 
-  const metaTitle = document.querySelector('meta[name="title"]');
-  if (metaTitle) {
-    metaTitle.setAttribute('content', titleText);
+  const sourceMetaTitle = doc.querySelector('meta[name="title"]');
+  const targetMetaTitle = document.querySelector('meta[name="title"]');
+  if (targetMetaTitle) {
+    targetMetaTitle.setAttribute('content', sourceMetaTitle?.getAttribute('content') || titleText);
   }
 
-  const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription && calculatorType !== home) {
-    metaDescription.setAttribute(
+  const sourceMetaDescription = doc.querySelector('meta[name="description"]');
+  const targetMetaDescription = document.querySelector('meta[name="description"]');
+  if (targetMetaDescription && sourceMetaDescription) {
+    targetMetaDescription.setAttribute(
       'content',
-      `Use the ${prettyName} on Ask Mortgage Authority to compare scenarios and estimate results.`
+      sourceMetaDescription.getAttribute('content') || ''
     );
+  }
+
+  const sourceCanonical = doc.querySelector('link[rel="canonical"]');
+  const targetCanonical = document.querySelector('link[rel="canonical"]');
+  if (sourceCanonical && targetCanonical) {
+    targetCanonical.setAttribute('href', sourceCanonical.getAttribute('href') || getCalculatorPath(calculatorType));
   }
 }
 
 function setCalculatorContent(html, calculatorType, shouldUpdateMetadata) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
-  const calculatorContent = doc.querySelector('.mortgage-calculators-widget-wrapper');
+  const sourceAppContent = doc.getElementById('app-content');
 
-  if (!calculatorContent) {
-    throw new Error(`Missing calculator wrapper for ${calculatorType}`);
+  if (!sourceAppContent) {
+    throw new Error(`Missing app content for ${calculatorType}`);
   }
 
   const appContent = document.getElementById('app-content');
   if (!appContent) return;
 
   appContent.innerHTML = '';
-  appContent.appendChild(calculatorContent);
-  enhanceCalculatorContent(calculatorType);
+  Array.from(sourceAppContent.children).forEach((node) => {
+    appContent.appendChild(node.cloneNode(true));
+  });
+
   dispatchCalculatorLoaded(calculatorType);
+  enhanceCalculatorContent(calculatorType);
 
   if (shouldUpdateMetadata) {
-    updateClientSideMetadata(calculatorType);
+    updateClientSideMetadata(doc, calculatorType);
   }
 }
 
 function loadCalculator(calculatorType) {
-  const templatePath = `/templates/${calculatorType}.html`;
+  const routePath = getCalculatorPath(calculatorType);
 
-  fetch(templatePath)
+  fetch(routePath)
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`Template request failed for ${calculatorType}`);
+        throw new Error(`Page request failed for ${calculatorType}`);
       }
       return response.text();
     })

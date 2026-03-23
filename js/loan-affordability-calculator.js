@@ -33,11 +33,34 @@
 
   function initLoanAffordability() {
     const form = document.getElementById("loan-affordability-form");
-    if (!form) return;
+    if (!form || form.dataset.uiBound === "true") return;
+    form.dataset.uiBound = "true";
+
+    const ui = window.CalculatorUI;
     const resultBox = document.getElementById("loan-affordability-results");
+    const housingDetail = document.getElementById("la-max-housing-detail");
+
+    const positiveChecks = [
+      ["annualIncome", "Gross Annual Income must be greater than 0."],
+      ["monthlyDebts", "Monthly Debts must be 0 or greater."],
+      ["frontRatio", "Front-End Ratio must be greater than 0."],
+      ["backRatio", "Back-End Ratio must be greater than 0."],
+      ["downPayment", "Down Payment must be 0 or greater."],
+      ["interestRate", "Interest Rate must be greater than 0."],
+      ["years", "Loan Term must be greater than 0."],
+      ["propertyTax", "Property Tax must be 0 or greater."],
+      ["insurance", "Insurance must be 0 or greater."],
+      ["hoa", "HOA must be 0 or greater."]
+    ];
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      ui?.clearFormErrors(form);
+      if (ui && !ui.validateForm(form)) {
+        return;
+      }
+
       const annualIncome = toNumber(form.annualIncome.value);
       const monthlyDebts = toNumber(form.monthlyDebts.value);
       const front = toNumber(form.frontRatio.value) / 100 || 0.28;
@@ -49,8 +72,27 @@
       const insuranceAnnual = toNumber(form.insurance.value);
       const hoaMonthly = toNumber(form.hoa.value);
 
-      if (!annualIncome || !rate || !years) {
-        alert("Please enter income, rate, and term.");
+      let firstInvalidField = null;
+      positiveChecks.forEach(([name, message]) => {
+        const field = form[name];
+        if (!field) return;
+        const value = toNumber(field.value);
+        const mustBePositive = !["monthlyDebts", "downPayment", "propertyTax", "insurance", "hoa"].includes(name);
+        const isValid = mustBePositive ? value > 0 : value >= 0;
+        if (!isValid) {
+          ui?.showFieldError(field, message);
+          firstInvalidField = firstInvalidField || field;
+        }
+      });
+
+      if (firstInvalidField) {
+        firstInvalidField.focus();
+        return;
+      }
+
+      if (front > back) {
+        ui?.showFieldError(form.frontRatio, "Front-End Ratio should usually be less than or equal to the Back-End Ratio.");
+        form.frontRatio.focus();
         return;
       }
 
@@ -59,7 +101,11 @@
       const maxHousingBack = monthlyIncome * back - monthlyDebts;
       const maxHousing = Math.min(maxHousingFront, maxHousingBack);
       if (maxHousing <= 0) {
-        alert("Debts are too high for the chosen ratios.");
+        ui?.showFormError(
+          form,
+          "Current monthly debts already exceed the selected affordability ratios. Lower debts or adjust the ratios to continue."
+        );
+        ui?.hideResults(resultBox);
         return;
       }
 
@@ -75,16 +121,33 @@
       document.getElementById("la-home-price").textContent = asCurrency(homePrice);
       document.getElementById("la-pi").textContent = asCurrency(paymentPI);
       document.getElementById("la-piti").textContent = asCurrency(piti);
-      document.getElementById("la-max-housing").textContent =
-        `${asCurrency(maxHousing)} (front: ${asCurrency(maxHousingFront)}, back: ${asCurrency(maxHousingBack)})`;
+      document.getElementById("la-max-housing").textContent = asCurrency(maxHousing);
+      if (housingDetail) {
+        housingDetail.textContent = `Front-end limit ${asCurrency(maxHousingFront)} | Back-end limit ${asCurrency(maxHousingBack)}`;
+      }
 
-      resultBox.hidden = false;
+      if (ui) {
+        ui.revealResults(resultBox);
+        ui.track("calculator_result", {
+          calculator_type: "Loan-Affordability-Calculator",
+          estimated_home_price: Math.round(homePrice),
+          max_loan_amount: Math.round(maxLoan)
+        });
+      } else {
+        resultBox.hidden = false;
+      }
     });
 
     const resetBtn = form.querySelector("[data-reset]");
     if (resetBtn) {
       resetBtn.addEventListener("click", () => {
-        resultBox.hidden = true;
+        ui?.hideResults(resultBox);
+        if (housingDetail) {
+          housingDetail.textContent = "";
+        }
+        if (!ui) {
+          resultBox.hidden = true;
+        }
       });
     }
   }

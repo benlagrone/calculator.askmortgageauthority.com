@@ -58,3 +58,8 @@ Notes
 - Most calculators are frontend-only; keep new APIs focused on live data, reference data, caching, or persistence.
 - `.dockerignore` excludes large/unneeded files (e.g., `venv/`, archives) from the Docker build context.
 - `.gitignore` now excludes `venv/`, archives, caches, and common artifacts.
+
+Planning docs
+- `FEATURE-ROADMAP.md`: product roadmap for new calculators and companion tools.
+- `SEO-plan.md`: SEO and UI/UX roadmap for crawlability, content, and on-page improvements.
+- `DEPLOYMENT_PLAN.md`: deployment, platform, and API roadmap.

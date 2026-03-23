@@ -1,0 +1,130 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">HELOC Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate how much home equity may be available for a HELOC, plus the draw-period payment and the repayment-period payment.
+      </p>
+
+      <form id="heloc-calculator-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Property and existing mortgage</h3>
+            <p class="calc-form-section-copy">Start with the current value of the property and the balance of your first mortgage or any existing liens.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="heloc-home-value">Current Home Value</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="heloc-home-value" name="homeValue" autocomplete="off" inputmode="decimal" placeholder="500,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="heloc-mortgage-balance">Current Mortgage Balance</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="heloc-mortgage-balance" name="mortgageBalance" autocomplete="off" inputmode="decimal" placeholder="265,000" required>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Line request</h3>
+            <p class="calc-form-section-copy">Lenders usually cap the total mortgage balance plus HELOC at a combined loan-to-value limit.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="heloc-requested-line">Requested HELOC Line</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="heloc-requested-line" name="requestedLine" autocomplete="off" inputmode="decimal" placeholder="75,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="heloc-max-cltv">Max Combined LTV (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="heloc-max-cltv" name="maxCltv" autocomplete="off" inputmode="decimal" placeholder="85" required>
+            </div>
+            <p class="calc-field-help">Combined LTV measures the first mortgage plus the HELOC against the current home value.</p>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">HELOC terms</h3>
+            <p class="calc-form-section-copy">This estimate assumes an interest-only draw period followed by an amortized repayment period at the same rate.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="heloc-rate">Estimated HELOC Rate (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="heloc-rate" name="interestRate" autocomplete="off" inputmode="decimal" placeholder="8.25" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="heloc-draw-years">Draw Period (Years)</label>
+            <div class="mortgage-calculators-widget-input-container">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="heloc-draw-years" name="drawYears" autocomplete="off" inputmode="decimal" placeholder="10" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="heloc-repayment-years">Repayment Period (Years)</label>
+            <div class="mortgage-calculators-widget-input-container">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="heloc-repayment-years" name="repaymentYears" autocomplete="off" inputmode="decimal" placeholder="20" required>
+            </div>
+            <p class="calc-field-help">During repayment, the balance is treated like a standard amortizing loan using the same rate entered above.</p>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="heloc-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Estimated line capacity</span>
+          <div class="calc-result-hero-label">Available HELOC line</div>
+          <div id="heloc-available-line" class="calc-result-hero-value"></div>
+          <div id="heloc-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Requested line</div>
+            <div id="heloc-requested-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated approved line</div>
+            <div id="heloc-approved-line" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Draw-period payment</div>
+            <div id="heloc-draw-payment" class="calc-result-value"></div>
+            <div class="calc-result-subtext">Interest-only estimate</div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Repayment payment</div>
+            <div id="heloc-repayment-payment" class="calc-result-value"></div>
+            <div class="calc-result-subtext">Amortized monthly payment</div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Combined LTV</div>
+            <div id="heloc-combined-ltv" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Remaining equity after HELOC</div>
+            <div id="heloc-remaining-equity" class="calc-result-value"></div>
+            <div id="heloc-equity-cushion" class="calc-result-subtext"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">Actual HELOC approval depends on credit, occupancy, property type, lender overlays, and the rate structure available when you apply.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,103 +6,133 @@
         Estimate the maximum loan and home price based on income, debts, down payment, rate, term, and PITI.
       </p>
 
-      <form id="loan-affordability-form" class="mortgage-calculators-widget-form" novalidate>
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-income">Gross Annual Income</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-income" name="annualIncome" autocomplete="off" placeholder="120,000" value="120000">
+      <form id="loan-affordability-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Income and debt picture</h3>
+            <p class="calc-form-section-copy">Start with realistic income and monthly debt obligations so the affordability range reflects your actual budget.</p>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-debts">Monthly Debts</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-debts" name="monthlyDebts" autocomplete="off" placeholder="500" value="500">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-income">Gross Annual Income</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-income" name="annualIncome" autocomplete="off" inputmode="decimal" placeholder="120,000" value="120000" required>
+            </div>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-front">Front-End Ratio (%)</label>
-          <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-front" name="frontRatio" autocomplete="off" placeholder="28" value="28">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-debts">Monthly Debts</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-debts" name="monthlyDebts" autocomplete="off" inputmode="decimal" placeholder="500" value="500" required>
+            </div>
+            <p class="calc-field-help">Include minimum payments for credit cards, auto loans, student loans, and any other recurring debt.</p>
           </div>
-        </div>
+        </section>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-back">Back-End Ratio (%)</label>
-          <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-back" name="backRatio" autocomplete="off" placeholder="36" value="36">
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Financing assumptions</h3>
+            <p class="calc-form-section-copy">These inputs control how much of your monthly income can reasonably support a housing payment.</p>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-down">Down Payment</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-down" name="downPayment" autocomplete="off" placeholder="60,000" value="60000">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-front">Front-End Ratio (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-front" name="frontRatio" autocomplete="off" inputmode="decimal" placeholder="28" value="28" required>
+            </div>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-rate">Interest Rate (%)</label>
-          <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-rate" name="interestRate" autocomplete="off" placeholder="6.5" value="6.5">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-back">Back-End Ratio (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-back" name="backRatio" autocomplete="off" inputmode="decimal" placeholder="36" value="36" required>
+            </div>
+            <p class="calc-field-help">Front-end looks only at housing costs. Back-end includes housing plus your other monthly debts.</p>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-years">Loan Term (Years)</label>
-          <div class="mortgage-calculators-widget-input-container">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-years" name="years" autocomplete="off" placeholder="30" value="30">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-down">Down Payment</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-down" name="downPayment" autocomplete="off" inputmode="decimal" placeholder="60,000" value="60000" required>
+            </div>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-tax">Property Tax (annual)</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-tax" name="propertyTax" autocomplete="off" placeholder="6,000" value="6000">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-rate">Interest Rate (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-rate" name="interestRate" autocomplete="off" inputmode="decimal" placeholder="6.5" value="6.5" required>
+            </div>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-insurance">Insurance (annual)</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-insurance" name="insurance" autocomplete="off" placeholder="1,200" value="1200">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-years">Loan Term (Years)</label>
+            <div class="mortgage-calculators-widget-input-container">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-years" name="years" autocomplete="off" inputmode="decimal" placeholder="30" value="30" required>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-hoa">HOA (monthly)</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="la-hoa" name="hoa" autocomplete="off" placeholder="0" value="0">
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Taxes, insurance, and HOA</h3>
+            <p class="calc-form-section-copy">These ongoing ownership costs reduce how much of the monthly budget can go toward principal and interest.</p>
           </div>
-        </div>
 
-        <div class="d-flex flex-wrap gap-2">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-tax">Property Tax (annual)</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-tax" name="propertyTax" autocomplete="off" inputmode="decimal" placeholder="6,000" value="6000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-insurance">Insurance (annual)</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-insurance" name="insurance" autocomplete="off" inputmode="decimal" placeholder="1,200" value="1200" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="la-hoa">HOA (monthly)</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="la-hoa" name="hoa" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+            </div>
+            <p class="calc-field-help">Leave HOA at 0 if the property does not have a monthly association fee.</p>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
           <button type="submit" class="btn btn-primary">Calculate</button>
           <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
         </div>
       </form>
 
-      <div id="loan-affordability-results" class="mt-4" hidden>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Max Loan Amount:</div>
-          <div id="la-max-loan" class="theme-title-text"></div>
+      <div id="loan-affordability-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Estimated budget</span>
+          <div class="calc-result-hero-label">Estimated home price</div>
+          <div id="la-home-price" class="calc-result-hero-value"></div>
+          <p class="calc-results-note mb-0">Use this as a planning range, then test how taxes, insurance, rate, and down payment change the outcome.</p>
         </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Estimated Home Price:</div>
-          <div id="la-home-price" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">P&I Payment:</div>
-          <div id="la-pi" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Estimated PITI + HOA:</div>
-          <div id="la-piti" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Max Allowed Housing (front/back):</div>
-          <div id="la-max-housing" class="theme-title-text"></div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Max loan amount</div>
+            <div id="la-max-loan" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">P&amp;I payment</div>
+            <div id="la-pi" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated PITI + HOA</div>
+            <div id="la-piti" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Max allowed housing payment</div>
+            <div id="la-max-housing" class="calc-result-value"></div>
+            <div id="la-max-housing-detail" class="calc-result-subtext"></div>
+          </div>
         </div>
       </div>
     </div>

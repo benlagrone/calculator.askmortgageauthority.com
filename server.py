@@ -9,12 +9,17 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
+from calculator_seo import build_seo_catalog
 from page_rendering import build_not_found_page, build_page_catalog, render_page
 
 APP_DIR = Path(__file__).resolve().parent
 TEMPLATES_DIR = APP_DIR / "templates"
 INDEX_HTML = (APP_DIR / "index.html").read_text(encoding="utf-8")
 PAGE_CATALOG = build_page_catalog(TEMPLATES_DIR)
+SEO_CATALOG = build_seo_catalog(
+    PAGE_CATALOG,
+    (TEMPLATES_DIR / "home.html").read_text(encoding="utf-8"),
+)
 
 DEFAULT_CACHE_TTL = 24 * 60 * 60  # 1 day
 DEFAULT_REQUEST_TIMEOUT_SECONDS = 10.0
@@ -253,7 +258,14 @@ def spa_fallback(full_path: str):
     slug = Path(full_path).name.replace(".html", "")
     page = PAGE_CATALOG.get(slug)
     if page:
-        return HTMLResponse(render_page(INDEX_HTML, page, slug))
+        return HTMLResponse(
+            render_page(
+                INDEX_HTML,
+                page,
+                slug,
+                seo_page=SEO_CATALOG.get(slug),
+            )
+        )
 
     return HTMLResponse(
         render_page(
