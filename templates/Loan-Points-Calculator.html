@@ -3,82 +3,112 @@
     <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
       <h2 class="mortgage-calculators-widget-title theme-title-text">Loan Points Calculator</h2>
       <p class="mortgage-calculators-widget-description theme-body-text">
-        Compare a loan with and without discount points: payments, total interest, points cost, and breakeven.
+        Compare a loan with and without discount points so you can estimate payment savings, total interest, upfront cost, and breakeven timing.
       </p>
 
-      <form id="loan-points-form" class="mortgage-calculators-widget-form" novalidate>
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-amount">Loan Amount</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-amount" name="loanAmount" autocomplete="off" placeholder="350,000" value="350000">
+      <form id="loan-points-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Loan details</h3>
+            <p class="calc-form-section-copy">Set the loan amount and term first. Then compare the rate with points against the rate without points.</p>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-term">Loan Term (Years)</label>
-          <div class="mortgage-calculators-widget-input-container">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-term" name="years" autocomplete="off" placeholder="30" value="30">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-amount">Loan Amount</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-amount" name="loanAmount" autocomplete="off" inputmode="decimal" placeholder="350,000" value="350000" required>
+            </div>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-rate-base">Rate Without Points (%)</label>
-          <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-rate-base" name="rateBase" autocomplete="off" placeholder="6.75" value="6.75">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-term">Loan Term (Years)</label>
+            <div class="mortgage-calculators-widget-input-container">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-term" name="years" autocomplete="off" inputmode="decimal" placeholder="30" value="30" required>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-rate-points">Rate With Points (%)</label>
-          <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-rate-points" name="ratePoints" autocomplete="off" placeholder="6.25" value="6.25">
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Rate comparison</h3>
+            <p class="calc-form-section-copy">Use the note rate without points and the lower rate offered when you buy discount points.</p>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-points">Points (% of loan)</label>
-          <div class="mortgage-calculators-widget-input-container is-percentage">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-points" name="pointsPct" autocomplete="off" placeholder="1" value="1">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-rate-base">Rate Without Points (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-rate-base" name="rateBase" autocomplete="off" inputmode="decimal" placeholder="6.75" value="6.75" required>
+            </div>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-fees">Other Closing Costs (optional)</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-fees" name="closingCosts" autocomplete="off" placeholder="0" value="0">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-rate-points">Rate With Points (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-rate-points" name="ratePoints" autocomplete="off" inputmode="decimal" placeholder="6.25" value="6.25" required>
+            </div>
           </div>
-        </div>
 
-        <div class="d-flex flex-wrap gap-2">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-points">Points (% of loan)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-points" name="pointsPct" autocomplete="off" inputmode="decimal" placeholder="1" value="1" required>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Upfront costs</h3>
+            <p class="calc-form-section-copy">Add any additional closing costs you want to include in the breakeven analysis.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lp-fees">Other Closing Costs</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lp-fees" name="closingCosts" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
           <button type="submit" class="btn btn-primary">Calculate</button>
           <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
         </div>
       </form>
 
-      <div id="loan-points-results" class="mt-4" hidden>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Points Cost:</div>
-          <div id="lp-points-cost" class="theme-title-text"></div>
+      <div id="loan-points-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Points analysis</span>
+          <div class="calc-result-hero-label">Breakeven timing</div>
+          <div id="lp-breakeven" class="calc-result-hero-value"></div>
+          <p id="lp-hero-note" class="calc-results-note mb-0"></p>
         </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Monthly Payment (No Points):</div>
-          <div id="lp-monthly-base" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Monthly Payment (With Points):</div>
-          <div id="lp-monthly-points" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Total Interest (No Points):</div>
-          <div id="lp-interest-base" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Total Interest (With Points):</div>
-          <div id="lp-interest-points" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Breakeven (months):</div>
-          <div id="lp-breakeven" class="theme-title-text"></div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Points and upfront cost</div>
+            <div id="lp-points-cost" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Monthly payment without points</div>
+            <div id="lp-monthly-base" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Monthly payment with points</div>
+            <div id="lp-monthly-points" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Monthly savings</div>
+            <div id="lp-monthly-savings" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Total interest without points</div>
+            <div id="lp-interest-base" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Total cost with points</div>
+            <div id="lp-interest-points" class="calc-result-value"></div>
+          </div>
         </div>
       </div>
     </div>

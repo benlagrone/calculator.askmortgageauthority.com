@@ -1,84 +1,99 @@
 <div class="mortgage-calculators-widget-wrapper">
-  <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left Refinance Break-Even Point-calculator-container">
-    <h2 class="mortgage-calculators-widget-title theme-title-text">Refinance Break-Even Point Calculator</h2>
-    <p class="mortgage-calculators-widget-description theme-body-text">Calculate the number of months to break-even if you refinance the loan.</p>
-    <form class="mortgage-calculators-widget-form Refinance Break-Even Point-form" id="mortgage-calculators-widget-form-js-askmortgageauthority" onsubmit="onCalculatorSubmit(event)" novalidate="">
-      <input type="hidden" name="type" value="Refinance Break-Even Point" autocomplete="off" class="">
-      
-      <!-- Current Monthly Payment -->
-      <div class="mortgage-calculators-widget-form-group row form-group">
-        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="currentmonthlypayment-askmortgageauthority">Current Monthly Payment</label>
-        <div class="mortgage-calculators-widget-input-container is-amount">
-          <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="currentmonthlypayment-askmortgageauthority" name="currentmonthlypayment" autocomplete="off" placeholder="0.00" data-min="1" data-max="100000" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
-          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Refinance Break-Even Point Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate how many months it may take for refinance savings to cover the closing costs of the new loan.
+      </p>
+
+      <form id="refinance-break-even-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Current payment and new loan amount</h3>
+            <p class="calc-form-section-copy">Start with the payment you make today and the amount you expect to refinance into.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rbe-current-payment">Current Monthly Payment</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="rbe-current-payment" name="currentMonthlyPayment" autocomplete="off" inputmode="decimal" placeholder="2,485" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rbe-new-loan-amount">New Loan Amount</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="rbe-new-loan-amount" name="newLoanAmount" autocomplete="off" inputmode="decimal" placeholder="285,000" required>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Refinance terms</h3>
+            <p class="calc-form-section-copy">The new rate, term, and closing costs determine the new payment and the breakeven timeline.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rbe-rate">New Interest Rate (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="rbe-rate" name="newInterestRate" autocomplete="off" inputmode="decimal" placeholder="5.75" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rbe-loan-term">Loan Term (Years)</label>
+            <div class="mortgage-calculators-widget-input-container is-year">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="rbe-loan-term" name="loanTerm" autocomplete="off" inputmode="decimal" placeholder="30" required>
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="rbe-closing-costs">Closing Costs</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="rbe-closing-costs" name="closingCosts" autocomplete="off" inputmode="decimal" placeholder="4,800" required>
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="refinance-break-even-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Break-even estimate</span>
+          <div class="calc-result-hero-label">Estimated time to recover closing costs</div>
+          <div id="rbe-break-even" class="calc-result-hero-value"></div>
+          <p id="rbe-hero-note" class="calc-results-note mb-0"></p>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Current monthly payment</div>
+            <div id="rbe-current-payment-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated new monthly payment</div>
+            <div id="rbe-new-monthly-payment" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Monthly savings</div>
+            <div id="rbe-monthly-savings" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Closing costs</div>
+            <div id="rbe-closing-costs-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">First-year net savings</div>
+            <div id="rbe-first-year-savings" class="calc-result-value"></div>
+          </div>
         </div>
       </div>
-
-      <!-- New Loan Amount -->
-      <div class="mortgage-calculators-widget-form-group row form-group">
-        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="newloanamount-askmortgageauthority">New Loan Amount</label>
-        <div class="mortgage-calculators-widget-input-container is-amount">
-          <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="newloanamount-askmortgageauthority" name="newloanamount" autocomplete="off" placeholder="0.00" data-min="1" data-max="10000000" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
-          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
-        </div>
-      </div>
-
-      <!-- New Interest Rate -->
-      <div class="mortgage-calculators-widget-form-group row form-group">
-        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="newinterestrate-askmortgageauthority">New Interest Rate</label>
-        <div class="mortgage-calculators-widget-input-container is-percentage">
-          <input class="mortgage-calculators-widget-input is-percentage form-control" type="text" id="newinterestrate-askmortgageauthority" name="newinterestrate" autocomplete="off" placeholder="0" data-min="0.001" data-max="25" onkeyup="onInputKeyUp(event, 'percentage')" onkeydown="onInputKeyDown(event, 'percentage')" required="">
-          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
-        </div>
-      </div>
-
-      <!-- Loan Term -->
-      <div class="mortgage-calculators-widget-form-group row form-group">
-        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="loanterm-askmortgageauthority">Loan Term</label>
-        <div class="mortgage-calculators-widget-input-container is-year">
-          <input class="mortgage-calculators-widget-input is-year form-control" type="text" id="loanterm-askmortgageauthority" name="loanterm" autocomplete="off" data-min="1" data-max="40" onkeyup="onInputKeyUp(event, 'year')" onkeydown="onInputKeyDown(event, 'year')" required="">
-          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
-        </div>
-      </div>
-
-      <!-- Closing Costs -->
-      <div class="mortgage-calculators-widget-form-group row form-group">
-        <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="closingcosts-askmortgageauthority">Closing Costs</label>
-        <div class="mortgage-calculators-widget-input-container is-amount">
-          <input class="mortgage-calculators-widget-input is-amount form-control" type="text" id="closingcosts-askmortgageauthority" name="closingcosts" autocomplete="off" placeholder="0.00" data-min="1" data-max="100000" onkeyup="onInputKeyUp(event, 'amount')" onkeydown="onInputKeyDown(event, 'amount')" required="">
-          <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary"></label>
-        </div>
-      </div>
-
-      <input type="submit" value="Calculate" class="mortgage-calculators-widget-submit btn btn-primary">
-      <p class="mortgage-calculators-widget-disclaimer">Default amounts are hypothetical and may not apply to your individual situation. This calculator provides approximations for informational purposes only. Actual results will be provided by your lender and will likely vary depending on your eligibility and current market rates.</p>
-    </form>
+    </div>
   </div>
-  <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--right">
-    <h2 class="mortgage-calculators-widget-title theme-body-text" id="mortgage-calculators-widget-results-title-js-askmortgageauthority">Results</h2>
-    <button class="mortgage-calculators-widget-print theme-title-text btn btn-secondary" onclick="window.print()" onkeypress="window.ConsumerConnectApps.callOnEnter(event, window.print)">Print</button>
-    <div class="line-item-calculator-results" id="mortgage-calculators-widget-results-js-askmortgageauthority" tabindex="0">
-      <div class="mortgage-calculators-widget-results">
-        <h3 class="mortgage-calculators-widget-subtitle theme-title-text">New Monthly Payment</h3>
-        <div class="mortgage-calculators-widget-result theme-body-text" id="newmonthlypayment" data-type="amount" data-placeholder="$0.00">$0.00</div>
-      </div>
-      <div class="mortgage-calculators-widget-results">
-        <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Monthly Savings</h3>
-        <div class="mortgage-calculators-widget-result theme-body-text" id="monthlysavings" data-type="amount" data-placeholder="$0.00">$0.00</div>
-      </div>
-      <div class="mortgage-calculators-widget-results">
-        <h3 class="mortgage-calculators-widget-subtitle theme-title-text">Number of months to break even</h3>
-        <div class="mortgage-calculators-widget-result theme-body-text" id="numberofmonthstobreakeven" data-type="text" data-placeholder="0">0</div>
-      </div>
-    </div>
-    <div class="rates-calculator-results" id="rates-calculator-results-js-askmortgageauthority" tabindex="0">
-    </div>
-
-    <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-grandtotal-js-askmortgageauthority" tabindex="0">
-    </div>
-    <a class="theme-color-links mortgage-calculators-widget-tables-href" tabindex="0" id="mortgage-calculators-widget-tables-href-js-askmortgageauthority" href="/RefinanceBreakEven.html#mortgage-calculators-widget-tables-js-askmortgageauthority" aria-label="See full report below on the same page">
-      See Full Report Below
-    </a>
-  </div>
-  <div class="mortgage-calculators-widget-tables-container" id="mortgage-calculators-widget-tables-js-askmortgageauthority"></div>
 </div>

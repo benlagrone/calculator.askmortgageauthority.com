@@ -3,92 +3,132 @@
     <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
       <h2 class="mortgage-calculators-widget-title theme-title-text">Loan Refinance Calculator</h2>
       <p class="mortgage-calculators-widget-description theme-body-text">
-        Compare your current loan to a refinance: monthly payment, remaining interest, and interest saved.
+        Compare your current loan to a refinance based on the remaining balance, monthly payment, remaining interest, and projected interest savings.
       </p>
 
-      <form id="loan-refinance-form" class="mortgage-calculators-widget-form" novalidate>
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lr-amount">Loan Amount</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-amount" name="loanAmount" autocomplete="off" placeholder="300,000" value="300000">
+      <form id="loan-refinance-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Loan amount and current payment history</h3>
+            <p class="calc-form-section-copy">Start with the original loan amount and how long you have already been paying on the existing mortgage.</p>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Current Loan</label>
-          <div class="d-flex flex-wrap gap-3">
-            <div class="mortgage-calculators-widget-input-container is-percentage">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-rate-old" name="interestRate" autocomplete="off" placeholder="6.5" value="6.5">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">% rate</label>
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lr-amount">Original Loan Amount</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-amount" name="loanAmount" autocomplete="off" inputmode="decimal" placeholder="300,000" value="300000" required>
             </div>
-            <div class="mortgage-calculators-widget-input-container is-year">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-years-old" name="years" autocomplete="off" placeholder="30" value="30">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
-            </div>
-            <div class="mortgage-calculators-widget-input-container is-month">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-months-old" name="months" autocomplete="off" placeholder="0">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
-            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lr-paid">Payments Made</label>
             <div class="mortgage-calculators-widget-input-container">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-paid" name="paymentMade" autocomplete="off" placeholder="24" value="24">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Payments made (months)</label>
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-paid" name="paymentMade" autocomplete="off" inputmode="decimal" placeholder="24" value="24" required>
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months already paid</label>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">New Loan</label>
-          <div class="d-flex flex-wrap gap-3">
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Current loan terms</h3>
+            <p class="calc-form-section-copy">Use the original term of the current loan so the calculator can estimate the remaining balance and remaining interest correctly.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lr-rate-old">Current Rate (%)</label>
             <div class="mortgage-calculators-widget-input-container is-percentage">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-rate-new" name="interestRateNew" autocomplete="off" placeholder="5.5" value="5.5">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">% rate</label>
-            </div>
-            <div class="mortgage-calculators-widget-input-container is-year">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-years-new" name="yearsNew" autocomplete="off" placeholder="30" value="30">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
-            </div>
-            <div class="mortgage-calculators-widget-input-container is-month">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-months-new" name="monthsNew" autocomplete="off" placeholder="0">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Months</label>
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-rate-old" name="interestRate" autocomplete="off" inputmode="decimal" placeholder="6.5" value="6.5" required>
             </div>
           </div>
-        </div>
 
-        <div class="d-flex flex-wrap gap-2">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lr-years-old">Current Loan Term</label>
+            <div class="d-flex flex-wrap gap-3">
+              <div class="mortgage-calculators-widget-input-container is-year">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-years-old" name="years" autocomplete="off" inputmode="decimal" placeholder="30" value="30" required>
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+              </div>
+              <div class="mortgage-calculators-widget-input-container is-month">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-months-old" name="months" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Extra months</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Proposed refinance terms</h3>
+            <p class="calc-form-section-copy">Enter the new rate and term you are considering so you can compare payment and interest trade-offs against the current remaining balance.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lr-rate-new">New Rate (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-rate-new" name="interestRateNew" autocomplete="off" inputmode="decimal" placeholder="5.5" value="5.5" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lr-years-new">New Loan Term</label>
+            <div class="d-flex flex-wrap gap-3">
+              <div class="mortgage-calculators-widget-input-container is-year">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-years-new" name="yearsNew" autocomplete="off" inputmode="decimal" placeholder="30" value="30" required>
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+              </div>
+              <div class="mortgage-calculators-widget-input-container is-month">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lr-months-new" name="monthsNew" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Extra months</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
           <button type="submit" class="btn btn-primary">Calculate</button>
           <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
         </div>
       </form>
 
-      <div id="loan-refinance-results" class="mt-4" hidden>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Remaining Balance (Current):</div>
-          <div id="lr-balance-old" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Monthly Payment (Current):</div>
-          <div id="lr-monthly-old" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Remaining Interest (Current):</div>
-          <div id="lr-interest-old" class="theme-title-text"></div>
+      <div id="loan-refinance-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Refinance comparison</span>
+          <div class="calc-result-hero-label">Estimated interest saved</div>
+          <div id="lr-saved" class="calc-result-hero-value"></div>
+          <p id="lr-hero-note" class="calc-results-note mb-0"></p>
         </div>
 
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">New Loan Total Payment:</div>
-          <div id="lr-total-new" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Monthly Payment (New):</div>
-          <div id="lr-monthly-new" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Total Interest (New):</div>
-          <div id="lr-interest-new" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Interest Saved:</div>
-          <div id="lr-saved" class="theme-title-text"></div>
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Remaining current balance</div>
+            <div id="lr-balance-old" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Current monthly payment</div>
+            <div id="lr-monthly-old" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Remaining interest on current loan</div>
+            <div id="lr-interest-old" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">New monthly payment</div>
+            <div id="lr-monthly-new" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Total payment on new loan</div>
+            <div id="lr-total-new" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Interest on new loan</div>
+            <div id="lr-interest-new" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Monthly payment change</div>
+            <div id="lr-monthly-change" class="calc-result-value"></div>
+            <div id="lr-monthly-change-note" class="calc-result-subtext"></div>
+          </div>
         </div>
       </div>
     </div>

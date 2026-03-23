@@ -12,6 +12,7 @@
     "Loan-Comparison-Calculator": "fa-solid fa-right-left",
     "Loan-Refinance-Calculator": "fa-solid fa-rotate-left",
     "HELOC-Calculator": "fa-solid fa-house-circle-check",
+    "PMI-Removal-Calculator": "fa-solid fa-shield-halved",
     "Commercial-Loan-Calculator": "fa-solid fa-building-columns",
     "Loan-Affordability-Calculator": "fa-solid fa-wallet",
     "Loan-Tax-Saving-Calculator": "fa-solid fa-scale-unbalanced",

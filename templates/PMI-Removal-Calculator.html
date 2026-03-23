@@ -1,0 +1,127 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">PMI Removal Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate your current loan-to-value ratio, how much principal still needs to be paid down to reach the PMI threshold, and how long that may take.
+      </p>
+
+      <form id="pmi-removal-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Current mortgage snapshot</h3>
+            <p class="calc-form-section-copy">Use your current balance and an estimated home value to measure your current loan-to-value ratio.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pmi-balance">Current Loan Balance</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="pmi-balance" name="currentBalance" autocomplete="off" inputmode="decimal" placeholder="278,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pmi-home-value">Current Home Value</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="pmi-home-value" name="homeValue" autocomplete="off" inputmode="decimal" placeholder="360,000" required>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Current mortgage terms</h3>
+            <p class="calc-form-section-copy">These values are used to estimate the regular payment pace and how quickly the balance could reach the PMI cutoff.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pmi-rate">Interest Rate (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="pmi-rate" name="interestRate" autocomplete="off" inputmode="decimal" placeholder="6.25" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pmi-years">Remaining Loan Term (Years)</label>
+            <div class="mortgage-calculators-widget-input-container is-year">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="pmi-years" name="remainingYears" autocomplete="off" inputmode="decimal" placeholder="27" required>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">PMI assumptions</h3>
+            <p class="calc-form-section-copy">Adjust the removal threshold or add extra principal if you want to compare a faster path to dropping PMI.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pmi-threshold">PMI Removal Threshold (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="pmi-threshold" name="targetLtv" autocomplete="off" inputmode="decimal" placeholder="80" value="80" required>
+            </div>
+            <p class="calc-field-help">Most borrower-requested PMI cancellation targets are near 80% LTV, but your servicer rules can differ.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pmi-monthly-cost">Monthly PMI Cost</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="pmi-monthly-cost" name="monthlyPmi" autocomplete="off" inputmode="decimal" placeholder="165" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="pmi-extra-payment">Extra Monthly Principal</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="pmi-extra-payment" name="extraPrincipal" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="pmi-removal-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">PMI removal estimate</span>
+          <div class="calc-result-hero-label">Estimated time to reach the PMI threshold</div>
+          <div id="pmi-time-to-removal" class="calc-result-hero-value"></div>
+          <div id="pmi-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Current LTV</div>
+            <div id="pmi-current-ltv" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Target balance for removal</div>
+            <div id="pmi-target-balance" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Additional principal needed</div>
+            <div id="pmi-principal-needed" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated remaining PMI cost</div>
+            <div id="pmi-total-cost" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Scheduled monthly payment</div>
+            <div id="pmi-scheduled-payment" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Payment with extra principal</div>
+            <div id="pmi-payment-with-extra" class="calc-result-value"></div>
+            <div id="pmi-extra-note" class="calc-result-subtext"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">This is a planning estimate only. Your servicer may require an appraisal, seasoning period, or a different PMI removal threshold.</p>
+      </div>
+    </div>
+  </div>
+</div>
