@@ -3,76 +3,198 @@
     <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
       <h2 class="mortgage-calculators-widget-title theme-title-text">Loan Comparison Calculator</h2>
       <p class="mortgage-calculators-widget-description theme-body-text">
-        Compare two loans side by side: monthly payment, total payment, and total interest.
+        Compare two loan scenarios side by side to see which option has the lower monthly payment, the lower short-term cost, and the lower lifetime interest cost.
       </p>
 
-      <form id="loan-comparison-form" class="mortgage-calculators-widget-form" novalidate>
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-amount">Loan Amount</label>
-          <div class="mortgage-calculators-widget-input-container is-amount">
-            <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-amount" name="loanAmount" autocomplete="off" placeholder="300,000" value="300000">
+      <form id="loan-comparison-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Comparison setup</h3>
+            <p class="calc-form-section-copy">Use the horizon to compare short-term carrying cost before you sell, refinance, or pay the loan off early.</p>
           </div>
-        </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Loan Term 1</label>
-          <div class="d-flex flex-wrap gap-3">
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-horizon">Comparison Horizon (Years)</label>
             <div class="mortgage-calculators-widget-input-container is-year">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-years1" name="years1" autocomplete="off" placeholder="15" value="15">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-horizon" name="comparisonHorizon" autocomplete="off" inputmode="decimal" placeholder="5" value="5" required>
             </div>
-            <div class="mortgage-calculators-widget-input-container is-percentage">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-rate1" name="interestRate1" autocomplete="off" placeholder="6" value="6">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">% Rate</label>
-            </div>
+            <p class="calc-field-help">Short-term cost is based on interest paid plus upfront costs during this time window. Taxes and insurance are not included.</p>
           </div>
+        </section>
+
+        <div class="calc-compare-grid">
+          <section class="calc-form-section calc-compare-section">
+            <div class="calc-form-section-heading">
+              <span class="calc-compare-kicker">Loan A</span>
+              <h3 class="calc-form-section-title">First loan scenario</h3>
+              <p class="calc-form-section-copy">Use this for the lower-rate offer, shorter term, or current loan you want to compare.</p>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-amount1">Loan Amount</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-amount1" name="loanAmount1" autocomplete="off" inputmode="decimal" placeholder="300,000" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-rate1">Interest Rate (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-rate1" name="interestRate1" autocomplete="off" inputmode="decimal" placeholder="6.00" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-years1">Loan Term (Years)</label>
+              <div class="mortgage-calculators-widget-input-container is-year">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-years1" name="years1" autocomplete="off" inputmode="decimal" placeholder="15" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-fees1">Upfront Costs</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-fees1" name="upfrontCosts1" autocomplete="off" inputmode="decimal" placeholder="3,000" value="0">
+              </div>
+              <p class="calc-field-help">Include points, lender fees, or other closing costs you want counted in the comparison.</p>
+            </div>
+          </section>
+
+          <section class="calc-form-section calc-compare-section">
+            <div class="calc-form-section-heading">
+              <span class="calc-compare-kicker">Loan B</span>
+              <h3 class="calc-form-section-title">Second loan scenario</h3>
+              <p class="calc-form-section-copy">Use this for the competing offer, longer term, or refinance option you want to evaluate.</p>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-amount2">Loan Amount</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-amount2" name="loanAmount2" autocomplete="off" inputmode="decimal" placeholder="300,000" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-rate2">Interest Rate (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-rate2" name="interestRate2" autocomplete="off" inputmode="decimal" placeholder="6.50" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-years2">Loan Term (Years)</label>
+              <div class="mortgage-calculators-widget-input-container is-year">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-years2" name="years2" autocomplete="off" inputmode="decimal" placeholder="30" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="lc-fees2">Upfront Costs</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-fees2" name="upfrontCosts2" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+              </div>
+              <p class="calc-field-help">If one option costs more up front, include that difference here so the monthly savings can be weighed realistically.</p>
+            </div>
+          </section>
         </div>
 
-        <div class="mortgage-calculators-widget-form-group row form-group">
-          <label class="mortgage-calculators-widget-label theme-body-text col-form-label">Loan Term 2</label>
-          <div class="d-flex flex-wrap gap-3">
-            <div class="mortgage-calculators-widget-input-container is-year">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-years2" name="years2" autocomplete="off" placeholder="30" value="30">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
-            </div>
-            <div class="mortgage-calculators-widget-input-container is-percentage">
-              <input class="mortgage-calculators-widget-input form-control" type="text" id="lc-rate2" name="interestRate2" autocomplete="off" placeholder="6.5" value="6.5">
-              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">% Rate</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-flex flex-wrap gap-2">
+        <div class="d-flex flex-wrap gap-2 calc-actions">
           <button type="submit" class="btn btn-primary">Calculate</button>
           <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
         </div>
       </form>
 
-      <div id="loan-comparison-results" class="mt-4" hidden>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Monthly Payment (Term 1):</div>
-          <div id="lc-monthly1" class="theme-title-text"></div>
+      <div id="loan-comparison-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Loan comparison summary</span>
+          <div class="calc-result-hero-label">Best monthly payment option</div>
+          <div id="lc-hero" class="calc-result-hero-value"></div>
+          <div id="lc-status" class="calc-results-status" role="status" aria-live="polite"></div>
         </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Monthly Payment (Term 2):</div>
-          <div id="lc-monthly2" class="theme-title-text"></div>
+
+        <div class="calc-results-grid calc-comparison-highlights">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Monthly payment difference</div>
+            <div id="lc-monthly-diff" class="calc-result-value"></div>
+            <div id="lc-monthly-diff-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Short-term cost winner</div>
+            <div id="lc-horizon-winner" class="calc-result-value"></div>
+            <div id="lc-horizon-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Lifetime cost winner</div>
+            <div id="lc-lifetime-winner" class="calc-result-value"></div>
+            <div id="lc-lifetime-note" class="calc-result-subtext"></div>
+          </div>
         </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Total Payment (Term 1):</div>
-          <div id="lc-total1" class="theme-title-text"></div>
+
+        <div class="calc-comparison-results-grid">
+          <div class="calc-result-card calc-comparison-card">
+            <div class="calc-result-label">Loan A</div>
+            <div class="calc-result-value" id="lc-title1">Scenario A</div>
+            <div class="calc-comparison-metrics">
+              <div>
+                <span class="calc-result-label">Monthly payment</span>
+                <strong id="lc-monthly1" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Upfront costs</span>
+                <strong id="lc-fees-output1" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Short-term cost</span>
+                <strong id="lc-horizon-cost1" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Total interest</span>
+                <strong id="lc-interest1" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Interest + fees</span>
+                <strong id="lc-total-cost1" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Loan payoff term</span>
+                <strong id="lc-term-output1" class="calc-result-value"></strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-result-card calc-comparison-card">
+            <div class="calc-result-label">Loan B</div>
+            <div class="calc-result-value" id="lc-title2">Scenario B</div>
+            <div class="calc-comparison-metrics">
+              <div>
+                <span class="calc-result-label">Monthly payment</span>
+                <strong id="lc-monthly2" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Upfront costs</span>
+                <strong id="lc-fees-output2" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Short-term cost</span>
+                <strong id="lc-horizon-cost2" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Total interest</span>
+                <strong id="lc-interest2" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Interest + fees</span>
+                <strong id="lc-total-cost2" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Loan payoff term</span>
+                <strong id="lc-term-output2" class="calc-result-value"></strong>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Total Payment (Term 2):</div>
-          <div id="lc-total2" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Total Interest (Term 1):</div>
-          <div id="lc-interest1" class="theme-title-text"></div>
-        </div>
-        <div class="mortgage-calculators-widget-result">
-          <div class="theme-body-text">Total Interest (Term 2):</div>
-          <div id="lc-interest2" class="theme-title-text"></div>
-        </div>
+
+        <p class="calc-results-note mb-0">This calculator compares principal and interest only. Property taxes, insurance, mortgage insurance, and escrow setup costs are not included unless you add them to upfront costs.</p>
       </div>
     </div>
   </div>

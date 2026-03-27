@@ -1,0 +1,179 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Closing Costs Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate closing costs for a purchase or refinance, including lender fees, title and escrow charges, prepaid taxes, insurance, and credits.
+      </p>
+
+      <form id="closing-costs-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Loan snapshot</h3>
+            <p class="calc-form-section-copy">Start with the transaction type, the property value, and the loan amount you expect to close.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-transaction-type">Transaction Type</label>
+            <div class="mortgage-calculators-widget-input-container">
+              <select class="mortgage-calculators-widget-input form-control" id="cc-transaction-type" name="transactionType" required>
+                <option value="purchase">Purchase</option>
+                <option value="refinance">Refinance</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-property-value">Home Price or Appraised Value</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-property-value" name="propertyValue" autocomplete="off" inputmode="decimal" placeholder="400,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-loan-amount">Loan Amount</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-loan-amount" name="loanAmount" autocomplete="off" inputmode="decimal" placeholder="320,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-credits">Seller or Lender Credits</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-credits" name="credits" autocomplete="off" inputmode="decimal" placeholder="2,500" value="0">
+            </div>
+            <p class="calc-field-help">Use this for seller concessions, lender credits, or builder incentives that reduce the amount due at closing.</p>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Lender and settlement fees</h3>
+            <p class="calc-form-section-copy">These are the fixed charges typically paid to the lender, title company, escrow agent, and local recording office.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-origination-fees">Origination and Underwriting Fees</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-origination-fees" name="originationFees" autocomplete="off" inputmode="decimal" placeholder="1,650" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-appraisal-fee">Appraisal Fee</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-appraisal-fee" name="appraisalFee" autocomplete="off" inputmode="decimal" placeholder="650" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-title-fee">Title and Escrow Fees</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-title-fee" name="titleEscrowFees" autocomplete="off" inputmode="decimal" placeholder="1,850" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-recording-fee">Recording and Miscellaneous Fees</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-recording-fee" name="recordingFees" autocomplete="off" inputmode="decimal" placeholder="425" value="0">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Prepaids and reserves</h3>
+            <p class="calc-form-section-copy">These are the upfront tax and insurance amounts often collected at closing for escrow setup and initial coverage.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-annual-tax">Annual Property Tax</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-annual-tax" name="annualPropertyTax" autocomplete="off" inputmode="decimal" placeholder="4,800" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-tax-months">Prepaid Tax Months</label>
+              <div class="mortgage-calculators-widget-input-container">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-tax-months" name="taxMonths" autocomplete="off" inputmode="decimal" placeholder="3" value="0">
+              </div>
+              <p class="calc-field-help">Many lenders collect a few months of taxes into escrow at closing.</p>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-annual-insurance">Annual Homeowners Insurance</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-annual-insurance" name="annualInsurance" autocomplete="off" inputmode="decimal" placeholder="1,650" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cc-insurance-months">Prepaid Insurance Months</label>
+              <div class="mortgage-calculators-widget-input-container">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cc-insurance-months" name="insuranceMonths" autocomplete="off" inputmode="decimal" placeholder="12" value="0">
+              </div>
+              <p class="calc-field-help">Homeowners insurance is often collected for the first year at closing, especially on purchases.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="closing-costs-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Closing estimate</span>
+          <div id="cc-hero-label" class="calc-result-hero-label">Estimated cash to close</div>
+          <div id="cc-hero-value" class="calc-result-hero-value"></div>
+          <div id="cc-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Down payment</div>
+            <div id="cc-down-payment" class="calc-result-value"></div>
+            <div id="cc-down-payment-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Closing costs before credits</div>
+            <div id="cc-gross-closing" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Net closing costs</div>
+            <div id="cc-net-closing" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Lender and settlement fees</div>
+            <div id="cc-fees-total" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Prepaid taxes and insurance</div>
+            <div id="cc-prepaids" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Credits applied</div>
+            <div id="cc-credits-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Closing costs as % of loan</div>
+            <div id="cc-cost-pct" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated loan-to-value</div>
+            <div id="cc-ltv" class="calc-result-value"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">Actual closing costs vary by property type, state, escrow timing, prepaid interest, transfer taxes, and the fees your lender and title company charge.</p>
+      </div>
+    </div>
+  </div>
+</div>

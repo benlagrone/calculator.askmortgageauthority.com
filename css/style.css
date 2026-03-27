@@ -116,6 +116,20 @@ input[type="text"].mortgage-calculators-widget-input::-ms-input-placeholder,
     font-size: .95rem;
     margin-bottom: 0
 }
+.calc-compare-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+.calc-compare-kicker {
+    color: #0a58ca;
+    display: inline-block;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 6px;
+    text-transform: uppercase
+}
 .calc-field-help {
     margin-top: 8px
 }
@@ -229,12 +243,32 @@ input[type="text"].mortgage-calculators-widget-input:focus,
     gap: 14px;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr))
 }
+.calc-comparison-results-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 14px
+}
 .calc-result-card {
     background: rgba(255, 255, 255, .1);
     border: 1px solid rgba(255, 255, 255, .12);
     border-radius: 18px;
     min-height: 100%;
     padding: 16px
+}
+.calc-comparison-card {
+    display: grid;
+    gap: 12px
+}
+.calc-comparison-metrics {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+.calc-comparison-metrics strong.calc-result-value {
+    display: block;
+    font-size: 1.12rem;
+    margin-top: 4px
 }
 .calc-result-label {
     color: rgba(255, 255, 255, .78);
@@ -346,6 +380,11 @@ input[type="text"].mortgage-calculators-widget-input:focus,
 @media screen and (max-width:768px) {
     .calc-form-section {
         padding: 18px 16px
+    }
+    .calc-compare-grid,
+    .calc-comparison-results-grid,
+    .calc-comparison-metrics {
+        grid-template-columns: 1fr
     }
     .calc-actions .btn {
         width: 100%
