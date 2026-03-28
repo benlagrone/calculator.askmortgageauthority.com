@@ -1,0 +1,127 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Debt-to-Income Ratio Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate your front-end and back-end debt-to-income ratios so you can see how your income and monthly obligations compare to common mortgage guidelines.
+      </p>
+
+      <form id="dti-calculator-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Income and housing payment</h3>
+            <p class="calc-form-section-copy">Use your gross monthly income before taxes and the full monthly housing payment you expect a lender to count.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dti-income">Gross Monthly Income</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="dti-income" name="grossMonthlyIncome" autocomplete="off" inputmode="decimal" placeholder="8,500" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dti-housing">Monthly Housing Payment</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="dti-housing" name="housingPayment" autocomplete="off" inputmode="decimal" placeholder="2,450" required>
+            </div>
+            <p class="calc-field-help">Include principal, interest, taxes, insurance, HOA dues, and mortgage insurance if those apply.</p>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Other recurring monthly debts</h3>
+            <p class="calc-form-section-copy">Add only debts a lender typically counts, such as minimum payments on installment or revolving accounts.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dti-auto">Car or Auto Loans</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="dti-auto" name="autoLoans" autocomplete="off" inputmode="decimal" placeholder="410" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dti-student">Student Loans</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="dti-student" name="studentLoans" autocomplete="off" inputmode="decimal" placeholder="250" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dti-credit">Credit Cards and Personal Loans</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="dti-credit" name="creditAndPersonalLoans" autocomplete="off" inputmode="decimal" placeholder="180" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dti-other">Alimony, Child Support, or Other Debts</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="dti-other" name="otherDebts" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+              </div>
+            </div>
+          </div>
+
+          <p class="calc-field-help">Most lenders do not count utilities, groceries, phone bills, or insurance premiums that are not tied to the property.</p>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="dti-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">DTI estimate</span>
+          <div class="calc-result-hero-label">Estimated back-end debt-to-income ratio</div>
+          <div id="dti-back-end" class="calc-result-hero-value"></div>
+          <div id="dti-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Front-end DTI</div>
+            <div id="dti-front-end" class="calc-result-value"></div>
+            <div class="calc-result-subtext">Housing payment only</div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Gross monthly income</div>
+            <div id="dti-income-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Housing payment</div>
+            <div id="dti-housing-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Other monthly debts</div>
+            <div id="dti-other-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Total monthly debt payments</div>
+            <div id="dti-total-debt" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Income left after debts</div>
+            <div id="dti-income-left" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Room to 36% guideline</div>
+            <div id="dti-room-36" class="calc-result-value"></div>
+            <div id="dti-room-36-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Room to 43% guideline</div>
+            <div id="dti-room-43" class="calc-result-value"></div>
+            <div id="dti-room-43-note" class="calc-result-subtext"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">This estimate is for planning only. Mortgage approval also depends on credit profile, assets, reserves, loan program, and lender overlays.</p>
+      </div>
+    </div>
+  </div>
+</div>

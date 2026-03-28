@@ -11,6 +11,7 @@
     "Loan-Rent-Or-Buy-Calculator": "fa-solid fa-house",
     "Loan-Comparison-Calculator": "fa-solid fa-right-left",
     "Closing-Costs-Calculator": "fa-solid fa-receipt",
+    "Debt-to-Income-Ratio-Calculator": "fa-solid fa-percent",
     "Loan-Refinance-Calculator": "fa-solid fa-rotate-left",
     "HELOC-Calculator": "fa-solid fa-house-circle-check",
     "PMI-Removal-Calculator": "fa-solid fa-shield-halved",
