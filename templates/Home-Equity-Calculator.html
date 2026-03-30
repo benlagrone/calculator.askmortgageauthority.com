@@ -1,0 +1,118 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Home Equity Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate your current home equity, what you might net after selling costs, and how much equity may be available to borrow at a selected combined loan-to-value limit.
+      </p>
+
+      <form id="home-equity-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Property and mortgage balances</h3>
+            <p class="calc-form-section-copy">Use your current home value and all mortgage balances tied to the property to estimate your available equity.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="he-home-value">Current Home Value</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="he-home-value" name="homeValue" autocomplete="off" inputmode="decimal" placeholder="525,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="he-first-mortgage">First Mortgage Balance</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="he-first-mortgage" name="firstMortgageBalance" autocomplete="off" inputmode="decimal" placeholder="312,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="he-second-balance">Second Mortgage or HELOC Balance</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="he-second-balance" name="secondLienBalance" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+            </div>
+            <p class="calc-field-help">Include any second mortgage, HELOC balance, or other lien that would need to be paid off from the property value.</p>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Planning assumptions</h3>
+            <p class="calc-form-section-copy">These assumptions help estimate sale proceeds and how much equity might be accessible for a refinance or HELOC.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="he-selling-costs">Estimated Selling Costs (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="he-selling-costs" name="sellingCostPct" autocomplete="off" inputmode="decimal" placeholder="8" value="8" required>
+              </div>
+              <p class="calc-field-help">This can include agent commission, transfer taxes, title fees, and seller-paid closing expenses.</p>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="he-max-cltv">Max Borrowable CLTV (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="he-max-cltv" name="maxCltv" autocomplete="off" inputmode="decimal" placeholder="80" value="80" required>
+              </div>
+              <p class="calc-field-help">Combined loan-to-value is the total of all mortgage balances against the home value. Many cash-out or HELOC programs cap this near 80%.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="home-equity-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Equity snapshot</span>
+          <div class="calc-result-hero-label">Estimated current home equity</div>
+          <div id="he-current-equity" class="calc-result-hero-value"></div>
+          <div id="he-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Total mortgage debt</div>
+            <div id="he-total-debt" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Current combined LTV</div>
+            <div id="he-current-cltv" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated selling costs</div>
+            <div id="he-selling-costs-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Net proceeds after sale</div>
+            <div id="he-net-sale-proceeds" class="calc-result-value"></div>
+            <div class="calc-result-subtext">After selling costs and mortgage payoff</div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Max total borrowable balance</div>
+            <div id="he-max-borrowable-balance" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Tappable equity at selected CLTV</div>
+            <div id="he-tappable-equity" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Equity left after max tap</div>
+            <div id="he-equity-after-tap" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Selected borrowable CLTV</div>
+            <div id="he-max-cltv-output" class="calc-result-value"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">This estimate is for planning only. Appraised value, lender overlays, payoff fees, and local selling costs can change how much equity is actually available.</p>
+      </div>
+    </div>
+  </div>
+</div>
