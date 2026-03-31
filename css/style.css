@@ -213,6 +213,101 @@ input[type="text"].mortgage-calculators-widget-input:focus,
 .calc-results-panel.is-visible {
     animation: calcResultsIn .28s ease-out
 }
+.calc-release-banner {
+    background: linear-gradient(135deg, #0f2742 0%, #17456c 62%, #2b6cb0 100%);
+    box-shadow: 0 16px 36px rgba(10, 37, 64, .16);
+    color: #f8fbff;
+    position: sticky;
+    top: 0;
+    z-index: 1030
+}
+.calc-release-banner[hidden] {
+    display: none !important
+}
+.calc-release-banner__inner {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+    padding: 14px 0
+}
+.calc-release-banner__copy {
+    display: grid;
+    gap: 4px
+}
+.calc-release-banner__eyebrow {
+    color: rgba(248, 251, 255, .78);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase
+}
+.calc-release-banner__title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0
+}
+.calc-release-banner__actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end
+}
+.calc-release-banner__chip,
+.calc-release-banner__dismiss {
+    border-radius: 999px;
+    font-size: .92rem;
+    font-weight: 600;
+    line-height: 1;
+    min-height: 40px;
+    padding: 11px 16px;
+    text-decoration: none;
+    transition: transform .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease
+}
+.calc-release-banner__chip {
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .18);
+    color: #fff
+}
+.calc-release-banner__chip:hover,
+.calc-release-banner__chip:focus {
+    background: rgba(255, 255, 255, .18);
+    border-color: rgba(255, 255, 255, .32);
+    color: #fff;
+    transform: translateY(-1px)
+}
+.calc-release-banner__dismiss {
+    background: #fff;
+    border: 1px solid transparent;
+    color: #102a43
+}
+.calc-release-banner__dismiss:hover,
+.calc-release-banner__dismiss:focus {
+    background: #edf4ff;
+    color: #102a43;
+    transform: translateY(-1px)
+}
+@media (max-width:991.98px) {
+    .calc-release-banner {
+        top: 0
+    }
+    .calc-release-banner__inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0 16px
+    }
+    .calc-release-banner__actions {
+        justify-content: flex-start
+    }
+}
+@media (max-width:575.98px) {
+    .calc-release-banner__chip,
+    .calc-release-banner__dismiss {
+        width: 100%
+    }
+}
 .calc-result-hero {
     border-bottom: 1px solid rgba(255, 255, 255, .14);
     margin-bottom: 18px;

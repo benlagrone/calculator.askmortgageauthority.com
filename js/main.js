@@ -1,4 +1,82 @@
 var home = 'home';
+const NEW_CALCULATORS_BANNER = {
+  version: '2026-03-mortgage-tools',
+  title: 'New calculators are live: HELOC, PMI Removal, Closing Costs, DTI, and Home Equity.',
+  calculators: [
+    { slug: 'HELOC-Calculator', label: 'HELOC' },
+    { slug: 'PMI-Removal-Calculator', label: 'PMI Removal' },
+    { slug: 'Closing-Costs-Calculator', label: 'Closing Costs' },
+    { slug: 'Debt-to-Income-Ratio-Calculator', label: 'Debt-to-Income Ratio' },
+    { slug: 'Home-Equity-Calculator', label: 'Home Equity' }
+  ]
+};
+
+function getNewCalculatorsBannerStorageKey() {
+  return `ama-calculators-banner-dismissed:${NEW_CALCULATORS_BANNER.version}`;
+}
+
+function isNewCalculatorsBannerDismissed() {
+  try {
+    return window.localStorage.getItem(getNewCalculatorsBannerStorageKey()) === '1';
+  } catch (error) {
+    return false;
+  }
+}
+
+function dismissNewCalculatorsBanner() {
+  try {
+    window.localStorage.setItem(getNewCalculatorsBannerStorageKey(), '1');
+  } catch (error) {
+    // Ignore storage failures and still hide the banner for this page view.
+  }
+
+  const banner = document.getElementById('new-calculators-banner');
+  if (banner) {
+    banner.hidden = true;
+  }
+}
+
+function trackNewCalculatorsBannerClick(slug) {
+  if (typeof window.gtag !== 'function') return;
+
+  window.gtag('event', 'new_calculators_banner_click', {
+    event_category: 'engagement',
+    event_label: slug
+  });
+}
+
+function ensureNewCalculatorsBanner() {
+  const root = document.getElementById('new-calculators-banner-root');
+  if (!root) return;
+
+  if (isNewCalculatorsBannerDismissed()) {
+    root.innerHTML = '';
+    return;
+  }
+
+  const chips = NEW_CALCULATORS_BANNER.calculators
+    .map((calculator) => (
+      `<a class="calc-release-banner__chip" href="/${calculator.slug}" data-calculator="${calculator.slug}" data-new-calculator-link="true">${calculator.label}</a>`
+    ))
+    .join('');
+
+  root.innerHTML = `
+    <section id="new-calculators-banner" class="calc-release-banner" aria-label="New calculators">
+      <div class="container">
+        <div class="calc-release-banner__inner">
+          <div class="calc-release-banner__copy">
+            <span class="calc-release-banner__eyebrow">New Calculators</span>
+            <p class="calc-release-banner__title">${NEW_CALCULATORS_BANNER.title}</p>
+          </div>
+          <div class="calc-release-banner__actions">
+            ${chips}
+            <button type="button" class="calc-release-banner__dismiss" data-dismiss-new-calculators="true" aria-label="Dismiss new calculators banner">Dismiss</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
 
 function getCalculatorTypeFromPath() {
   return window.location.pathname.split('/').pop().replace('.html', '') || home;
@@ -143,6 +221,18 @@ function loadCalculator(calculatorType) {
 }
 
 document.addEventListener('click', function(e) {
+  const dismissButton = e.target.closest('[data-dismiss-new-calculators]');
+  if (dismissButton) {
+    e.preventDefault();
+    dismissNewCalculatorsBanner();
+    return;
+  }
+
+  const newCalculatorLink = e.target.closest('[data-new-calculator-link]');
+  if (newCalculatorLink) {
+    trackNewCalculatorsBannerClick(newCalculatorLink.getAttribute('data-calculator') || '');
+  }
+
   const link = e.target.closest('[data-calculator]');
   if (!link) return;
   if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -156,6 +246,8 @@ document.addEventListener('click', function(e) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  ensureNewCalculatorsBanner();
+
   const initialCalculatorType = typeof window.__INITIAL_CALCULATOR_SLUG__ === 'string'
     ? window.__INITIAL_CALCULATOR_SLUG__
     : '';
