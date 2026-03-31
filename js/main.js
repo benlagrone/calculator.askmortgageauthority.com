@@ -1,8 +1,9 @@
 var home = 'home';
 const NEW_CALCULATORS_BANNER = {
-  version: '2026-03-mortgage-tools',
-  title: 'New calculators are live: HELOC, PMI Removal, Closing Costs, DTI, and Home Equity.',
+  version: '2026-03-cash-out-refinance',
+  title: 'New calculators are live: Cash-Out Refinance, HELOC, PMI Removal, Closing Costs, DTI, and Home Equity.',
   calculators: [
+    { slug: 'Cash-Out-Refinance-Calculator', label: 'Cash-Out Refinance' },
     { slug: 'HELOC-Calculator', label: 'HELOC' },
     { slug: 'PMI-Removal-Calculator', label: 'PMI Removal' },
     { slug: 'Closing-Costs-Calculator', label: 'Closing Costs' },

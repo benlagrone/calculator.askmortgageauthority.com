@@ -1,0 +1,194 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Cash-Out Refinance Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate how much cash you could pull from a refinance, how the new payment compares, and whether the added balance and closing costs still fit your goals.
+      </p>
+
+      <form id="cash-out-refinance-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Current mortgage</h3>
+            <p class="calc-form-section-copy">Use your current balance, rate, and remaining term so the calculator can compare your existing payment and remaining interest to the new refinance option.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-current-balance">Current Mortgage Balance</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-current-balance" name="currentBalance" autocomplete="off" inputmode="decimal" placeholder="312,000" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-current-rate">Current Interest Rate (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-current-rate" name="currentRate" autocomplete="off" inputmode="decimal" placeholder="6.75" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-current-years">Remaining Term</label>
+            <div class="d-flex flex-wrap gap-3">
+              <div class="mortgage-calculators-widget-input-container is-year">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-current-years" name="currentYears" autocomplete="off" inputmode="decimal" placeholder="27" required>
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+              </div>
+              <div class="mortgage-calculators-widget-input-container is-month">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-current-months" name="currentMonths" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Extra months</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Property and cash-out target</h3>
+            <p class="calc-form-section-copy">Use your current home value, cash target, and the CLTV limit you want to test. This sets the maximum new loan size available in the scenario.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-home-value">Current Home Value</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-home-value" name="homeValue" autocomplete="off" inputmode="decimal" placeholder="525,000" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-cash-out">Desired Cash to Borrower</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-cash-out" name="desiredCashOut" autocomplete="off" inputmode="decimal" placeholder="50,000" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-closing-costs">Estimated Closing Costs</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-closing-costs" name="closingCosts" autocomplete="off" inputmode="decimal" placeholder="6,500" value="6500" required>
+              </div>
+              <p class="calc-field-help">Use lender fees, title charges, escrow costs, and any other refinance costs you expect to pay.</p>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-max-cltv">Max CLTV Allowed (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-max-cltv" name="maxCltv" autocomplete="off" inputmode="decimal" placeholder="80" value="80" required>
+              </div>
+              <p class="calc-field-help">Many cash-out programs limit the new loan around 80% of appraised value, though some products allow more or less.</p>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-finance-costs">Closing Costs Paid</label>
+              <div class="mortgage-calculators-widget-input-container">
+                <select class="mortgage-calculators-widget-input form-select" id="cor-finance-costs" name="financeClosingCosts" required>
+                  <option value="yes" selected>Finance them into the new loan</option>
+                  <option value="no">Pay them out of pocket</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">New refinance terms</h3>
+            <p class="calc-form-section-copy">Set the rate and term you are considering for the refinance so you can compare the payment, lifetime interest, and break-even trade-off.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-new-rate">New Interest Rate (%)</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-new-rate" name="newRate" autocomplete="off" inputmode="decimal" placeholder="6.00" required>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="cor-new-years">New Loan Term</label>
+            <div class="d-flex flex-wrap gap-3">
+              <div class="mortgage-calculators-widget-input-container is-year">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-new-years" name="newYears" autocomplete="off" inputmode="decimal" placeholder="30" value="30" required>
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+              </div>
+              <div class="mortgage-calculators-widget-input-container is-month">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="cor-new-months" name="newMonths" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Extra months</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="cash-out-refinance-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Cash-out comparison</span>
+          <div class="calc-result-hero-label">Estimated net cash after closing costs</div>
+          <div id="cor-net-cash" class="calc-result-hero-value"></div>
+          <div id="cor-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Current mortgage balance</div>
+            <div id="cor-current-balance-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Max loan amount at selected CLTV</div>
+            <div id="cor-max-loan-amount" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Current monthly payment</div>
+            <div id="cor-current-payment" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">New monthly payment</div>
+            <div id="cor-new-payment" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Monthly payment change</div>
+            <div id="cor-monthly-change" class="calc-result-value"></div>
+            <div id="cor-monthly-change-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated new loan amount</div>
+            <div id="cor-new-loan-amount" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Current LTV</div>
+            <div id="cor-current-ltv" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">New CLTV</div>
+            <div id="cor-new-cltv" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Remaining interest on current loan</div>
+            <div id="cor-current-interest" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Projected interest on new loan</div>
+            <div id="cor-new-interest" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Projected interest change</div>
+            <div id="cor-interest-change" class="calc-result-value"></div>
+            <div id="cor-interest-change-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Break-even impact</div>
+            <div id="cor-break-even" class="calc-result-value"></div>
+            <div id="cor-break-even-note" class="calc-result-subtext"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">This estimate is for planning only. Actual cash-out limits, appraisal value, mortgage insurance, escrow setup, and lender-specific pricing can materially change the final refinance offer.</p>
+      </div>
+    </div>
+  </div>
+</div>
