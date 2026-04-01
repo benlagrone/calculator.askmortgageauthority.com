@@ -443,6 +443,139 @@ input[type="text"].mortgage-calculators-widget-input:focus,
 .calc-seo-copy p:last-child {
     margin-bottom: 0
 }
+.calc-collection-hero {
+    background: linear-gradient(135deg, #102a43 0%, #17456c 60%, #2a6ea6 100%);
+    border-radius: 28px;
+    box-shadow: 0 24px 48px rgba(10, 37, 64, .18);
+    color: #f8fbff;
+    padding: 28px
+}
+.calc-collection-eyebrow {
+    color: rgba(248, 251, 255, .76);
+    display: inline-block;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 10px;
+    text-transform: uppercase
+}
+.calc-collection-title {
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin: 0;
+    max-width: 14ch
+}
+.calc-collection-copy {
+    color: rgba(248, 251, 255, .84);
+    line-height: 1.75;
+    margin: 0;
+    max-width: 58ch
+}
+.calc-collection-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 24px
+}
+.calc-collection-card {
+    background: #fff;
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 20px;
+    box-shadow: 0 18px 32px rgba(10, 37, 64, .12);
+    color: #102a43;
+    display: block;
+    min-height: 100%;
+    padding: 20px;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease
+}
+.calc-collection-card:hover,
+.calc-collection-card:focus {
+    border-color: #bfd0e1;
+    box-shadow: 0 22px 38px rgba(10, 37, 64, .16);
+    color: #102a43;
+    transform: translateY(-2px)
+}
+.calc-collection-card__title {
+    color: #102a43;
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px
+}
+.calc-collection-card__copy {
+    color: #52616b;
+    display: block;
+    line-height: 1.65
+}
+.calc-library-intro {
+    margin-top: 24px
+}
+.calc-library-intro p {
+    color: #52616b;
+    line-height: 1.7;
+    margin-bottom: 0
+}
+.calc-library-heading {
+    color: #102a43;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 24px 0 12px
+}
+.calc-link-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+}
+.calc-link-card {
+    background: #fff;
+    border: 1px solid #d9e5f2;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(10, 37, 64, .06);
+    color: #102a43;
+    display: block;
+    min-height: 100%;
+    padding: 16px 18px;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease
+}
+.calc-link-card:hover,
+.calc-link-card:focus {
+    background: #f8fbff;
+    border-color: #bfd0e1;
+    box-shadow: 0 16px 32px rgba(10, 37, 64, .09);
+    color: #102a43;
+    transform: translateY(-1px)
+}
+.calc-link-card--compact {
+    background: rgba(255, 255, 255, .14);
+    border-color: rgba(255, 255, 255, .16);
+    box-shadow: none
+}
+.calc-link-card--compact:hover,
+.calc-link-card--compact:focus {
+    background: rgba(255, 255, 255, .2);
+    border-color: rgba(255, 255, 255, .28);
+    box-shadow: none;
+    color: #fff
+}
+.calc-link-card--compact .calc-link-card__title,
+.calc-link-card--compact .calc-link-card__copy {
+    color: #f8fbff
+}
+.calc-link-card__title {
+    color: #102a43;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px
+}
+.calc-link-card__copy {
+    color: #52616b;
+    display: block;
+    font-size: .94rem;
+    line-height: 1.65
+}
 .calc-related-list {
     display: grid;
     gap: 12px
@@ -473,12 +606,22 @@ input[type="text"].mortgage-calculators-widget-input:focus,
     line-height: 1.6
 }
 @media screen and (max-width:768px) {
+    .calc-collection-hero {
+        padding: 22px 18px
+    }
+    .calc-collection-title {
+        max-width: none
+    }
     .calc-form-section {
         padding: 18px 16px
     }
     .calc-compare-grid,
     .calc-comparison-results-grid,
     .calc-comparison-metrics {
+        grid-template-columns: 1fr
+    }
+    .calc-collection-grid,
+    .calc-link-grid {
         grid-template-columns: 1fr
     }
     .calc-actions .btn {

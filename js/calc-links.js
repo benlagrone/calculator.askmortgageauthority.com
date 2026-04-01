@@ -1,6 +1,30 @@
 (() => {
   let cache = null;
 
+  const getLinkText = (a) => {
+    const explicit = (a.getAttribute("data-label") || "").trim();
+    if (explicit) return explicit;
+
+    const preferred = a.querySelector(
+      ".calc-link-card__title, .calc-collection-card__title, .card-title"
+    );
+    if (preferred && preferred.textContent) {
+      const text = preferred.textContent.trim();
+      if (text) return text;
+    }
+
+    const cardTitle = a.closest(".card")?.querySelector(".card-title");
+    if (cardTitle && cardTitle.textContent) {
+      const text = cardTitle.textContent.trim();
+      if (text) return text;
+    }
+
+    const raw = (a.textContent || "").replace(/\s+/g, " ").trim();
+    if (raw) return raw;
+
+    return a.getAttribute("data-calculator") || "";
+  };
+
   const fetchCalculators = async () => {
     if (cache) return cache;
     const res = await fetch("/templates/home.html");
@@ -23,7 +47,7 @@
         while (node && node.tagName !== "H3") {
           collectAnchors(node).forEach((a) => {
             const calc = a.getAttribute("data-calculator");
-            const text = (a.textContent || calc || "").trim() || calc || "";
+            const text = getLinkText(a);
             if (!calc || seen.has(calc)) return;
             seen.add(calc);
             const item = { calc, text };
@@ -41,7 +65,7 @@
     if (!groups.length) {
       collectAnchors(doc).forEach((a) => {
         const calc = a.getAttribute("data-calculator");
-        const text = (a.textContent || calc || "").trim() || calc || "";
+        const text = getLinkText(a);
         if (!calc || seen.has(calc)) return;
         seen.add(calc);
         flat.push({ calc, text });

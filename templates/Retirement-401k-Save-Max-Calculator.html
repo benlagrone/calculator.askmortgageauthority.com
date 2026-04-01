@@ -1,0 +1,97 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h1 class="mortgage-calculators-widget-title">401k Save the Max Calculator</h1>
+      <p class="mortgage-calculators-widget-description">Estimate the employee deferral rate needed to hit your annual 401k limit and see how employer matching changes the total saved.</p>
+
+      <form id="save-max-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h2 class="calc-form-section-title">Contribution Inputs</h2>
+            <p class="calc-form-section-copy">Enter salary, matching policy, and the employee contribution cap you are targeting this year.</p>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="save-max-salary">Salary</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="save-max-salary" name="salary" autocomplete="off" placeholder="120000" required>
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Annual gross pay</label>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="save-max-match-pct">Employer Match</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="save-max-match-pct" name="matchPct" autocomplete="off" placeholder="50">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Percent of your contribution the employer matches</label>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="save-max-match-cap">Match Cap</label>
+            <div class="mortgage-calculators-widget-input-container is-percentage">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="save-max-match-cap" name="matchCapPct" autocomplete="off" placeholder="6">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Maximum percent of salary eligible for employer matching</label>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="save-max-limit">Employee Contribution Limit</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="save-max-limit" name="planLimit" autocomplete="off" placeholder="23000" required>
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Annual employee deferral target</label>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="save-max-catchup-toggle">Catch-Up Contribution</label>
+            <div class="mortgage-calculators-widget-input-container">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="save-max-catchup-toggle" name="catchup">
+                <label class="form-check-label" for="save-max-catchup-toggle">Include catch-up amount</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="save-max-catchup">Catch-Up Amount</label>
+            <div class="mortgage-calculators-widget-input-container is-amount">
+              <input class="mortgage-calculators-widget-input form-control" type="text" id="save-max-catchup" name="catchupAmount" autocomplete="off" placeholder="7500">
+              <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Only used when the catch-up option is checked</label>
+            </div>
+          </div>
+        </section>
+
+        <div class="calc-actions d-flex flex-column flex-sm-row gap-2">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <section id="save-max-results" class="calc-results-panel mt-4" hidden>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Recommended Rate</span>
+          <div class="calc-result-hero-label">Employee deferral rate needed to reach the target</div>
+          <div class="calc-result-hero-value" id="sm-employee-rate">0.0%</div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Employee Contribution</div>
+            <div class="calc-result-value" id="sm-employee-amount">$0</div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Employer Match</div>
+            <div class="calc-result-value" id="sm-match-amount">$0</div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Total Annual Savings</div>
+            <div class="calc-result-value" id="sm-total">$0</div>
+          </div>
+        </div>
+
+        <p class="calc-results-note" id="sm-note"></p>
+      </section>
+    </div>
+  </div>
+</div>
