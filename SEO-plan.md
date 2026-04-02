@@ -123,6 +123,11 @@ This should run in parallel with the content pass. Better UX will improve engage
    - Add one shared validation and enhancement layer for all calculators.
    - Apply the pattern to modern calculators first, then legacy templates.
 
+7. Split per-calculator JS and improve mobile speed.
+   - Stop loading the full calculator script set on every route.
+   - Load calculator-specific JS only where it is needed.
+   - Defer or reduce non-critical assets so high-intent calculator pages become usable faster on mobile connections.
+
 ### P2: Improve information architecture (Week 3-6)
 
 1. Create five category landing pages.
@@ -144,6 +149,12 @@ This should run in parallel with the content pass. Better UX will improve engage
 ### P3: Publish supporting content that feeds the calculators (Month 2-3)
 
 Use articles to capture informational queries and pass internal-link authority into the calculators.
+
+Target output for this phase:
+
+- Publish 10 supporting articles.
+- Link each article to its matching calculator and category or collection page.
+- Add reciprocal links from those calculators back to the supporting articles.
 
 - Mortgage cluster:
   - How to calculate mortgage payment with taxes and insurance
@@ -225,6 +236,8 @@ Each article should link to the matching calculator and the relevant category pa
 6. Category pages and related-calculator linking.
 7. Trust/disclosure blocks across all finance calculators.
 8. Supporting articles that feed the calculators.
+9. Per-calculator JS split and mobile speed improvements on priority routes.
+10. Publish 10 supporting articles and link them into the matching calculators.
 
 ## What not to over-invest in first
 

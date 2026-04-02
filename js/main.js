@@ -1,14 +1,12 @@
 var home = 'home';
 const NEW_CALCULATORS_BANNER = {
-  version: '2026-03-cash-out-refinance',
-  title: 'New calculators are live: Cash-Out Refinance, HELOC, PMI Removal, Closing Costs, DTI, and Home Equity.',
+  version: '2026-04-payoff-tools',
+  title: 'New calculators are live: Mortgage Payoff Date, Debt Snowball vs Avalanche, and Cash-Out Refinance.',
   calculators: [
+    { slug: 'Mortgage-Payoff-Date-Calculator', label: 'Mortgage Payoff Date' },
+    { slug: 'Debt-Snowball-vs-Avalanche-Calculator', label: 'Snowball vs Avalanche' },
     { slug: 'Cash-Out-Refinance-Calculator', label: 'Cash-Out Refinance' },
-    { slug: 'HELOC-Calculator', label: 'HELOC' },
-    { slug: 'PMI-Removal-Calculator', label: 'PMI Removal' },
-    { slug: 'Closing-Costs-Calculator', label: 'Closing Costs' },
-    { slug: 'Debt-to-Income-Ratio-Calculator', label: 'Debt-to-Income Ratio' },
-    { slug: 'Home-Equity-Calculator', label: 'Home Equity' }
+    { slug: 'HELOC-Calculator', label: 'HELOC' }
   ]
 };
 

@@ -1,0 +1,285 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Debt Snowball vs Avalanche Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Compare two popular debt payoff strategies side by side to see which one clears balances faster, which one saves more interest, and what your debt-free timeline could look like.
+      </p>
+
+      <form id="debt-strategy-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Monthly payoff plan</h3>
+            <p class="calc-form-section-copy">Enter the extra amount you can add above your minimum payments each month. Both strategies use the same total monthly budget so you can compare the outcome fairly.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-extra">Extra Monthly Payment</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-extra" name="extraPayment" autocomplete="off" inputmode="decimal" placeholder="300" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-start-month">Strategy Start Month</label>
+              <div class="mortgage-calculators-widget-input-container">
+                <input class="mortgage-calculators-widget-input form-control" type="month" id="dsa-start-month" name="startMonth" required>
+              </div>
+              <p class="calc-field-help">Use the month you expect to begin the payoff plan so the debt-free date matches your timing assumptions.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Debt list</h3>
+            <p class="calc-form-section-copy">Use at least two debts. Leave any unused debt cards blank and they will be ignored.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <section class="calc-form-section calc-compare-section" data-debt-entry="1">
+              <div class="calc-form-section-heading">
+                <span class="calc-compare-kicker">Debt 1</span>
+                <h3 class="calc-form-section-title">First balance</h3>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-name-1">Debt Name</label>
+                <div class="mortgage-calculators-widget-input-container">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-name-1" name="debt1Name" autocomplete="off" placeholder="Credit Card A" data-role="name">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-balance-1">Balance</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-balance-1" name="debt1Balance" autocomplete="off" inputmode="decimal" placeholder="7,400" data-role="balance">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-apr-1">APR (%)</label>
+                <div class="mortgage-calculators-widget-input-container is-percentage">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-apr-1" name="debt1Apr" autocomplete="off" inputmode="decimal" placeholder="24.99" data-role="apr">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-minimum-1">Minimum Payment</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-minimum-1" name="debt1Minimum" autocomplete="off" inputmode="decimal" placeholder="190" data-role="minimum">
+                </div>
+              </div>
+            </section>
+
+            <section class="calc-form-section calc-compare-section" data-debt-entry="2">
+              <div class="calc-form-section-heading">
+                <span class="calc-compare-kicker">Debt 2</span>
+                <h3 class="calc-form-section-title">Second balance</h3>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-name-2">Debt Name</label>
+                <div class="mortgage-calculators-widget-input-container">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-name-2" name="debt2Name" autocomplete="off" placeholder="Personal Loan" data-role="name">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-balance-2">Balance</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-balance-2" name="debt2Balance" autocomplete="off" inputmode="decimal" placeholder="5,300" data-role="balance">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-apr-2">APR (%)</label>
+                <div class="mortgage-calculators-widget-input-container is-percentage">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-apr-2" name="debt2Apr" autocomplete="off" inputmode="decimal" placeholder="12.90" data-role="apr">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-minimum-2">Minimum Payment</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-minimum-2" name="debt2Minimum" autocomplete="off" inputmode="decimal" placeholder="165" data-role="minimum">
+                </div>
+              </div>
+            </section>
+
+            <section class="calc-form-section calc-compare-section" data-debt-entry="3">
+              <div class="calc-form-section-heading">
+                <span class="calc-compare-kicker">Debt 3</span>
+                <h3 class="calc-form-section-title">Third balance</h3>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-name-3">Debt Name</label>
+                <div class="mortgage-calculators-widget-input-container">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-name-3" name="debt3Name" autocomplete="off" placeholder="Store Card" data-role="name">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-balance-3">Balance</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-balance-3" name="debt3Balance" autocomplete="off" inputmode="decimal" placeholder="1,800" data-role="balance">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-apr-3">APR (%)</label>
+                <div class="mortgage-calculators-widget-input-container is-percentage">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-apr-3" name="debt3Apr" autocomplete="off" inputmode="decimal" placeholder="29.99" data-role="apr">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-minimum-3">Minimum Payment</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-minimum-3" name="debt3Minimum" autocomplete="off" inputmode="decimal" placeholder="70" data-role="minimum">
+                </div>
+              </div>
+            </section>
+
+            <section class="calc-form-section calc-compare-section" data-debt-entry="4">
+              <div class="calc-form-section-heading">
+                <span class="calc-compare-kicker">Debt 4</span>
+                <h3 class="calc-form-section-title">Fourth balance</h3>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-name-4">Debt Name</label>
+                <div class="mortgage-calculators-widget-input-container">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-name-4" name="debt4Name" autocomplete="off" placeholder="Auto Loan" data-role="name">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-balance-4">Balance</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-balance-4" name="debt4Balance" autocomplete="off" inputmode="decimal" placeholder="12,500" data-role="balance">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-apr-4">APR (%)</label>
+                <div class="mortgage-calculators-widget-input-container is-percentage">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-apr-4" name="debt4Apr" autocomplete="off" inputmode="decimal" placeholder="8.50" data-role="apr">
+                </div>
+              </div>
+
+              <div class="mortgage-calculators-widget-form-group row form-group">
+                <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="dsa-minimum-4">Minimum Payment</label>
+                <div class="mortgage-calculators-widget-input-container is-amount">
+                  <input class="mortgage-calculators-widget-input form-control" type="text" id="dsa-minimum-4" name="debt4Minimum" autocomplete="off" inputmode="decimal" placeholder="315" data-role="minimum">
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="debt-strategy-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Debt strategy comparison</span>
+          <div class="calc-result-hero-label">Best interest-saving strategy</div>
+          <div id="dsa-hero" class="calc-result-hero-value"></div>
+          <div id="dsa-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid calc-comparison-highlights">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Interest winner</div>
+            <div id="dsa-interest-winner" class="calc-result-value"></div>
+            <div id="dsa-interest-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Faster debt-free strategy</div>
+            <div id="dsa-time-winner" class="calc-result-value"></div>
+            <div id="dsa-time-note" class="calc-result-subtext"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">First debt cleared</div>
+            <div id="dsa-first-winner" class="calc-result-value"></div>
+            <div id="dsa-first-note" class="calc-result-subtext"></div>
+          </div>
+        </div>
+
+        <div class="calc-comparison-results-grid">
+          <div class="calc-result-card calc-comparison-card">
+            <div class="calc-result-label">Snowball</div>
+            <div class="calc-result-value">Lowest balance first</div>
+            <div class="calc-comparison-metrics">
+              <div>
+                <span class="calc-result-label">Debt-free date</span>
+                <strong id="dsa-snowball-date" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Payoff timeline</span>
+                <strong id="dsa-snowball-months" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Total interest</span>
+                <strong id="dsa-snowball-interest" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Total paid</span>
+                <strong id="dsa-snowball-paid" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Monthly payoff budget</span>
+                <strong id="dsa-snowball-budget" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">First debt cleared</span>
+                <strong id="dsa-snowball-first" class="calc-result-value"></strong>
+              </div>
+            </div>
+            <div id="dsa-snowball-order" class="calc-result-subtext"></div>
+          </div>
+
+          <div class="calc-result-card calc-comparison-card">
+            <div class="calc-result-label">Avalanche</div>
+            <div class="calc-result-value">Highest APR first</div>
+            <div class="calc-comparison-metrics">
+              <div>
+                <span class="calc-result-label">Debt-free date</span>
+                <strong id="dsa-avalanche-date" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Payoff timeline</span>
+                <strong id="dsa-avalanche-months" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Total interest</span>
+                <strong id="dsa-avalanche-interest" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Total paid</span>
+                <strong id="dsa-avalanche-paid" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">Monthly payoff budget</span>
+                <strong id="dsa-avalanche-budget" class="calc-result-value"></strong>
+              </div>
+              <div>
+                <span class="calc-result-label">First debt cleared</span>
+                <strong id="dsa-avalanche-first" class="calc-result-value"></strong>
+              </div>
+            </div>
+            <div id="dsa-avalanche-order" class="calc-result-subtext"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">Snowball can create earlier quick wins by clearing smaller balances first, while avalanche usually minimizes interest by attacking the highest APR debt first. This calculator assumes fixed rates and no new charges.</p>
+      </div>
+    </div>
+  </div>
+</div>

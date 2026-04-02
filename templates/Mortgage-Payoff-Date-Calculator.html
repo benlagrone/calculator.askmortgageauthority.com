@@ -1,0 +1,132 @@
+<div class="mortgage-calculators-widget-wrapper">
+  <div class="mortgage-calculators-widget">
+    <div class="mortgage-calculators-widget-container mortgage-calculators-widget-container--left">
+      <h2 class="mortgage-calculators-widget-title theme-title-text">Mortgage Payoff Date Calculator</h2>
+      <p class="mortgage-calculators-widget-description theme-body-text">
+        Estimate when your current mortgage could be paid off, how extra monthly principal changes the payoff date, and how much remaining interest you may save.
+      </p>
+
+      <form id="mortgage-payoff-date-form" class="mortgage-calculators-widget-form calc-enhanced-form" novalidate>
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Current mortgage snapshot</h3>
+            <p class="calc-form-section-copy">Use the current balance, rate, and remaining term so the calculator can estimate your scheduled payment and your projected payoff date.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mpd-balance">Current Mortgage Balance</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="mpd-balance" name="balance" autocomplete="off" inputmode="decimal" placeholder="312,000" required>
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mpd-rate">Interest Rate (%)</label>
+              <div class="mortgage-calculators-widget-input-container is-percentage">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="mpd-rate" name="rate" autocomplete="off" inputmode="decimal" placeholder="6.50" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="mortgage-calculators-widget-form-group row form-group">
+            <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mpd-years">Remaining Loan Term</label>
+            <div class="d-flex flex-wrap gap-3">
+              <div class="mortgage-calculators-widget-input-container is-year">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="mpd-years" name="years" autocomplete="off" inputmode="decimal" placeholder="27" required>
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Years</label>
+              </div>
+              <div class="mortgage-calculators-widget-input-container is-month">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="mpd-months" name="months" autocomplete="off" inputmode="decimal" placeholder="0" value="0">
+                <label class="mortgage-calculators-widget-label mortgage-calculators-widget-label--secondary">Extra months</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="calc-form-section">
+          <div class="calc-form-section-heading">
+            <h3 class="calc-form-section-title">Payoff acceleration plan</h3>
+            <p class="calc-form-section-copy">Add any extra monthly principal you plan to send above the scheduled payment. If you leave extra principal at zero, the calculator will show the current payoff path only.</p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mpd-extra-payment">Extra Monthly Principal</label>
+              <div class="mortgage-calculators-widget-input-container is-amount">
+                <input class="mortgage-calculators-widget-input form-control" type="text" id="mpd-extra-payment" name="extraPayment" autocomplete="off" inputmode="decimal" placeholder="250" value="0">
+              </div>
+            </div>
+
+            <div class="mortgage-calculators-widget-form-group row form-group">
+              <label class="mortgage-calculators-widget-label theme-body-text col-form-label" for="mpd-start-month">Payment Start Month</label>
+              <div class="mortgage-calculators-widget-input-container">
+                <input class="mortgage-calculators-widget-input form-control" type="month" id="mpd-start-month" name="startMonth" required>
+              </div>
+              <p class="calc-field-help">Use the month your next mortgage payment will be applied so the payoff date is anchored correctly.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-2 calc-actions">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+          <button type="reset" class="btn btn-outline-secondary" data-reset>Reset</button>
+        </div>
+      </form>
+
+      <div id="mortgage-payoff-date-results" class="calc-results-panel mt-4" hidden data-result>
+        <div class="calc-result-hero">
+          <span class="calc-result-eyebrow">Projected payoff timeline</span>
+          <div class="calc-result-hero-label">Projected mortgage payoff date</div>
+          <div id="mpd-payoff-date" class="calc-result-hero-value"></div>
+          <div id="mpd-status" class="calc-results-status" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated scheduled payment</div>
+            <div id="mpd-scheduled-payment" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Extra monthly principal</div>
+            <div id="mpd-extra-payment-output" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Scheduled payoff date</div>
+            <div id="mpd-scheduled-date" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Accelerated payoff date</div>
+            <div id="mpd-accelerated-date" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Time saved</div>
+            <div id="mpd-time-saved" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Remaining payments on schedule</div>
+            <div id="mpd-scheduled-months" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Remaining payments with extra</div>
+            <div id="mpd-accelerated-months" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Interest on current schedule</div>
+            <div id="mpd-scheduled-interest" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Interest with extra principal</div>
+            <div id="mpd-accelerated-interest" class="calc-result-value"></div>
+          </div>
+          <div class="calc-result-card">
+            <div class="calc-result-label">Estimated interest saved</div>
+            <div id="mpd-interest-saved" class="calc-result-value"></div>
+          </div>
+        </div>
+
+        <p class="calc-results-note mb-0">This estimate assumes a fixed interest rate and consistent monthly payments. Escrow, fees, rate changes, and one-time lump-sum payments are not included.</p>
+      </div>
+    </div>
+  </div>
+</div>

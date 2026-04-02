@@ -97,6 +97,12 @@ These are not pure calculators, but they improve retention, conversion, and perc
 5. Bookmarkable or saved scenarios
    - Preserve calculator state for return visits and sales follow-up.
 
+6. Per-calculator JS split and mobile performance pass
+   - Reduce route-level JS payload, defer non-critical assets, and improve mobile speed on the highest-intent calculator pages first.
+
+7. Supporting article program
+   - Publish 10 supporting articles and link them into the most important mortgage, refinance, debt, and retirement calculators.
+
 ## Cross-cutting dependencies
 
 1. Shared UI layer
@@ -111,6 +117,12 @@ These are not pure calculators, but they improve retention, conversion, and perc
 4. Analytics
    - Track calculator start, calculator completion, related-calculator click, share action, and CTA click for every new tool.
 
+5. Performance and delivery
+   - Split per-calculator JS where practical and keep mobile performance improvements ahead of broad catalog expansion.
+
+6. Content support
+   - Pair priority calculators with supporting articles so the product roadmap also drives internal linking and organic discovery.
+
 ## Recommended first shipping order
 
 1. HELOC Calculator
@@ -120,6 +132,8 @@ These are not pure calculators, but they improve retention, conversion, and perc
 5. Home Equity Calculator
 6. Cash-Out Refinance Calculator
 7. Debt Snowball vs Avalanche Calculator
+8. Per-calculator JS split and mobile speed improvements on top mortgage routes
+9. Publish 10 supporting articles and link them into the matching calculators
 
 ## What not to build next
 
