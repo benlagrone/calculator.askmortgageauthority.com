@@ -63,3 +63,4 @@ Planning docs
 - `FEATURE-ROADMAP.md`: product roadmap for new calculators and companion tools.
 - `SEO-plan.md`: SEO and UI/UX roadmap for crawlability, content, and on-page improvements.
 - `DEPLOYMENT_PLAN.md`: deployment, platform, and API roadmap.
+- `INTAKE-PREQUAL-CHAT-PLAN.md`: product and implementation plan for calculator-driven intake, chat triage, and prequalification handoff.

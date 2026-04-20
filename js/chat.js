@@ -11,6 +11,15 @@
     const wrapper = document.getElementById('chatbot-wrapper');
     wrapper.appendChild(iframe);
 
+    function postToChat(message) {
+        if (!iframe.contentWindow) return;
+        iframe.contentWindow.postMessage(message, '*');
+    }
+
+    function getCurrentContext() {
+        return window.IntakeContext?.getCurrentContext?.() || null;
+    }
+
     // Listen for chat toggle command from the iframe
     window.addEventListener('message', function (event) {
         if (!event.data || typeof event.data !== 'object') return;
@@ -31,10 +40,30 @@
         }
     });
 
+    document.addEventListener('ama:intake-context-updated', function (event) {
+        const context = event.detail?.context;
+        if (!context) return;
+
+        postToChat({
+            type: 'ama:update-context',
+            context: context
+        });
+    });
+
     // Send parent URL to iframe after it loads
     iframe.onload = function () {
-        iframe.contentWindow.postMessage({
-            parentUrl: window.location.href
-        }, '*');
+        const context = getCurrentContext();
+
+        postToChat({
+            parentUrl: window.location.href,
+            calculatorContext: context
+        });
+
+        if (context) {
+            postToChat({
+                type: 'ama:set-context',
+                context: context
+            });
+        }
     };
 })();

@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Dict, Optional
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
+from route_assets import build_route_script_manifest
+
 
 SITE_NAME = "Ask Mortgage Authority"
 SITE_URL = "https://calculator.askmortgageauthority.com"
@@ -43,6 +45,7 @@ GENERIC_PARAGRAPH_RE = re.compile(r"<p[^>]*>(.*?)</p>", re.IGNORECASE | re.DOTAL
 TAG_RE = re.compile(r"<[^>]+>")
 MULTISPACE_RE = re.compile(r"\s+")
 ASSET_RELEASE_NAME = os.getenv("CALCULATORS_RELEASE_NAME") or f"dev-{int(time.time())}"
+ROUTE_SCRIPT_MANIFEST: Dict[str, list[str]] = {}
 
 
 @dataclass(frozen=True)
@@ -135,6 +138,8 @@ def build_page_catalog(templates_dir: Path) -> Dict[str, Page]:
             is_home=is_home,
         )
 
+    global ROUTE_SCRIPT_MANIFEST
+    ROUTE_SCRIPT_MANIFEST = build_route_script_manifest(pages.keys())
     return pages
 
 
@@ -326,6 +331,8 @@ def _append_head_extras(
     boot_script = (
         "<script>"
         f"window.__INITIAL_CALCULATOR_SLUG__ = {json.dumps(initial_slug)};"
+        f"window.__CALCULATOR_ASSET_RELEASE__ = {json.dumps(ASSET_RELEASE_NAME)};"
+        f"window.__CALCULATOR_SCRIPT_MANIFEST__ = {json.dumps(ROUTE_SCRIPT_MANIFEST)};"
         "</script>\n    "
         f"{MAIN_JS_MARKER}"
     )

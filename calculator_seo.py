@@ -221,12 +221,20 @@ class RelatedCalculator:
 
 
 @dataclass(frozen=True)
+class RelatedGuide:
+    slug: str
+    title: str
+    description: str
+
+
+@dataclass(frozen=True)
 class SeoPage:
     slug: str
     category_title: str
     category_anchor: str
     intro_paragraphs: Sequence[str]
     related: Sequence[RelatedCalculator]
+    guides: Sequence[RelatedGuide]
     faqs: Sequence[SeoFaq]
     html: str
 
@@ -453,6 +461,17 @@ def _build_seo_html(page, seo_page: SeoPage) -> str:
         )
         for item in seo_page.related
     )
+    guide_html = "".join(
+        (
+            '<li class="calc-related-item">'
+            f'<a href="/{escape(item.slug)}" data-calculator="{escape(item.slug)}">'
+            f'<span>{escape(item.title)}</span>'
+            f'<small>{escape(item.description)}</small>'
+            "</a>"
+            "</li>"
+        )
+        for item in seo_page.guides
+    )
     faq_accordion_id = f"calcFaqAccordion-{seo_page.slug}"
     faq_items = []
 
@@ -479,18 +498,42 @@ def _build_seo_html(page, seo_page: SeoPage) -> str:
         for paragraph in seo_page.intro_paragraphs
     )
 
-    related_section_html = ""
+    sidebar_sections = []
     if related_html:
+        sidebar_sections.append(
+            f"""
+            <section class="card calc-seo-card">
+              <div class="card-body p-4">
+                <h2 class="h5 mb-3">Related Calculators</h2>
+                <ul class="calc-related-list list-unstyled mb-0">
+                  {related_html}
+                </ul>
+              </div>
+            </section>
+            """.strip()
+        )
+
+    if guide_html:
+        sidebar_sections.append(
+            f"""
+            <section class="card calc-seo-card">
+              <div class="card-body p-4">
+                <h2 class="h5 mb-3">Helpful Guides</h2>
+                <ul class="calc-related-list list-unstyled mb-0">
+                  {guide_html}
+                </ul>
+              </div>
+            </section>
+            """.strip()
+        )
+
+    related_section_html = ""
+    if sidebar_sections:
         related_section_html = f"""
         <div class="col-12 col-xl-4">
-          <section class="card calc-seo-card h-100">
-            <div class="card-body p-4">
-              <h2 class="h5 mb-3">Related Calculators</h2>
-              <ul class="calc-related-list list-unstyled mb-0">
-                {related_html}
-              </ul>
-            </div>
-          </section>
+          <div class="d-grid gap-3">
+            {"".join(sidebar_sections)}
+          </div>
         </div>
         """.strip()
 
@@ -530,7 +573,11 @@ def _build_seo_html(page, seo_page: SeoPage) -> str:
     """.strip()
 
 
-def build_seo_catalog(pages: Dict[str, object], home_html: str) -> Dict[str, SeoPage]:
+def build_seo_catalog(
+    pages: Dict[str, object],
+    home_html: str,
+    guide_map: Optional[Dict[str, Sequence[RelatedGuide]]] = None,
+) -> Dict[str, SeoPage]:
     sections = _parse_home_sections(home_html)
     section_by_slug = {}
 
@@ -549,6 +596,7 @@ def build_seo_catalog(pages: Dict[str, object], home_html: str) -> Dict[str, Seo
 
         labels = _extract_labels(page.body_html)
         related = _build_related_calculators(slug, section, pages)
+        guides = tuple(guide_map.get(slug, ())) if guide_map else ()
         related_titles = [item.title for item in related]
         intro_paragraphs = _build_intro_paragraphs(page, section, labels, related_titles)
         faqs = _build_faqs(page, section, labels, related_titles)
@@ -558,6 +606,7 @@ def build_seo_catalog(pages: Dict[str, object], home_html: str) -> Dict[str, Seo
             category_anchor=section.anchor,
             intro_paragraphs=intro_paragraphs,
             related=related,
+            guides=guides,
             faqs=faqs,
             html="",
         )
@@ -567,6 +616,7 @@ def build_seo_catalog(pages: Dict[str, object], home_html: str) -> Dict[str, Seo
             category_anchor=seo_page.category_anchor,
             intro_paragraphs=seo_page.intro_paragraphs,
             related=seo_page.related,
+            guides=seo_page.guides,
             faqs=seo_page.faqs,
             html=_build_seo_html(page, seo_page),
         )
@@ -577,6 +627,7 @@ def build_seo_catalog(pages: Dict[str, object], home_html: str) -> Dict[str, Seo
             continue
 
         related = _build_related_from_slugs(config["related_slugs"], pages)
+        guides = tuple(guide_map.get(slug, ())) if guide_map else ()
         faqs = tuple(
             SeoFaq(question=question, answer=answer)
             for question, answer in config["faqs"]
@@ -587,6 +638,7 @@ def build_seo_catalog(pages: Dict[str, object], home_html: str) -> Dict[str, Seo
             category_anchor=config["category_anchor"],
             intro_paragraphs=tuple(config["intro_paragraphs"]),
             related=related,
+            guides=guides,
             faqs=faqs,
             html="",
         )
@@ -596,6 +648,7 @@ def build_seo_catalog(pages: Dict[str, object], home_html: str) -> Dict[str, Seo
             category_anchor=seo_page.category_anchor,
             intro_paragraphs=seo_page.intro_paragraphs,
             related=seo_page.related,
+            guides=seo_page.guides,
             faqs=seo_page.faqs,
             html=_build_seo_html(page, seo_page),
         )

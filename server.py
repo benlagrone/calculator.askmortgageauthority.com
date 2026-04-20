@@ -10,15 +10,31 @@ from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
 from calculator_seo import build_seo_catalog
-from page_rendering import build_not_found_page, build_page_catalog, render_page
+from page_rendering import Page, build_not_found_page, build_page_catalog, render_page
+from supporting_articles import build_article_catalog, build_guide_map
 
 APP_DIR = Path(__file__).resolve().parent
 TEMPLATES_DIR = APP_DIR / "templates"
 INDEX_HTML = (APP_DIR / "index.html").read_text(encoding="utf-8")
 PAGE_CATALOG = build_page_catalog(TEMPLATES_DIR)
+ARTICLE_CATALOG = build_article_catalog(PAGE_CATALOG)
+PAGE_CATALOG.update(
+    {
+        slug: Page(
+            slug=article.slug,
+            title=article.title,
+            description=article.description,
+            canonical=article.canonical,
+            body_html=article.body_html,
+            heading=article.heading,
+        )
+        for slug, article in ARTICLE_CATALOG.items()
+    }
+)
 SEO_CATALOG = build_seo_catalog(
     PAGE_CATALOG,
     (TEMPLATES_DIR / "home.html").read_text(encoding="utf-8"),
+    build_guide_map(ARTICLE_CATALOG),
 )
 
 DEFAULT_CACHE_TTL = 24 * 60 * 60  # 1 day

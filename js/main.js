@@ -1,4 +1,7 @@
 var home = 'home';
+const routeScriptManifest = window.__CALCULATOR_SCRIPT_MANIFEST__ || {};
+const assetReleaseName = window.__CALCULATOR_ASSET_RELEASE__ || '';
+const scriptLoadPromises = new Map();
 const NEW_CALCULATORS_BANNER = {
   version: '2026-04-payoff-tools',
   title: 'New calculators are live: Mortgage Payoff Date, Debt Snowball vs Avalanche, and Cash-Out Refinance.',
@@ -83,6 +86,62 @@ function getCalculatorTypeFromPath() {
 
 function getCalculatorPath(calculatorType) {
   return calculatorType === home ? '/' : `/${calculatorType}`;
+}
+
+function withReleaseQuery(assetPath) {
+  if (!assetPath) return assetPath;
+  const url = new URL(assetPath, window.location.origin);
+  if (assetReleaseName) {
+    url.searchParams.set('release', assetReleaseName);
+  }
+  return `${url.pathname}${url.search}${url.hash}`;
+}
+
+function hasLoadedScript(assetPath) {
+  const expectedPath = new URL(assetPath, window.location.origin).pathname;
+  return Array.from(document.scripts).some((script) => {
+    if (!script.src) return false;
+    try {
+      return new URL(script.src, window.location.origin).pathname === expectedPath;
+    } catch (error) {
+      return false;
+    }
+  });
+}
+
+function ensureScriptLoaded(assetPath) {
+  if (!assetPath) {
+    return Promise.resolve();
+  }
+
+  if (hasLoadedScript(assetPath)) {
+    return Promise.resolve();
+  }
+
+  if (scriptLoadPromises.has(assetPath)) {
+    return scriptLoadPromises.get(assetPath);
+  }
+
+  const promise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = withReleaseQuery(assetPath);
+    script.async = false;
+    script.dataset.routeScript = assetPath;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error(`Failed to load ${assetPath}`));
+    document.body.appendChild(script);
+  });
+
+  scriptLoadPromises.set(assetPath, promise);
+  return promise;
+}
+
+function loadCalculatorScripts(calculatorType) {
+  const scripts = routeScriptManifest[calculatorType] || [];
+  return scripts.reduce(
+    (chain, assetPath) => chain.then(() => ensureScriptLoaded(assetPath)),
+    Promise.resolve()
+  );
 }
 
 function ensureReadableAnchors(root) {
@@ -192,13 +251,14 @@ function setCalculatorContent(html, calculatorType, shouldUpdateMetadata) {
   Array.from(sourceAppContent.children).forEach((node) => {
     appContent.appendChild(node.cloneNode(true));
   });
+  return loadCalculatorScripts(calculatorType).then(() => {
+    dispatchCalculatorLoaded(calculatorType);
+    enhanceCalculatorContent(calculatorType);
 
-  dispatchCalculatorLoaded(calculatorType);
-  enhanceCalculatorContent(calculatorType);
-
-  if (shouldUpdateMetadata) {
-    updateClientSideMetadata(doc, calculatorType);
-  }
+    if (shouldUpdateMetadata) {
+      updateClientSideMetadata(doc, calculatorType);
+    }
+  });
 }
 
 function loadCalculator(calculatorType) {
@@ -212,7 +272,7 @@ function loadCalculator(calculatorType) {
       return response.text();
     })
     .then((html) => {
-      setCalculatorContent(html, calculatorType, true);
+      return setCalculatorContent(html, calculatorType, true);
     })
     .catch((error) => {
       console.error('Error loading calculator:', error);
@@ -254,8 +314,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const hasServerContent = !!(appContent && appContent.children.length);
 
   if (hasServerContent && initialCalculatorType) {
-    enhanceCalculatorContent(initialCalculatorType);
-    dispatchCalculatorLoaded(initialCalculatorType);
+    loadCalculatorScripts(initialCalculatorType)
+      .then(() => {
+        enhanceCalculatorContent(initialCalculatorType);
+        dispatchCalculatorLoaded(initialCalculatorType);
+      })
+      .catch((error) => {
+        console.error('Error loading calculator scripts:', error);
+      });
   } else if (!hasServerContent) {
     loadCalculator(getCalculatorTypeFromPath());
   }

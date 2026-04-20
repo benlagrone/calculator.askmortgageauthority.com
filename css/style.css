@@ -443,6 +443,73 @@ input[type="text"].mortgage-calculators-widget-input:focus,
 .calc-seo-copy p:last-child {
     margin-bottom: 0
 }
+.calc-article-hero {
+    background: linear-gradient(135deg, #102a43 0%, #1f4f78 62%, #4b8ec4 100%);
+    border-radius: 28px;
+    box-shadow: 0 24px 48px rgba(10, 37, 64, .14);
+    color: #f8fbff;
+    margin-bottom: 16px;
+    padding: 28px
+}
+.calc-article-hero h1 {
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1.08;
+    margin: 0
+}
+.calc-article-hero__copy {
+    color: rgba(248, 251, 255, .86);
+    line-height: 1.8;
+    max-width: 56ch
+}
+.calc-article-meta-card {
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 18px;
+    padding: 18px 20px
+}
+.calc-article-meta-card__label {
+    color: rgba(248, 251, 255, .72);
+    display: block;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 6px;
+    text-transform: uppercase
+}
+.calc-article-card {
+    overflow: hidden
+}
+.calc-article-highlights {
+    background: #f8fbfd;
+    border: 1px solid #e5edf4;
+    border-radius: 18px;
+    margin-bottom: 24px;
+    padding: 18px 20px
+}
+.calc-article-highlights ul {
+    color: #52616b;
+    margin: 0;
+    padding-left: 18px
+}
+.calc-article-highlights li+li {
+    margin-top: 8px
+}
+.calc-article-section+.calc-article-section {
+    margin-top: 26px
+}
+.calc-article-section h2 {
+    color: #102a43;
+    font-size: 1.22rem;
+    margin-bottom: 10px
+}
+.calc-article-section p,
+.calc-article-note {
+    color: #52616b;
+    line-height: 1.75
+}
+.calc-article-section p:last-child {
+    margin-bottom: 0
+}
 .calc-collection-hero {
     background: linear-gradient(135deg, #102a43 0%, #17456c 60%, #2a6ea6 100%);
     border-radius: 28px;
@@ -606,6 +673,9 @@ input[type="text"].mortgage-calculators-widget-input:focus,
     line-height: 1.6
 }
 @media screen and (max-width:768px) {
+    .calc-article-hero {
+        padding: 22px 18px
+    }
     .calc-collection-hero {
         padding: 22px 18px
     }
